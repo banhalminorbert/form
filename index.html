@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Digitális Entitás Stratégia Értékelés | Intellektuális Tőke Audit</title>
-  <meta name="description" content="Professzionális digitális identitás-építési audit vezérkutatáshoz. Vállalkozások és közéleti személyiségek számára." />
+  <title>Digitális Entitás Stratégia Értékelés | Metallagentur</title>
+  <meta name="description" content="Professzionális digitális identitás-építési audit. GDPR-kompatibilis. Metallagentur GmbH." />
+  <meta name="author" content="Metallagentur GmbH" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -16,6 +17,8 @@
       --gold: #D4AF37;
       --line: rgba(212, 175, 55, 0.28);
       --lightstone: #F9F7F2;
+      --error: #e74c3c;
+      --success: #2ecc71;
     }
     
     * { 
@@ -46,7 +49,7 @@
       text-align: center;
       padding: 80px 0 60px;
       border-bottom: 2px solid var(--gold);
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
     
     header h1 {
@@ -64,11 +67,19 @@
       margin: 0 auto;
     }
     
+    .header-brand {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    
     .intro-box {
       background: rgba(212, 175, 55, 0.08);
       border-left: 4px solid var(--gold);
       padding: 30px;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
       border-radius: 8px;
       line-height: 1.8;
     }
@@ -112,7 +123,7 @@
       border-radius: 12px;
       padding: 50px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-      margin-bottom: 80px;
+      margin-bottom: 0;
     }
     
     .form-section {
@@ -222,22 +233,33 @@
       cursor: pointer;
     }
     
-    .radio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 16px;
-      margin-top: 12px;
-    }
-    
-    .radio-grid label {
-      display: flex;
-      align-items: center;
-      margin: 0;
-    }
-    
     .required {
-      color: #e74c3c;
+      color: var(--error);
       margin-left: 4px;
+    }
+    
+    .legal-notice {
+      background: rgba(46, 204, 113, 0.08);
+      border-left: 4px solid var(--success);
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #27ae60;
+    }
+    
+    .legal-notice p {
+      margin-bottom: 8px;
+    }
+    
+    .legal-notice a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .legal-notice a:hover {
+      text-decoration: underline;
     }
     
     button {
@@ -280,15 +302,6 @@
       background: var(--lightstone);
     }
     
-    footer {
-      text-align: center;
-      padding: 60px 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-      border-top: 1px solid var(--line);
-      margin-top: 80px;
-    }
-    
     .success-message {
       display: none;
       background: rgba(46, 204, 113, 0.15);
@@ -301,26 +314,41 @@
       font-weight: 600;
     }
     
-    .error-message {
-      color: #e74c3c;
+    footer {
+      background: var(--onyx);
+      color: var(--ivory);
+      padding: 60px 0;
+      text-align: center;
       font-size: 0.85rem;
-      margin-top: 6px;
-      display: none;
+      opacity: 0.9;
+      margin-top: 60px;
     }
     
-    .tooltip {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      background: var(--gold);
-      color: var(--onyx);
-      border-radius: 50%;
-      text-align: center;
-      line-height: 1.1;
-      font-size: 0.75rem;
-      font-weight: 700;
-      cursor: help;
-      margin-left: 6px;
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    
+    .footer-section {
+      margin: 15px 0;
+      padding: 15px 0;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    
+    .footer-section:first-of-type {
+      border-top: none;
     }
     
     @media (max-width: 768px) {
@@ -336,8 +364,9 @@
         flex-direction: column;
       }
       
-      .radio-grid {
-        grid-template-columns: 1fr;
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
@@ -347,13 +376,17 @@
     <header>
       <h1>Digitális Entitás Stratégia</h1>
       <p>Intellektuális Tőke & Reputáció Audit — Professzionális Értékelőlapok</p>
+      <div class="header-brand">
+        <p><strong>Metallagentur GmbH</strong> | Wien, Österreich</p>
+        <p><a href="https://www.metallagentur.at" target="_blank" rel="noopener noreferrer">www.metallagentur.at</a></p>
+      </div>
     </header>
 
     <div class="intro-box">
-      <h2>Jó napot!</h2>
+      <h2>Üdvözöljük!</h2>
       <p>Ön egy nagy lehetőség előtt áll. Az interneten létezése ma már nem csupán weboldalakból, hanem <strong>strukturált, algoritmikusan értelmezhető, mesterséges intelligencia által feldolgozható digitális entitásokból</strong> áll.</p>
-      <p>Ez a kérdőív célja, hogy <strong>felmérje az Ön digitális jelenlétét, szakmai eredményeit és nemzetközi pozicionálási lehetőségeit</strong>, és ennek alapján egy magas szintű, műszakileg precíz stratégiai javaslatot készítsen.</p>
-      <p><strong>Az értékelés teljesen bizalmas.</strong> Az Ön válaszai közvetlenül a saját e-mail-fiókjára küldödnek vissza, és feldolgozva egy személyre szabott, <strong>digitális identitás-építési stratégiát</strong> (SEO, Schema.org, Knowledge Graph, AI-keresés optimalizálás) kapnak.</p>
+      <p>Ez a kérdőív célja, hogy <strong>felmérje az Ön digitális jelenlétét, szakmai eredményeit és nemzetközi pozicionálási lehetőségeit</strong>, és ennek alapján egy magas szintű, műszakilag precíz stratégiai javaslatot készítsen.</p>
+      <p><strong>Az értékelés teljesen bizalmas és GDPR-kompatibilis.</strong> Az Ön válaszai kizárólag az Ön e-mail-fiókjára küldödnek vissza, feldolgozva egy személyre szabott, <strong>digitális identitás-építési stratégiát</strong> (SEO, Schema.org, Knowledge Graph, AI-keresés optimalizálás) kapnak.</p>
       <p style="margin-top: 20px; font-weight: 600;">Becsült kitöltési idő: <strong>15–20 perc</strong></p>
     </div>
 
@@ -370,23 +403,22 @@
         <div class="form-group">
           <label>Teljes Név <span class="required">*</span></label>
           <input type="text" name="fullName" required placeholder="Pl. Osvárt Andrea vagy Gauder Milán" />
-          <span class="error-message"></span>
         </div>
 
         <div class="form-group">
-          <label>E-mail Cím (a jelentés ide érkezik) <span class="required">*</span></label>
+          <label>E-mail Cím (az audit ide érkezik) <span class="required">*</span></label>
           <input type="email" name="email" required placeholder="az-on-email@pelda.com" />
-          <span class="error-message"></span>
+          <span class="label-info">Ezt az e-mail-címet használjuk az audit küldésére és az Önnel való kommunikációhoz.</span>
         </div>
 
         <div class="form-group">
           <label>Telefonszám (opcionális)</label>
-          <input type="tel" name="phone" placeholder="+36 30 123 4567" />
+          <input type="tel" name="phone" placeholder="+43 1 123 4567" />
         </div>
 
         <div class="form-group">
           <label>Fő Lakcím / Bázis <span class="required">*</span></label>
-          <input type="text" name="baseLocation" required placeholder="Pl. Budapest, Bécs, New York" />
+          <input type="text" name="baseLocation" required placeholder="Pl. Budapest, Wien, New York" />
         </div>
 
         <div class="form-group">
@@ -448,7 +480,7 @@
         </div>
 
         <div class="form-group">
-          <label>Nyilvános Politikai / Gazdaságpolitikai Célok vagy Vizió <span class="required">*</span></label>
+          <label>Nyilvános Politikai / Gazdaságpolitikai Célok vagy Vízió <span class="required">*</span></label>
           <textarea name="publicVision" required placeholder="Pl. Szuverén európai pénzügyi infrastruktúra, digitalizáció, független kultúra, stb."></textarea>
         </div>
       </div>
@@ -584,7 +616,7 @@
         <div class="form-group">
           <label>Fennáll-e bármilyen online reputációs konfliktus (pereskedés, médiascandalum)? <span class="required">*</span></label>
           <textarea name="conflicts" required placeholder="Pl. Átrium-per, bírósági eljárások, sajtóban kritizált témák stb. (vagy: Nincs)."></textarea>
-          <span class="label-info">Ez szigorúan bizalmas és a stratégia elkészítéséhez elengedhetetlen.</span>
+          <span class="label-info">Ez szigorúan bizalmas és a stratégia elkészítéséhez elengedhetetlen. GDPR-védelemmel kezeljük.</span>
         </div>
 
         <div class="form-group">
@@ -643,9 +675,90 @@
         </div>
       </div>
 
-      <!-- SECTION 8: EGYÉB MEGJEGYZÉSEK -->
+      <!-- SECTION 8: JOGI ÉS ADATVÉDELMI NYILATKOZATOK -->
       <div class="form-section">
-        <h3 class="section-header">8. Egyéb Megjegyzések</h3>
+        <h3 class="section-header">8. Jogi és Adatvédelmi Nyilatkozatok (GDPR)</h3>
+        <p class="section-subtitle">Az EU és az Osztrák jogszabályoknak megfelelő szükséges hozzájárulások</p>
+
+        <div class="legal-notice">
+          <p><strong>🔒 Adatvédelmi Nyilatkozat (GDPR-kompatibilis)</strong></p>
+          <p>Az Ön személyes adatait a GDPR (2016/679/EU) és az Osztrák Adatvédelmi Törvény (Datenschutzgesetz 2000, DSG) szerint kezelünk.</p>
+          <p><strong>Adatkezelő:</strong> Metallagentur GmbH, Wien, Österreich | <a href="https://www.metallagentur.at" target="_blank">www.metallagentur.at</a></p>
+          <p><strong>Adatkezelés célja:</strong> Digitális Entitás audit készítése, stratégiai tanácsadás</p>
+          <p><strong>Adatok tárolása:</strong> Biztonságos szervereken, min. 30 napig, majd törlésre kerül (ha nem kérnek továbbfejlesztést)</p>
+          <p><strong>Jogok:</strong> Joga van az adatokhoz való hozzáféréshez, javításhoz, törléshez, vagy adathordozhatósághoz. Kéréseit az <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a> címre küldje.</p>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: flex-start; cursor: pointer;">
+            <input type="checkbox" name="agreeDataProcessing" required style="margin-top: 4px; margin-right: 12px; width: 18px; height: 18px; flex-shrink: 0;" />
+            <span>
+              Elfogadom a személyes adataim kezelésének nyilatkozatát a GDPR és az Osztrák Adatvédelmi Törvény (DSG) értelmében. 
+              <span class="required">*</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="legal-notice">
+          <p><strong>📧 E-mail Kommunikáció és Marketing</strong></p>
+          <p>Az audit elkészültét és a javaslatokat e-mailben fogjuk küldeni Önnek. Jogában áll bármikor lemondani az e-mail kommunikációról az audit vége után.</p>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: flex-start; cursor: pointer;">
+            <input type="checkbox" name="agreeEmail" required style="margin-top: 4px; margin-right: 12px; width: 18px; height: 18px; flex-shrink: 0;" />
+            <span>
+              Engedélyezem az audit eredményeinek és az opcionális tanácsadási lehetőségeknek az e-mailben történő küldését.
+              <span class="required">*</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="legal-notice">
+          <p><strong>⚖️ Impresszum és Jogi Nyilatkozat</strong></p>
+          <p><strong>Szervezet:</strong> Metallagentur GmbH</p>
+          <p><strong>Ország:</strong> Österreich (Austria)</p>
+          <p><strong>Cím:</strong> Wien</p>
+          <p><strong>Weboldal:</strong> <a href="https://www.metallagentur.at" target="_blank">www.metallagentur.at</a></p>
+          <p><strong>Felelős:</strong> Tamas Toth</p>
+          <p><strong>E-mail:</strong> <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a></p>
+          <p><strong>Törvényi Forma:</strong> GmbH (Gesellschaft mit beschränkter Haftung)</p>
+        </div>
+
+        <div class="legal-notice">
+          <p><strong>🔐 Szellemi Tulajdon és Titoktartás</strong></p>
+          <p>Az audit dokumentum és az ebből készült stratégiai javaslatok az Ön és a Metallagentur között kizárólagos, bizalmas információnak minősülnek. Az audit másolása, megosztása vagy nyilvánosságra hozatala tilos, kivéve ha expressis verbis egyezményt kötünk másként.</p>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: flex-start; cursor: pointer;">
+            <input type="checkbox" name="agreeConfidentiality" required style="margin-top: 4px; margin-right: 12px; width: 18px; height: 18px; flex-shrink: 0;" />
+            <span>
+              Tudomásulávettem az audit-dokumentum és a stratégiai javaslatok bizalmas természetéről. Ezeket harmadik féllel nem osztom meg az ügyfél vagy a Metallagentur hozzájárulása nélkül.
+              <span class="required">*</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="legal-notice">
+          <p><strong>⚠️ Felelősség Korlátozás</strong></p>
+          <p>A Metallagentur az audit és a stratégiai javaslatok alapján az internetes pozicionálást csak akkor tudja garantálni, ha az ügyfél az ajánlásokat pontosan és teljes egészében megvalósítja. A keresőmotorok algoritmusa folyamatosan változik, és az eredmények nem biztosíthatók 100%-osan. A Metallagentur nem vállal felelősséget a harmadik féltől származó adatokért, a már létező online reputáció megváltoztatásáért vagy jogszabálysértésekért.</p>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: flex-start; cursor: pointer;">
+            <input type="checkbox" name="agreeTerms" required style="margin-top: 4px; margin-right: 12px; width: 18px; height: 18px; flex-shrink: 0;" />
+            <span>
+              Elfogadom a Metallagentur felelősség-korlátozási nyilatkozatát és az audit nem-garantált jellegét.
+              <span class="required">*</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SECTION 9: EGYÉB MEGJEGYZÉSEK -->
+      <div class="form-section">
+        <h3 class="section-header">9. Egyéb Megjegyzések és Kontakt Preferenciák</h3>
 
         <div class="form-group">
           <label>Bármi, amit fontos tudnunk az Ön profiláról vagy az auditról?</label>
@@ -653,17 +766,33 @@
         </div>
 
         <div class="form-group">
-          <label style="display: flex; align-items: flex-start;">
-            <input type="checkbox" name="agreePrivacy" required style="margin-top: 4px; margin-right: 12px; width: 18px; height: 18px;" />
-            <span>Egyetértek az adatok feldolgozásával és a bizalmas értékeléssel. <span class="required">*</span></span>
-          </label>
+          <label>Preferált Kommunikációs Csatorna <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="comm-email" name="communicationPreference" value="email" required />
+              <label for="comm-email">E-mail</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="comm-phone" name="communicationPreference" value="phone" required />
+              <label for="comm-phone">Telefonos konzultáció (ha szükséges)</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="comm-both" name="communicationPreference" value="both" required />
+              <label for="comm-both">Mindkettő</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Hogyan szerzett tudomást a Metallagentúrról? <span class="required">*</span></label>
+          <input type="text" name="referralSource" required placeholder="Pl. internet keresés, ajánlás, LinkedIn stb." />
         </div>
       </div>
 
       <!-- SUBMIT -->
       <div class="button-group">
         <button type="button" class="button-secondary" onclick="document.getElementById('assessmentForm').reset();">
-          Forma Törlése
+          FORMA TÖRLÉSE
         </button>
         <button type="submit">
           ÉRTÉKELÉS ELKÜLDÉSE
@@ -672,10 +801,24 @@
     </form>
 
     <footer>
-      <p><strong>Teljesen Bizalmas Audit</strong></p>
-      <p>Az Ön válaszai csak az Ön e-mail-fiókjára küldödnek, és egyetlen külső féllel nem osztódnak meg.</p>
-      <p>Kérdések? <strong>tamas.toth@metallagentur.at</strong></p>
-      <p style="margin-top: 20px; font-size: 0.85rem;">© 2026 Intellektuális Tőke & Digitális Entitás Audit | Bizalmas</p>
+      <div class="footer-section">
+        <h4 style="color: var(--gold); margin-bottom: 10px;">Metallagentur GmbH</h4>
+        <p>Wien, Österreich</p>
+        <p>Digitale Entitäten & Reputationsstrategien</p>
+      </div>
+      
+      <div class="footer-links">
+        <a href="https://www.metallagentur.at" target="_blank" rel="noopener noreferrer">www.metallagentur.at</a>
+        <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a>
+        <a href="#" id="privacyLink">Adatvédelmi Nyilatkozat</a>
+        <a href="#" id="impressumLink">Impresszum</a>
+      </div>
+      
+      <div class="footer-section">
+        <p>© 2026 Metallagentur GmbH. Alle Rechte vorbehalten.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">GDPR-kompatibilis | Osztrák Adatvédelmi Törvény (DSG) megfelelő</p>
+        <p style="font-size: 0.8rem;">Form Version 1.0 | Aktualizálva: 2026-05-08</p>
+      </div>
     </footer>
   </div>
 
@@ -691,6 +834,23 @@
     // Form submission
     document.getElementById('assessmentForm').addEventListener('submit', async function(e) {
       e.preventDefault();
+
+      // Validate all required checkboxes
+      const requiredCheckboxes = [
+        'agreeDataProcessing',
+        'agreeEmail',
+        'agreeConfidentiality',
+        'agreeTerms'
+      ];
+
+      for (let name of requiredCheckboxes) {
+        const checkbox = this.querySelector(`[name="${name}"]`);
+        if (!checkbox.checked) {
+          alert('Kérjük, fogadja el az összes jogi nyilatkozatot az audit elküldéséhez.');
+          checkbox.focus();
+          return;
+        }
+      }
 
       // Validate required fields
       const requiredFields = this.querySelectorAll('[required]');
@@ -720,6 +880,7 @@
       const emailBody = `
 DIGITÁLIS ENTITÁS AUDIT - KITÖLTÖTT ÉRTÉKELŐLAP
 ================================================
+FORM VERZIÓ: 1.0 | GDPR-KOMPATIBILIS | Metallagentur GmbH
 
 SZEMÉLYES ADATOK:
 -----------------
@@ -773,15 +934,30 @@ Wikidata szükséges: ${data.wikidataNeeded}
 Saját domainok: ${data.ownedDomains}
 AI tartalom szükséges: ${data.aiContentNeeded}
 
+KONTAKT PREFERENCIÁK:
+---------------------
+Kommunikációs csatorna: ${data.communicationPreference}
+Forrás: ${data.referralSource}
+
 EGYÉB MEGJEGYZÉSEK:
 -------------------
 ${data.additionalComments || 'Nincs'}
 
+JOGI NYILATKOZATOK:
+-------------------
+✓ GDPR adatkezelés elfogadva
+✓ E-mail kommunikáció elfogadva
+✓ Bizalmas szerződés elfogadva
+✓ Felelősség-korlátozás elfogadva
+
 ================================================
 Az audit hamarosan érkezik erre az e-mail-fiókra!
+Metallagentur GmbH | www.metallagentur.at
+GDPR-kompatibilis | Osztrák DSG megfelelő
+================================================
 `;
 
-      // Send via email (using formspree or similar)
+      // Send via email (using formspree)
       try {
         const response = await fetch('https://formspree.io/f/mgvwyvoa', {
           method: 'POST',
@@ -791,7 +967,7 @@ Az audit hamarosan érkezik erre az e-mail-fiókra!
           body: JSON.stringify({
             ...data,
             markets: data.markets,
-            _subject: `Digitális Entitás Audit - ${data.fullName}`,
+            _subject: `GDPR Digitális Entitás Audit - ${data.fullName}`,
             _captcha: false,
             _replyto: data.email
           })
@@ -807,6 +983,17 @@ Az audit hamarosan érkezik erre az e-mail-fiókra!
       } catch (error) {
         alert('Hiba az elküldéskor: ' + error.message);
       }
+    });
+
+    // Legal link handlers
+    document.getElementById('privacyLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Adatvédelmi Nyilatkozat:\n\nA személyes adatok GDPR (2016/679/EU) és az Osztrák DSG szerint kezelkednek.\n\nAdatkezelő: Metallagentur GmbH\nCél: Digitális entitás audit\nTárolás: 30 nap vagy a megkötött szerződésig\n\nJogok: Hozzáférés, javítás, törlés, adathordozhatóság\n\nA részletekért lépjen kapcsolatba: tamas.toth@metallagentur.at');
+    });
+
+    document.getElementById('impressumLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Impresszum:\n\nOrganización: Metallagentur GmbH\nHely: Wien, Österreich\nTörvényi forma: GmbH\nWebsite: www.metallagentur.at\nE-mail: tamas.toth@metallagentur.at\n\n© 2026 Metallagentur GmbH. Alle Rechte vorbehalten.');
     });
   </script>
 </body>
