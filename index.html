@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digitális Entitás Stratégia Értékelés | Intellektuális Tőke Audit</title>
+  <meta name="description" content="Professzionális digitális identitás-építési audit vezérkutatáshoz. Vállalkozások és közéleti személyiségek számára." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --onyx: #0F0F0F;
+      --ivory: #FFFFF0;
+      --stone: #F5F2EA;
+      --charcoal: #333333;
+      --muted: #74736A;
+      --gold: #D4AF37;
+      --line: rgba(212, 175, 55, 0.28);
+      --lightstone: #F9F7F2;
+    }
+    
+    * { 
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--ivory) 0%, var(--stone) 100%);
+      color: var(--charcoal);
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    header {
+      text-align: center;
+      padding: 80px 0 60px;
+      border-bottom: 2px solid var(--gold);
+      margin-bottom: 60px;
+    }
+    
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+    
+    header p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .intro-box {
+      background: rgba(212, 175, 55, 0.08);
+      border-left: 4px solid var(--gold);
+      padding: 30px;
+      margin-bottom: 60px;
+      border-radius: 8px;
+      line-height: 1.8;
+    }
+    
+    .intro-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    
+    .intro-box p {
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+    
+    .intro-box ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    
+    .intro-box li {
+      margin-bottom: 8px;
+      padding-left: 24px;
+      position: relative;
+    }
+    
+    .intro-box li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    form {
+      background: white;
+      border-radius: 12px;
+      padding: 50px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      margin-bottom: 80px;
+    }
+    
+    .form-section {
+      margin-bottom: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--line);
+    }
+    
+    .form-section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 40px;
+      padding-bottom: 0;
+    }
+    
+    .section-header {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      letter-spacing: -0.015em;
+    }
+    
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    
+    .form-group {
+      margin-bottom: 32px;
+    }
+    
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--charcoal);
+      font-size: 0.95rem;
+    }
+    
+    .label-info {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: block;
+      margin-top: 4px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      background: var(--lightstone);
+      color: var(--charcoal);
+      transition: all 0.3s ease;
+    }
+    
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: white;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .checkbox-group,
+    .radio-group {
+      margin-top: 12px;
+    }
+    
+    .checkbox-item,
+    .radio-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+      cursor: pointer;
+      accent-color: var(--gold);
+    }
+    
+    .checkbox-item label,
+    .radio-item label {
+      margin: 0;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    
+    .radio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    
+    .radio-grid label {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+    
+    .required {
+      color: #e74c3c;
+      margin-left: 4px;
+    }
+    
+    button {
+      background: linear-gradient(135deg, var(--charcoal) 0%, var(--onyx) 100%);
+      color: var(--ivory);
+      padding: 16px 48px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      justify-content: space-between;
+    }
+    
+    .button-secondary {
+      background: var(--stone);
+      color: var(--charcoal);
+    }
+    
+    .button-secondary:hover {
+      background: var(--lightstone);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 60px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--line);
+      margin-top: 80px;
+    }
+    
+    .success-message {
+      display: none;
+      background: rgba(46, 204, 113, 0.15);
+      border: 1px solid #2ecc71;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 40px;
+      color: #27ae60;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .error-message {
+      color: #e74c3c;
+      font-size: 0.85rem;
+      margin-top: 6px;
+      display: none;
+    }
+    
+    .tooltip {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: var(--gold);
+      color: var(--onyx);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.1;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: help;
+      margin-left: 6px;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      form {
+        padding: 30px 20px;
+      }
+      
+      .button-group {
+        flex-direction: column;
+      }
+      
+      .radio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Digitális Entitás Stratégia</h1>
+      <p>Intellektuális Tőke & Reputáció Audit — Professzionális Értékelőlapok</p>
+    </header>
+
+    <div class="intro-box">
+      <h2>Jó napot!</h2>
+      <p>Ön egy nagy lehetőség előtt áll. Az interneten létezése ma már nem csupán weboldalakból, hanem <strong>strukturált, algoritmikusan értelmezhető, mesterséges intelligencia által feldolgozható digitális entitásokból</strong> áll.</p>
+      <p>Ez a kérdőív célja, hogy <strong>felmérje az Ön digitális jelenlétét, szakmai eredményeit és nemzetközi pozicionálási lehetőségeit</strong>, és ennek alapján egy magas szintű, műszakileg precíz stratégiai javaslatot készítsen.</p>
+      <p><strong>Az értékelés teljesen bizalmas.</strong> Az Ön válaszai közvetlenül a saját e-mail-fiókjára küldödnek vissza, és feldolgozva egy személyre szabott, <strong>digitális identitás-építési stratégiát</strong> (SEO, Schema.org, Knowledge Graph, AI-keresés optimalizálás) kapnak.</p>
+      <p style="margin-top: 20px; font-weight: 600;">Becsült kitöltési idő: <strong>15–20 perc</strong></p>
+    </div>
+
+    <form id="assessmentForm">
+      <div class="success-message" id="successMessage">
+        ✓ Köszönjük válaszait! Elemzésünk hamarosan érkezik az Ön e-mail-fiókjába.
+      </div>
+
+      <!-- SECTION 1: SZEMÉLYES ADATOK -->
+      <div class="form-section">
+        <h3 class="section-header">1. Személyes és Professzionális Azonosítás</h3>
+        <p class="section-subtitle">Alapvető adatok az audit elkezdéséhez</p>
+
+        <div class="form-group">
+          <label>Teljes Név <span class="required">*</span></label>
+          <input type="text" name="fullName" required placeholder="Pl. Osvárt Andrea vagy Gauder Milán" />
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label>E-mail Cím (a jelentés ide érkezik) <span class="required">*</span></label>
+          <input type="email" name="email" required placeholder="az-on-email@pelda.com" />
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label>Telefonszám (opcionális)</label>
+          <input type="tel" name="phone" placeholder="+36 30 123 4567" />
+        </div>
+
+        <div class="form-group">
+          <label>Fő Lakcím / Bázis <span class="required">*</span></label>
+          <input type="text" name="baseLocation" required placeholder="Pl. Budapest, Bécs, New York" />
+        </div>
+
+        <div class="form-group">
+          <label>Jelenlegi Végzettség / Végzettségek <span class="required">*</span></label>
+          <textarea name="education" required placeholder="Pl. Eötvös Loránd Tudományegyetem (italianisztika), nemzetközi üzleti iskola stb."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Beszélt Nyelvek <span class="required">*</span></label>
+          <input type="text" name="languages" required placeholder="Pl. magyar, angol, olasz, német" />
+        </div>
+      </div>
+
+      <!-- SECTION 2: SZAKMAI PROFIL -->
+      <div class="form-section">
+        <h3 class="section-header">2. Szakmai Profil és Karrier</h3>
+        <p class="section-subtitle">Miben és mennyit értek el eddig?</p>
+
+        <div class="form-group">
+          <label>Jelenlegi / Legfrissebb Pozíció <span class="required">*</span></label>
+          <input type="text" name="currentRole" required placeholder="Pl. Global Executive Vice President, Filmproducer, Tanácsadó" />
+        </div>
+
+        <div class="form-group">
+          <label>Pályafutás Hossza (év) <span class="required">*</span></label>
+          <input type="text" name="careerYears" required placeholder="Pl. 20+ év" />
+        </div>
+
+        <div class="form-group">
+          <label>Legjelentősebb Szakmai Eredmények / Díjak <span class="required">*</span></label>
+          <textarea name="achievements" required placeholder="Pl. EFA tagság (2024), Forbes Év Filantrópja, Mastercard Global EVP, Globo d'Oro díj stb."></textarea>
+          <span class="label-info">Csak ellenőrzött, nyilvánosan igazolt eredmények!</span>
+        </div>
+
+        <div class="form-group">
+          <label>Nemzetközi Jelenlét / Működési Régiók <span class="required">*</span></label>
+          <textarea name="internationalPresence" required placeholder="Pl. Olaszország, USA, Egyesült Királyság, Közép-Kelet-Európa, Afrika stb."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Szakmai Szervezetek / Intézmények (tagság, felügyelet, alapítás) <span class="required">*</span></label>
+          <textarea name="organizationalRoles" required placeholder="Pl. Európai Filmakadémia tag, Mastercard, TSZOE elnök, Átrium alapító stb."></textarea>
+        </div>
+      </div>
+
+      <!-- SECTION 3: TÁRSADALMI HATÁS -->
+      <div class="form-section">
+        <h3 class="section-header">3. Társadalmi Hatás és Civil Felelősségvállalás</h3>
+        <p class="section-subtitle">Miként járulsz hozzá a társadalomhoz?</p>
+
+        <div class="form-group">
+          <label>Filantróp / Civil Projektek <span class="required">*</span></label>
+          <textarea name="philanthropyProjects" required placeholder="Pl. Átrium Színház alapítás, Van Helyed Alapítvány támogatás, nemvagyegyedul.com, Gauder Art Residency stb."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Oktatási / Mentori Tevékenységek <span class="required">*</span></label>
+          <textarea name="educationalRoles" required placeholder="Pl. Bankárképző Mentorprogram, egyetemi előadás, MIT SMR főszerkesztőség, startup tanácsadás stb."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Nyilvános Politikai / Gazdaságpolitikai Célok vagy Vizió <span class="required">*</span></label>
+          <textarea name="publicVision" required placeholder="Pl. Szuverén európai pénzügyi infrastruktúra, digitalizáció, független kultúra, stb."></textarea>
+        </div>
+      </div>
+
+      <!-- SECTION 4: DIGITÁLIS JELENLÉT -->
+      <div class="form-section">
+        <h3 class="section-header">4. Jelenlegi Digitális Jelenlét és Márkaképek</h3>
+        <p class="section-subtitle">Jelenleg hol és hogyan jelenít meg az internet?</p>
+
+        <div class="form-group">
+          <label>Van saját weboldala / blogja? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="website-yes" name="hasWebsite" value="yes" required />
+              <label for="website-yes">Igen</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="website-no" name="hasWebsite" value="no" required />
+              <label for="website-no">Nem</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="website-outdated" name="hasWebsite" value="outdated" required />
+              <label for="website-outdated">Van, de elavult</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Weboldalak / Profil URL-ek <span class="required">*</span></label>
+          <textarea name="websiteUrls" required placeholder="Pl. https://andreaosvart.com, https://www.linkedin.com/in/gauder, IMDb profil stb."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Jelenlegi Online Reputációs Kérdések / Kihívások <span class="required">*</span></label>
+          <textarea name="reputationalChallenges" required placeholder="Pl. Név-duplikáció (Gaudits vs. Gauder), régi bulvárcikkek, hiányzó EFA tagság az IMDb-n, elavult szövegek stb."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>LinkedIn / Közösségi Média Jelenlét <span class="required">*</span></label>
+          <input type="text" name="socialMedia" required placeholder="Pl. LinkedIn, Twitter, Instagram — URL-ek vagy handle-ek" />
+        </div>
+      </div>
+
+      <!-- SECTION 5: JÖVŐKÉP ÉS CÉLOK -->
+      <div class="form-section">
+        <h3 class="section-header">5. Jövőkép és Stratégiai Célok (3–5 év)</h3>
+        <p class="section-subtitle">Hová szeretnél eljutni?</p>
+
+        <div class="form-group">
+          <label>Jövőbeli Szerepek / Pozíciók (aspirációs) <span class="required">*</span></label>
+          <textarea name="futureRoles" required placeholder="Pl. Miniszteri tanácsadó, nemzetközi filmfesztivál zsűri, kutatóintézet vezetője, szövetkezeti elnök stb."></textarea>
+          <span class="label-info">Ezekre nem szükséges kinevezés most, de fontosak a hosszú távú stratégiához!</span>
+        </div>
+
+        <div class="form-group">
+          <label>Mely nemzetközi Piacok / Közönségek Érdekelnek? <span class="required">*</span></label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-us" name="markets" value="US" />
+              <label for="market-us">USA / Észak-Amerika</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-uk" name="markets" value="UK" />
+              <label for="market-uk">Egyesült Királyság / Írország</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-eu" name="markets" value="EU" />
+              <label for="market-eu">Európai Unió (széles)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-cee" name="markets" value="CEE" />
+              <label for="market-cee">Közép-Kelet-Európa</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-asia" name="markets" value="Asia" />
+              <label for="market-asia">Ázsia / Csendes-óceáni régió</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-mena" name="markets" value="MENA" />
+              <label for="market-mena">Közel-Kelet / Afrika</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Fontosabb Iparágak / Szakterületek (jövőben is) <span class="required">*</span></label>
+          <input type="text" name="futureIndustries" required placeholder="Pl. Film- és médiaipar, fintech, gazdaságfejlesztés, oktatás, kultúra stb." />
+        </div>
+      </div>
+
+      <!-- SECTION 6: KAPCSOLATOK ÉS KIEGÉSZÍTÉSEK -->
+      <div class="form-section">
+        <h3 class="section-header">6. Szövetségek, Partneri és Kiegészítő Információ</h3>
+        <p class="section-subtitle">Egyedül vagy több személyből álló entitás-architektúra?</p>
+
+        <div class="form-group">
+          <label>Van-e közös (házastárs / partner) digitális entitás, amit párhuzamosan kellene felépíteni? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="partner-yes" name="hasPartner" value="yes" required />
+              <label for="partner-yes">Igen</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="partner-no" name="hasPartner" value="no" required />
+              <label for="partner-no">Nem</label>
+            </div>
+          </div>
+        </div>
+
+        <div id="partnerDetails" style="display: none;">
+          <div class="form-group">
+            <label>Partner(ek) Neve(i) és Alapvető Profilja <span class="required">*</span></label>
+            <textarea name="partnerInfo" placeholder="Pl. Osvárt Andrea, Nemzetközi Filmproducer, EFA tag."></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Közös Projektjeik / Filantróp Kezdeményezések <span class="required">*</span></label>
+          <textarea name="sharedProjects" placeholder="Pl. Gauder Art Residency, közös alapítványi munka stb. (vagy: Nincs közös projekt)"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Név-duplikáció vagy Branding Kihívás (név-variációk)? <span class="required">*</span></label>
+          <textarea name="nameVariations" required placeholder="Pl. Gaudits vs. Gauder Milán, vagy nincs gond."></textarea>
+        </div>
+      </div>
+
+      <!-- SECTION 7: TECHNIKAI ÉS JOGI KÉRDÉSEK -->
+      <div class="form-section">
+        <h3 class="section-header">7. Technikai és Jogi Kérdések</h3>
+        <p class="section-subtitle">Technikai előfeltételek és szenzitív témák</p>
+
+        <div class="form-group">
+          <label>Fennáll-e bármilyen online reputációs konfliktus (pereskedés, médiascandalum)? <span class="required">*</span></label>
+          <textarea name="conflicts" required placeholder="Pl. Átrium-per, bírósági eljárások, sajtóban kritizált témák stb. (vagy: Nincs)."></textarea>
+          <span class="label-info">Ez szigorúan bizalmas és a stratégia elkészítéséhez elengedhetetlen.</span>
+        </div>
+
+        <div class="form-group">
+          <label>Rendelkezik-e Wikipédia oldallal? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="wiki-yes" name="hasWikipedia" value="yes" required />
+              <label for="wiki-yes">Igen</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="wiki-no" name="hasWikipedia" value="no" required />
+              <label for="wiki-no">Nem</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="wiki-partial" name="hasWikipedia" value="partial" required />
+              <label for="wiki-partial">Igen, de hiányos</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Wikidata / Strukturált Adat Igény <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="wikidata-yes" name="wikidataNeeded" value="yes" required />
+              <label for="wikidata-yes">Igen, szükséges</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="wikidata-no" name="wikidataNeeded" value="no" required />
+              <label for="wikidata-no">Nem szükséges</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="wikidata-unsure" name="wikidataNeeded" value="unsure" required />
+              <label for="wikidata-unsure">Nem vagyok biztosan</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Domainjeire (milyon.hu, személynév.com stb.) Tulajdon? <span class="required">*</span></label>
+          <input type="text" name="ownedDomains" required placeholder="Pl. https://andreaosvart.com, https://milangaudits.com" />
+        </div>
+
+        <div class="form-group">
+          <label>AI-alapú Képgeneráció / Videók Igénye? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="ai-yes" name="aiContentNeeded" value="yes" required />
+              <label for="ai-yes">Igen</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="ai-no" name="aiContentNeeded" value="no" required />
+              <label for="ai-no">Nem</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 8: EGYÉB MEGJEGYZÉSEK -->
+      <div class="form-section">
+        <h3 class="section-header">8. Egyéb Megjegyzések</h3>
+
+        <div class="form-group">
+          <label>Bármi, amit fontos tudnunk az Ön profiláról vagy az auditról?</label>
+          <textarea name="additionalComments" placeholder="Szabad szöveg, további kontextus vagy kérdések..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; align-items: flex-start;">
+            <input type="checkbox" name="agreePrivacy" required style="margin-top: 4px; margin-right: 12px; width: 18px; height: 18px;" />
+            <span>Egyetértek az adatok feldolgozásával és a bizalmas értékeléssel. <span class="required">*</span></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <div class="button-group">
+        <button type="button" class="button-secondary" onclick="document.getElementById('assessmentForm').reset();">
+          Forma Törlése
+        </button>
+        <button type="submit">
+          ÉRTÉKELÉS ELKÜLDÉSE
+        </button>
+      </div>
+    </form>
+
+    <footer>
+      <p><strong>Teljesen Bizalmas Audit</strong></p>
+      <p>Az Ön válaszai csak az Ön e-mail-fiókjára küldödnek, és egyetlen külső féllel nem osztódnak meg.</p>
+      <p>Kérdések? <strong>tamas.toth@metallagentur.at</strong></p>
+      <p style="margin-top: 20px; font-size: 0.85rem;">© 2026 Intellektuális Tőke & Digitális Entitás Audit | Bizalmas</p>
+    </footer>
+  </div>
+
+  <script>
+    // Partner toggle
+    document.querySelectorAll('input[name="hasPartner"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        document.getElementById('partnerDetails').style.display = 
+          this.value === 'yes' ? 'block' : 'none';
+      });
+    });
+
+    // Form submission
+    document.getElementById('assessmentForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Validate required fields
+      const requiredFields = this.querySelectorAll('[required]');
+      let allValid = true;
+
+      requiredFields.forEach(field => {
+        if (!field.value && field.type !== 'checkbox' && field.type !== 'radio') {
+          allValid = false;
+          field.classList.add('error');
+        }
+      });
+
+      if (!allValid) {
+        alert('Kérjük, töltse ki az összes kötelezően kitöltendő mezőt!');
+        return;
+      }
+
+      // Collect form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+
+      // Convert checkbox array
+      const markets = formData.getAll('markets');
+      data.markets = markets.join(', ') || 'Nem jelölt';
+
+      // Create email body
+      const emailBody = `
+DIGITÁLIS ENTITÁS AUDIT - KITÖLTÖTT ÉRTÉKELŐLAP
+================================================
+
+SZEMÉLYES ADATOK:
+-----------------
+Név: ${data.fullName}
+E-mail: ${data.email}
+Telefon: ${data.phone || 'Nem adott meg'}
+Bázis: ${data.baseLocation}
+Nyelvek: ${data.languages}
+
+SZAKMAI PROFIL:
+---------------
+Jelenlegi pozíció: ${data.currentRole}
+Karrier hossza: ${data.careerYears}
+Nemzetközi jelenlét: ${data.internationalPresence}
+Szervezeti szerepek: ${data.organizationalRoles}
+
+EREDMÉNYEK / DÍJAK:
+${data.achievements}
+
+TÁRSADALMI HATÁS:
+-----------------
+Filantrópia: ${data.philanthropyProjects}
+Oktatás/Mentorálás: ${data.educationalRoles}
+Nyilvános Vízió: ${data.publicVision}
+
+DIGITÁLIS JELENLÉT:
+-------------------
+Saját weboldal: ${data.hasWebsite}
+Weboldalak: ${data.websiteUrls}
+Reputációs kihívások: ${data.reputationalChallenges}
+Közösségi média: ${data.socialMedia}
+
+JÖVŐKÉP:
+--------
+Jövőbeli szerepek: ${data.futureRoles}
+Érdeklő piacok: ${data.markets}
+Jövőbeli iparágak: ${data.futureIndustries}
+
+PARTNEREK / SZÖVETSÉGEK:
+------------------------
+Van partner: ${data.hasPartner}
+${data.hasPartner === 'yes' ? `Partner info: ${data.partnerInfo}` : ''}
+Közös projektek: ${data.sharedProjects}
+Név-duplikáció: ${data.nameVariations}
+
+TECHNIKAI KÉRDÉSEK:
+-------------------
+Reputációs konfliktusok: ${data.conflicts}
+Wikipedia: ${data.hasWikipedia}
+Wikidata szükséges: ${data.wikidataNeeded}
+Saját domainok: ${data.ownedDomains}
+AI tartalom szükséges: ${data.aiContentNeeded}
+
+EGYÉB MEGJEGYZÉSEK:
+-------------------
+${data.additionalComments || 'Nincs'}
+
+================================================
+Az audit hamarosan érkezik erre az e-mail-fiókra!
+`;
+
+      // Send via email (using formspree or similar)
+      try {
+        const response = await fetch('https://formspree.io/f/mgvwyvoa', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...data,
+            markets: data.markets,
+            _subject: `Digitális Entitás Audit - ${data.fullName}`,
+            _captcha: false,
+            _replyto: data.email
+          })
+        });
+
+        if (response.ok) {
+          document.getElementById('successMessage').style.display = 'block';
+          document.getElementById('assessmentForm').style.display = 'none';
+          window.scrollTo(0, 0);
+        } else {
+          alert('Hiba az elküldéskor. Kérjük, próbálja újra vagy lépjen kapcsolatba: tamas.toth@metallagentur.at');
+        }
+      } catch (error) {
+        alert('Hiba az elküldéskor: ' + error.message);
+      }
+    });
+  </script>
+</body>
+</html>
