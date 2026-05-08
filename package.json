@@ -1,0 +1,102 @@
+{
+  "name": "digital-entity-audit-framework",
+  "version": "1.0.0",
+  "description": "Professional Digital Identity & Reputation Strategy Assessment Tool - GDPR compliant",
+  "author": {
+    "name": "Metallagentur GmbH",
+    "email": "tamas.toth@metallagentur.at",
+    "url": "https://www.metallagentur.at"
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metallagentur/digital-entity-audit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/metallagentur/digital-entity-audit/issues",
+    "email": "tamas.toth@metallagentur.at"
+  },
+  "homepage": "https://www.metallagentur.at",
+  "keywords": [
+    "digital-identity",
+    "reputation-management",
+    "seo",
+    "gdpr-compliant",
+    "audit",
+    "strategie",
+    "austria",
+    "knowledge-graph",
+    "entity-architecture",
+    "ai-search",
+    "geo",
+    "schema-org"
+  ],
+  "main": "index.html",
+  "files": [
+    "index.html",
+    "README.md",
+    "LICENSE.md",
+    "GDPR_COMPLIANCE.md",
+    "TERMS_OF_SERVICE.md",
+    "IMPRESSUM.md",
+    "docs/",
+    ".gitignore",
+    ".editorconfig"
+  ],
+  "scripts": {
+    "test": "npm run validate",
+    "validate": "npm run html-validate",
+    "html-validate": "html-validate index.html",
+    "lighthouse": "lighthouse index.html --output-path=./lighthouse-report.html",
+    "server": "npx http-server .",
+    "clean": "rm -rf lighthouse-report.html *.log"
+  },
+  "devDependencies": {
+    "html-validate": "^9.0.0",
+    "lighthouse": "^10.0.0",
+    "http-server": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "lang": [
+    "hu",
+    "en",
+    "de"
+  ],
+  "standards": {
+    "gdpr": "2016/679/EU",
+    "austria_dsg": "DSG 2000",
+    "ecg": "E-Commerce-Gesetz",
+    "wcag": "2.1 AA"
+  },
+  "security": {
+    "https": true,
+    "csp": "strict",
+    "ssl_min": "TLS 1.2"
+  },
+  "metadata": {
+    "created": "2026-05-08",
+    "updated": "2026-05-08",
+    "version": "1.0.0",
+    "status": "production",
+    "maintenance": "active"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://www.metallagentur.at"
+  },
+  "contributors": [
+    {
+      "name": "Tamas Toth",
+      "email": "tamas.toth@metallagentur.at",
+      "url": "https://www.metallagentur.at"
+    }
+  ],
+  "organization": {
+    "name": "Metallagentur GmbH",
+    "country": "Österreich",
+    "city": "Wien",
+    "website": "https://www.metallagentur.at"
+  }
+}
