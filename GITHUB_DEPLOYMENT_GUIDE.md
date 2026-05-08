@@ -26,7 +26,7 @@ cp -r /mnt/user-data/outputs/* .
 
 # Git konfig
 git config user.name "Tamas Toth"
-git config user.email "tamas.toth@metallagentur.at"
+git config user.email "[your-email@example.com]"
 
 # Hozzáadás és commit
 git add .
@@ -167,7 +167,7 @@ jobs:
         run: |
           echo "GDPR Compliance Check"
           grep -q "GDPR" GDPR_COMPLIANCE.md || exit 1
-          grep -q "tamas.toth@metallagentur.at" index.html || exit 1
+          grep -q "[your-email@example.com]" index.html || exit 1
       
       - name: Lighthouse Audit
         run: |
@@ -310,8 +310,8 @@ git push origin main
 
 ```
 1. GitHub Issues: https://github.com/[USERNAME]/digital-entity-audit/issues
-2. E-mail: tamas.toth@metallagentur.at
-3. Website: https://www.metallagentur.at
+2. E-mail: [your-email@example.com]
+3. Website: https://www.your-website.com
 ```
 
 ---
@@ -341,8 +341,8 @@ Az audit-keretrendszer GitHub Pages-en működik:
 👉 https://[USERNAME].github.io/digital-entity-audit/
 ```
 
-Köszönjük, hogy a Metallagentur audit-keretrendszert használod!
+Köszönjük, hogy a [Your Organization Name] audit-keretrendszert használod!
 
 ---
 
-**© 2026 Metallagentur GmbH | CC BY-NC-ND 4.0 | GDPR-kompatibilis**
+**© 2026 [Your Organization Name] GmbH | CC BY-NC-ND 4.0 | GDPR-kompatibilis**

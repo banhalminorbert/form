@@ -1,6 +1,6 @@
 # IMPRESSUM — Jogi Nyilatkozat
 
-**Metallagentur GmbH**
+**[Your Organization Name]**
 
 ---
 
@@ -10,24 +10,24 @@
 
 | Adat | Érték |
 |------|-------|
-| **Szervezet neve** | Metallagentur GmbH |
+| **Szervezet neve** | [Your Organization Name] |
 | **Jogi forma** | GmbH (Gesellschaft mit beschränkter Haftung) |
-| **Cím** | Wien, Österreich |
+| **Cím** | [City], [Country] |
 | **Ország** | Österreich (Austria) |
 
 ### 2. Képviselet és Vezetőség
 
 | Szak | Személy |
 |------|---------|
-| **Geschäftsführer (Ügyvezető)** | Tamas Toth |
-| **Kontakt személyes** | Tamas Toth |
+| **Geschäftsführer (Ügyvezető)** | [Your Name] |
+| **Kontakt személyes** | [Your Name] |
 
 ### 3. Kommunikáció
 
 | Csatorna | Adat |
 |----------|------|
-| **E-mail** | tamas.toth@metallagentur.at |
-| **Weboldal** | https://www.metallagentur.at |
+| **E-mail** | [your-email@example.com] |
+| **Weboldal** | https://www.your-website.com |
 | **Telefon** | [Kötelezett szám behelyezése] |
 
 ### 4. Nyilvánosságra Hozandó Adatok
@@ -81,15 +81,15 @@ Kamarai tagság: Wirtschaftskammer Österreich (WKÖ)
 
 ```
 Adatvédelmi Tisztviselő:     [Név vagy cím]
-Elérhetőség:                tamas.toth@metallagentur.at
+Elérhetőség:                [your-email@example.com]
 ```
 
 ### 8. Szövegszer Nyelvé
 
 ```
 Weboldal nyelve:    Magyar
-Szöveggondozás:     Metallagentur GmbH
-Jogi szöveg:        Metallagentur GmbH + Jogász
+Szöveggondozás:     [Your Organization Name]
+Jogi szöveg:        [Your Organization Name] + Jogász
 ```
 
 ---
@@ -99,7 +99,7 @@ Jogi szöveg:        Metallagentur GmbH + Jogász
 ### 9. Szerzői Jogok
 
 ```
-© 2026 Metallagentur GmbH — Minden jog fenntartva
+© 2026 [Your Organization Name] — Minden jog fenntartva
 
 Digitális Entitás Audit Framework
 Licensz: CC BY-NC-ND 4.0
@@ -159,7 +159,7 @@ Jogsértés esetén: Jogi lépések és kártérítési igény.
 ### 14. GDPR Megfelelőség
 
 ```
-Adatkezelő:                Metallagentur GmbH
+Adatkezelő:                [Your Organization Name]
 Adatkezelés alapja:        GDPR Art. 6 (1) a-b-f
 Jogalapok:                 Hozzájárulás, szerződés, jogos érdek
 Adatvédelmi Nyilatkozat:   GDPR_COMPLIANCE.md (teljes szöveg)
@@ -174,8 +174,8 @@ Adatvédelmi Nyilatkozat:   GDPR_COMPLIANCE.md (teljes szöveg)
 ```
 Teljes szöveg:    TERMS_OF_SERVICE.md
 Alkalmazandó jog: Osztrák Jog
-Jogviszony:       Metallagentur GmbH és az ügyfél között
-Végzésre hely:    Wien, Österreich
+Jogviszony:       [Your Organization Name] és az ügyfél között
+Végzésre hely:    [City], [Country]
 ```
 
 ---
@@ -193,12 +193,12 @@ A Metallagentur **nem felel** a linkelt weboldalak tartalmáért:
 ```
 
 **Felfedezés módja:**
-E-mailben: tamas.toth@metallagentur.at (Subject: Ingatlanműködés)
+E-mailben: [your-email@example.com] (Subject: Ingatlanműködés)
 
 ### 17. Képek és Média
 
 ```
-Fotók:              © Metallagentur GmbH vagy forrás szerint
+Fotók:              © [Your Organization Name] vagy forrás szerint
 Ikonok:             Saját kép vagy CC0 közvetlenből (hivatkozással)
 Videók:             Saját vagy forrásolt (jelölt)
 ```
@@ -212,7 +212,7 @@ Videók:             Saját vagy forrásolt (jelölt)
 **Ha jogsértést vagy adatvédelmi problémát talál:**
 
 ```
-1. E-mailben jelezni:     tamas.toth@metallagentur.at
+1. E-mailben jelezni:     [your-email@example.com]
 2. Tárgy:                 [Impresszum megsértés / Adatvédelmi problé-ma]
 3. Válasz időszak:        14 nap
 4. Jogorvoslat:           Bíróságra való fordulás (Wien)
@@ -222,7 +222,7 @@ Videók:             Saját vagy forrásolt (jelölt)
 
 ```
 Jogdíj kérelem küldéséhez:
-E-mail:     tamas.toth@metallagentur.at
+E-mail:     [your-email@example.com]
 Tárgy:      DMCA / Szerzői Jogi Megsértés
 Leírás:     Mi, hol, hogyan sérült meg
 Azonosítás: Sérelmezett werk URL-je
@@ -235,8 +235,8 @@ Azonosítás: Sérelmezett werk URL-je
 ### 20. Szerkesztői Felelősség
 
 ```
-Felelős szerkesztő:    Tamas Toth
-Szerkesztési hely:     Wien, Österreich
+Felelős szerkesztő:    [Your Name]
+Szerkesztési hely:     [City], [Country]
 Szerkesztési idő:      Folyamatosan (napi frissítés ahol szükséges)
 Utolsó frissítés:      2026-05-08
 ```
@@ -285,7 +285,7 @@ Bejelentés:            accessibility@metallagentur.at
 ### 25. Szociális Média Nyilatkozat
 
 ```
-Felelős szerkesztő (Social Media):  Tamas Toth
+Felelős szerkesztő (Social Media):  [Your Name]
 Platform:                           Facebook, LinkedIn, Instagram, Twitter
 Tartalom moderálása:                Heti 3x áttekintés
 ```
@@ -315,7 +315,7 @@ Jelentős módosítások előfordulhatnak:
 
 | Téma | E-mail | Telefonos | Levél |
 |------|--------|----------|-------|
-| **Általános** | tamas.toth@metallagentur.at | [szám] | Wien |
+| **Általános** | [your-email@example.com] | [szám] | Wien |
 | **Adatvédelmi** | [dpo@metallagentur.at] | [szám] | Wien |
 | **Jogi** | legal@metallagentur.at | [szám] | Wien |
 | **Szerzői jog** | copyright@metallagentur.at | [szám] | Wien |
@@ -323,7 +323,7 @@ Jelentős módosítások előfordulhatnak:
 ### 28. Levélcím
 
 ```
-Metallagentur GmbH
+[Your Organization Name]
 Wien
 Österreich
 
@@ -374,13 +374,13 @@ A weboldal tartalma a legjobb tudás szerint pontosak. Azonban a Metallagentur n
 Cégbejegyzés és szerzői jogi adatok változásait
 kérjük haladéktalanul jelezni:
 
-E-mail: tamas.toth@metallagentur.at
+E-mail: [your-email@example.com]
 Bejelentési díj: EUR 0 (ingyenes)
 ```
 
 ---
 
-**© 2026 Metallagentur GmbH**
+**© 2026 [Your Organization Name]**
 
 *Osztrák E-kereskedelem Törvény (E-Commerce-Gesetz) szerint szükséges jogi nyilatkozat.*
 

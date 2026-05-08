@@ -1,0 +1,242 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    LETÖLTÉS & TELEPÍTÉSI ÚTMUTATÓ                            ║
+║         Digitális Entitás Audit Framework — [Your Organization Name] GmbH               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+📦 ZIP FÁJL TARTALMAZ:
+───────────────────────────────────────────────────────────────────────────────
+
+✓ index.html (38 KB)                     — Interaktív audit kérdőív
+✓ README.md (13 KB)                      — Teljes dokumentáció
+✓ GDPR_COMPLIANCE.md (9 KB)              — GDPR nyilatkozat
+✓ TERMS_OF_SERVICE.md (9 KB)             — Szerződési feltételek
+✓ IMPRESSUM.md (9 KB)                    — Jogi impresszum
+✓ LICENSE.md (7 KB)                      — CC BY-NC-ND 4.0
+✓ 00_START_HERE.md                       — Gyors indítás
+✓ GITHUB_DEPLOYMENT_GUIDE.md             — GitHub Pages útmutató
+✓ Digital_Entity_Audit_Template.md (21 KB) — Elemzési sablon
+✓ ÚTMUTATÓ.txt (12 KB)                   — Felhasználói útmutató
+✓ package.json                           — NPM metaadatok
+✓ .gitignore                             — Git konfigurálás
+
+TELJES MÉRET: ~52 KB (tömörített ZIP)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚀 GYORS TELEPÍTÉS:
+───────────────────────────────────────────────────────────────────────────────
+
+1. ZIP FÁJL KICSOMAGOLÁSA:
+   Windows: Jobb klikk > Extract All
+   Mac: Dupla klikk a ZIP-re
+   Linux: unzip Digital_Entity_Audit_Framework_Complete.zip
+
+2. KÖNYVTÁRSTRUKTÚRA:
+   Digital_Entity_Audit_Framework_Complete/
+   ├── index.html (FŐOLDAL — nyiss meg ezt böngészőben!)
+   ├── README.md (olvasd el először!)
+   ├── 00_START_HERE.md (gyors útmutató)
+   ├── GITHUB_DEPLOYMENT_GUIDE.md (GitHub-ra feltöltéshez)
+   ├── GDPR_COMPLIANCE.md (jogi referencia)
+   ├── TERMS_OF_SERVICE.md
+   ├── IMPRESSUM.md
+   ├── LICENSE.md
+   └── [egyéb dokumentumok]
+
+3. AZONNAL KIPRÓBÁLNI:
+   Nyiss meg az index.html-t böngészőben:
+   - Firefox: File > Open File > index.html
+   - Chrome: File > Open File > index.html
+   - Safari: File > Open > index.html
+   - Edge: File > Open > index.html
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 MIELŐTT GITHUB-RA FELTÖLTÖD:
+───────────────────────────────────────────────────────────────────────────────
+
+⚠️ KRITIKUS MÓDOSÍTÁSOK (index.html-ben):
+
+1. E-MAIL CÍM MÓDOSÍTÁSA:
+   Keresés: [your-email@example.com]
+   Cserélje: az Ön e-mail-cím
+
+2. FORMSPREE ENDPOINT MÓDOSÍTÁSA:
+   a) https://formspree.io oldalra menj
+   b) "New Form" létrehozása az Ön e-mailével
+   c) Az endpoint-ot másold (f/xyz123)
+   d) Az index.html-ben find & replace:
+      https://formspree.io/f/mgvwyvoa → https://formspree.io/f/[SAJÁT_ENDPOINT]
+
+3. IMPRESSUM KITÖLTÉSE (IMPRESSUM.md):
+   [ ] Cégbejegyzés szám (FN)
+   [ ] Adóazonosító (UID)
+   [ ] Konkrét cím Wien-ben
+   [ ] Telefon szám
+   [ ] Biztosítás adatai
+   [ ] Képviselő neve
+
+4. SZERVEZET NEVE MÓDOSÍTÁSA:
+   Keresés: [Your Organization Name] GmbH
+   Cserélje: az Ön szervezet neve (ha szükséges)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🌐 GITHUB-RA FELTÖLTÉS:
+───────────────────────────────────────────────────────────────────────────────
+
+LÉPÉSRŐL LÉPÉSRE:
+
+1. GITHUB ACCOUNT:
+   https://github.com/signup (ha nincs még)
+
+2. ÚJ REPOSITORY LÉTREHOZÁSA:
+   https://github.com/new
+   - Név: digital-entity-audit
+   - Leírás: "Professional Digital Identity Audit Framework"
+   - Public (nyilvános)
+   - Create Repository
+
+3. FÁJLOK FELTÖLTÉSE (GIT PARANCSOK):
+   
+   # Clone a repository-t
+   git clone https://github.com/[USERNAME]/digital-entity-audit.git
+   cd digital-entity-audit
+   
+   # Másolj az összes kicsomagolt fájlt ide
+   cp -r [kicsomagolt fájlok]/* .
+   
+   # Git konfigurálás
+   git config user.name "Neved"
+   git config user.email "email@example.com"
+   
+   # Hozzáadás és feltöltés
+   git add .
+   git commit -m "Initial commit: Digital Entity Audit Framework v1.0"
+   git push origin main
+
+4. GITHUB PAGES AKTIVÁLÁSA:
+   - A GitHub repo-hoz: Settings (fogaskerék ikon)
+   - Görgetess le: "Pages"
+   - Source: "Deploy from a branch"
+   - Branch: "main"
+   - Folder: "/ (root)"
+   - Save
+
+5. ELÉRHETŐ:
+   https://[USERNAME].github.io/digital-entity-audit/
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 RENDSZERRE VONATKOZÓ KÖVETELMÉNYEK:
+───────────────────────────────────────────────────────────────────────────────
+
+BÖNGÉSZŐ:
+✓ Chrome 90+
+✓ Firefox 88+
+✓ Safari 14+
+✓ Edge 90+
+✓ Mobile: iOS Safari 14+, Chrome Android
+
+SZOFTVERRE:
+✓ Nincs szükséges telepítés (csak böngésző)
+✓ Opcionális: Git (GitHub-ra feltöltéshez)
+✓ Opcionális: Node.js (validáláshoz)
+
+INTERNET:
+✓ HTTPS kapcsolat szükséges (Formspree miatt)
+✓ Internet sebesség: legalább 1 Mbps
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔒 BIZTONSÁGI MEGJEGYZÉSEK:
+───────────────────────────────────────────────────────────────────────────────
+
+✓ Az index.html HTTPS-en működik (kötelezően!)
+✓ Formspree: GDPR-kompatibilis, biztonságos e-mail gateway
+✓ A személyes adatok 30 nap után törlésre kerülnek
+✓ Nincsenek harmadik féltől származó tracking scriptok
+✓ Nincsenek cookie-k (csak session-ös működéshez)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚖️ JOGI NYILATKOZATOK:
+───────────────────────────────────────────────────────────────────────────────
+
+LICENSZ: CC BY-NC-ND 4.0
+- BY (Attribution): hivatkozni kell [Your Organization Name]-ra
+- NC (Non-Commercial): kereskedelmi felhasználás tilos
+- ND (No Derivatives): módosítás tilos
+
+GDPR COMPLIANCE: Teljes
+- GDPR 2016/679/EU szerint 100% kompatibilis
+- Osztrák DSG megfelelő
+- EU E-commerce Irányelv szerinti
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📞 TÁMOGATÁS:
+───────────────────────────────────────────────────────────────────────────────
+
+E-MAIL: [your-email@example.com]
+WEBSITE: https://www.your-website.com
+GITHUB: Issues: https://github.com/[USERNAME]/digital-entity-audit/issues
+
+DOKUMENTÁCIÓ:
+- 00_START_HERE.md — Gyors indítás
+- README.md — Teljes technikai dokumentáció
+- GITHUB_DEPLOYMENT_GUIDE.md — GitHub Pages
+- GDPR_COMPLIANCE.md — Jogi referencia
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ ELLENŐRZÉSI LISTA A FELTÖLTÉS ELŐTT:
+───────────────────────────────────────────────────────────────────────────────
+
+Lokális teszt:
+  [ ] index.html megnyitható böngészőben
+  [ ] Forma betöltődik
+  [ ] E-mail cím helyesen szerepel
+  [ ] Formspree endpoint beállítva
+  [ ] Összes dokumentum jó
+
+GitHub előkészítés:
+  [ ] Git telepítve
+  [ ] GitHub account létrehozva
+  [ ] Repository létrehozva
+  [ ] SSH/HTTPS kulcs beállítva
+
+Feltöltés után:
+  [ ] index.html megjelenik GitHub-on
+  [ ] README.md megjelenik
+  [ ] GitHub Pages aktív
+  [ ] HTTPS működik
+  [ ] Forma működik
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📦 VERZIÓ INFORMÁCIÓ:
+───────────────────────────────────────────────────────────────────────────────
+
+Projekt: Digitális Entitás Audit Framework
+Verzió: 1.0.0
+Kiadás dátuma: 2026-05-08
+Szervezet: [Your Organization Name] GmbH
+Ország: Österreich (Austria)
+
+Frissítések:
+v1.0.0 — Kezdeti kibocsátás
+v1.1.0 (tervezett) — Angol & német fordítások
+v2.0.0 (tervezett) — AI audit-generátor
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎉 KÉSZ A FELTÖLTÉSHEZ!
+
+Az audit-keretrendszer teljes, production-ready és GDPR-kompatibilis.
+
+Köszönjük, hogy a [Your Organization Name] audit-keretrendszert használod!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+© 2026 [Your Organization Name] GmbH | GDPR-kompatibilis | CC BY-NC-ND 4.0

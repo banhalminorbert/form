@@ -1,6 +1,6 @@
 # 🎯 START HERE — Digitális Entitás Audit Framework
 
-**Metallagentur GmbH**
+**[Your Organization Name] GmbH**
 
 ---
 
@@ -112,7 +112,7 @@ Az index.html űrlapja **automatikusan elküldi az e-maileket** a **Formspree** 
 **Hogy működik:**
 
 1. Ügyfél kitölti az online formát
-2. Formspree elküldi: `tamas.toth@metallagentur.at`
+2. Formspree elküldi: `[your-email@example.com]`
 3. Válaszok **automatikusan estrutúráltan** érkeznek
 
 **Tesetelés:**
@@ -143,11 +143,11 @@ index.html-ben keresed a `:root` CSS-t:
 
 ### E-mail Cím Módosítása
 
-Keresés: `tamas.toth@metallagentur.at` — helyettesítsd a saját e-maileddel
+Keresés: `[your-email@example.com]` — helyettesítsd a saját e-maileddel
 
 ### Weboldal Neve/Branding
 
-Keresés: `Metallagentur GmbH` — helyettesítsd a szervezeted nevével
+Keresés: `[Your Organization Name] GmbH` — helyettesítsd a szervezeted nevével
 
 ---
 
@@ -237,8 +237,8 @@ A fordítások a `docs/` mappában lesznek.
 ### Kontakt
 
 ```
-E-mail: tamas.toth@metallagentur.at
-Website: https://www.metallagentur.at
+E-mail: [your-email@example.com]
+Website: https://www.your-website.com
 GitHub Issues: [GitHub repo]/issues
 ```
 
@@ -261,16 +261,16 @@ GitHub Issues: [GitHub repo]/issues
 
 ## 🎉 Kész!
 
-Az audit-keretrendszer **production-ready**. Üdvözlünk a Metallagentur szövetségében!
+Az audit-keretrendszer **production-ready**. Üdvözlünk a [Your Organization Name] szövetségében!
 
 ```
 👉 Indíts el: index.html
 👉 GitHub: https://github.com/[USERNAME]/digital-entity-audit
-👉 Support: tamas.toth@metallagentur.at
+👉 Support: [your-email@example.com]
 ```
 
 ---
 
-**© 2026 Metallagentur GmbH | GDPR-kompatibilis | CC BY-NC-ND 4.0**
+**© 2026 [Your Organization Name] GmbH | GDPR-kompatibilis | CC BY-NC-ND 4.0**
 
 *Verzió: 1.0.0 | 2026-05-08*

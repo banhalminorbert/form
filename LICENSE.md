@@ -1,6 +1,6 @@
 # LICENSE — Digitális Entitás Audit Framework
 
-**Metallagentur GmbH**
+**[Your Organization Name]**
 
 ---
 
@@ -28,7 +28,7 @@ A **Digitális Entitás Audit Framework**, amely magában foglalja:
 - Az ehhez kapcsolódó dokumentáció
 
 ### Licenciátor
-**Metallagentur GmbH**, Wien, Österreich, www.metallagentur.at
+**[Your Organization Name]**, [City], [Country], www.metallagentur.at
 
 ### Ön (vagy az Ön szervezete)
 Bármely személy vagy entitás, amely betartja a feltételeket.
@@ -47,15 +47,15 @@ Az alábbi feltételek mellett **ingyenesen** használhatja a Munkát:
 ### 2.1 Attribution (Hivatkozás)
 
 **Kötelezően meg kell adnia:**
-- Az eredeti munka szerzője: Metallagentur GmbH
+- Az eredeti munka szerzője: [Your Organization Name]
 - A munka címe: "Digitális Entitás Audit Framework"
-- Az eredeti munka helye: https://www.metallagentur.at
+- Az eredeti munka helye: https://www.your-website.com
 - A munka licensz típusa: CC BY-NC-ND 4.0
 
 **Ideális hivatkozás:**
 ```
-"Digitális Entitás Audit Framework" © 2026 Metallagentur GmbH, 
-CC BY-NC-ND 4.0 https://www.metallagentur.at
+"Digitális Entitás Audit Framework" © 2026 [Your Organization Name], 
+CC BY-NC-ND 4.0 https://www.your-website.com
 ```
 
 ### 2.2 NonCommercial (Nem-Kereskedelmi)
@@ -114,7 +114,7 @@ A Metallagentur fenntartja:
 ## 5. Szerzői Jogi Nyilatkozat
 
 ```
-Copyright © 2026 Metallagentur GmbH
+Copyright © 2026 [Your Organization Name]
 
 Alle Rechte vorbehalten (All rights reserved).
 ```
@@ -124,9 +124,9 @@ Amennyiben nincs szerzői jogi nyilatkozat egy fájlban, az alábbi szöveg teki
 ```html
 <!--
 Digitális Entitás Audit Framework
-© 2026 Metallagentur GmbH
+© 2026 [Your Organization Name]
 CC BY-NC-ND 4.0
-https://www.metallagentur.at
+https://www.your-website.com
 -->
 ```
 
@@ -267,9 +267,9 @@ A teljes CC BY-NC-ND 4.0 licenc elolvasható:
 **Ha szeretnél kereskedelmi licencet kapni,** vagy ha eltérő feltételek szerinti licenszálásra van szükséged:
 
 ```
-Metallagentur GmbH
-E-mail: tamas.toth@metallagentur.at
-Weboldal: https://www.metallagentur.at
+[Your Organization Name]
+E-mail: [your-email@example.com]
+Weboldal: https://www.your-website.com
 Telefon: [szám]
 ```
 
@@ -283,6 +283,6 @@ Telefon: [szám]
 
 ---
 
-**© 2026 Metallagentur GmbH — Creative Commons BY-NC-ND 4.0 — All Rights Reserved**
+**© 2026 [Your Organization Name] — Creative Commons BY-NC-ND 4.0 — All Rights Reserved**
 
 *Ez a dokumentum az érvényes CC BY-NC-ND 4.0 nemzetközi licencet értelmezi az osztrák jog szempontjából.*

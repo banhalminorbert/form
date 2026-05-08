@@ -1,26 +1,26 @@
 # GDPR Compliance & Adatvédelmi Nyilatkozat
 
-**Metallagentur GmbH**  
-Wien, Österreich  
+**[Your Organization Name]**  
+[City], [Country]  
 www.metallagentur.at  
-tamas.toth@metallagentur.at
+[your-email@example.com]
 
 ---
 
 ## 1. Adatkezelő és Adatfeldolgozó
 
 ### Adatkezelő (Controller)
-**Metallagentur GmbH**
-- Cím: Wien, Österreich
+**[Saját szervezet neve]**
+- Cím: [Város], [Ország]
 - Telefon: [telefonszám]
-- E-mail: tamas.toth@metallagentur.at
-- Weboldal: https://www.metallagentur.at
-- Képviselet: Tamas Toth (Geschäftsführer)
+- E-mail: [your-email@example.com]
+- Weboldal: https://www.your-website.com
+- Képviselet: [Saját név] (Ügyvezető)
 
 ### Adatvédelmi Tisztségviselő (Data Protection Officer)
 [Ha szükséges — kötelezően erre szükség van, ha az adatkezelés rendszeres és nagyléptékű felügyeletét jelenti]
 
-E-mail: [dpo@metallagentur.at]
+E-mail: [dpo@your-website.com]
 
 ---
 
@@ -130,7 +130,7 @@ Az EU Bizottság által jóváhagyott standard szerződési feltételek (2021/91
 
 **Kérelem küldéséhez:**
 ```
-E-mail: tamas.toth@metallagentur.at
+E-mail: [your-email@example.com]
 Tárgy: GDPR Art. 15 — Hozzáférés kérése
 ```
 
@@ -145,7 +145,7 @@ Tárgy: GDPR Art. 15 — Hozzáférés kérése
 
 **Kérelem:**
 ```
-E-mail: tamas.toth@metallagentur.at
+E-mail: [your-email@example.com]
 Tárgy: GDPR Art. 16 — Helyesbítés kérése
 ```
 
@@ -165,7 +165,7 @@ Tárgy: GDPR Art. 16 — Helyesbítés kérése
 
 **Kérelem:**
 ```
-E-mail: tamas.toth@metallagentur.at
+E-mail: [your-email@example.com]
 Tárgy: GDPR Art. 17 — Törlés kérése
 ```
 
@@ -185,7 +185,7 @@ Tárgy: GDPR Art. 17 — Törlés kérése
 **Jogában áll, hogy az adatokat gépileg olvasható formátumban (JSON, CSV) kapja meg.**
 
 ```
-E-mail: tamas.toth@metallagentur.at
+E-mail: [your-email@example.com]
 Tárgy: GDPR Art. 20 — Adathordozhatóság kérése
 ```
 
@@ -201,7 +201,7 @@ Tárgy: GDPR Art. 20 — Adathordozhatóság kérése
 - Közvetlen marketing célú
 
 ```
-E-mail: tamas.toth@metallagentur.at
+E-mail: [your-email@example.com]
 Tárgy: GDPR Art. 21 — Tiltakozás
 ```
 
@@ -292,16 +292,16 @@ Ha jelentős változások történnek (pl. új adatkezelési célok), e-mailben 
 **Adatvédelmi Kérdéseihez:**
 
 ```
-Metallagentur GmbH
+[Your Organization Name]
 Adatvédelmi Tisztviselő
-E-mail: tamas.toth@metallagentur.at
+E-mail: [your-email@example.com]
 Telefon: [számtelefon]
-Weboldal: https://www.metallagentur.at
+Weboldal: https://www.your-website.com
 ```
 
 ---
 
-**© 2026 Metallagentur GmbH**  
+**© 2026 [Your Organization Name]**  
 **GDPR-kompatibilis | Osztrák DSG megfelelő**
 
 ---

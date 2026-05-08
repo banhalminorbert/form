@@ -2,7 +2,7 @@
 
 **Professional Digital Identity & Reputation Strategy Assessment Tool**
 
-A [Metallagentur GmbH](https://www.metallagentur.at) által fejlesztett, GDPR-kompatibilis, professzonális audit-rendszer vállalkozók, közéleti személyiségek és szervezetek digitális jelenlétének értékeléséhez.
+A [[Your Organization Name]](https://www.your-website.com) által fejlesztett, GDPR-kompatibilis, professzonális audit-rendszer vállalkozók, közéleti személyiségek és szervezetek digitális jelenlétének értékeléséhez.
 
 ---
 
@@ -15,7 +15,7 @@ A [Metallagentur GmbH](https://www.metallagentur.at) által fejlesztett, GDPR-ko
 ├── README.md                          # Ez a dokumentum
 ├── GDPR_COMPLIANCE.md                 # GDPR és osztrák adatvédelmi nyilatkozat
 ├── LICENSE.md                         # Jogok és felelősség korlátozás
-├── IMPRESSUM.md                       # Impresszum (Metallagentur GmbH)
+├── IMPRESSUM.md                       # Impresszum ([Your Organization Name])
 ├── TERMS_OF_SERVICE.md                # Felhasználási feltételek
 └── docs/
     ├── Digital_Entity_Audit_Template.md
@@ -94,7 +94,7 @@ Az `index.html` az alábbi GDPR-követelményeket teljesíti:
 ✓ **Artikulus 20**: Adathordozhatóság (teljes JSON export az e-mailben)  
 ✓ **Artikulus 21**: Jog a hozzájárulás megvonásához (e-mail-ben nyújtva)
 
-**Adatkezelő**: Metallagentur GmbH, Wien, Österreich  
+**Adatkezelő**: [Your Organization Name], [City], [Country]  
 **Ügyfél céljára végzett feldolgozás**: Digitális entitás audit és stratégiai tanácsadás  
 **Tárolási időtartam**: 30 nap, majd végleges törlés (vagy megmarad, ha szerződés kötik)
 
@@ -109,10 +109,10 @@ Az alábbi osztrák szabályozás megsértésének elkerülésével:
 ### Jogi Nyilatkozatok az index.html-ben
 
 1. **Impresszum (Pflichtangaben nach TMG/E-Commerce-Richtlinie)**
-   - Szervezet neve: Metallagentur GmbH
-   - Cím: Wien, Österreich
+   - Szervezet neve: [Your Organization Name]
+   - Cím: [City], [Country]
    - Felelős: Tamas Toth
-   - E-mail: tamas.toth@metallagentur.at
+   - E-mail: [your-email@example.com]
    - Törvényi forma: GmbH
 
 2. **Adatvédelmi Nyilatkozat**
@@ -178,8 +178,8 @@ Ajánlott: CC BY-NC-ND 4.0 (Creative Commons)
 Közvetlenül szükséges osztrák és EU kötelezettségek:
 
 ```
-Metallagentur GmbH
-Wien, Österreich
+[Your Organization Name]
+[City], [Country]
 FN: [Firmenregister szám]
 ÖSt.ID: [ÖSt.ID szám]
 Geschäftsführer: Tamas Toth
@@ -282,7 +282,7 @@ EGYÉB MEGJEGYZÉSEK
 JOGI NYILATKOZATOK
 
 ================================================
-GDPR-KOMPATIBILIS | Metallagentur GmbH
+GDPR-KOMPATIBILIS | [Your Organization Name]
 ```
 
 ---
@@ -341,7 +341,7 @@ server {
 - [ ] Formspree végpont beállítása
 - [ ] SSL/TLS tanúsítvány (produktion)
 - [ ] Impresszum kitöltése (Metallagentur adatok)
-- [ ] E-mail-cím megadása (tamas.toth@metallagentur.at)
+- [ ] E-mail-cím megadása ([your-email@example.com])
 - [ ] Backup stratégia (mined 30 nap adattörlés)
 - [ ] Privacy Policy link működése
 - [ ] Mobile responsiveness teszt
@@ -362,9 +362,9 @@ Az audit-keretrendszer az alábbi feltételek alatt módosítható:
 
 ## 📞 Támogatás és Kontakt
 
-**Metallagentur GmbH**
-- Web: https://www.metallagentur.at
-- E-mail: tamas.toth@metallagentur.at
+**[Your Organization Name]**
+- Web: https://www.your-website.com
+- E-mail: [your-email@example.com]
 - Ország: Österreich (Austria)
 - Forma: GmbH (Gesellschaft mit beschränkter Haftung)
 
@@ -441,12 +441,12 @@ A fordítási berkehezést a `docs/` mappában végezzük.
 
 ---
 
-**© 2026 Metallagentur GmbH. All rights reserved.**
+**© 2026 [Your Organization Name]. All rights reserved.**
 
 *Gitub repository: [digital-entity-audit](https://github.com/metallagentur/digital-entity-audit)*
 
 ---
 
 **Last Updated**: 2026-05-08  
-**Maintainer**: Metallagentur GmbH  
+**Maintainer**: [Your Organization Name]  
 **Status**: Production Ready ✓

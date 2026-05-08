@@ -1,6 +1,6 @@
 # Felhasználási Feltételek (Terms of Service)
 
-**Metallagentur GmbH**  
+**[Your Organization Name]**  
 Wien, Österreich  
 www.metallagentur.at
 
@@ -22,7 +22,7 @@ A **Digitális Entitás Audit Framework** egy interaktív kérdőív és straté
 Az audit-keretrendszer szellemi tulajdon az alábbiak szerint:
 
 ```
-© 2026 Metallagentur GmbH
+© 2026 [Your Organization Name]
 
 Licensz: CC BY-NC-ND 4.0
 - BY (Attribution): Kötelezően hivatkozni kell Metallagentur-ra
@@ -42,7 +42,7 @@ Licensz: CC BY-NC-ND 4.0
 
 | Szellemi Termék | Tulajdonos | Felhasználási Jog |
 |---|---|---|
-| **Audit-keretrendszer (HTML/CSS/JS)** | Metallagentur GmbH | CC BY-NC-ND 4.0 |
+| **Audit-keretrendszer (HTML/CSS/JS)** | [Your Organization Name] | CC BY-NC-ND 4.0 |
 | **Audit-dokumentum (ügyfélre szabott)** | Ügyfél | Kizárólagos (titkos) |
 | **Stratégiai javaslatok** | Ügyfél + Metallagentur | Közös (szerződés alapján) |
 
@@ -336,15 +336,15 @@ Később továbbra is érvényre juttatható
 **Ha kérdése van a feltételekről:**
 
 ```
-Metallagentur GmbH
-E-mail: tamas.toth@metallagentur.at
-Weboldal: https://www.metallagentur.at
+[Your Organization Name]
+E-mail: [your-email@example.com]
+Weboldal: https://www.your-website.com
 Telefon: [szám]
 ```
 
 ---
 
-**© 2026 Metallagentur GmbH**
+**© 2026 [Your Organization Name]**
 
 *Ezek a feltételek az österreichisches Recht (osztrák jog) szerint értelmezendőek és végrehajthatóak.*
 

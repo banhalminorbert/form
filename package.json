@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Professional Digital Identity & Reputation Strategy Assessment Tool - GDPR compliant",
   "author": {
-    "name": "Metallagentur GmbH",
-    "email": "tamas.toth@metallagentur.at",
-    "url": "https://www.metallagentur.at"
+    "name": "[Your Organization Name]",
+    "email": "[your-email@example.com]",
+    "url": "https://www.your-website.com"
   },
   "license": "CC-BY-NC-ND-4.0",
   "repository": {
@@ -14,9 +14,9 @@
   },
   "bugs": {
     "url": "https://github.com/metallagentur/digital-entity-audit/issues",
-    "email": "tamas.toth@metallagentur.at"
+    "email": "[your-email@example.com]"
   },
-  "homepage": "https://www.metallagentur.at",
+  "homepage": "https://www.your-website.com",
   "keywords": [
     "digital-identity",
     "reputation-management",
@@ -84,19 +84,19 @@
   },
   "funding": {
     "type": "individual",
-    "url": "https://www.metallagentur.at"
+    "url": "https://www.your-website.com"
   },
   "contributors": [
     {
       "name": "Tamas Toth",
-      "email": "tamas.toth@metallagentur.at",
-      "url": "https://www.metallagentur.at"
+      "email": "[your-email@example.com]",
+      "url": "https://www.your-website.com"
     }
   ],
   "organization": {
-    "name": "Metallagentur GmbH",
+    "name": "[Your Organization Name]",
     "country": "Österreich",
     "city": "Wien",
-    "website": "https://www.metallagentur.at"
+    "website": "https://www.your-website.com"
   }
 }
