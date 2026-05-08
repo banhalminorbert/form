@@ -114,7 +114,7 @@
       content: "→";
       position: absolute;
       left: 0;
-      color: var(--gold);
+      color: var(--charcoal);
       font-weight: bold;
     }
     
@@ -194,7 +194,7 @@
     textarea:focus,
     select:focus {
       outline: none;
-      border-color: var(--gold);
+      border-color: var(--charcoal);
       background: white;
       box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
     }
@@ -223,7 +223,7 @@
       height: 18px;
       margin-right: 12px;
       cursor: pointer;
-      accent-color: var(--gold);
+      accent-color: var(--charcoal);
     }
     
     .checkbox-item label,
@@ -253,7 +253,7 @@
     }
     
     .legal-notice a {
-      color: var(--gold);
+      color: var(--charcoal);
       text-decoration: none;
       font-weight: 600;
     }
@@ -325,7 +325,7 @@
     }
     
     footer a {
-      color: var(--gold);
+      color: var(--charcoal);
       text-decoration: none;
     }
     
@@ -377,8 +377,8 @@
       <h1>Digitális Entitás Stratégia</h1>
       <p>Intellektuális Tőke & Reputáció Audit — Professzionális Értékelőlapok</p>
       <div class="header-brand">
-        <p><strong>Metallagentur GmbH</strong> | Wien, Österreich</p>
-        <p><a href="https://www.metallagentur.at" target="_blank" rel="noopener noreferrer">www.metallagentur.at</a></p>
+        <p><strong>[Szervezet neve]</strong> | [Város, Ország]</p>
+        <p><a href="https://www.your-website.com" target="_blank" rel="noopener noreferrer">www.your-website.com</a></p>
       </div>
     </header>
 
@@ -571,9 +571,149 @@
         </div>
       </div>
 
-      <!-- SECTION 6: KAPCSOLATOK ÉS KIEGÉSZÍTÉSEK -->
+      <!-- SECTION 6: OSZTRÁK ÜZLETI JELLEMZŐK -->
       <div class="form-section">
-        <h3 class="section-header">6. Szövetségek, Partneri és Kiegészítő Információ</h3>
+        <h3 class="section-header">6. Osztrák Üzleti Jellemzők és Piacra Lépés</h3>
+        <p class="section-subtitle">Ausztriában való üzletmenet és piacra lépési stratégia</p>
+
+        <div class="form-group">
+          <label>Az Ön szervezet Ausztriában van-e vagy tervez-e ausztriai expanziót? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="austria-yes" name="austriaPresence" value="yes" required />
+              <label for="austria-yes">Igen, már van ausztriai jelenlétünk</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="austria-planned" name="austriaPresence" value="planned" required />
+              <label for="austria-planned">Tervezzük a piacra lépést</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="austria-no" name="austriaPresence" value="no" required />
+              <label for="austria-no">Nem, de érdekelt a lehetőségben</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Mely ausztriai régióban vagy városban szeretne működni? <span class="required">*</span></label>
+          <input type="text" name="austriaRegion" required placeholder="Pl. Wien (Bécs), Graz, Linz, Salzburg, Innsbruck, Vorarlberg" />
+        </div>
+
+        <div class="form-group">
+          <label>Ausztrián kívül mely EU-s vagy EGT-s piacokat érinti az Ön stratégiája? <span class="required">*</span></label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-germany" name="austrianMarkets" value="Germany" />
+              <label for="market-germany">Németország</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-czechia" name="austrianMarkets" value="Czech Republic" />
+              <label for="market-czechia">Csehország</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-poland" name="austrianMarkets" value="Poland" />
+              <label for="market-poland">Lengyelország</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-slovakia" name="austrianMarkets" value="Slovakia" />
+              <label for="market-slovakia">Szlovákia</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-romania" name="austrianMarkets" value="Romania" />
+              <label for="market-romania">Románia</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-slovenia" name="austrianMarkets" value="Slovenia" />
+              <label for="market-slovenia">Szlovénia</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-italy" name="austrianMarkets" value="Italy" />
+              <label for="market-italy">Olaszország</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="market-switzerland" name="austrianMarkets" value="Switzerland" />
+              <label for="market-switzerland">Svájc</label>
+            </div>
+          </div>
+          <span class="label-info">Ausztria stratégiai helyzete: Közép-Kelet-Európa kapuja az EU-ba</span>
+        </div>
+
+        <div class="form-group">
+          <label>Milyen jogszabályi vagy szabályozási kihívásokat szembesül az Ausztriában való működéskor? <span class="required">*</span></label>
+          <textarea name="austriaRegulatoryIssues" required placeholder="Pl. GmbH regisztrációs követelmények, osztrák munkaügyi törvények, GDPR megfelelőség, ÁFA szabályozás, statisztikai bejelentési kötelezettségek"></textarea>
+          <span class="label-info">Osztrák jogszabályi információkért: Külgazdasági Iroda Bécs - trade.vie@mfa.gov.hu</span>
+        </div>
+
+        <div class="form-group">
+          <label>Szükséges-e helyi partner vagy képviselő Ausztriában? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="partner-austria-yes" name="austriaPartnerNeeded" value="yes" required />
+              <label for="partner-austria-yes">Igen, szükséges lokális jelenlét</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="partner-austria-maybe" name="austriaPartnerNeeded" value="maybe" required />
+              <label for="partner-austria-maybe">Lehet, de nem biztosan</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="partner-austria-no" name="austriaPartnerNeeded" value="no" required />
+              <label for="partner-austria-no">Nem szükséges</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Van-e kapcsolata osztrák kereskedelmi szervezetekkel vagy iparkamara tagjaival? <span class="required">*</span></label>
+          <textarea name="austriaBusinessContacts" required placeholder="Pl. Magyar Kereskedelmi és Iparkamara, Enterprise Europe Network, helyi kereskedelmi kamarák, Nemzeti Befektetési Ügynökség (HIPA)"></textarea>
+          <span class="label-info">Az ausztriai Nagykövetség Külgazdasági Irodája segítségnyújtó partnerként működik</span>
+        </div>
+
+        <div class="form-group">
+          <label>Milyen nyelvű kommunikáció szükséges az Ön ausztriai üzleti partnereivel? <span class="required">*</span></label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="lang-german" name="austriaLanguages" value="German" />
+              <label for="lang-german">Német</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="lang-english" name="austriaLanguages" value="English" />
+              <label for="lang-english">Angol</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="lang-hungarian" name="austriaLanguages" value="Hungarian" />
+              <label for="lang-hungarian">Magyar</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="lang-other-austria" name="austriaLanguages" value="Other" />
+              <label for="lang-other-austria">Egyéb</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Mely ausztriai gazdasági szektorok érdekelnek? <span class="required">*</span></label>
+          <input type="text" name="austriaIndustries" required placeholder="Pl. mérnöki tanácsadás, IT/szoftver, mezőgazdaság, turizmus, fenntartható energia, gyógyszertan, logisztika" />
+        </div>
+
+        <div class="form-group">
+          <label>Finanszírozás: Igényelne-e magyar kormányzati támogatást az ausztriai piacra lépéshez? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="funding-yes" name="austriaFundingSupport" value="yes" required />
+              <label for="funding-yes">Igen, érdeklődik a finanszírozási lehetőségek iránt</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="funding-maybe" name="austriaFundingSupport" value="maybe" required />
+              <label for="funding-maybe">Talán, függhet a feltételektől</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="funding-no" name="austriaFundingSupport" value="no" required />
+              <label for="funding-no">Nem szükséges</label>
+            </div>
+          </div>
+          <span class="label-info">HIPA, HEPA, magyar export-import finanszírozási programok</span>
+        </div>
+      </div>
         <p class="section-subtitle">Egyedül vagy több személyből álló entitás-architektúra?</p>
 
         <div class="form-group">
@@ -610,7 +750,7 @@
 
       <!-- SECTION 7: TECHNIKAI ÉS JOGI KÉRDÉSEK -->
       <div class="form-section">
-        <h3 class="section-header">7. Technikai és Jogi Kérdések</h3>
+        <h3 class="section-header">8. Technikai és Jogi Kérdések</h3>
         <p class="section-subtitle">Technikai előfeltételek és szenzitív témák</p>
 
         <div class="form-group">
@@ -677,7 +817,7 @@
 
       <!-- SECTION 8: JOGI ÉS ADATVÉDELMI NYILATKOZATOK -->
       <div class="form-section">
-        <h3 class="section-header">8. Jogi és Adatvédelmi Nyilatkozatok (GDPR)</h3>
+        <h3 class="section-header">9. Jogi és Adatvédelmi Nyilatkozatok (GDPR)</h3>
         <p class="section-subtitle">Az EU és az Osztrák jogszabályoknak megfelelő szükséges hozzájárulások</p>
 
         <div class="legal-notice">
@@ -721,7 +861,7 @@
           <p><strong>Cím:</strong> Wien</p>
           <p><strong>Weboldal:</strong> <a href="https://www.metallagentur.at" target="_blank">www.metallagentur.at</a></p>
           <p><strong>Felelős:</strong> Tamas Toth</p>
-          <p><strong>E-mail:</strong> <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:[your-email@example.com]">[your-email@example.com]</a></p>
           <p><strong>Törvényi Forma:</strong> GmbH (Gesellschaft mit beschränkter Haftung)</p>
         </div>
 
@@ -758,7 +898,7 @@
 
       <!-- SECTION 9: EGYÉB MEGJEGYZÉSEK -->
       <div class="form-section">
-        <h3 class="section-header">9. Egyéb Megjegyzések és Kontakt Preferenciák</h3>
+        <h3 class="section-header">10. Egyéb Megjegyzések és Kontakt Preferenciák</h3>
 
         <div class="form-group">
           <label>Bármi, amit fontos tudnunk az Ön profiláról vagy az auditról?</label>
@@ -802,22 +942,22 @@
 
     <footer>
       <div class="footer-section">
-        <h4 style="color: var(--gold); margin-bottom: 10px;">Metallagentur GmbH</h4>
-        <p>Wien, Österreich</p>
-        <p>Digitale Entitäten & Reputationsstrategien</p>
+        <h4 style="color: var(--charcoal); margin-bottom: 10px;">[Szervezet neve]</h4>
+        <p>[Város], [Ország]</p>
+        <p>Digitális Stratégia és Audit Szolgáltatások</p>
       </div>
       
       <div class="footer-links">
-        <a href="https://www.metallagentur.at" target="_blank" rel="noopener noreferrer">www.metallagentur.at</a>
-        <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a>
+        <a href="https://www.your-website.com" target="_blank" rel="noopener noreferrer">www.your-website.com</a>
+        <a href="mailto:[your-email@example.com]">[your-email@example.com]</a>
         <a href="#" id="privacyLink">Adatvédelmi Nyilatkozat</a>
         <a href="#" id="impressumLink">Impresszum</a>
       </div>
       
       <div class="footer-section">
-        <p>© 2026 Metallagentur GmbH. Alle Rechte vorbehalten.</p>
+        <p>© 2026 [Szervezet neve]. Minden jog fenntartva.</p>
         <p style="font-size: 0.8rem; margin-top: 10px;">GDPR-kompatibilis | Osztrák Adatvédelmi Törvény (DSG) megfelelő</p>
-        <p style="font-size: 0.8rem;">Form Version 1.0 | Aktualizálva: 2026-05-08</p>
+        <p style="font-size: 0.8rem;">Form Version 1.0 | Utolsó frissítés: 2026-05-08</p>
       </div>
     </footer>
   </div>
@@ -959,7 +1099,7 @@ GDPR-kompatibilis | Osztrák DSG megfelelő
 
       // Send via email (using formspree)
       try {
-        const response = await fetch('https://formspree.io/f/mgvwyvoa', {
+        const response = await fetch('https://formspree.io/f/[SAJÁT_ENDPOINT]', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -988,12 +1128,12 @@ GDPR-kompatibilis | Osztrák DSG megfelelő
     // Legal link handlers
     document.getElementById('privacyLink').addEventListener('click', (e) => {
       e.preventDefault();
-      alert('Adatvédelmi Nyilatkozat:\n\nA személyes adatok GDPR (2016/679/EU) és az Osztrák DSG szerint kezelkednek.\n\nAdatkezelő: Metallagentur GmbH\nCél: Digitális entitás audit\nTárolás: 30 nap vagy a megkötött szerződésig\n\nJogok: Hozzáférés, javítás, törlés, adathordozhatóság\n\nA részletekért lépjen kapcsolatba: tamas.toth@metallagentur.at');
+      alert('Adatvédelmi Nyilatkozat:\n\nA személyes adatok GDPR (2016/679/EU) és az Osztrák DSG szerint kezelkednek.\n\nAdatkezelő: [Saját szervezet neve]\nCél: Digitális entitás audit\nTárolás: 30 nap vagy a megkötött szerződésig\n\nJogok: Hozzáférés, javítás, törlés, adathordozhatóság\n\nA részletekért lépjen kapcsolatba: [your-email@example.com]');
     });
 
     document.getElementById('impressumLink').addEventListener('click', (e) => {
       e.preventDefault();
-      alert('Impresszum:\n\nOrganización: Metallagentur GmbH\nHely: Wien, Österreich\nTörvényi forma: GmbH\nWebsite: www.metallagentur.at\nE-mail: tamas.toth@metallagentur.at\n\n© 2026 Metallagentur GmbH. Alle Rechte vorbehalten.');
+      alert('Impresszum:\n\nSzervezet: [Saját szervezet neve]\nHely: [Város], [Ország]\nTörvényi forma: [GmbH/Kft./etc.]\nWebsite: www.your-website.com\nE-mail: [your-email@example.com]\n\n© 2026 [Saját szervezet neve]. Minden jog fenntartva.');
     });
   </script>
 </body>
