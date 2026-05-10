@@ -82,6 +82,9 @@
       margin-bottom: 40px;
       border-radius: 8px;
       line-height: 1.8;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .intro-box h2 {
@@ -124,6 +127,9 @@
       padding: 50px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
       margin-bottom: 0;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .form-section {
@@ -322,6 +328,8 @@
       font-size: 0.85rem;
       opacity: 0.9;
       margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     footer a {
@@ -356,8 +364,16 @@
         font-size: 2.2rem;
       }
       
+      .container {
+        padding: 0 1rem;
+      }
+      
       form {
         padding: 30px 20px;
+      }
+      
+      .intro-box {
+        padding: 20px 15px;
       }
       
       .button-group {
@@ -576,9 +592,149 @@
         </div>
       </div>
 
-      <!-- SECTION 6: OSZTRÁK ÜZLETI JELLEMZŐK -->
+      <!-- SECTION 6: ENTITÁS-ALAPÚ STRATÉGIA -->
       <div class="form-section">
-        <h3 class="section-header">6. Osztrák Üzleti Jellemzők és Piacra Lépés</h3>
+        <h3 class="section-header">6. Entitás-Alapú Stratégia (Entity-First Positioning)</h3>
+        <p class="section-subtitle">A modern keresés (Google, ChatGPT, Gemini) entitásokra, nem kulcsszavakra alapul</p>
+
+        <div class="form-group">
+          <label>Ön mint ENTITÁS: Hogyan határozná meg magát egyetlen mondatban? <span class="required">*</span></label>
+          <textarea name="entityDefinition" required placeholder="Pl. 'Norbert Banhalmi: executive portréfotós, Bécs' vagy 'Budapest-i digitális stratéga, startup mentorálás'"></textarea>
+          <span class="label-info">Ez lesz az alapja a Knowledge Graph és AI-keresési optimalizálásnak</span>
+        </div>
+
+        <div class="form-group">
+          <label>Wikidata Jelenlét <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="wikidata-yes" name="wikidataPresence" value="yes" required />
+              <label for="wikidata-yes">Igen, Wikidata Q-szám: <input type="text" name="wikidataId" placeholder="pl. Q138425941" style="width: 200px; padding: 8px; margin-left: 10px;" /></label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="wikidata-no" name="wikidataPresence" value="no" required />
+              <label for="wikidata-no">Nincs, de szeretnék</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="wikidata-notneed" name="wikidataPresence" value="notneed" required />
+              <label for="wikidata-notneed">Nem szükséges</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Google Knowledge Panel: Szerepel Önről? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="kgpanel-yes" name="kgPanel" value="yes" required />
+              <label for="kgpanel-yes">Igen, Google Knowledge Panel URL: <input type="url" name="kgPanelUrl" placeholder="https://..." style="width: 300px; padding: 8px; margin-left: 10px;" /></label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="kgpanel-no" name="kgPanel" value="no" required />
+              <label for="kgpanel-no">Nem, de szeretnék</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="kgpanel-notneed" name="kgPanel" value="notneed" required />
+              <label for="kgpanel-notneed">Nem érdekel</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Domain Stratégia: Hány weboldalon van jelen (nyelv/ország)? <span class="required">*</span></label>
+          <input type="text" name="domainCount" required placeholder="Pl. '3: norbertbanhalmi.com (EN), banhalmi.art (HU), banhalmi.de (DE)'" />
+        </div>
+
+        <div class="form-group">
+          <label>GEO-FÓKUSZ: Mely városok/országok az Ön ELSŐDLEGES piaca? <span class="required">*</span></label>
+          <input type="text" name="geoPrimary" required placeholder="Pl. 'Bécs, Budapest, Berlin'" />
+        </div>
+
+        <div class="form-group">
+          <label>Lokális Jelenlét: Van-e fizikai iroda/telephely? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="localoffice-yes" name="localOffice" value="yes" required />
+              <label for="localoffice-yes">Igen, hol: <input type="text" name="officeLocation" placeholder="Pl. Wien, Budapest" style="width: 200px; padding: 8px; margin-left: 10px;" /></label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="localoffice-no" name="localOffice" value="no" required />
+              <label for="localoffice-no">Nem, de van elsődleges működési hely</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="localoffice-virtual" name="localOffice" value="virtual" required />
+              <label for="localoffice-virtual">Virtuális/online</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Szakterület Kategóriák: Mely szakterületeken dolgozik? <span class="required">*</span></label>
+          <textarea name="skillCategories" required placeholder="Pl. fotóművészet, executive coaching, digitális stratégia, tanácsadás"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Célközönség Definiálása: Ki az ideális ügyfele? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="audience-b2b" name="audience" value="b2b" required />
+              <label for="audience-b2b">Vállalatok (B2B)</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="audience-b2c" name="audience" value="b2c" required />
+              <label for="audience-b2c">Magánszemélyek (B2C)</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="audience-both" name="audience" value="both" required />
+              <label for="audience-both">Mindkettő</label>
+            </div>
+          </div>
+          <textarea name="audienceDescription" required placeholder="Részletesen írja le az ideális ügyfélét"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Külön Brand/Megnevezés: Dolgozik valamilyen brand név alatt? <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="brand-yes" name="brandName" value="yes" required />
+              <label for="brand-yes">Igen: <input type="text" name="brandNameValue" placeholder="Pl. BANHALMI, Osiris Studio" style="width: 200px; padding: 8px; margin-left: 10px;" /></label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="brand-no" name="brandName" value="no" required />
+              <label for="brand-no">Nem</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Hitelesítés: Mely társadalmi domainkben van jelen? <span class="required">*</span></label>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" name="socialDomains" value="linkedin" />
+              <label>LinkedIn (URL: <input type="url" name="linkedinUrl" placeholder="https://linkedin.com/in/..." style="width: 250px; padding: 6px;" />)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="socialDomains" value="twitter" />
+              <label>Twitter/X (URL: <input type="url" name="twitterUrl" placeholder="https://twitter.com/..." style="width: 250px; padding: 6px;" />)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="socialDomains" value="wikidata" />
+              <label>Wikidata (Q-szám: <input type="text" name="wikidataUrl" placeholder="Q123456" style="width: 120px; padding: 6px;" />)</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="socialDomains" value="wikipedia" />
+              <label>Wikipedia</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="socialDomains" value="other" />
+              <label>Egyéb: <input type="text" name="otherDomains" placeholder="pl. Instagram, Medium, Crunchbase" style="width: 250px; padding: 6px;" /></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 7: OSZTRÁK ÜZLETI JELLEMZŐK -->
+      <div class="form-section">
+        <h3 class="section-header">7. Osztrák Üzleti Jellemzők és Piacra Lépés</h3>
         <p class="section-subtitle">Ausztriában való üzletmenet és piacra lépési stratégia</p>
 
         <div class="form-group">
@@ -755,7 +911,7 @@
 
       <!-- SECTION 7: TECHNIKAI ÉS JOGI KÉRDÉSEK -->
       <div class="form-section">
-        <h3 class="section-header">8. Technikai és Jogi Kérdések</h3>
+        <h3 class="section-header">9. Technikai és Jogi Kérdések</h3>
         <p class="section-subtitle">Technikai előfeltételek és szenzitív témák</p>
 
         <div class="form-group">
@@ -822,7 +978,7 @@
 
       <!-- SECTION 8: JOGI ÉS ADATVÉDELMI NYILATKOZATOK -->
       <div class="form-section">
-        <h3 class="section-header">9. Jogi és Adatvédelmi Nyilatkozatok (GDPR)</h3>
+        <h3 class="section-header">10. Jogi és Adatvédelmi Nyilatkozatok (GDPR)</h3>
         <p class="section-subtitle">Az EU és az Osztrák jogszabályoknak megfelelő szükséges hozzájárulások</p>
 
         <div class="legal-notice">
@@ -903,7 +1059,7 @@
 
       <!-- SECTION 9: EGYÉB MEGJEGYZÉSEK -->
       <div class="form-section">
-        <h3 class="section-header">10. Egyéb Megjegyzések és Kontakt Preferenciák</h3>
+        <h3 class="section-header">11. Egyéb Megjegyzések és Kontakt Preferenciák</h3>
 
         <div class="form-group">
           <label>Bármi, amit fontos tudnunk az Ön profiláról vagy az auditról?</label>
