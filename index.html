@@ -546,31 +546,6 @@
       line-height: 1.65;
     }
 
-
-
-    .strategy-suite-note {
-      margin: 30px 0 18px;
-      padding: clamp(20px, 2.4vw, 28px);
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--card), var(--card-tint));
-      border: 1px solid var(--blue-line);
-      box-shadow: var(--shadow-sm);
-    }
-    .strategy-suite-note h3 {
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: clamp(1.35rem, 2vw, 1.75rem);
-      line-height: 1.16;
-      color: var(--ink);
-      margin-bottom: 8px;
-    }
-    .strategy-suite-note p {
-      color: var(--body);
-      font-size: 0.96rem;
-      line-height: 1.7;
-      max-width: 76ch;
-    }
-
     /* =========================================================
        FORM FIELDS
        ========================================================= */
@@ -1080,6 +1055,22 @@
     /* =========================================================
        PDF EXPORT (print document — kept light/legible)
        ========================================================= */
+
+
+    .pdf-export-stage {
+      position: fixed;
+      left: -10000px;
+      top: 0;
+      width: 794px;
+      min-height: 1123px;
+      background: #ffffff;
+      color: #111827;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 1;
+      visibility: visible;
+    }
+
     .pdf-export-document {
       font-family: Inter, Arial, sans-serif;
       color: #111827;
@@ -1393,30 +1384,6 @@
       .utility-actions button { width: 100%; }
     }
 
-
-
-    @media (max-width: 520px) {
-      .progress-shell {
-        top: 6px;
-        padding: 10px 12px;
-        border-radius: 14px;
-      }
-      .progress-meta {
-        margin-bottom: 7px;
-        font-size: 0.68rem;
-        letter-spacing: 0.08em;
-      }
-      .progress-hint {
-        display: none;
-      }
-      .progress-track {
-        height: 6px;
-      }
-      .gate-login, .gate-card {
-        padding: 24px 20px;
-      }
-    }
-
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; scroll-behavior: auto !important; }
     }
@@ -1428,18 +1395,21 @@
     <div class="gate-shell">
       <div class="gate-card">
         <div class="gate-eyebrow">Üdvözöljük · stratégiai belépés</div>
-        <h1>Ez egy mély digitális diagnózis. Kérjük, szánjon rá valódi figyelmet.</h1>
+        <h1>Ez nem egy gyors űrlap. Ez egy mély digitális tükör.</h1>
         <p class="gate-lead">
-          Ez a kérdőív azt térképezi fel, hogyan érti ma Önt, a cégét vagy a márkáját a digitális világ: a keresők, az AI-rendszerek, a magyar piac és a nemzetközi döntéshozók.
+          Ezt a kérdőívet azért készítettük, hogy feltérképezzük Ön, a cége vagy a márkája múltját, jelenét és jövőképét. A válaszokból összetett struktúra épül: megértjük, ki Ön valójában, mit képvisel, mit lát ma a piac, és mit kell felépíteni ahhoz, hogy az AI, a keresők, a magyar és a nemzetközi piac is pontosan értse.
         </p>
         <div class="gate-callout">
-          <strong>Becsült kitöltési idő:</strong> 45–90 perc. Mélyebb, stratégiai válaszokkal 90–120 perc. Nem kell sietni: minden jó válasz később pontosabb stratégiává válik.
+          <strong>Becsült kitöltési idő:</strong> 45–90 perc. Ha minden stratégiai blokkra mélyen válaszol, számoljon inkább 90–120 perccel. Ez rendben van. Egy komoly audit nem rohanva születik.
         </div>
+        <p class="gate-lead">
+          Szembe fog nézni a múltjával, a jelenével és a jövőjével. Minden kérdésnek oka van, és mélyebb értelme lehet annál, mint ami elsőre látszik. Nem tökéletes mondatokat keresünk, hanem őszinte, használható válaszokat.
+        </p>
         <div class="gate-ritual" aria-label="Kitöltési javaslatok">
-          <div class="ritual-item"><strong>Vonuljon félre.</strong><br>Keressen nyugodt helyet, ahol nem szakítják félbe.</div>
-          <div class="ritual-item"><strong>Kapcsolja be a kedvenc zenéjét.</strong><br>A jó ritmus segít tisztábban gondolkodni.</div>
-          <div class="ritual-item"><strong>Töltsön egy italt.</strong><br>Kávé, tea, víz vagy valami ünnepibb — a lényeg a figyelem.</div>
-          <div class="ritual-item"><strong>Nézzen rá őszintén.</strong><br>A múlt, a jelen és a jövőkép együtt adja ki a valódi digitális entitást.</div>
+          <div class="ritual-item"><strong>Vonuljon félre.</strong><br>Olyan helyet válasszon, ahol nincs stressz, nincs sürgetés, és senki nem kérdez rá percenként, hogy „kész vagy már?”.</div>
+          <div class="ritual-item"><strong>Kapcsolja be a kedvenc zenéjét.</strong><br>Ez stratégiai munka, de emberi figyelem kell hozzá. A jó ritmus sokszor jobb válaszokat hoz.</div>
+          <div class="ritual-item"><strong>Töltsön egy italt.</strong><br>Kávé, tea, víz vagy valami ünnepibb — a lényeg, hogy legyen ideje átgondolni.</div>
+          <div class="ritual-item"><strong>Ne akarjon gyorsan túllenni rajta.</strong><br>A jó válaszokból épül fel az a kép, amely alapján az AI és a piac pontosabban fogja érteni Önt.</div>
         </div>
       </div>
       <div class="gate-login">
@@ -1452,7 +1422,7 @@
           <div class="password-error" id="passwordError" role="alert" aria-live="polite"></div>
         </form>
         <div class="gate-meta">
-          A belépés után a kérdőív automatikusan ment ebben a böngészőben, és a válaszok PDF-be is letölthetők. A linket és a jelszót csak az érintett kapcsolattartókkal ossza meg.
+          A belépés után a kérdőív automatikusan ment a böngészőben, és a válaszok PDF-be is letölthetők. A jelszóellenőrzés hash-alapú kliensoldali védelem; valódi vállalati szintű védelemhez szerveroldali azonosítás szükséges.
         </div>
       </div>
     </div>
@@ -2036,15 +2006,10 @@
       </details>
 
 
-      <div class="strategy-suite-note" aria-label="Opcionális stratégiai tesztek">
-        <h3>Opcionális stratégiai mélytesztek</h3>
-        <p>Az alábbi blokkok nem kötelezők. Akkor adnak kiemelt értéket, ha a cél nem csak láthatóság, hanem pontosabb üzleti pozicionálás, erősebb márkaélmény, hosszú távú bizalom, skálázhatóság és vezetői tisztaság. Válassza ki azokat a kérdéseket, amelyek valóban fontosak.</p>
-      </div>
-
       <details class="accordion">
-        <summary>C4. Üzleti valóságteszt — cél, bizonyíték és AI-ajánlhatóság</summary>
+        <summary>C4. Elon Musk stress test — üzleti valóság és AI-ajánlhatóság</summary>
         <div class="accordion-body">
-          <p class="micro-intro">Ez a rész a valódi üzleti tétet tisztázza: milyen eredményt vár, mi skálázható, mi bizonyítható, és hol veszíthet pénzt a pontatlan digitális értelmezés. Nem kell minden kérdésre válaszolni: <strong>válasszon ki legalább 3-at</strong>, amelyek a legjobban megmutatják a stratégiai lényeget.</p>
+          <p class="micro-intro">Ez nem udvariassági kör. Itt azt nézzük meg, hogy a személy, cég vagy márka mögött mennyi valódi jel, bizonyíték, sebesség és üzleti potenciál van. Nem kell minden kérdésre válaszolni: <strong>válasszon ki legalább 3-at</strong>, amelyek a legjobban megmutatják a valódi üzleti tétet.</p>
 
           <div class="form-group">
             <label for="muskBusinessOutcome">Mi az az egy konkrét üzleti eredmény, amit az entitásépítéstől vár?</label>
@@ -2122,9 +2087,9 @@
 
 
       <details class="accordion">
-        <summary>C5. Márkatisztasági teszt — első benyomás, élmény és egyszerűség</summary>
+        <summary>C5. Steve Jobs clarity test — tisztaság, élmény és első benyomás</summary>
         <div class="accordion-body">
-          <p class="micro-intro">Ez a rész az első benyomás, a márkaélmény és az üzenet tisztaságát vizsgálja. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 3-at</strong>, amelyek a legjobban megmutatják, mit kell egyszerűbbé, szebbé és egyértelműbbé tenni.</p>
+          <p class="micro-intro">Ez a blokk nem technikai kérdéssor. Itt azt vizsgáljuk, hogy az első benyomás, a márkaélmény és az üzenet mennyire tiszta. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 3-at</strong>, amelyek a legjobban megmutatják, mit kell egyszerűbbé, szebbé és egyértelműbbé tenni.</p>
 
           <div class="form-group">
             <label for="jobsTenSecondUnderstanding">Ha valaki 10 másodperc alatt találkozik Önnel vagy a márkájával online, mit kellene azonnal megértenie?</label>
@@ -2190,7 +2155,7 @@
 
 
       <details class="accordion">
-        <summary>C6. Hosszú távú értékteszt — bizalom, előny és cégérték</summary>
+        <summary>C6. Warren Buffett value test — bizalom, érték és hosszú távú előny</summary>
         <div class="accordion-body">
           <p class="micro-intro">Ez a blokk azt vizsgálja, hogy a személy, cég vagy márka mögött van-e tartós érték, bizalom és nehezen lemásolható előny. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, amelyek legjobban megmutatják, miért értékes hosszú távon az entitás.</p>
 
@@ -2245,7 +2210,7 @@
       </details>
 
       <details class="accordion">
-        <summary>C7. Skálázhatósági teszt — kapcsolatok, terjedés és hálózati hatás</summary>
+        <summary>C7. Mark Zuckerberg scale test — kapcsolatok, terjedés és hálózati hatás</summary>
         <div class="accordion-body">
           <p class="micro-intro">Ez a blokk azt nézi, hogyan tud a márka terjedni, kapcsolódni és skálázódni. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, ha szeretné, hogy az audit a hálózati hatást, közösségi bizonyítékokat és platformstratégiát is pontosabban lássa.</p>
 
@@ -2301,7 +2266,7 @@
 
 
       <details class="accordion">
-        <summary>C8. Narratív mélységteszt — rejtett mintázatok, történet és átalakulás</summary>
+        <summary>C8. Merlin insight test — rejtett mintázatok, történet és átalakulás</summary>
         <div class="accordion-body">
           <p class="micro-intro">Ez a blokk a márka mélyebb történetét keresi: azt, amit a piac ma még nem lát, de amitől a személy, cég vagy márka emlékezhetővé és hitelessé válhat. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, ha szeretné, hogy az audit ne csak technikai, hanem narratív és átalakulási szinten is pontosabb legyen.</p>
 
@@ -2356,7 +2321,7 @@
       </details>
 
       <details class="accordion">
-        <summary>C9. Vezetői küldetésteszt — küldetés, döntés és kerekasztal</summary>
+        <summary>C9. Arthur leadership test — küldetés, bizalom és kerekasztal</summary>
         <div class="accordion-body">
           <p class="micro-intro">Ez a blokk a vezetői hitelességet, a küldetést és a stratégia mögötti embereket vizsgálja. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, ha szeretné, hogy az audit a bizalom, döntési helyzet, kerekasztal és hosszú távú örökség szintjén is pontosabb legyen.</p>
 
@@ -2413,9 +2378,9 @@
 
 
       <details class="accordion">
-        <summary>C10. Transzformációs teszt — tudás, tanulság és stratégiai újjáépítés</summary>
+        <summary>C10. Ceridwen transformation test — tudás, árnyék és alkímia</summary>
         <div class="accordion-body">
-          <p class="micro-intro">Ez a rész a mély átalakulást vizsgálja: milyen tudás, tapasztalat, hiba, tanulság vagy rejtett erő alakítható át erősebb márkaidentitássá. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, ha szeretné, hogy az audit transzformációs szinten is pontosabb legyen.</p>
+          <p class="micro-intro">Ceridwen nézőpontja a mély átalakulást vizsgálja: mi az a tudás, tapasztalat, hiba, tanulság vagy rejtett erő, amelyből erősebb márkaidentitás születhet. Ez a rész nem kötelező, de különösen hasznos, ha a cél nem csak láthatóság, hanem valódi stratégiai újjáépítés. <strong>Válaszoljon legalább 2–3 kérdésre</strong>, ha szeretné, hogy az audit mélyebb transzformációs szinten is pontosabb legyen.</p>
 
           <div class="form-group">
             <label for="ceridwenHiddenKnowledge">Milyen tudás vagy tapasztalat van Önben vagy a cégben, amit a piac még nem ért igazán?</label>
@@ -2468,9 +2433,9 @@
       </details>
 
       <details class="accordion">
-        <summary>C11. Etikai bizalmi teszt — felelősség, méltóság és hosszú távú bizalom</summary>
+        <summary>C11. Dalai Láma ethics test — béke, felelősség és emberi bizalom</summary>
         <div class="accordion-body">
-          <p class="micro-intro">Ez a rész azt vizsgálja, hogy a márka milyen emberi, etikai és társadalmi bizalmi alapra épül. Nem vallási blokk, hanem vezetői tisztasági teszt: hogyan lehet úgy növekedni, hogy közben a bizalom, felelősség és emberi méltóság is erősödjön. <strong>Válaszoljon legalább 2–3 kérdésre</strong>, ha szeretné, hogy az audit hosszú távú bizalmi szinten is pontosabb legyen.</p>
+          <p class="micro-intro">A Dalai Láma nézőpontja azt vizsgálja, hogy a márka milyen emberi, etikai és társadalmi bizalmi alapra épül. Ez nem vallási blokk, hanem vezetői tisztasági teszt: hogyan lehet úgy növekedni, hogy közben a bizalom, felelősség és emberi méltóság is erősödjön. <strong>Válaszoljon legalább 2–3 kérdésre</strong>, ha szeretné, hogy az audit etikai és hosszú távú bizalmi szinten is pontosabb legyen.</p>
 
           <div class="form-group">
             <label for="dalaiLamaHumanBenefit">Kinek lesz jobb az élete, munkája vagy döntési helyzete attól, hogy Ön vagy a cége sikeresebb lesz?</label>
@@ -2822,7 +2787,7 @@
 
       <div class="utility-panel" aria-label="Mentés és PDF export">
         <h3>Mentés és PDF letöltés</h3>
-        <p>Az űrlap a válaszokat csak ebben a böngészőben menti automatikusan, hogy egy hosszabb kitöltés közben ne vesszen el a munka. Megosztott vagy céges gépen a beküldés után használja a „Helyi mentés törlése” gombot. A válaszokból bármikor letölthető egy belső PDF-vázlat is.</p>
+        <p>Az űrlap a böngészőben automatikusan menti a válaszokat, hogy egy hosszabb kitöltés közben ne vesszen el a munka. A válaszokból bármikor letölthető egy belső PDF-vázlat is.</p>
         <div class="utility-actions">
           <button type="button" id="downloadPdfButton" class="button-tertiary">VÁLASZOK LETÖLTÉSE PDF-BE</button>
           <button type="button" id="clearDraftButton" class="button-tertiary">HELYI MENTÉS TÖRLÉSE</button>
@@ -2858,7 +2823,7 @@
       <div class="footer-section">
         <p>© 2026 Mag. Tamás Tóth e.U. Minden jog fenntartva.</p>
         <p style="font-size: 0.8rem; margin-top: 10px;">GDPR-kompatibilis | Osztrák Adatvédelmi Törvény (DSG) szerint</p>
-        <p style="font-size: 0.8rem;">Form Version 3.6 | Premium strategic audit · autosave/PDF verzió | Utolsó frissítés: 2026-06-04</p>
+        <p style="font-size: 0.8rem;">Form Version 3.5 | Elon · Steve · Buffett · Zuckerberg · Merlin · Arthur · Ceridwen · Dalai Láma + autosave/PDF verzió | Utolsó frissítés: 2026-06-04</p>
       </div>
     </footer>
   </div>
@@ -2975,16 +2940,36 @@
         autosaveStatus.textContent = message;
       };
 
-      const getFieldLabel = (field) => {
-        if (!field) return field?.name || '';
-        const directLabel = field.id ? form.querySelector(`label[for="${CSS.escape(field.id)}"]`) : null;
-        if (directLabel) return directLabel.textContent.replace(/\*/g, '').replace(/\s+/g, ' ').trim();
-        const parentLabel = field.closest('label');
-        if (parentLabel) return parentLabel.textContent.replace(/\*/g, '').replace(/\s+/g, ' ').trim();
-        const group = field.closest('.form-group');
-        const groupLabel = group?.querySelector('.field-label, label');
-        return (groupLabel?.textContent || field.name || '').replace(/\*/g, '').replace(/\s+/g, ' ').trim();
+      const cleanPdfText = (value) => String(value || '')
+        .replace(/\*/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      const getDirectLabelText = (field) => {
+        if (!field || !field.id || !form) return '';
+        const label = Array.from(form.querySelectorAll('label')).find((item) => item.htmlFor === field.id);
+        return cleanPdfText(label?.textContent || '');
       };
+
+      const getQuestionLabel = (field) => {
+        if (!field) return '';
+        const group = field.closest('.form-group');
+        const fieldLabel = group?.querySelector('.field-label');
+        if (fieldLabel) return cleanPdfText(fieldLabel.textContent);
+        const directLabel = getDirectLabelText(field);
+        if (directLabel) return directLabel;
+        const groupLabel = group?.querySelector('label');
+        if (groupLabel) return cleanPdfText(groupLabel.textContent);
+        return cleanPdfText(field.name || field.id || 'Mező');
+      };
+
+      const getOptionLabel = (field) => {
+        const directLabel = getDirectLabelText(field);
+        if (directLabel) return directLabel;
+        return cleanPdfText(field.value || field.name || 'Kiválasztva');
+      };
+
+      const getFieldLabel = getQuestionLabel;
 
       const getSerializableFields = () => {
         if (!form) return [];
@@ -3062,28 +3047,45 @@
         const rows = [];
         const groupedChecks = new Map();
         getSerializableFields().forEach((field) => {
+          if (field.disabled) return;
+
           if (field.type === 'checkbox') {
             if (!field.checked) return;
-            const label = getFieldLabel(field);
-            const existing = groupedChecks.get(field.name) || { question: label, values: [] };
-            existing.values.push(label);
-            groupedChecks.set(field.name, existing);
+            const question = getQuestionLabel(field);
+            const option = getOptionLabel(field);
+            if (!question || question === option) {
+              rows.push({ question: option || field.name, value: 'Igen / elfogadva' });
+              return;
+            }
+            const key = `${field.name}::${question}`;
+            const existing = groupedChecks.get(key) || { question, values: [] };
+            existing.values.push(option);
+            groupedChecks.set(key, existing);
             return;
           }
+
           if (field.type === 'radio') {
             if (!field.checked) return;
-            rows.push({ question: getFieldLabel(field), value: getFieldLabel(field) });
+            rows.push({ question: getQuestionLabel(field), value: getOptionLabel(field) });
             return;
           }
-          const value = field.tagName === 'SELECT'
-            ? (field.selectedOptions?.[0]?.textContent || '').trim()
-            : (field.value || '').trim();
-          if (!value || value === 'Kérem válasszon') return;
-          rows.push({ question: getFieldLabel(field), value });
+
+          const tagName = String(field.tagName || '').toUpperCase();
+          let value = '';
+          if (tagName === 'SELECT') {
+            value = cleanPdfText(field.selectedOptions?.[0]?.textContent || field.value || '');
+            if (!field.value || /^kérem válasszon/i.test(value)) return;
+          } else {
+            value = String(field.value || '').trim();
+            if (!value) return;
+          }
+          rows.push({ question: getQuestionLabel(field), value });
         });
+
         groupedChecks.forEach((item) => {
           rows.push({ question: item.question, value: item.values.join('\n') });
         });
+
         return rows;
       };
 
@@ -3092,7 +3094,7 @@
         const title = 'Digitális Entitásépítési Audit — kitöltött válaszok';
         const meta = `Generálva: ${new Date().toLocaleString('hu-HU')} · Forrás: ${window.location.href}`;
         const content = rows.length
-          ? rows.map((row) => `<div class="pdf-answer"><span class="pdf-question">${escapeHtml(row.question)}</span><div class="pdf-value">${escapeHtml(row.value)}</div></div>`).join('')
+          ? rows.map((row, index) => `<div class="pdf-answer"><span class="pdf-question">${index + 1}. ${escapeHtml(row.question)}</span><div class="pdf-value">${escapeHtml(row.value)}</div></div>`).join('')
           : '<p>Nincs még kitöltött válasz.</p>';
         return `<div class="pdf-export-document"><h1>${escapeHtml(title)}</h1><div class="pdf-meta">${escapeHtml(meta)}</div>${content}</div>`;
       };
@@ -3100,30 +3102,44 @@
       const downloadAnswersAsPdf = async () => {
         const rows = collectAnsweredFields();
         if (!rows.length) {
-          showAlert('Még nincs kitöltött válasz, amit PDF-be lehetne menteni.');
+          showAlert('Még nincs kitöltött válasz, amit PDF-be lehetne menteni. Írjon be legalább egy választ, vagy jelöljön ki egy opciót.');
           return;
         }
-        const wrapper = document.createElement('div');
-        wrapper.innerHTML = buildPdfMarkup();
+
+        const stage = document.createElement('div');
+        stage.className = 'pdf-export-stage';
+        stage.innerHTML = buildPdfMarkup();
+        document.body.appendChild(stage);
+        const pdfElement = stage.firstElementChild;
         const fileName = 'digitalis-entitas-audit-valaszok-' + new Date().toISOString().slice(0, 10) + '.pdf';
-        if (window.html2pdf) {
-          await window.html2pdf().set({
-            margin: 10,
-            filename: fileName,
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2, useCORS: true },
-            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-          }).from(wrapper.firstElementChild).save();
-        } else {
-          const printWindow = window.open('', '_blank');
-          if (!printWindow) {
-            showAlert('A PDF exporthoz engedélyezni kell az új ablak megnyitását, vagy próbálja újra később.');
-            return;
+
+        try {
+          await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+          if (window.html2pdf) {
+            await window.html2pdf().set({
+              margin: 10,
+              filename: fileName,
+              image: { type: 'jpeg', quality: 0.98 },
+              html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', scrollX: 0, scrollY: 0 },
+              jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+              pagebreak: { mode: ['css', 'legacy'] }
+            }).from(pdfElement).save();
+          } else {
+            const printWindow = window.open('', '_blank');
+            if (!printWindow) {
+              showAlert('A PDF exporthoz engedélyezni kell az új ablak megnyitását, vagy próbálja újra később.');
+              return;
+            }
+            printWindow.document.write('<!doctype html><html><head><title>Audit válaszok</title><meta charset="utf-8"></head><body>' + buildPdfMarkup() + '</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
           }
-          printWindow.document.write('<!doctype html><html><head><title>Audit válaszok</title></head><body>' + buildPdfMarkup() + '</body></html>');
-          printWindow.document.close();
-          printWindow.focus();
-          printWindow.print();
+        } catch (error) {
+          console.error('PDF export failed', error);
+          showAlert('A PDF generálás nem sikerült. Próbálja meg újra, vagy használja a böngésző nyomtatás / mentés PDF-be funkcióját.');
+        } finally {
+          stage.remove();
         }
       };
 
