@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Digitális Entitásépítési Audit és Deep Search Stratégia | Mag. Tamás Tóth</title>
+  <title>Digitális Entitásépítési Audit és Deep Search Stratégia | Bánhalmi Norbert e.U.</title>
   <meta name="description" content="C-level digitális entitásépítési és deep search audit személyes márkáknak, cégeknek és márkáknak a magyar és nemzetközi piaci láthatóság erősítésére." />
-  <meta name="author" content="Mag. Tamás Tóth e.U." />
+  <meta name="author" content="Bánhalmi Norbert e.U." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#17283D" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -546,6 +546,31 @@
       line-height: 1.65;
     }
 
+
+
+    .strategy-suite-note {
+      margin: 30px 0 18px;
+      padding: clamp(20px, 2.4vw, 28px);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--card), var(--card-tint));
+      border: 1px solid var(--blue-line);
+      box-shadow: var(--shadow-sm);
+    }
+    .strategy-suite-note h3 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(1.35rem, 2vw, 1.75rem);
+      line-height: 1.16;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .strategy-suite-note p {
+      color: var(--body);
+      font-size: 0.96rem;
+      line-height: 1.7;
+      max-width: 76ch;
+    }
+
     /* =========================================================
        FORM FIELDS
        ========================================================= */
@@ -1055,22 +1080,6 @@
     /* =========================================================
        PDF EXPORT (print document — kept light/legible)
        ========================================================= */
-
-
-    .pdf-export-stage {
-      position: fixed;
-      left: -10000px;
-      top: 0;
-      width: 794px;
-      min-height: 1123px;
-      background: #ffffff;
-      color: #111827;
-      z-index: 0;
-      pointer-events: none;
-      opacity: 1;
-      visibility: visible;
-    }
-
     .pdf-export-document {
       font-family: Inter, Arial, sans-serif;
       color: #111827;
@@ -1113,38 +1122,125 @@
     }
 
     /* =========================================================
-       FOOTER (deep blue)
+       FOOTER — professional service architecture
        ========================================================= */
-    footer {
+    footer.site-footer {
       margin: 0 0 56px;
-      padding: clamp(32px, 4vw, 48px) clamp(24px, 3vw, 40px);
-      text-align: center;
+      padding: clamp(30px, 4vw, 48px);
       border-radius: var(--radius-lg);
-      background: linear-gradient(160deg, var(--blue-dark), var(--blue));
-      border: 1px solid rgba(201, 162, 39, 0.22);
+      background:
+        radial-gradient(110% 90% at 100% 0%, rgba(201, 162, 39, 0.13), transparent 52%),
+        linear-gradient(160deg, var(--blue-dark), var(--blue) 62%, var(--blue-mid));
+      border: 1px solid rgba(201, 162, 39, 0.24);
       color: var(--on-dark);
       box-shadow: var(--shadow-lg);
+      text-align: left;
+      overflow: hidden;
+      position: relative;
     }
-    footer h4 { color: #EBC85A; margin-bottom: 12px; font-weight: 600; font-size: 1.1rem; }
-    footer p, footer .footer-section, footer div { color: var(--on-dark-soft); }
-    footer .footer-section { margin-bottom: 18px; }
-    footer .footer-section:last-child { margin-bottom: 0; }
-    footer small { color: rgba(243, 241, 234, 0.6); }
-
+    footer.site-footer::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), rgba(235, 200, 90, 0.48), var(--blue-mid));
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.15fr 0.9fr 0.95fr;
+      gap: clamp(22px, 3vw, 38px);
+      align-items: start;
+      padding-bottom: 26px;
+      border-bottom: 1px solid rgba(243, 241, 234, 0.14);
+    }
+    .footer-brand h4,
+    .footer-col h4 {
+      color: #EBC85A;
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .footer-brand strong {
+      display: block;
+      font-family: var(--serif);
+      color: var(--on-dark);
+      font-weight: 600;
+      font-size: clamp(1.45rem, 2vw, 1.9rem);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .footer-brand p,
+    .footer-col p,
+    .footer-bottom p,
+    .footer-note {
+      color: var(--on-dark-soft);
+      font-size: 0.92rem;
+      line-height: 1.68;
+    }
+    .footer-note {
+      margin-top: 14px;
+      padding: 13px 15px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(243, 241, 234, 0.11);
+    }
+    .footer-list {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+    }
+    .footer-list li {
+      color: var(--on-dark-soft);
+      font-size: 0.91rem;
+      line-height: 1.55;
+      padding-left: 18px;
+      position: relative;
+    }
+    .footer-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #EBC85A;
+    }
     .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin: 18px 0;
+      display: grid;
+      gap: 9px;
+      margin: 0;
     }
     .footer-links a {
       color: #EBC85A;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.2s;
+      line-height: 1.45;
+      transition: color 0.2s, text-decoration-color 0.2s;
+      text-underline-offset: 4px;
     }
-    .footer-links a:hover { color: #F4DA86; text-decoration: underline; }
+    .footer-links a:hover {
+      color: #F4DA86;
+      text-decoration: underline;
+      text-decoration-color: rgba(244, 218, 134, 0.7);
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      padding-top: 22px;
+    }
+    .footer-legal {
+      text-align: right;
+      color: rgba(243, 241, 234, 0.68);
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+    .footer-legal span {
+      display: block;
+    }
+
 
     /* =========================================================
        PASSWORD LANDING GATE
@@ -1384,6 +1480,30 @@
       .utility-actions button { width: 100%; }
     }
 
+
+
+    @media (max-width: 520px) {
+      .progress-shell {
+        top: 6px;
+        padding: 10px 12px;
+        border-radius: 14px;
+      }
+      .progress-meta {
+        margin-bottom: 7px;
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+      }
+      .progress-hint {
+        display: none;
+      }
+      .progress-track {
+        height: 6px;
+      }
+      .gate-login, .gate-card {
+        padding: 24px 20px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; scroll-behavior: auto !important; }
     }
@@ -1395,21 +1515,18 @@
     <div class="gate-shell">
       <div class="gate-card">
         <div class="gate-eyebrow">Üdvözöljük · stratégiai belépés</div>
-        <h1>Ez nem egy gyors űrlap. Ez egy mély digitális tükör.</h1>
+        <h1>Ez egy mély digitális diagnózis. Kérjük, szánjon rá valódi figyelmet.</h1>
         <p class="gate-lead">
-          Ezt a kérdőívet azért készítettük, hogy feltérképezzük Ön, a cége vagy a márkája múltját, jelenét és jövőképét. A válaszokból összetett struktúra épül: megértjük, ki Ön valójában, mit képvisel, mit lát ma a piac, és mit kell felépíteni ahhoz, hogy az AI, a keresők, a magyar és a nemzetközi piac is pontosan értse.
+          Ez a kérdőív azt térképezi fel, hogyan érti ma Önt, a cégét vagy a márkáját a digitális világ: a keresők, az AI-rendszerek, a magyar piac és a nemzetközi döntéshozók.
         </p>
         <div class="gate-callout">
-          <strong>Becsült kitöltési idő:</strong> 45–90 perc. Ha minden stratégiai blokkra mélyen válaszol, számoljon inkább 90–120 perccel. Ez rendben van. Egy komoly audit nem rohanva születik.
+          <strong>Becsült kitöltési idő:</strong> 45–90 perc. Mélyebb, stratégiai válaszokkal 90–120 perc. Nem kell sietni: minden jó válasz később pontosabb stratégiává válik.
         </div>
-        <p class="gate-lead">
-          Szembe fog nézni a múltjával, a jelenével és a jövőjével. Minden kérdésnek oka van, és mélyebb értelme lehet annál, mint ami elsőre látszik. Nem tökéletes mondatokat keresünk, hanem őszinte, használható válaszokat.
-        </p>
         <div class="gate-ritual" aria-label="Kitöltési javaslatok">
-          <div class="ritual-item"><strong>Vonuljon félre.</strong><br>Olyan helyet válasszon, ahol nincs stressz, nincs sürgetés, és senki nem kérdez rá percenként, hogy „kész vagy már?”.</div>
-          <div class="ritual-item"><strong>Kapcsolja be a kedvenc zenéjét.</strong><br>Ez stratégiai munka, de emberi figyelem kell hozzá. A jó ritmus sokszor jobb válaszokat hoz.</div>
-          <div class="ritual-item"><strong>Töltsön egy italt.</strong><br>Kávé, tea, víz vagy valami ünnepibb — a lényeg, hogy legyen ideje átgondolni.</div>
-          <div class="ritual-item"><strong>Ne akarjon gyorsan túllenni rajta.</strong><br>A jó válaszokból épül fel az a kép, amely alapján az AI és a piac pontosabban fogja érteni Önt.</div>
+          <div class="ritual-item"><strong>Vonuljon félre.</strong><br>Keressen nyugodt helyet, ahol nem szakítják félbe.</div>
+          <div class="ritual-item"><strong>Kapcsolja be a kedvenc zenéjét.</strong><br>A jó ritmus segít tisztábban gondolkodni.</div>
+          <div class="ritual-item"><strong>Töltsön egy italt.</strong><br>Kávé, tea, víz vagy valami ünnepibb — a lényeg a figyelem.</div>
+          <div class="ritual-item"><strong>Nézzen rá őszintén.</strong><br>A múlt, a jelen és a jövőkép együtt adja ki a valódi digitális entitást.</div>
         </div>
       </div>
       <div class="gate-login">
@@ -1422,7 +1539,7 @@
           <div class="password-error" id="passwordError" role="alert" aria-live="polite"></div>
         </form>
         <div class="gate-meta">
-          A belépés után a kérdőív automatikusan ment a böngészőben, és a válaszok PDF-be is letölthetők. A jelszóellenőrzés hash-alapú kliensoldali védelem; valódi vállalati szintű védelemhez szerveroldali azonosítás szükséges.
+          A belépés után a kérdőív automatikusan ment ebben a böngészőben, és a válaszok PDF-be is letölthetők. A linket és a jelszót csak az érintett kapcsolattartókkal ossza meg.
         </div>
       </div>
     </div>
@@ -1434,7 +1551,7 @@
       <div class="eyebrow">Digitális entitásépítés · Deep Search · AI-érthetőség</div>
       <h1>Digitális Entitásépítési Audit és Deep Search Stratégia</h1>
       <p>Ez az űrlap azért készült, hogy feltérképezze egy cég, márka vagy személyes márka múltját, jelenét és jövőképét. A cél: az AI, a keresők, a magyar piac és a nemzetközi piac tisztán, pontosan és hitelesen értse, ki Ön, mit képvisel, és miért ajánlható.</p>
-      <div class="header-brand">Mag. Tamás Tóth e.U. | Wien, Österreich</div>
+      <div class="header-brand">Bánhalmi Norbert e.U. | Wien, Österreich</div>
     </header>
 
     <section class="intro-grid" aria-label="Bevezetés">
@@ -1498,11 +1615,11 @@
       </div>
     </section>
 
-    <form action="https://formsubmit.co/tamas.toth@metallagentur.at" method="POST" id="assessmentForm" accept-charset="UTF-8" novalidate>
-            <input type="hidden" name="_subject" value="Digitális Entitás Audit - Mag. Tamás Tóth">
+    <form action="https://formsubmit.co/office@vipach.at" method="POST" id="assessmentForm" accept-charset="UTF-8" novalidate>
+            <input type="hidden" name="_subject" value="Digitális Entitás Audit - Bánhalmi Norbert e.U.">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="html">
-      <input type="hidden" name="_next" value="https://form.digitallagentur.at/">
+      <input type="hidden" name="_next" value="https://form.vipach.at/">
 
 
       <div class="success-message" id="successMessage">
@@ -2006,10 +2123,15 @@
       </details>
 
 
+      <div class="strategy-suite-note" aria-label="Opcionális stratégiai tesztek">
+        <h3>Opcionális stratégiai mélytesztek</h3>
+        <p>Az alábbi blokkok nem kötelezők. Akkor adnak kiemelt értéket, ha a cél nem csak láthatóság, hanem pontosabb üzleti pozicionálás, erősebb márkaélmény, hosszú távú bizalom, skálázhatóság és vezetői tisztaság. Válassza ki azokat a kérdéseket, amelyek valóban fontosak.</p>
+      </div>
+
       <details class="accordion">
-        <summary>C4. Elon Musk stress test — üzleti valóság és AI-ajánlhatóság</summary>
+        <summary>C4. Üzleti valóságteszt — cél, bizonyíték és AI-ajánlhatóság</summary>
         <div class="accordion-body">
-          <p class="micro-intro">Ez nem udvariassági kör. Itt azt nézzük meg, hogy a személy, cég vagy márka mögött mennyi valódi jel, bizonyíték, sebesség és üzleti potenciál van. Nem kell minden kérdésre válaszolni: <strong>válasszon ki legalább 3-at</strong>, amelyek a legjobban megmutatják a valódi üzleti tétet.</p>
+          <p class="micro-intro">Ez a rész a valódi üzleti tétet tisztázza: milyen eredményt vár, mi skálázható, mi bizonyítható, és hol veszíthet pénzt a pontatlan digitális értelmezés. Nem kell minden kérdésre válaszolni: <strong>válasszon ki legalább 3-at</strong>, amelyek a legjobban megmutatják a stratégiai lényeget.</p>
 
           <div class="form-group">
             <label for="muskBusinessOutcome">Mi az az egy konkrét üzleti eredmény, amit az entitásépítéstől vár?</label>
@@ -2087,9 +2209,9 @@
 
 
       <details class="accordion">
-        <summary>C5. Steve Jobs clarity test — tisztaság, élmény és első benyomás</summary>
+        <summary>C5. Márkatisztasági teszt — első benyomás, élmény és egyszerűség</summary>
         <div class="accordion-body">
-          <p class="micro-intro">Ez a blokk nem technikai kérdéssor. Itt azt vizsgáljuk, hogy az első benyomás, a márkaélmény és az üzenet mennyire tiszta. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 3-at</strong>, amelyek a legjobban megmutatják, mit kell egyszerűbbé, szebbé és egyértelműbbé tenni.</p>
+          <p class="micro-intro">Ez a rész az első benyomás, a márkaélmény és az üzenet tisztaságát vizsgálja. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 3-at</strong>, amelyek a legjobban megmutatják, mit kell egyszerűbbé, szebbé és egyértelműbbé tenni.</p>
 
           <div class="form-group">
             <label for="jobsTenSecondUnderstanding">Ha valaki 10 másodperc alatt találkozik Önnel vagy a márkájával online, mit kellene azonnal megértenie?</label>
@@ -2155,7 +2277,7 @@
 
 
       <details class="accordion">
-        <summary>C6. Warren Buffett value test — bizalom, érték és hosszú távú előny</summary>
+        <summary>C6. Hosszú távú értékteszt — bizalom, előny és cégérték</summary>
         <div class="accordion-body">
           <p class="micro-intro">Ez a blokk azt vizsgálja, hogy a személy, cég vagy márka mögött van-e tartós érték, bizalom és nehezen lemásolható előny. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, amelyek legjobban megmutatják, miért értékes hosszú távon az entitás.</p>
 
@@ -2210,7 +2332,7 @@
       </details>
 
       <details class="accordion">
-        <summary>C7. Mark Zuckerberg scale test — kapcsolatok, terjedés és hálózati hatás</summary>
+        <summary>C7. Skálázhatósági teszt — kapcsolatok, terjedés és hálózati hatás</summary>
         <div class="accordion-body">
           <p class="micro-intro">Ez a blokk azt nézi, hogyan tud a márka terjedni, kapcsolódni és skálázódni. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, ha szeretné, hogy az audit a hálózati hatást, közösségi bizonyítékokat és platformstratégiát is pontosabban lássa.</p>
 
@@ -2266,7 +2388,7 @@
 
 
       <details class="accordion">
-        <summary>C8. Merlin insight test — rejtett mintázatok, történet és átalakulás</summary>
+        <summary>C8. Narratív mélységteszt — rejtett mintázatok, történet és átalakulás</summary>
         <div class="accordion-body">
           <p class="micro-intro">Ez a blokk a márka mélyebb történetét keresi: azt, amit a piac ma még nem lát, de amitől a személy, cég vagy márka emlékezhetővé és hitelessé válhat. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, ha szeretné, hogy az audit ne csak technikai, hanem narratív és átalakulási szinten is pontosabb legyen.</p>
 
@@ -2321,7 +2443,7 @@
       </details>
 
       <details class="accordion">
-        <summary>C9. Arthur leadership test — küldetés, bizalom és kerekasztal</summary>
+        <summary>C9. Vezetői küldetésteszt — küldetés, döntés és kerekasztal</summary>
         <div class="accordion-body">
           <p class="micro-intro">Ez a blokk a vezetői hitelességet, a küldetést és a stratégia mögötti embereket vizsgálja. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, ha szeretné, hogy az audit a bizalom, döntési helyzet, kerekasztal és hosszú távú örökség szintjén is pontosabb legyen.</p>
 
@@ -2378,9 +2500,9 @@
 
 
       <details class="accordion">
-        <summary>C10. Ceridwen transformation test — tudás, árnyék és alkímia</summary>
+        <summary>C10. Transzformációs teszt — tudás, tanulság és stratégiai újjáépítés</summary>
         <div class="accordion-body">
-          <p class="micro-intro">Ceridwen nézőpontja a mély átalakulást vizsgálja: mi az a tudás, tapasztalat, hiba, tanulság vagy rejtett erő, amelyből erősebb márkaidentitás születhet. Ez a rész nem kötelező, de különösen hasznos, ha a cél nem csak láthatóság, hanem valódi stratégiai újjáépítés. <strong>Válaszoljon legalább 2–3 kérdésre</strong>, ha szeretné, hogy az audit mélyebb transzformációs szinten is pontosabb legyen.</p>
+          <p class="micro-intro">Ez a rész a mély átalakulást vizsgálja: milyen tudás, tapasztalat, hiba, tanulság vagy rejtett erő alakítható át erősebb márkaidentitássá. Nem kötelező minden kérdésre válaszolni: <strong>válasszon ki legalább 2–3-at</strong>, ha szeretné, hogy az audit transzformációs szinten is pontosabb legyen.</p>
 
           <div class="form-group">
             <label for="ceridwenHiddenKnowledge">Milyen tudás vagy tapasztalat van Önben vagy a cégben, amit a piac még nem ért igazán?</label>
@@ -2433,9 +2555,9 @@
       </details>
 
       <details class="accordion">
-        <summary>C11. Dalai Láma ethics test — béke, felelősség és emberi bizalom</summary>
+        <summary>C11. Etikai bizalmi teszt — felelősség, méltóság és hosszú távú bizalom</summary>
         <div class="accordion-body">
-          <p class="micro-intro">A Dalai Láma nézőpontja azt vizsgálja, hogy a márka milyen emberi, etikai és társadalmi bizalmi alapra épül. Ez nem vallási blokk, hanem vezetői tisztasági teszt: hogyan lehet úgy növekedni, hogy közben a bizalom, felelősség és emberi méltóság is erősödjön. <strong>Válaszoljon legalább 2–3 kérdésre</strong>, ha szeretné, hogy az audit etikai és hosszú távú bizalmi szinten is pontosabb legyen.</p>
+          <p class="micro-intro">Ez a rész azt vizsgálja, hogy a márka milyen emberi, etikai és társadalmi bizalmi alapra épül. Nem vallási blokk, hanem vezetői tisztasági teszt: hogyan lehet úgy növekedni, hogy közben a bizalom, felelősség és emberi méltóság is erősödjön. <strong>Válaszoljon legalább 2–3 kérdésre</strong>, ha szeretné, hogy az audit hosszú távú bizalmi szinten is pontosabb legyen.</p>
 
           <div class="form-group">
             <label for="dalaiLamaHumanBenefit">Kinek lesz jobb az élete, munkája vagy döntési helyzete attól, hogy Ön vagy a cége sikeresebb lesz?</label>
@@ -2559,7 +2681,7 @@
           <div class="form-group">
             <div class="checkbox-item">
               <input type="checkbox" id="consent_5" name="agreeTerms" required />
-              <label for="consent_5">Elfogadom a Mag. Tamás Tóth e.U. adatvédelmi tájékoztatóját, és tudomásul veszem, hogy a szakmai tanácsadási feltételek az űrlap végén külön lenyíló blokkban olvashatók. <span class="required">*</span></label>
+              <label for="consent_5">Elfogadom a Bánhalmi Norbert e.U. adatvédelmi tájékoztatóját, és tudomásul veszem, hogy a szakmai tanácsadási feltételek az űrlap végén külön lenyíló blokkban olvashatók. <span class="required">*</span></label>
             </div>
           </div>
 
@@ -2573,10 +2695,10 @@
       <details class="privacy-panel" id="privacyPanel">
         <summary>Adatvédelmi tájékoztató röviden — mit kezelünk és miért?</summary>
         <div class="privacy-body">
-          <p><strong>Adatkezelő:</strong> Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kapcsolat: tamas.toth@metallagentur.at.</p>
+          <p><strong>Adatkezelő:</strong> Bánhalmi Norbert e.U., Schwedenplatz 2, Laurenzerberg 5/I/8-9, 1010 Wien, Austria. Kapcsolat: office@vipach.at.</p>
           <p><strong>Cél:</strong> digitális entitásépítési és deep search audit előkészítése, kapcsolattartás, számlázás, stratégiai elemzés és egyedi ajánlatkészítés.</p>
           <ul>
-            <li>A beküldött adatok az audit elkészítéséhez, a 2 000 EUR auditdíj számlázásához és az ügyfélkommunikációhoz szükségesek.</li>
+            <li>A beküldött adatok az audit elkészítéséhez, az esetleges szerződéskötéshez, számlázáshoz és az ügyfélkommunikációhoz szükségesek.</li>
             <li>A kutatás nyilvános forrásokra, a megadott linkekre és az ügyfél által megosztott háttérinformációkra épülhet.</li>
             <li>A stratégiai, reputációs és üzleti információkat bizalmasan kell kezelni.</li>
             <li>A beküldés külső űrlapfeldolgozó szolgáltatáson keresztül történik; szigorúbb compliance vagy nagyobb érzékenység esetén saját/EU-s backend javasolt.</li>
@@ -2589,17 +2711,20 @@
       <details class="privacy-panel" id="impressumPanel">
         <summary>Impresszum és szolgáltatói adatok</summary>
         <div class="privacy-body">
-          <p><strong>Szolgáltató:</strong> Mag. Tamás Tóth e.U.</p>
-          <p><strong>Cím:</strong> Liechtensteinstraße 131-133/24, 1090 Wien, Österreich.</p>
-          <p><strong>Web:</strong> metallagentur.at · <strong>E-mail:</strong> tamas.toth@metallagentur.at.</p>
-          <p><strong>GISA:</strong> 32963588 · <strong>EU adószám:</strong> ATU69150839.</p>
+          <p><strong>Szolgáltató:</strong> Bánhalmi Norbert e.U.</p>
+          <p><strong>Tulajdonos:</strong> Norbert Bánhalmi.</p>
+          <p><strong>Jogi forma:</strong> Bejegyzett egyéni vállalkozás (e.U.).</p>
+          <p><strong>Cím:</strong> Schwedenplatz 2, Laurenzerberg 5/I/8-9, 1010 Wien, Austria.</p>
+          <p><strong>Web:</strong> form.vipach.at · <strong>E-mail:</strong> office@vipach.at.</p>
+          <p><strong>Telefon:</strong> Tel (AT): +43 677 616 55592 · Tel (HU): +36 70 469 83 97.</p>
+          <p><strong>GISA:</strong> 36592951 · <strong>EU adószám:</strong> ATU80445314.</p>
           <p>A szolgáltatás üzleti, stratégiai és technológiai tanácsadási jellegű. Nem minősül jogi, adózási, befektetési vagy hatósági tanácsadásnak.</p>
         </div>
       </details>
 
       <div class="section-title">
         <h2>E. Számlázási adatok</h2>
-        <p>A 96 órás audit és stratégiai terv díjköteles szakmai tanácsadási szolgáltatás. Az alábbi adatok alapján lehet a megrendelést, a díjbekérőt vagy számlát pontosan előkészíteni. A cél egyszerű: ne a számlázás legyen az első reputációs anomália.</p>
+        <p>Az alábbi adatok az esetleges későbbi szerződéskötéshez, díjbekérőhöz vagy számlázáshoz szükségesek. A jelen felmérés az előzetes egyeztetés alapján díjmentes, de ha később megvalósítási munka indul, ezek az adatok segítenek a pontos adminisztrációban.</p>
       </div>
 
       <details class="accordion">
@@ -2720,21 +2845,21 @@
         </div>
 
         <details class="terms-panel">
-          <summary>Általános szakmai tanácsadási feltételek — Mag. Tamás Tóth e.U.</summary>
+          <summary>Általános szakmai tanácsadási feltételek — Bánhalmi Norbert e.U.</summary>
           <div class="terms-body">
             <div class="terms-meta">
-              <strong>Szerződő szolgáltató:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. E-mail: tamas.toth@metallagentur.at. GISA: 32963588. EU adószám: ATU69150839.
+              <strong>Szerződő szolgáltató:</strong> Bánhalmi Norbert e.U. / Norbert Bánhalmi, Schwedenplatz 2, Laurenzerberg 5/I/8-9, 1010 Wien, Austria. E-mail: office@vipach.at. GISA: 36592951. EU adószám: ATU80445314.
             </div>
 
             <h3>1. A feltételek hatálya</h3>
-            <p>Ezek a feltételek a digitális entitásépítési, deep search, márka-audit, piacérthetőségi, reputációs és stratégiai tanácsadási szolgáltatásokra vonatkoznak, amelyeket az ügyfél Mag. Tamás Tóth e.U.-val kötött egyedi megbízás vagy írásos visszaigazolás alapján rendel meg. A szolgáltatás első szakasza a 2 000 EUR díjú audit és stratégiai terv.</p>
+            <p>Ezek a feltételek a digitális entitásépítési, deep search, márka-audit, piacérthetőségi, reputációs és stratégiai tanácsadási szolgáltatásokra vonatkoznak, amelyeket az ügyfél Bánhalmi Norbert e.U.-val kötött egyedi megbízás vagy írásos visszaigazolás alapján rendel meg. A szolgáltatás első szakasza a 2 000 EUR értékű audit és stratégiai terv, amely az előzetes egyeztetés alapján jelen esetben díjmentesen készül.</p>
             <p>A szolgáltatás elsősorban vállalkozásoknak, cégvezetőknek, márkatulajdonosoknak, szakmai szereplőknek és B2B ügyfeleknek készül. Fogyasztói megrendelés csak külön írásos megállapodás alapján értelmezhető.</p>
 
             <h3>2. Szerződés létrejötte</h3>
             <p>Az űrlap beküldése ajánlatkérésnek és auditindítási adatközlésnek minősül. A konkrét megbízás a szolgáltató írásos visszaigazolásával, díjbekérő/számla kiállításával, külön megrendelő dokumentummal vagy az audit tényleges megkezdésével jön létre.</p>
             <p>A 6–18 hónapos megvalósítási program nem indul el automatikusan az űrlap beküldésével. Ahhoz külön ajánlat, elfogadás és megállapodás szükséges.</p>
 
-            <h3>3. A 2 000 EUR audit tartalma</h3>
+            <h3>3. A 2 000 EUR értékű audit tartalma</h3>
             <ul>
               <li>deep search alapú előzetes kutatás nyilvános és az ügyfél által megadott források alapján,</li>
               <li>AI-érthetőség, keresőbeni jelenlét és digitális lábnyom vizsgálata,</li>
@@ -2746,7 +2871,7 @@
             <p>Az audit nem garantál automatikus Google-helyezést, AI-ajánlást, sajtómegjelenést vagy üzletszerzést. A cél az, hogy a személy, cég vagy márka digitális entitása tisztábban, pontosabban és ellenőrizhetőbben legyen felépíthető.</p>
 
             <h3>4. Díjazás, beszámítás és minimális megrendelési érték</h3>
-            <p>Az audit és stratégiai terv díja 2 000 EUR. Amennyiben az ügyfél a későbbi megvalósítási munka egészét vagy részét a szolgáltatóval végezteti el, a 2 000 EUR auditdíj a későbbi megvalósítási díjból levonásra kerül. A teljes megvalósítási program minimális megrendelési értéke 10 000 EUR.</p>
+            <p>Az audit és stratégiai terv szakmai értéke 2 000 EUR. Az előzetes egyeztetés alapján jelen felmérés és stratégiai előkészítés díjmentesen készül. Amennyiben az ügyfél később megvalósítási munkát rendel meg, annak tartalma, ütemezése és díjazása külön egyedi ajánlatban és külön megállapodásban kerül rögzítésre.</p>
             <p>A díjak adózási és ÁFA/VAT-kezelése a számlázási adatok, az ügyfél státusza, országa és az alkalmazandó jogszabályok szerint kerül meghatározásra. A számlázási adatok pontosságáért a megrendelő felel.</p>
 
             <h3>5. Egyedi stratégia és változó technológiai környezet</h3>
@@ -2770,14 +2895,14 @@
         <div class="acknowledgement-panel">
           <div class="checkbox-item">
             <input type="checkbox" id="terms_acknowledgement" name="agreeConsultingTerms" required />
-            <label for="terms_acknowledgement">Elolvastam és elfogadom a fenti általános szakmai tanácsadási feltételeket, és tudomásul veszem, hogy a 2 000 EUR audit Mag. Tamás Tóth e.U.-val kötött szakmai tanácsadási megbízás előkészítéséhez kapcsolódik. <span class="required">*</span></label>
+            <label for="terms_acknowledgement">Elolvastam és elfogadom a fenti általános szakmai tanácsadási feltételeket, és tudomásul veszem, hogy a felmérés 2 000 EUR szakmai értékű auditnak minősül, amely az előzetes egyeztetés alapján jelen esetben díjmentesen készül. <span class="required">*</span></label>
           </div>
         </div>
 
         <div class="acknowledgement-panel">
           <div class="checkbox-item">
             <input type="checkbox" id="commercial_acknowledgement" name="agreeCommercialTerms" required />
-            <label for="commercial_acknowledgement">Megértettem, hogy a 96 órás digitális entitásdiagnózis és stratégiai terv díja 2 000 EUR. Tudomásul veszem, hogy az audit végén egyedi megvalósítási ajánlatot kapok; ha a későbbi munkát részben vagy egészben a szolgáltatóval végeztetem el, a 2 000 EUR levonásra kerül a megvalósítási díjból. A teljes entitásépítési program minimális megrendelési értéke 10 000 EUR. <span class="required">*</span></label>
+            <label for="commercial_acknowledgement">Megértettem, hogy a 96 órás digitális entitásdiagnózis és stratégiai terv szakmai értéke 2 000 EUR, de az előzetes egyeztetés alapján jelen felmérés díjmentes. Tudomásul veszem, hogy az audit végén esetleges megvalósítási javaslat és egyedi ajánlat készülhet, amely csak külön elfogadás esetén válik megrendeléssé. <span class="required">*</span></label>
           </div>
           <p class="fineprint">Az űrlap beküldése nem jelenti automatikusan a 6–18 hónapos megvalósítási program megrendelését. A pontos szerződéses, számlázási és teljesítési feltételeket az auditot követő egyedi ajánlat és megállapodás tartalmazza. Az audit viszont már önmagában is használható stratégiai iránytű: megmutatja, merre van észak, mielőtt a teljes csapat elindulna délnek.</p>
         </div>
@@ -2787,7 +2912,7 @@
 
       <div class="utility-panel" aria-label="Mentés és PDF export">
         <h3>Mentés és PDF letöltés</h3>
-        <p>Az űrlap a böngészőben automatikusan menti a válaszokat, hogy egy hosszabb kitöltés közben ne vesszen el a munka. A válaszokból bármikor letölthető egy belső PDF-vázlat is.</p>
+        <p>Az űrlap a válaszokat csak ebben a böngészőben menti automatikusan, hogy egy hosszabb kitöltés közben ne vesszen el a munka. Megosztott vagy céges gépen a beküldés után használja a „Helyi mentés törlése” gombot. A válaszokból bármikor letölthető egy belső PDF-vázlat is.</p>
         <div class="utility-actions">
           <button type="button" id="downloadPdfButton" class="button-tertiary">VÁLASZOK LETÖLTÉSE PDF-BE</button>
           <button type="button" id="clearDraftButton" class="button-tertiary">HELYI MENTÉS TÖRLÉSE</button>
@@ -2806,24 +2931,44 @@
       <p class="submit-note">Beküldés után az űrlap zárolja a gombot, hogy ne menjen el véletlenül kétszer. Egy stratégiai auditból egy is elég — abból viszont legyen nagyon jó.</p>
     </form>
 
-    <footer>
-      <div class="footer-section">
-        <h4>Mag. Tamás Tóth e.U.</h4>
-        <p>Wien, Österreich</p>
-        <p>Digitális Stratégia, Deep Search és Entitásépítési Audit</p>
+    <footer class="site-footer" aria-label="Szakmai és jogi lábléc">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Szolgáltató</h4>
+          <strong>Bánhalmi Norbert e.U.</strong>
+          <p>Wien, Österreich · Digitális stratégia, Deep Search és entitásépítési audit személyes márkáknak, cégeknek és márkáknak.</p>
+          <div class="footer-note">A kérdőív célja, hogy a 96 órás előzetes elemzéshez strukturált, üzletileg értelmezhető és AI-kompatibilis információs alapot adjon.</div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Szakmai fókusz</h4>
+          <ul class="footer-list">
+            <li>Digitális entitásépítés és AI-érthetőség</li>
+            <li>Deep Search alapú reputációs és forrásaudit</li>
+            <li>C-level pozicionálás, bizalmi jelek és bizonyítékrendszer</li>
+            <li>6–18 hónapos stratégiai építési irányok előkészítése</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kapcsolat és jogi információk</h4>
+          <div class="footer-links">
+            <a href="https://form.vipach.at" target="_blank" rel="noopener noreferrer">form.vipach.at</a>
+            <a href="mailto:office@vipach.at">office@vipach.at</a>
+            <a href="#" id="privacyLink">Adatvédelmi nyilatkozat</a>
+            <a href="#" id="impressumLink">Impresszum</a>
+          </div>
+          <p class="footer-note">A beküldött adatok kizárólag az audit előkészítéséhez, az esetleges szerződéskötéshez és számlázáshoz szükséges szakmai feldolgozást támogatják.</p>
+        </div>
       </div>
 
-      <div class="footer-links">
-        <a href="https://metallagentur.at" target="_blank" rel="noopener noreferrer">metallagentur.at</a>
-        <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a>
-        <a href="#" id="privacyLink">Adatvédelmi Nyilatkozat</a>
-        <a href="#" id="impressumLink">Impresszum</a>
-      </div>
-
-      <div class="footer-section">
-        <p>© 2026 Mag. Tamás Tóth e.U. Minden jog fenntartva.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">GDPR-kompatibilis | Osztrák Adatvédelmi Törvény (DSG) szerint</p>
-        <p style="font-size: 0.8rem;">Form Version 3.5 | Elon · Steve · Buffett · Zuckerberg · Merlin · Arthur · Ceridwen · Dalai Láma + autosave/PDF verzió | Utolsó frissítés: 2026-06-04</p>
+      <div class="footer-bottom">
+        <p>© 2026 Bánhalmi Norbert e.U. Minden jog fenntartva.</p>
+        <div class="footer-legal">
+          <span>GDPR-kompatibilis · Osztrák Adatvédelmi Törvény (DSG) szerint</span>
+          <span>Form Version 3.7 · Premium strategic audit · autosave/PDF verzió</span>
+          <span>Utolsó frissítés: 2026-06-05</span>
+        </div>
       </div>
     </footer>
   </div>
@@ -2835,7 +2980,7 @@
   <script>
     (() => {
 
-    const PASSWORD_HASH = '65e84be33532fb784c48129675f9eff3a682b27168c0ea744b2cf58ee02337c5';
+    const PASSWORD_HASH = 'df3abc05e3e7aa976d8d6f63c6da5caf23307fbbc1e5bd5feec5f7433a90ef8a';
     const AUTH_KEY = 'entity_deep_search_unlocked_v1';
     const passwordGate = document.getElementById('passwordGate');
     const protectedContent = document.getElementById('protectedContent');
@@ -2901,7 +3046,7 @@
       const clearDraftButton = document.getElementById('clearDraftButton');
       const downloadPdfButton = document.getElementById('downloadPdfButton');
       const autosaveStatus = document.getElementById('autosaveStatus');
-      const AUTOSAVE_KEY = 'metallagentur_entity_audit_draft_v34';
+      const AUTOSAVE_KEY = 'vipach_entity_audit_draft_v35';
 
       const setRuntimeMeta = () => {
         const currentUrl = window.location.href.split('?')[0];
@@ -2940,42 +3085,56 @@
         autosaveStatus.textContent = message;
       };
 
-      const cleanPdfText = (value) => String(value || '')
+      const cleanLabelText = (value) => String(value || '')
         .replace(/\*/g, '')
         .replace(/\s+/g, ' ')
         .trim();
 
-      const getDirectLabelText = (field) => {
-        if (!field || !field.id || !form) return '';
-        const label = Array.from(form.querySelectorAll('label')).find((item) => item.htmlFor === field.id);
-        return cleanPdfText(label?.textContent || '');
-      };
-
-      const getQuestionLabel = (field) => {
+      const getGroupQuestion = (field) => {
         if (!field) return '';
         const group = field.closest('.form-group');
-        const fieldLabel = group?.querySelector('.field-label');
-        if (fieldLabel) return cleanPdfText(fieldLabel.textContent);
-        const directLabel = getDirectLabelText(field);
-        if (directLabel) return directLabel;
-        const groupLabel = group?.querySelector('label');
-        if (groupLabel) return cleanPdfText(groupLabel.textContent);
-        return cleanPdfText(field.name || field.id || 'Mező');
+        if (!group) return '';
+        const explicitGroupLabel = group.querySelector(':scope > .field-label');
+        if (explicitGroupLabel) return cleanLabelText(explicitGroupLabel.textContent);
+        const directLabel = Array.from(group.children).find((child) => child.tagName === 'LABEL');
+        if (directLabel) return cleanLabelText(directLabel.textContent);
+        return '';
       };
 
-      const getOptionLabel = (field) => {
-        const directLabel = getDirectLabelText(field);
-        if (directLabel) return directLabel;
-        return cleanPdfText(field.value || field.name || 'Kiválasztva');
+      const getFieldLabel = (field) => {
+        if (!field) return '';
+        const groupQuestion = getGroupQuestion(field);
+        const directLabel = field.id ? form.querySelector(`label[for="${CSS.escape(field.id)}"]`) : null;
+        const parentLabel = field.closest('label');
+        const ownLabel = directLabel || parentLabel;
+        const ownText = cleanLabelText(ownLabel?.textContent || '');
+
+        if (field.type === 'radio' || field.type === 'checkbox') {
+          return ownText || field.value || field.name || '';
+        }
+
+        if (groupQuestion) return groupQuestion;
+        if (ownText) return ownText;
+        return cleanLabelText(field.name || '');
       };
 
-      const getFieldLabel = getQuestionLabel;
+      const getOptionText = (field) => {
+        if (!field) return '';
+        if (field.tagName === 'SELECT') {
+          const selectedText = cleanLabelText(field.selectedOptions?.[0]?.textContent || '');
+          return selectedText === 'Kérem válasszon' ? '' : selectedText;
+        }
+        if (field.type === 'checkbox' || field.type === 'radio') {
+          return getFieldLabel(field) || field.value || 'Kiválasztva';
+        }
+        return (field.value || '').trim();
+      };
 
       const getSerializableFields = () => {
         if (!form) return [];
         return Array.from(form.elements).filter((field) => {
           if (!field.name) return false;
-          if (field.type === 'hidden' || field.type === 'submit' || field.type === 'button') return false;
+          if (field.type === 'hidden' || field.type === 'submit' || field.type === 'button' || field.type === 'reset') return false;
           if (field.name === '_honey') return false;
           return true;
         });
@@ -3045,48 +3204,28 @@
 
       const collectAnsweredFields = () => {
         const rows = [];
-        const groupedChecks = new Map();
+        const groupedChoices = new Map();
+
         getSerializableFields().forEach((field) => {
-          if (field.disabled) return;
-
-          if (field.type === 'checkbox') {
+          if (field.type === 'checkbox' || field.type === 'radio') {
             if (!field.checked) return;
-            const question = getQuestionLabel(field);
-            const option = getOptionLabel(field);
-            if (!question || question === option) {
-              rows.push({ question: option || field.name, value: 'Igen / elfogadva' });
-              return;
-            }
-            const key = `${field.name}::${question}`;
-            const existing = groupedChecks.get(key) || { question, values: [] };
-            existing.values.push(option);
-            groupedChecks.set(key, existing);
+            const question = getGroupQuestion(field) || field.name;
+            const existing = groupedChoices.get(field.name) || { question, values: [] };
+            existing.values.push(getFieldLabel(field) || field.value || 'Kiválasztva');
+            groupedChoices.set(field.name, existing);
             return;
           }
 
-          if (field.type === 'radio') {
-            if (!field.checked) return;
-            rows.push({ question: getQuestionLabel(field), value: getOptionLabel(field) });
-            return;
-          }
-
-          const tagName = String(field.tagName || '').toUpperCase();
-          let value = '';
-          if (tagName === 'SELECT') {
-            value = cleanPdfText(field.selectedOptions?.[0]?.textContent || field.value || '');
-            if (!field.value || /^kérem válasszon/i.test(value)) return;
-          } else {
-            value = String(field.value || '').trim();
-            if (!value) return;
-          }
-          rows.push({ question: getQuestionLabel(field), value });
+          const value = getOptionText(field);
+          if (!value) return;
+          rows.push({ question: getFieldLabel(field), value });
         });
 
-        groupedChecks.forEach((item) => {
+        groupedChoices.forEach((item) => {
           rows.push({ question: item.question, value: item.values.join('\n') });
         });
 
-        return rows;
+        return rows.filter((row) => row.question && row.value);
       };
 
       const buildPdfMarkup = () => {
@@ -3094,7 +3233,7 @@
         const title = 'Digitális Entitásépítési Audit — kitöltött válaszok';
         const meta = `Generálva: ${new Date().toLocaleString('hu-HU')} · Forrás: ${window.location.href}`;
         const content = rows.length
-          ? rows.map((row, index) => `<div class="pdf-answer"><span class="pdf-question">${index + 1}. ${escapeHtml(row.question)}</span><div class="pdf-value">${escapeHtml(row.value)}</div></div>`).join('')
+          ? rows.map((row) => `<div class="pdf-answer"><span class="pdf-question">${escapeHtml(row.question)}</span><div class="pdf-value">${escapeHtml(row.value)}</div></div>`).join('')
           : '<p>Nincs még kitöltött válasz.</p>';
         return `<div class="pdf-export-document"><h1>${escapeHtml(title)}</h1><div class="pdf-meta">${escapeHtml(meta)}</div>${content}</div>`;
       };
@@ -3102,44 +3241,47 @@
       const downloadAnswersAsPdf = async () => {
         const rows = collectAnsweredFields();
         if (!rows.length) {
-          showAlert('Még nincs kitöltött válasz, amit PDF-be lehetne menteni. Írjon be legalább egy választ, vagy jelöljön ki egy opciót.');
+          showAlert('Még nincs kitöltött válasz, amit PDF-be lehetne menteni.');
           return;
         }
 
-        const stage = document.createElement('div');
-        stage.className = 'pdf-export-stage';
-        stage.innerHTML = buildPdfMarkup();
-        document.body.appendChild(stage);
-        const pdfElement = stage.firstElementChild;
+        const exportHost = document.createElement('div');
+        exportHost.setAttribute('aria-hidden', 'true');
+        exportHost.style.position = 'absolute';
+        exportHost.style.left = '-10000px';
+        exportHost.style.top = '0';
+        exportHost.style.width = '794px';
+        exportHost.style.background = '#ffffff';
+        exportHost.style.color = '#111827';
+        exportHost.innerHTML = buildPdfMarkup();
+        document.body.appendChild(exportHost);
+
+        const exportNode = exportHost.firstElementChild;
         const fileName = 'digitalis-entitas-audit-valaszok-' + new Date().toISOString().slice(0, 10) + '.pdf';
 
         try {
-          await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-          if (window.html2pdf) {
+          if (window.html2pdf && exportNode) {
             await window.html2pdf().set({
               margin: 10,
               filename: fileName,
               image: { type: 'jpeg', quality: 0.98 },
-              html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', scrollX: 0, scrollY: 0 },
+              html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
               jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
               pagebreak: { mode: ['css', 'legacy'] }
-            }).from(pdfElement).save();
+            }).from(exportNode).save();
           } else {
             const printWindow = window.open('', '_blank');
             if (!printWindow) {
               showAlert('A PDF exporthoz engedélyezni kell az új ablak megnyitását, vagy próbálja újra később.');
               return;
             }
-            printWindow.document.write('<!doctype html><html><head><title>Audit válaszok</title><meta charset="utf-8"></head><body>' + buildPdfMarkup() + '</body></html>');
+            printWindow.document.write('<!doctype html><html><head><title>Audit válaszok</title><style>body{font-family:Arial,sans-serif;color:#111827;padding:24px}.pdf-answer{break-inside:avoid;margin:0 0 12px;padding:12px;border:1px solid #e5e7eb;border-radius:8px;background:#f9fafb}.pdf-question{display:block;font-weight:700;margin-bottom:5px}.pdf-value{white-space:pre-wrap;font-size:13px}</style></head><body>' + buildPdfMarkup() + '</body></html>');
             printWindow.document.close();
             printWindow.focus();
             printWindow.print();
           }
-        } catch (error) {
-          console.error('PDF export failed', error);
-          showAlert('A PDF generálás nem sikerült. Próbálja meg újra, vagy használja a böngésző nyomtatás / mentés PDF-be funkcióját.');
         } finally {
-          stage.remove();
+          exportHost.remove();
         }
       };
 
@@ -3234,7 +3376,7 @@
         }
 
         const requiredBillingFields = [
-          [document.getElementById('billingName'), 'Kérjük, adja meg a számlázási nevet a 2 000 EUR auditdíjhoz.'],
+          [document.getElementById('billingName'), 'Kérjük, adja meg a számlázási nevet az esetleges szerződéskötéshez és számlázáshoz.'],
           [document.getElementById('billingEmail'), 'Kérjük, adja meg a számlázási e-mail-címet.'],
           [document.getElementById('billingCountry'), 'Kérjük, adja meg a számlázási országot.'],
           [document.getElementById('billingAddress'), 'Kérjük, adja meg a számlázási címet.'],
@@ -3262,7 +3404,7 @@
 
         const commercialAcknowledgement = document.getElementById('commercial_acknowledgement');
         if (commercialAcknowledgement && !commercialAcknowledgement.checked) {
-          const msg = 'Kérjük, erősítse meg, hogy megértette a 2 000 EUR auditdíjat, a beszámítást és a minimum 10 000 EUR megvalósítási keretet.';
+          const msg = 'Kérjük, erősítse meg, hogy megértette: ez a felmérés 2 000 EUR szakmai értékű, de az előzetes egyeztetés alapján díjmentes; az esetleges későbbi megvalósítás külön ajánlat alapján történik.';
           commercialAcknowledgement.setCustomValidity(msg);
           showAlert(msg);
           openAndFocus(commercialAcknowledgement);
