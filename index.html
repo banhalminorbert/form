@@ -1105,6 +1105,7 @@
       font-weight: 700;
       margin-bottom: 5px;
       color: #111827;
+      white-space: pre-wrap;
     }
     .pdf-export-document .pdf-value {
       white-space: pre-wrap;
@@ -1508,6 +1509,8 @@
       <input type="hidden" name="clientPageUrl" id="clientPageUrl" value="">
       <input type="hidden" name="clientUserAgent" id="clientUserAgent" value="">
       <input type="hidden" name="clientSubmissionTimestamp" id="clientSubmissionTimestamp" value="">
+      <input type="hidden" name="_replyto" id="replyTo" value="">
+      <textarea name="Teljes kérdések és válaszok" id="formattedAnswers" hidden style="display:none;"></textarea>
 
 
       <div class="success-message" id="successMessage">
@@ -2896,6 +2899,8 @@
       const clientPageUrl = document.getElementById('clientPageUrl');
       const clientUserAgent = document.getElementById('clientUserAgent');
       const clientSubmissionTimestamp = document.getElementById('clientSubmissionTimestamp');
+      const formattedAnswers = document.getElementById('formattedAnswers');
+      const replyTo = document.getElementById('replyTo');
       const progressBar = document.getElementById('progressBar');
       const progressText = document.getElementById('progressText');
       const progressHint = document.getElementById('progressHint');
@@ -2916,6 +2921,10 @@
         if (clientPageUrl) clientPageUrl.value = window.location.href;
         if (clientUserAgent) clientUserAgent.value = navigator.userAgent || '';
         if (clientSubmissionTimestamp) clientSubmissionTimestamp.value = new Date().toISOString();
+        const emailField = document.getElementById('contactEmail');
+        if (replyTo && emailField && (emailField.value || '').trim()) {
+          replyTo.value = (emailField.value || '').trim();
+        }
       };
 
       const openAndFocus = (field) => {
@@ -2981,6 +2990,7 @@
           if (!field.name) return false;
           if (field.type === 'hidden' || field.type === 'submit' || field.type === 'button') return false;
           if (field.name === '_honey') return false;
+          if (field.id === 'formattedAnswers' || field.name === 'Teljes kérdések és válaszok') return false;
           return true;
         });
       };
@@ -3047,6 +3057,45 @@
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#039;');
 
+      const getSectionTitle = (field) => {
+        const section = field?.closest('details.accordion')?.previousElementSibling;
+        const title = section?.classList?.contains('section-title')
+          ? section.querySelector('h2')
+          : null;
+        return cleanPdfText(title?.textContent || '');
+      };
+
+      const getAccordionTitle = (field) => cleanPdfText(field?.closest('details.accordion')?.querySelector('summary')?.textContent || '');
+
+      const getFieldHelpText = (field) => {
+        const group = field?.closest('.form-group');
+        const help = group ? Array.from(group.children).find((child) => child.classList?.contains('field-help')) : null;
+        return cleanPdfText(help?.textContent || '');
+      };
+
+      const getFullQuestionText = (field) => {
+        const parts = [];
+        const section = getSectionTitle(field);
+        const block = getAccordionTitle(field);
+        const question = getQuestionLabel(field);
+        const help = getFieldHelpText(field);
+        if (section) parts.push(`Szekció: ${section}`);
+        if (block) parts.push(`Blokk: ${block}`);
+        if (question) parts.push(`Kérdés: ${question}`);
+        if (help) parts.push(`Magyarázat: ${help}`);
+        return parts.join('\n');
+      };
+
+      const buildQuestionAnswerText = () => {
+        const rows = collectAnsweredFields();
+        if (!rows.length) return 'Nincs kitöltött válasz.';
+        return rows.map((row, index) => `${index + 1}. Teljes kérdés:\n${row.question}\n\nVálasz:\n${row.value}`).join('\n\n---\n\n');
+      };
+
+      const syncFormattedAnswers = () => {
+        if (formattedAnswers) formattedAnswers.value = buildQuestionAnswerText();
+      };
+
       const collectAnsweredFields = () => {
         const rows = [];
         const groupedChecks = new Map();
@@ -3055,7 +3104,7 @@
 
           if (field.type === 'checkbox') {
             if (!field.checked) return;
-            const question = getQuestionLabel(field);
+            const question = getFullQuestionText(field);
             const option = getOptionLabel(field);
             if (!question || question === option) {
               rows.push({ question: option || field.name, value: 'Igen / elfogadva' });
@@ -3070,7 +3119,7 @@
 
           if (field.type === 'radio') {
             if (!field.checked) return;
-            rows.push({ question: getQuestionLabel(field), value: getOptionLabel(field) });
+            rows.push({ question: getFullQuestionText(field), value: getOptionLabel(field) });
             return;
           }
 
@@ -3083,7 +3132,7 @@
             value = String(field.value || '').trim();
             if (!value) return;
           }
-          rows.push({ question: getQuestionLabel(field), value });
+          rows.push({ question: getFullQuestionText(field), value });
         });
 
         groupedChecks.forEach((item) => {
@@ -3326,6 +3375,7 @@
 
         form.addEventListener('submit', (event) => {
           setRuntimeMeta();
+          syncFormattedAnswers();
 
           if (!validateCustomRules()) {
             event.preventDefault();
