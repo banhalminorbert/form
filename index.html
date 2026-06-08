@@ -1058,14 +1058,14 @@
 
 
     .pdf-export-stage {
-      position: fixed;
-      left: -10000px;
+      position: absolute;
+      left: 0;
       top: 0;
       width: 794px;
       min-height: 1123px;
       background: #ffffff;
       color: #111827;
-      z-index: 0;
+      z-index: 2147483647;
       pointer-events: none;
       opacity: 1;
       visibility: visible;
@@ -1499,11 +1499,12 @@
       </div>
     </section>
 
-    <form action="https://formsubmit.co/tamas.toth@metallagentur.at" method="POST" id="assessmentForm" accept-charset="UTF-8" novalidate>
+    <form action="https://script.google.com/macros/s/AKfycbz2L-DqpBR10Pbr1HwjqtuXlNqcfX1XE_ljg11Pg-Bx9J32fqYns0Jg1KhW8nnR-aInPA/exec" method="POST" id="assessmentForm" accept-charset="UTF-8" novalidate>
             <input type="hidden" name="_subject" value="Digitális Entitás Audit - Mag. Tamás Tóth">
+      <input type="hidden" name="technicalProcessor" value="Google Apps Script / Google Workspace">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="html">
-      <input type="hidden" name="_next" id="nextUrl" value="https://form.digitallagentur.at/?sent=1">
+      <input type="hidden" name="_next" id="nextUrl" value="https://form.metallagentur.at/?sent=1">
       <input type="text" name="_honey" id="formHoney" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
       <input type="hidden" name="formSourceUrl" id="formSourceUrl" value="">
       <input type="hidden" name="clientPageUrl" id="clientPageUrl" value="">
@@ -2587,7 +2588,7 @@
             <li>A beküldött adatok az audit elkészítéséhez, a 2 000 EUR auditdíj számlázásához és az ügyfélkommunikációhoz szükségesek.</li>
             <li>A kutatás nyilvános forrásokra, a megadott linkekre és az ügyfél által megosztott háttérinformációkra épülhet.</li>
             <li>A stratégiai, reputációs és üzleti információkat bizalmasan kell kezelni.</li>
-            <li>A beküldés külső űrlapfeldolgozó szolgáltatáson keresztül történik; szigorúbb compliance vagy nagyobb érzékenység esetén saját/EU-s backend javasolt.</li>
+            <li>A beküldés Google Apps Script alapú technikai továbbítással történik, amely az űrlap adatait a megadott kapcsolati e-mail-címre továbbítja. Az adatkezelő a beérkező adatokat az audit előkészítése, kapcsolattartás és ajánlatkészítés céljából kezeli.</li>
           </ul>
           <p><strong>Jogok:</strong> hozzáférés, helyesbítés, törlés, korlátozás, tiltakozás és adathordozhatóság az alkalmazandó GDPR/DSG keretek szerint.</p>
           <p><strong>Verzió:</strong> Privacy-HU-Entity-Audit-2026-06-04.</p>
@@ -2764,7 +2765,7 @@
             <p>Az ügyfél köteles a szolgáltatás elvégzéséhez szükséges adatokat, hozzáférhető forrásokat, dokumentumokat, jóváhagyásokat és döntéseket ésszerű időben biztosítani. Az ügyfél felel azért, hogy az általa megadott információk valósak, jogszerűen felhasználhatók és nem sértik harmadik személy jogait.</p>
 
             <h3>7. Titoktartás és adatvédelem</h3>
-            <p>A felek a projekt során megismert üzleti, személyes, pénzügyi, reputációs és stratégiai információkat bizalmasan kezelik. A személyes adatok kezelése a GDPR, az osztrák Datenschutzgesetz és a szolgáltató adatvédelmi tájékoztatója szerint történik. A formküldés külső technikai szolgáltatón keresztül történhet, amelyről az adatvédelmi tájékoztató ad részletesebb információt.</p>
+            <p>A felek a projekt során megismert üzleti, személyes, pénzügyi, reputációs és stratégiai információkat bizalmasan kezelik. A személyes adatok kezelése a GDPR, az osztrák Datenschutzgesetz és a szolgáltató adatvédelmi tájékoztatója szerint történik. A formküldés Google Apps Script technikai továbbítással történik, amely az űrlap adatait a szolgáltató kapcsolati e-mail-címére küldi tovább.</p>
 
             <h3>8. Felelősségi korlátok</h3>
             <p>A szolgáltató a szakmai gondosság szabályai szerint jár el, de nem vállal felelősséget harmadik fél platformjai, keresők, AI-rendszerek, sajtótermékek, közösségi oldalak vagy hatósági adatbázisok működéséért, változásaiért vagy döntéseiért. A stratégia üzleti és technológiai tanácsadási anyag, nem minősül jogi, adózási, pénzügyi, befektetési, biztosítási vagy hatósági tanácsadásnak.</p>
@@ -3086,9 +3087,73 @@
         return parts.join('\n');
       };
 
+      const EMPTY_ANSWER_LABEL = '— Nincs kitöltve —';
+      const EMPTY_CHECKBOX_LABEL = '— Nincs bejelölve —';
+
+      const normaliseAnswerValue = (value) => {
+        const cleaned = String(value || '').trim();
+        return cleaned ? cleaned : EMPTY_ANSWER_LABEL;
+      };
+
+      const collectAllReportRows = () => {
+        const rows = [];
+        const groupedChoiceFields = new Map();
+
+        getSerializableFields().forEach((field) => {
+          if (!field || field.disabled) return;
+
+          const tagName = String(field.tagName || '').toUpperCase();
+          const question = getFullQuestionText(field) || getQuestionLabel(field) || field.name || field.id || 'Mező';
+
+          if (field.type === 'checkbox' || field.type === 'radio') {
+            const key = `${field.type}::${field.name || field.id}::${question}`;
+            let group = groupedChoiceFields.get(key);
+            if (!group) {
+              group = {
+                type: field.type,
+                question,
+                values: [],
+                hasAnyOption: false
+              };
+              groupedChoiceFields.set(key, group);
+              rows.push(group);
+            }
+            group.hasAnyOption = true;
+            if (field.checked) {
+              group.values.push(getOptionLabel(field) || field.value || 'Kiválasztva');
+            }
+            return;
+          }
+
+          if (tagName === 'SELECT') {
+            const selectedText = cleanPdfText(field.selectedOptions?.[0]?.textContent || field.value || '');
+            const isEmptySelect = !field.value || /^kérem válasszon/i.test(selectedText);
+            rows.push({ question, value: isEmptySelect ? EMPTY_ANSWER_LABEL : selectedText });
+            return;
+          }
+
+          rows.push({ question, value: normaliseAnswerValue(field.value) });
+        });
+
+        return rows.map((row) => {
+          if (Array.isArray(row.values)) {
+            return {
+              question: row.question,
+              value: row.values.length ? row.values.join('\n') : (row.type === 'checkbox' ? EMPTY_CHECKBOX_LABEL : EMPTY_ANSWER_LABEL)
+            };
+          }
+          return row;
+        });
+      };
+
+      const collectAnsweredFields = () => collectAllReportRows().filter((row) => {
+        const value = String(row.value || '').trim();
+        return value && value !== EMPTY_ANSWER_LABEL && value !== EMPTY_CHECKBOX_LABEL;
+      });
+
       const buildQuestionAnswerText = () => {
-        const rows = collectAnsweredFields();
-        if (!rows.length) return 'Nincs kitöltött válasz.';
+        const rows = collectAllReportRows();
+        if (!rows.length) return 'Nincs exportálható kérdés az űrlapban.';
         return rows.map((row, index) => `${index + 1}. Teljes kérdés:\n${row.question}\n\nVálasz:\n${row.value}`).join('\n\n---\n\n');
       };
 
@@ -3096,75 +3161,32 @@
         if (formattedAnswers) formattedAnswers.value = buildQuestionAnswerText();
       };
 
-      const collectAnsweredFields = () => {
-        const rows = [];
-        const groupedChecks = new Map();
-        getSerializableFields().forEach((field) => {
-          if (field.disabled) return;
-
-          if (field.type === 'checkbox') {
-            if (!field.checked) return;
-            const question = getFullQuestionText(field);
-            const option = getOptionLabel(field);
-            if (!question || question === option) {
-              rows.push({ question: option || field.name, value: 'Igen / elfogadva' });
-              return;
-            }
-            const key = `${field.name}::${question}`;
-            const existing = groupedChecks.get(key) || { question, values: [] };
-            existing.values.push(option);
-            groupedChecks.set(key, existing);
-            return;
-          }
-
-          if (field.type === 'radio') {
-            if (!field.checked) return;
-            rows.push({ question: getFullQuestionText(field), value: getOptionLabel(field) });
-            return;
-          }
-
-          const tagName = String(field.tagName || '').toUpperCase();
-          let value = '';
-          if (tagName === 'SELECT') {
-            value = cleanPdfText(field.selectedOptions?.[0]?.textContent || field.value || '');
-            if (!field.value || /^kérem válasszon/i.test(value)) return;
-          } else {
-            value = String(field.value || '').trim();
-            if (!value) return;
-          }
-          rows.push({ question: getFullQuestionText(field), value });
-        });
-
-        groupedChecks.forEach((item) => {
-          rows.push({ question: item.question, value: item.values.join('\n') });
-        });
-
-        return rows;
-      };
-
       const buildPdfMarkup = () => {
-        const rows = collectAnsweredFields();
-        const title = 'Digitális Entitásépítési Audit — kitöltött válaszok';
+        const rows = collectAllReportRows();
+        const title = 'Digitális Entitásépítési Audit — teljes kérdéssor és válaszok';
         const meta = `Generálva: ${new Date().toLocaleString('hu-HU')} · Forrás: ${window.location.href}`;
         const content = rows.length
           ? rows.map((row, index) => `<div class="pdf-answer"><span class="pdf-question">${index + 1}. ${escapeHtml(row.question)}</span><div class="pdf-value">${escapeHtml(row.value)}</div></div>`).join('')
-          : '<p>Nincs még kitöltött válasz.</p>';
+          : '<p>Nincs exportálható kérdés az űrlapban.</p>';
         return `<div class="pdf-export-document"><h1>${escapeHtml(title)}</h1><div class="pdf-meta">${escapeHtml(meta)}</div>${content}</div>`;
       };
 
       const downloadAnswersAsPdf = async () => {
-        const rows = collectAnsweredFields();
-        if (!rows.length) {
-          showAlert('Még nincs kitöltött válasz, amit PDF-be lehetne menteni. Írjon be legalább egy választ, vagy jelöljön ki egy opciót.');
-          return;
-        }
+        clearAlert();
+        syncFormattedAnswers();
 
         const stage = document.createElement('div');
         stage.className = 'pdf-export-stage';
         stage.innerHTML = buildPdfMarkup();
         document.body.appendChild(stage);
         const pdfElement = stage.firstElementChild;
-        const fileName = 'digitalis-entitas-audit-valaszok-' + new Date().toISOString().slice(0, 10) + '.pdf';
+        const fileName = 'digitalis-entitas-audit-teljes-kerdessor-' + new Date().toISOString().slice(0, 10) + '.pdf';
+
+        const originalText = downloadPdfButton ? downloadPdfButton.textContent : '';
+        if (downloadPdfButton) {
+          downloadPdfButton.disabled = true;
+          downloadPdfButton.textContent = 'PDF KÉSZÜL...';
+        }
 
         try {
           await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
@@ -3173,9 +3195,9 @@
               margin: 10,
               filename: fileName,
               image: { type: 'jpeg', quality: 0.98 },
-              html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', scrollX: 0, scrollY: 0 },
+              html2canvas: { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#ffffff', scrollX: 0, scrollY: 0, windowWidth: 794 },
               jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-              pagebreak: { mode: ['css', 'legacy'] }
+              pagebreak: { mode: ['css', 'legacy'], avoid: '.pdf-answer' }
             }).from(pdfElement).save();
           } else {
             const printWindow = window.open('', '_blank');
@@ -3193,6 +3215,10 @@
           showAlert('A PDF generálás nem sikerült. Próbálja meg újra, vagy használja a böngésző nyomtatás / mentés PDF-be funkcióját.');
         } finally {
           stage.remove();
+          if (downloadPdfButton) {
+            downloadPdfButton.disabled = false;
+            downloadPdfButton.textContent = originalText || 'VÁLASZOK LETÖLTÉSE PDF-BE';
+          }
         }
       };
 
