@@ -6,7 +6,18 @@
   <title>Digitális Entitásépítési Audit és Deep Search Stratégia | Mag. Tamás Tóth</title>
   <meta name="description" content="C-level digitális entitásépítési és deep search audit személyes márkáknak, cégeknek és márkáknak a magyar és nemzetközi piaci láthatóság erősítésére." />
   <meta name="author" content="Mag. Tamás Tóth e.U." />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="GPTBot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="ChatGPT-User" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="OAI-SearchBot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="ClaudeBot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="Claude-User" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="PerplexityBot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="CCBot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="Google-Extended" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+  <meta name="Applebot-Extended" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
   <meta name="theme-color" content="#17283D" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -919,7 +930,7 @@
     }
 
     /* =========================================================
-       UTILITY PANEL (autosave + PDF)
+       UTILITY PANEL (autosave)
        ========================================================= */
     .utility-panel {
       margin: 28px 0 8px;
@@ -1052,66 +1063,6 @@
       line-height: 1.65;
     }
 
-    /* =========================================================
-       PDF EXPORT (print document — kept light/legible)
-       ========================================================= */
-
-
-    .pdf-export-stage {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 794px;
-      min-height: 1123px;
-      background: #ffffff;
-      color: #111827;
-      z-index: 2147483647;
-      pointer-events: none;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .pdf-export-document {
-      font-family: Inter, Arial, sans-serif;
-      color: #111827;
-      background: #ffffff;
-      padding: 28px;
-      line-height: 1.55;
-    }
-    .pdf-export-document h1 {
-      font-family: Georgia, serif;
-      font-size: 26px;
-      margin: 0 0 8px;
-      color: #111827;
-    }
-    .pdf-export-document .pdf-meta {
-      color: #4b5563;
-      font-size: 12px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #d1d5db;
-      padding-bottom: 12px;
-    }
-    .pdf-export-document .pdf-answer {
-      break-inside: avoid;
-      page-break-inside: avoid;
-      margin: 0 0 12px;
-      padding: 12px;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      background: #f9fafb;
-    }
-    .pdf-export-document .pdf-question {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 5px;
-      color: #111827;
-      white-space: pre-wrap;
-    }
-    .pdf-export-document .pdf-value {
-      white-space: pre-wrap;
-      color: #1f2937;
-      font-size: 13px;
-    }
 
     /* =========================================================
        FOOTER (deep blue)
@@ -1423,7 +1374,7 @@
           <div class="password-error" id="passwordError" role="alert" aria-live="polite"></div>
         </form>
         <div class="gate-meta">
-          A belépés után a kérdőív automatikusan ment a böngészőben, és a válaszok PDF-be is letölthetők. A jelszóellenőrzés hash-alapú kliensoldali védelem; valódi vállalati szintű védelemhez szerveroldali azonosítás szükséges.
+          A belépés után a kérdőív automatikusan ment a böngésző tartós tárhelyébe. A kitöltött válaszok ugyanabban a böngészőben gép- vagy böngésző-újraindítás után is visszatöltődnek. A jelszóellenőrzés hash-alapú kliensoldali védelem; valódi vállalati szintű védelemhez szerveroldali azonosítás szükséges.
         </div>
       </div>
     </div>
@@ -2794,13 +2745,12 @@
 
 
 
-      <div class="utility-panel" aria-label="Mentés és PDF export">
-        <h3>Mentés és PDF letöltés</h3>
-        <p>Az űrlap a böngészőben automatikusan menti a válaszokat, hogy egy hosszabb kitöltés közben ne vesszen el a munka. A válaszokból bármikor letölthető egy belső PDF-vázlat is.</p>
+      <div class="utility-panel" aria-label="Automatikus böngészős mentés">
+        <h3>Automatikus mentés</h3>
+        <p>Az űrlap a böngésző tartós helyi tárhelyébe menti a válaszokat. Ha a gép vagy a böngésző újraindul, ugyanabban a böngészőben a kitöltött mezők automatikusan visszatöltődnek.</p>
         <div class="utility-actions">
-          <button type="button" id="downloadPdfButton" class="button-tertiary">VÁLASZOK LETÖLTÉSE PDF-BE</button>
           <button type="button" id="clearDraftButton" class="button-tertiary">HELYI MENTÉS TÖRLÉSE</button>
-          <span class="utility-status" id="autosaveStatus">Automatikus mentés aktív ebben a böngészőben.</span>
+          <span class="utility-status" id="autosaveStatus">Automatikus tartós mentés aktív ebben a böngészőben.</span>
         </div>
       </div>
 
@@ -2839,7 +2789,6 @@
   </main>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     (() => {
 
@@ -2864,7 +2813,7 @@
       return Array.from(new Uint8Array(digest)).map((byte) => byte.toString(16).padStart(2, '0')).join('');
     };
 
-    if (sessionStorage.getItem(AUTH_KEY) === 'true') {
+    if (localStorage.getItem(AUTH_KEY) === 'true' || sessionStorage.getItem(AUTH_KEY) === 'true') {
       showProtectedContent();
     }
 
@@ -2882,6 +2831,7 @@
           const typedHash = await sha256(typedPassword);
           if (typedHash === PASSWORD_HASH) {
             sessionStorage.setItem(AUTH_KEY, 'true');
+            localStorage.setItem(AUTH_KEY, 'true');
             showProtectedContent();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           } else {
@@ -2909,9 +2859,9 @@
       const submitButton = document.getElementById('submitButton');
       const resetButton = document.getElementById('resetButton');
       const clearDraftButton = document.getElementById('clearDraftButton');
-      const downloadPdfButton = document.getElementById('downloadPdfButton');
       const autosaveStatus = document.getElementById('autosaveStatus');
       const AUTOSAVE_KEY = 'metallagentur_entity_audit_draft_v34';
+      const AUTOSAVE_BACKUP_KEY = 'metallagentur_entity_audit_draft_v34_backup';
 
       const setRuntimeMeta = () => {
         const currentUrl = window.location.href.split('?')[0];
@@ -2954,7 +2904,7 @@
         autosaveStatus.textContent = message;
       };
 
-      const cleanPdfText = (value) => String(value || '')
+      const cleanText = (value) => String(value || '')
         .replace(/\*/g, '')
         .replace(/\s+/g, ' ')
         .trim();
@@ -2962,25 +2912,25 @@
       const getDirectLabelText = (field) => {
         if (!field || !field.id || !form) return '';
         const label = Array.from(form.querySelectorAll('label')).find((item) => item.htmlFor === field.id);
-        return cleanPdfText(label?.textContent || '');
+        return cleanText(label?.textContent || '');
       };
 
       const getQuestionLabel = (field) => {
         if (!field) return '';
         const group = field.closest('.form-group');
         const fieldLabel = group?.querySelector('.field-label');
-        if (fieldLabel) return cleanPdfText(fieldLabel.textContent);
+        if (fieldLabel) return cleanText(fieldLabel.textContent);
         const directLabel = getDirectLabelText(field);
         if (directLabel) return directLabel;
         const groupLabel = group?.querySelector('label');
-        if (groupLabel) return cleanPdfText(groupLabel.textContent);
-        return cleanPdfText(field.name || field.id || 'Mező');
+        if (groupLabel) return cleanText(groupLabel.textContent);
+        return cleanText(field.name || field.id || 'Mező');
       };
 
       const getOptionLabel = (field) => {
         const directLabel = getDirectLabelText(field);
         if (directLabel) return directLabel;
-        return cleanPdfText(field.value || field.name || 'Kiválasztva');
+        return cleanText(field.value || field.name || 'Kiválasztva');
       };
 
       const getFieldLabel = getQuestionLabel;
@@ -3012,12 +2962,25 @@
         return data;
       };
 
+      const getStoredDraftPayload = () => {
+        const primary = localStorage.getItem(AUTOSAVE_KEY);
+        const backup = localStorage.getItem(AUTOSAVE_BACKUP_KEY);
+        return primary || backup || '';
+      };
+
+      const normaliseStoredDraft = (parsed) => {
+        if (parsed && typeof parsed === 'object' && parsed.data && typeof parsed.data === 'object') {
+          return parsed.data;
+        }
+        return parsed && typeof parsed === 'object' ? parsed : {};
+      };
+
       const restoreFormState = () => {
         if (!form) return;
-        const raw = localStorage.getItem(AUTOSAVE_KEY);
+        const raw = getStoredDraftPayload();
         if (!raw) return;
         try {
-          const data = JSON.parse(raw);
+          const data = normaliseStoredDraft(JSON.parse(raw));
           getSerializableFields().forEach((field) => {
             if (!(field.name in data)) return;
             if (field.type === 'checkbox') {
@@ -3029,10 +2992,32 @@
               field.value = data[field.name] || '';
             }
           });
-          setAutosaveStatus('Korábbi helyi mentés visszatöltve ebben a böngészőben.');
+          setAutosaveStatus('Korábbi helyi mentés visszatöltve. Gép- vagy böngésző-újraindítás után is megmarad ugyanebben a böngészőben.');
         } catch (error) {
           console.warn('Autosave restore failed', error);
           localStorage.removeItem(AUTOSAVE_KEY);
+          localStorage.removeItem(AUTOSAVE_BACKUP_KEY);
+          localStorage.removeItem(AUTOSAVE_BACKUP_KEY);
+        }
+      };
+
+      const buildDraftPayload = () => JSON.stringify({
+        savedAt: new Date().toISOString(),
+        source: window.location.href.split('#')[0],
+        data: collectFormState()
+      });
+
+      const saveDraftNow = () => {
+        if (!form) return false;
+        try {
+          const payload = buildDraftPayload();
+          localStorage.setItem(AUTOSAVE_KEY, payload);
+          localStorage.setItem(AUTOSAVE_BACKUP_KEY, payload);
+          return true;
+        } catch (error) {
+          console.warn('Autosave failed', error);
+          setAutosaveStatus('A helyi mentés nem sikerült. A böngésző tárhelye lehet, hogy megtelt vagy tiltva van.');
+          return false;
         }
       };
 
@@ -3041,14 +3026,10 @@
         if (!form) return;
         window.clearTimeout(autosaveTimer);
         autosaveTimer = window.setTimeout(() => {
-          try {
-            localStorage.setItem(AUTOSAVE_KEY, JSON.stringify(collectFormState()));
-            setAutosaveStatus('Automatikusan mentve: ' + new Date().toLocaleTimeString('hu-HU', { hour: '2-digit', minute: '2-digit' }));
-          } catch (error) {
-            console.warn('Autosave failed', error);
-            setAutosaveStatus('A helyi mentés nem sikerült. A böngésző tárhelye lehet, hogy megtelt vagy tiltva van.');
+          if (saveDraftNow()) {
+            setAutosaveStatus('Automatikusan mentve: ' + new Date().toLocaleTimeString('hu-HU', { hour: '2-digit', minute: '2-digit' }) + ' · újraindítás után is visszatöltődik');
           }
-        }, 450);
+        }, 300);
       };
 
       const escapeHtml = (value) => String(value || '')
@@ -3063,15 +3044,15 @@
         const title = section?.classList?.contains('section-title')
           ? section.querySelector('h2')
           : null;
-        return cleanPdfText(title?.textContent || '');
+        return cleanText(title?.textContent || '');
       };
 
-      const getAccordionTitle = (field) => cleanPdfText(field?.closest('details.accordion')?.querySelector('summary')?.textContent || '');
+      const getAccordionTitle = (field) => cleanText(field?.closest('details.accordion')?.querySelector('summary')?.textContent || '');
 
       const getFieldHelpText = (field) => {
         const group = field?.closest('.form-group');
         const help = group ? Array.from(group.children).find((child) => child.classList?.contains('field-help')) : null;
-        return cleanPdfText(help?.textContent || '');
+        return cleanText(help?.textContent || '');
       };
 
       const getFullQuestionText = (field) => {
@@ -3126,7 +3107,7 @@
           }
 
           if (tagName === 'SELECT') {
-            const selectedText = cleanPdfText(field.selectedOptions?.[0]?.textContent || field.value || '');
+            const selectedText = cleanText(field.selectedOptions?.[0]?.textContent || field.value || '');
             const isEmptySelect = !field.value || /^kérem válasszon/i.test(selectedText);
             rows.push({ question, value: isEmptySelect ? EMPTY_ANSWER_LABEL : selectedText });
             return;
@@ -3159,67 +3140,6 @@
 
       const syncFormattedAnswers = () => {
         if (formattedAnswers) formattedAnswers.value = buildQuestionAnswerText();
-      };
-
-      const buildPdfMarkup = () => {
-        const rows = collectAllReportRows();
-        const title = 'Digitális Entitásépítési Audit — teljes kérdéssor és válaszok';
-        const meta = `Generálva: ${new Date().toLocaleString('hu-HU')} · Forrás: ${window.location.href}`;
-        const content = rows.length
-          ? rows.map((row, index) => `<div class="pdf-answer"><span class="pdf-question">${index + 1}. ${escapeHtml(row.question)}</span><div class="pdf-value">${escapeHtml(row.value)}</div></div>`).join('')
-          : '<p>Nincs exportálható kérdés az űrlapban.</p>';
-        return `<div class="pdf-export-document"><h1>${escapeHtml(title)}</h1><div class="pdf-meta">${escapeHtml(meta)}</div>${content}</div>`;
-      };
-
-      const downloadAnswersAsPdf = async () => {
-        clearAlert();
-        syncFormattedAnswers();
-
-        const stage = document.createElement('div');
-        stage.className = 'pdf-export-stage';
-        stage.innerHTML = buildPdfMarkup();
-        document.body.appendChild(stage);
-        const pdfElement = stage.firstElementChild;
-        const fileName = 'digitalis-entitas-audit-teljes-kerdessor-' + new Date().toISOString().slice(0, 10) + '.pdf';
-
-        const originalText = downloadPdfButton ? downloadPdfButton.textContent : '';
-        if (downloadPdfButton) {
-          downloadPdfButton.disabled = true;
-          downloadPdfButton.textContent = 'PDF KÉSZÜL...';
-        }
-
-        try {
-          await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-          if (window.html2pdf) {
-            await window.html2pdf().set({
-              margin: 10,
-              filename: fileName,
-              image: { type: 'jpeg', quality: 0.98 },
-              html2canvas: { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#ffffff', scrollX: 0, scrollY: 0, windowWidth: 794 },
-              jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-              pagebreak: { mode: ['css', 'legacy'], avoid: '.pdf-answer' }
-            }).from(pdfElement).save();
-          } else {
-            const printWindow = window.open('', '_blank');
-            if (!printWindow) {
-              showAlert('A PDF exporthoz engedélyezni kell az új ablak megnyitását, vagy próbálja újra később.');
-              return;
-            }
-            printWindow.document.write('<!doctype html><html><head><title>Audit válaszok</title><meta charset="utf-8"></head><body>' + buildPdfMarkup() + '</body></html>');
-            printWindow.document.close();
-            printWindow.focus();
-            printWindow.print();
-          }
-        } catch (error) {
-          console.error('PDF export failed', error);
-          showAlert('A PDF generálás nem sikerült. Próbálja meg újra, vagy használja a böngésző nyomtatás / mentés PDF-be funkcióját.');
-        } finally {
-          stage.remove();
-          if (downloadPdfButton) {
-            downloadPdfButton.disabled = false;
-            downloadPdfButton.textContent = originalText || 'VÁLASZOK LETÖLTÉSE PDF-BE';
-          }
-        }
       };
 
 
@@ -3385,6 +3305,7 @@
       const params = new URLSearchParams(window.location.search);
       if (params.get('sent') === '1') {
         localStorage.removeItem(AUTOSAVE_KEY);
+          localStorage.removeItem(AUTOSAVE_BACKUP_KEY);
         const message = document.getElementById('successMessage');
         if (message) {
           message.classList.add('show');
@@ -3398,9 +3319,13 @@
         updateProgress();
         form.addEventListener('input', () => { updateProgress(); saveDraft(); });
         form.addEventListener('change', () => { updateProgress(); saveDraft(); });
+        window.addEventListener('pagehide', saveDraftNow);
+        window.addEventListener('beforeunload', saveDraftNow);
+        document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveDraftNow(); });
 
         form.addEventListener('submit', (event) => {
           setRuntimeMeta();
+          saveDraftNow();
           syncFormattedAnswers();
 
           if (!validateCustomRules()) {
@@ -3430,6 +3355,7 @@
         resetButton.addEventListener('click', () => {
           form.reset();
           localStorage.removeItem(AUTOSAVE_KEY);
+          localStorage.removeItem(AUTOSAVE_BACKUP_KEY);
           clearAlert();
           setAutosaveStatus('A helyi mentés törölve. Az űrlap tiszta lappal indul.');
           if (submitButton) {
@@ -3445,16 +3371,8 @@
       if (clearDraftButton) {
         clearDraftButton.addEventListener('click', () => {
           localStorage.removeItem(AUTOSAVE_KEY);
+          localStorage.removeItem(AUTOSAVE_BACKUP_KEY);
           setAutosaveStatus('A helyi mentés törölve ebben a böngészőben.');
-        });
-      }
-
-      if (downloadPdfButton) {
-        downloadPdfButton.addEventListener('click', () => {
-          downloadAnswersAsPdf().catch((error) => {
-            console.error('PDF export failed', error);
-            showAlert('A PDF generálás nem sikerült. Próbálja meg újra, vagy használja a böngésző nyomtatás / mentés PDF-be funkcióját.');
-          });
         });
       }
 
