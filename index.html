@@ -3499,5 +3499,357 @@
       }
     })();
   </script>
+
+<style id="final-i18n-audit-style">
+  body.lang-en .field-help, body.lang-de .field-help { display:none !important; }
+  .i18n-hidden-by-lang { display:none !important; }
+  .mandatory-legal-acceptance {border:1px solid rgba(180,130,40,.45); background:rgba(255,248,232,.78); padding:18px; border-radius:18px; margin:18px 0;}
+  .mandatory-legal-acceptance .notice-title {font-weight:800; margin-bottom:8px;}
+</style>
+<script id="final-i18n-audit-fix">
+(() => {
+  const EXTRA = {
+    en: {
+      labels: {
+        consent_0: 'I have read and accept the GDPR and AI-use notice above. I understand that this form does not request sensitive data and I will not provide such data.',
+        gatePassword: 'Password',
+        submission_acknowledgement: 'I understand that submitting this form starts the 96-hour audit preparation, but does not automatically order the 6–18 month implementation programme.'
+      },
+      exact: {
+        'Üdvözöljük · stratégiai belépés':'Welcome · strategic access',
+        'Ez nem egy gyors űrlap. Ez egy mély digitális tükör.':'This is not a quick form. It is a deep digital mirror.',
+        'Becsült kitöltési idő:':'Estimated completion time:',
+        'Vonuljon félre.':'Step away from interruptions.',
+        'Kapcsolja be a kedvenc zenéjét.':'Put on music that helps you think.',
+        'Töltsön egy italt.':'Prepare a drink.',
+        'Ne akarjon gyorsan túllenni rajta.':'Do not rush through it.',
+        'Belépés a kérdőívhez':'Access to the questionnaire',
+        'Jelszó':'Password',
+        'KÉRDŐÍV MEGNYITÁSA':'OPEN QUESTIONNAIRE',
+        'Digitális entitásépítés · Deep Search · AI-érthetőség':'Digital entity building · Deep Search · AI readability',
+        'Digitális Entitásépítési Audit és Deep Search Stratégia':'Digital Entity Audit and Deep Search Strategy',
+        'Mi történik egy digitális entitásépítéskor?':'What happens during digital entity building?',
+        '96 órás digitális entitásdiagnózis':'96-hour digital entity diagnosis',
+        'A beküldés után':'After submission',
+        '96 órán belül':'within 96 hours',
+        'Példatörténet: magyar cég külföldi piacra lép':'Example: a Hungarian company entering foreign markets',
+        'Példatörténet: tulajdonosból személyes márka':'Example: turning an owner into a personal brand',
+        'Feltárjuk, mit lát ma a digitális tér, a kereső és az AI a személyből, cégből vagy márkából.':'We identify what the digital space, search engines and AI currently see about the person, company or brand.',
+        'Megmutatjuk, hol hiányos, félreérthető vagy gyenge a digitális jel, és mit kell először rendezni.':'We show where the digital signal is incomplete, misleading or weak, and what must be fixed first.',
+        'Időrendi, lépésről lépésre követhető stratégia készül a magyar és nemzetközi piaci célhoz.':'You receive a chronological, step-by-step strategy for the Hungarian and international market goal.',
+        'Mit kap az ügyfél 96 órán belül?':'What does the client receive within 96 hours?',
+        '1. Digitális valóságkép':'1. Digital reality snapshot',
+        'Mit lát ma a Google, a kereső, az AI és a piac.':'What Google, search engines, AI and the market see today.',
+        '2. AI-érthetőségi vizsgálat':'2. AI readability review',
+        'Mit ért félre, mit nem talál, és hol improvizálhat a rendszer.':'What the system misunderstands, fails to find or may improvise.',
+        '3. Kockázati térkép':'3. Risk map',
+        'Gyenge, félreérthető vagy reputációsan érzékeny pontok üzleti nyelven.':'Weak, ambiguous or reputation-sensitive points in business language.',
+        '4. Bizonyítékhiány':'4. Missing proof',
+        'Milyen források, strukturált adatok, sajtó- vagy tartalmi elemek hiányoznak.':'Which sources, structured data, press or content elements are missing.',
+        '5. Építési sorrend':'5. Build sequence',
+        'Mit kell előbb rendezni, és mit csak utána érdemes kommunikálni.':'What must be fixed first and what should only be communicated afterwards.',
+        '6. Egyedi megvalósítási irány':'6. Custom implementation direction',
+        'Az audit végén világos stratégiai irány és személyre szabott ajánlati alap készül.':'The audit creates a clear strategic direction and a personalised basis for an offer.',
+        'GDPR és AI-használati elfogadás a kitöltés megkezdése előtt':'GDPR and AI-use acceptance before starting the questionnaire',
+        'Fontos adatvédelmi figyelmeztetés:':'Important data-protection notice:',
+        'AI-eszközök:':'AI tools:',
+        'Emberi kontroll:':'Human control:',
+        'Hogyan érdemes kitölteni?':'How to complete the questionnaire',
+        '1. irány: tulajdonos, ügyvezető vagy személyes márka':'Path 1: owner, executive or personal brand',
+        '2. irány: cég, márka vagy szervezet':'Path 2: company, brand or organisation',
+        '0. Kapcsolattartási és auditindítási adatok':'0. Contact and audit-start data',
+        'Alapadatok és audit fókusz':'Basic data and audit focus',
+        'Mire készüljön elsődlegesen az audit?':'What should the audit primarily focus on?',
+        'A. Tulajdonos / ügyvezető / személyes márka':'A. Owner / executive / personal brand',
+        'A1. Személyes azonosítás és szerep':'A1. Personal identification and role',
+        'A2. Múlt: szakmai történet és bizonyítékok':'A2. Past: professional story and proof',
+        'A3. Jelen: online jelenlét, reputáció és AI-kép':'A3. Present: online presence, reputation and AI image',
+        'A4. Jövő: személyes márka célok és AI-pozicionálás':'A4. Future: personal-brand goals and AI positioning',
+        'B. Cég / márka / szervezet':'B. Company / brand / organisation',
+        'B1. Céges vagy márkaazonosítás':'B1. Company or brand identification',
+        'B2. Múlt: cégtörténet, fejlődés és régi digitális nyomok':'B2. Past: company history, development and old digital traces',
+        'B3. Jelen: termékek, szolgáltatások, piac és bizonyítékok':'B3. Present: products, services, markets and proof',
+        'B4. Jövő: piac, pozíció és AI-ajánlhatóság':'B4. Future: market, position and AI recommendability',
+        'C. Deep Search, támadhatóság és entitásépítési stratégia':'C. Deep Search, attack surface and entity-building strategy',
+        'C1. Források és kutatási mélység':'C1. Sources and research depth',
+        'C2. AI-félreértések és támadhatóság':'C2. AI misunderstandings and attack surface',
+        'C3. Stratégiai döntéshozatal és erőforrások':'C3. Strategic decision-making and resources',
+        'D. Kommunikáció, hozzájárulás és jogi nyilatkozatok':'D. Communication, consent and legal declarations',
+        'Kapcsolattartás és jogi hozzájárulás':'Contact and legal consent',
+        'Adatfeldolgozási és teljesítési tájékoztató':'Processing and delivery notice',
+        'E. Számlázási adatok':'E. Billing data',
+        'Számlázási és EU adószám adatok':'Billing and EU VAT data',
+        'Mit fogad el ezzel a számlázási résszel?':'What do you accept with this billing section?',
+        'Díjazás, árajánlat és megvalósítási keretek':'Fees, quotation and implementation framework',
+        'Mit kap az ügyfél?':'What does the client receive?',
+        'Miért hasznos akkor is, ha saját csapata van?':'Why is it useful even with your own team?',
+        'Miért egyedi minden ajánlat?':'Why is every offer custom?',
+        'Mi történik a 6–18 hónapos építés alatt?':'What happens during the 6–18 month build?',
+        '1. Beküldés':'1. Submission',
+        '2. 96 órás audit':'2. 96-hour audit',
+        '3. Egyedi ajánlat':'3. Custom offer',
+        '4. 6–18 hónap':'4. 6–18 months',
+        'Általános szakmai tanácsadási feltételek — Mag. Tamás Tóth e.U.':'General professional consulting terms — Mag. Tamás Tóth e.U.',
+        '1. A feltételek hatálya':'1. Scope of the terms',
+        '2. Szerződés létrejötte':'2. Formation of contract',
+        '3. A 2 000 EUR audit és 96 órás HTML stratégia tartalma':'3. Content of the EUR 2,000 audit and 96-hour HTML strategy',
+        '4. Szakmai csapat és AI-támogatás':'4. Professional team and AI support',
+        '5. Díjazás, beszámítás és minimális megrendelési érték':'5. Fees, crediting and minimum order value',
+        '6. Ügyfélkötelezettségek':'6. Client obligations',
+        '7. Titoktartás, adatvédelem és alvállalkozók':'7. Confidentiality, data protection and subcontractors',
+        '8. Felelősségi korlátok':'8. Limitations of liability',
+        '9. Alkalmazandó jog és illetékesség':'9. Governing law and jurisdiction',
+        'Automatikus mentés':'Automatic saving',
+        'HELYI MENTÉS TÖRLÉSE':'DELETE LOCAL DRAFT',
+        'ŰRLAP TÖRLÉSE':'CLEAR FORM',
+        'AUDIT ELINDÍTÁSA':'START AUDIT',
+        'Automatikus tartós mentés aktív ebben a böngészőben.':'Persistent automatic saving is active in this browser.',
+        'Beküldés után az űrlap zárolja a gombot, hogy ne menjen el véletlenül kétszer. Egy stratégiai auditból egy is elég — abból viszont legyen nagyon jó.':'After submission, the button is locked to prevent duplicate sending. One strategic audit is enough — but it should be excellent.',
+        'Adatvédelmi Nyilatkozat':'Privacy Notice',
+        'Impresszum':'Imprint',
+        'Digitális Stratégia, Deep Search és Entitásépítési Audit':'Digital Strategy, Deep Search and Entity Audit',
+        '© 2026 Mag. Tamás Tóth e.U. Minden jog fenntartva.':'© 2026 Mag. Tamás Tóth e.U. All rights reserved.',
+        'GDPR-kompatibilis | Osztrák Adatvédelmi Törvény (DSG) szerint':'GDPR-conscious | under the Austrian Data Protection Act (DSG)',
+        'Kérem válasszon':'Please select', 'Magyar':'Hungarian','Angol':'English','Német':'German','Többnyelvű összefoglaló':'Multilingual summary','E-mail':'E-mail','Telefonos hívás':'Phone call','Videókonferencia':'Video conference','Üzenetküldő alkalmazás':'Messaging app','Google keresés':'Google search','AI-válasz vagy AI-keresés':'AI answer or AI search','Ajánlás':'Referral','Szakmai esemény':'Professional event','Egyéb':'Other'
+      },
+      notices: {
+        hidden: 'Additional Hungarian explanatory text has been suppressed in this language view to keep the interface clean and consistent.',
+        gdpr: 'This form does not request sensitive data. Do not provide health, political, religious, trade-union, ethnic, biometric, genetic, sex-life or unnecessary private data. The submitted information is processed by Mag. Tamas Toth / Mag. Tamás Tóth e.U. and a contracted professional team. Claude, ChatGPT and Grok may be used with customised prompt sets and internet access for company analysis, deep search, AI visibility and attack-surface/reputation analysis. AI is a support tool; final strategic conclusions are reviewed by human experts.'
+      }
+    },
+    de: {
+      labels: {
+        consent_0: 'Ich habe den obigen DSGVO- und KI-Nutzungshinweis gelesen und akzeptiert. Ich nehme zur Kenntnis, dass dieses Formular keine sensiblen Daten abfragt und ich solche Daten nicht angebe.',
+        gatePassword: 'Passwort',
+        submission_acknowledgement: 'Ich verstehe, dass das Absenden dieses Formulars die Vorbereitung des 96-Stunden-Audits startet, aber nicht automatisch das 6–18-monatige Umsetzungsprogramm beauftragt.'
+      },
+      exact: {
+        'Üdvözöljük · stratégiai belépés':'Willkommen · strategischer Zugang',
+        'Ez nem egy gyors űrlap. Ez egy mély digitális tükör.':'Dies ist kein schnelles Formular. Es ist ein tiefer digitaler Spiegel.',
+        'Becsült kitöltési idő:':'Geschätzte Ausfüllzeit:',
+        'Vonuljon félre.':'Ziehen Sie sich zurück.',
+        'Kapcsolja be a kedvenc zenéjét.':'Schalten Sie passende Musik ein.',
+        'Töltsön egy italt.':'Stellen Sie ein Getränk bereit.',
+        'Ne akarjon gyorsan túllenni rajta.':'Versuchen Sie nicht, es schnell hinter sich zu bringen.',
+        'Belépés a kérdőívhez':'Zugang zum Fragebogen',
+        'Jelszó':'Passwort',
+        'KÉRDŐÍV MEGNYITÁSA':'FRAGEBOGEN ÖFFNEN',
+        'Digitális entitásépítés · Deep Search · AI-érthetőség':'Digitale Entitätsentwicklung · Deep Search · KI-Verständlichkeit',
+        'Digitális Entitásépítési Audit és Deep Search Stratégia':'Digitales Entitätsaudit und Deep-Search-Strategie',
+        'Mi történik egy digitális entitásépítéskor?':'Was passiert beim Aufbau einer digitalen Entität?',
+        '96 órás digitális entitásdiagnózis':'96-Stunden-Diagnose der digitalen Entität',
+        'A beküldés után':'Nach der Einreichung',
+        '96 órán belül':'innerhalb von 96 Stunden',
+        'Példatörténet: magyar cég külföldi piacra lép':'Beispiel: ein ungarisches Unternehmen betritt Auslandsmärkte',
+        'Példatörténet: tulajdonosból személyes márka':'Beispiel: vom Eigentümer zur Personal Brand',
+        'Feltárjuk, mit lát ma a digitális tér, a kereső és az AI a személyből, cégből vagy márkából.':'Wir zeigen, was der digitale Raum, Suchmaschinen und KI heute über die Person, das Unternehmen oder die Marke erkennen.',
+        'Megmutatjuk, hol hiányos, félreérthető vagy gyenge a digitális jel, és mit kell először rendezni.':'Wir zeigen, wo das digitale Signal unvollständig, missverständlich oder schwach ist und was zuerst bereinigt werden muss.',
+        'Időrendi, lépésről lépésre követhető stratégia készül a magyar és nemzetközi piaci célhoz.':'Es entsteht eine chronologische, schrittweise Strategie für das ungarische und internationale Marktziel.',
+        'Mit kap az ügyfél 96 órán belül?':'Was erhält der Kunde innerhalb von 96 Stunden?',
+        '1. Digitális valóságkép':'1. Digitales Realitätsbild',
+        'Mit lát ma a Google, a kereső, az AI és a piac.':'Was Google, Suchmaschinen, KI und Markt heute sehen.',
+        '2. AI-érthetőségi vizsgálat':'2. Prüfung der KI-Verständlichkeit',
+        'Mit ért félre, mit nem talál, és hol improvizálhat a rendszer.':'Was das System missversteht, nicht findet oder improvisieren könnte.',
+        '3. Kockázati térkép':'3. Risikolandkarte',
+        'Gyenge, félreérthető vagy reputációsan érzékeny pontok üzleti nyelven.':'Schwache, missverständliche oder reputationssensible Punkte in Geschäftssprache.',
+        '4. Bizonyítékhiány':'4. Fehlende Nachweise',
+        'Milyen források, strukturált adatok, sajtó- vagy tartalmi elemek hiányoznak.':'Welche Quellen, strukturierten Daten, Presse- oder Inhaltselemente fehlen.',
+        '5. Építési sorrend':'5. Aufbau-Reihenfolge',
+        'Mit kell előbb rendezni, és mit csak utána érdemes kommunikálni.':'Was zuerst bereinigt werden muss und was erst danach kommuniziert werden sollte.',
+        '6. Egyedi megvalósítási irány':'6. Individuelle Umsetzungsrichtung',
+        'Az audit végén világos stratégiai irány és személyre szabott ajánlati alap készül.':'Am Ende des Audits entsteht eine klare strategische Richtung und eine personalisierte Angebotsgrundlage.',
+        'GDPR és AI-használati elfogadás a kitöltés megkezdése előtt':'DSGVO- und KI-Nutzungseinwilligung vor Beginn des Fragebogens',
+        'Fontos adatvédelmi figyelmeztetés:':'Wichtiger Datenschutzhinweis:',
+        'AI-eszközök:':'KI-Werkzeuge:',
+        'Emberi kontroll:':'Menschliche Kontrolle:',
+        'Hogyan érdemes kitölteni?':'Wie sollte der Fragebogen ausgefüllt werden?',
+        '1. irány: tulajdonos, ügyvezető vagy személyes márka':'Richtung 1: Eigentümer, Geschäftsführer oder Personal Brand',
+        '2. irány: cég, márka vagy szervezet':'Richtung 2: Unternehmen, Marke oder Organisation',
+        '0. Kapcsolattartási és auditindítási adatok':'0. Kontakt- und Audit-Startdaten',
+        'Alapadatok és audit fókusz':'Basisdaten und Audit-Fokus',
+        'Mire készüljön elsődlegesen az audit?':'Worauf soll sich das Audit primär konzentrieren?',
+        'A. Tulajdonos / ügyvezető / személyes márka':'A. Eigentümer / Geschäftsführer / Personal Brand',
+        'A1. Személyes azonosítás és szerep':'A1. Persönliche Identifikation und Rolle',
+        'A2. Múlt: szakmai történet és bizonyítékok':'A2. Vergangenheit: berufliche Geschichte und Nachweise',
+        'A3. Jelen: online jelenlét, reputáció és AI-kép':'A3. Gegenwart: Online-Präsenz, Reputation und KI-Bild',
+        'A4. Jövő: személyes márka célok és AI-pozicionálás':'A4. Zukunft: Personal-Brand-Ziele und KI-Positionierung',
+        'B. Cég / márka / szervezet':'B. Unternehmen / Marke / Organisation',
+        'B1. Céges vagy márkaazonosítás':'B1. Unternehmens- oder Markenidentifikation',
+        'B2. Múlt: cégtörténet, fejlődés és régi digitális nyomok':'B2. Vergangenheit: Unternehmensgeschichte, Entwicklung und alte digitale Spuren',
+        'B3. Jelen: termékek, szolgáltatások, piac és bizonyítékok':'B3. Gegenwart: Produkte, Dienstleistungen, Markt und Nachweise',
+        'B4. Jövő: piac, pozíció és AI-ajánlhatóság':'B4. Zukunft: Markt, Position und KI-Empfehlbarkeit',
+        'C. Deep Search, támadhatóság és entitásépítési stratégia':'C. Deep Search, Angriffsflächen und Entitätsstrategie',
+        'C1. Források és kutatási mélység':'C1. Quellen und Recherchetiefe',
+        'C2. AI-félreértések és támadhatóság':'C2. KI-Missverständnisse und Angriffsflächen',
+        'C3. Stratégiai döntéshozatal és erőforrások':'C3. Strategische Entscheidungen und Ressourcen',
+        'D. Kommunikáció, hozzájárulás és jogi nyilatkozatok':'D. Kommunikation, Einwilligung und rechtliche Erklärungen',
+        'Kapcsolattartás és jogi hozzájárulás':'Kontakt und rechtliche Einwilligung',
+        'Adatfeldolgozási és teljesítési tájékoztató':'Hinweis zur Verarbeitung und Lieferung',
+        'E. Számlázási adatok':'E. Rechnungsdaten',
+        'Számlázási és EU adószám adatok':'Rechnungs- und UID-Daten',
+        'Mit fogad el ezzel a számlázási résszel?':'Was akzeptieren Sie mit diesem Rechnungsbereich?',
+        'Díjazás, árajánlat és megvalósítási keretek':'Honorar, Angebot und Umsetzungsrahmen',
+        'Mit kap az ügyfél?':'Was erhält der Kunde?',
+        'Miért hasznos akkor is, ha saját csapata van?':'Warum ist es auch mit eigenem Team nützlich?',
+        'Miért egyedi minden ajánlat?':'Warum ist jedes Angebot individuell?',
+        'Mi történik a 6–18 hónapos építés alatt?':'Was passiert während des 6–18-monatigen Aufbaus?',
+        '1. Beküldés':'1. Einreichung','2. 96 órás audit':'2. 96-Stunden-Audit','3. Egyedi ajánlat':'3. Individuelles Angebot','4. 6–18 hónap':'4. 6–18 Monate',
+        'Általános szakmai tanácsadási feltételek — Mag. Tamás Tóth e.U.':'Allgemeine fachliche Beratungsbedingungen — Mag. Tamás Tóth e.U.',
+        '1. A feltételek hatálya':'1. Geltungsbereich','2. Szerződés létrejötte':'2. Vertragsabschluss','3. A 2 000 EUR audit és 96 órás HTML stratégia tartalma':'3. Inhalt des 2.000-EUR-Audits und der 96-Stunden-HTML-Strategie','4. Szakmai csapat és AI-támogatás':'4. Fachteam und KI-Unterstützung','5. Díjazás, beszámítás és minimális megrendelési érték':'5. Honorar, Anrechnung und Mindestauftragswert','6. Ügyfélkötelezettségek':'6. Pflichten des Kunden','7. Titoktartás, adatvédelem és alvállalkozók':'7. Vertraulichkeit, Datenschutz und Subunternehmer','8. Felelősségi korlátok':'8. Haftungsbeschränkungen','9. Alkalmazandó jog és illetékesség':'9. Anwendbares Recht und Gerichtsstand',
+        'Automatikus mentés':'Automatische Speicherung','HELYI MENTÉS TÖRLÉSE':'LOKALEN ENTWURF LÖSCHEN','ŰRLAP TÖRLÉSE':'FORMULAR LÖSCHEN','AUDIT ELINDÍTÁSA':'AUDIT STARTEN','Automatikus tartós mentés aktív ebben a böngészőben.':'Automatische dauerhafte Speicherung ist in diesem Browser aktiv.','Beküldés után az űrlap zárolja a gombot, hogy ne menjen el véletlenül kétszer. Egy stratégiai auditból egy is elég — abból viszont legyen nagyon jó.':'Nach dem Absenden wird die Schaltfläche gesperrt, damit das Formular nicht versehentlich doppelt gesendet wird. Ein strategisches Audit reicht — aber es muss sehr gut sein.',
+        'Adatvédelmi Nyilatkozat':'Datenschutzhinweis','Impresszum':'Impressum','Digitális Stratégia, Deep Search és Entitásépítési Audit':'Digitale Strategie, Deep Search und Entitätsaudit','© 2026 Mag. Tamás Tóth e.U. Minden jog fenntartva.':'© 2026 Mag. Tamás Tóth e.U. Alle Rechte vorbehalten.','GDPR-kompatibilis | Osztrák Adatvédelmi Törvény (DSG) szerint':'DSGVO-konform | gemäß österreichischem Datenschutzgesetz (DSG)',
+        'Kérem válasszon':'Bitte auswählen','Magyar':'Ungarisch','Angol':'Englisch','Német':'Deutsch','Többnyelvű összefoglaló':'Mehrsprachige Zusammenfassung','E-mail':'E-Mail','Telefonos hívás':'Telefonanruf','Videókonferencia':'Videokonferenz','Üzenetküldő alkalmazás':'Messenger-App','Google keresés':'Google-Suche','AI-válasz vagy AI-keresés':'KI-Antwort oder KI-Suche','Ajánlás':'Empfehlung','Szakmai esemény':'Fachveranstaltung','Egyéb':'Sonstiges'
+      },
+      notices: {
+        hidden: 'Zusätzliche ungarische Erläuterungstexte wurden in dieser Sprachansicht ausgeblendet, damit die Oberfläche sauber und einheitlich bleibt.',
+        gdpr: 'Dieses Formular fragt keine sensiblen Daten ab. Bitte geben Sie keine Gesundheitsdaten, politischen oder religiösen Überzeugungen, Gewerkschaftszugehörigkeit, ethnische Daten, biometrischen/genetischen Daten, Informationen zum Sexualleben oder unnötigen privaten Daten an. Die übermittelten Informationen werden von Mag. Tamas Toth / Mag. Tamás Tóth e.U. und einem vertraglich gebundenen Fachteam verarbeitet. Claude, ChatGPT und Grok können mit personalisierten Prompt-Sets und Internetzugang für Unternehmensanalyse, Deep Search, KI-Sichtbarkeit sowie Angriffsflächen-/Reputationsanalyse genutzt werden. KI ist ein unterstützendes Werkzeug; finale strategische Schlussfolgerungen werden fachlich durch Menschen geprüft.'
+      }
+    }
+  };
+  const HUNGARIAN_RE = /\b(és|hogy|vagy|nem|kell|kérjük|űrlap|adat|adatok|cég|céget|márka|jelszó|beküld|ügyfél|számláz|jogi|tájékoztató|kitöltés|kérdés|válasz|tulajdonos|ügyvezető|személyes|piac|stratégia|kereső|múlt|jelen|jövő|bizonyíték|kockázat|díj|feltételek)\b/i;
+  const $ = (sel, root=document) => root.querySelector(sel);
+  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+  const esc = (s) => String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  const norm = (s) => String(s || '').replace(/\s+/g,' ').trim();
+  function currentLang(){ return document.documentElement.lang || localStorage.getItem('entity_audit_interface_language_v1') || 'hu'; }
+  function setLabel(id, text){
+    const label = document.querySelector(`label[for="${CSS && CSS.escape ? CSS.escape(id) : id}"]`);
+    if (!label || !text) return;
+    const required = label.textContent.includes('*') || !!label.querySelector('.required');
+    label.innerHTML = esc(text) + (required ? ' <span class="required">*</span>' : '');
+  }
+  function translateElementText(el, dict){
+    if (!el || !dict) return;
+    if (!el.dataset.huOriginalFinal) el.dataset.huOriginalFinal = el.innerHTML;
+    const originalText = norm(el.dataset.huTextFinal || el.textContent);
+    if (!el.dataset.huTextFinal) el.dataset.huTextFinal = originalText;
+    const trans = dict[originalText];
+    if (trans) { el.textContent = trans; el.classList.remove('i18n-hidden-by-lang'); return; }
+  }
+  function ensureFrontLegal(lang){
+    const block = document.getElementById('frontGdprNotice');
+    if (!block || lang === 'hu') return;
+    if (!block.querySelector('.mandatory-legal-acceptance[data-final="true"]')) {
+      const intro = document.createElement('div');
+      intro.className = 'mandatory-legal-acceptance';
+      intro.dataset.final = 'true';
+      intro.innerHTML = '<div class="notice-title"></div><p></p>';
+      block.prepend(intro);
+    }
+    const intro = block.querySelector('.mandatory-legal-acceptance[data-final="true"]');
+    intro.querySelector('.notice-title').textContent = lang === 'de' ? 'Verpflichtender DSGVO- und KI-Hinweis vor dem Ausfüllen' : 'Mandatory GDPR and AI notice before completion';
+    intro.querySelector('p').textContent = EXTRA[lang].notices.gdpr;
+  }
+  function finalI18nApply(lang=currentLang()){
+    if (!['hu','en','de'].includes(lang)) lang = 'hu';
+    document.documentElement.lang = lang;
+    document.body.classList.remove('lang-hu','lang-en','lang-de');
+    document.body.classList.add(`lang-${lang}`);
+    const hidden = $$('.i18n-hidden-by-lang'); hidden.forEach(el => el.classList.remove('i18n-hidden-by-lang'));
+    const interfaceLanguage = $('#interfaceLanguage'); if (interfaceLanguage) interfaceLanguage.value = lang;
+    if (lang === 'hu') {
+      $$('.mandatory-legal-acceptance[data-final="true"]').forEach(e => e.remove());
+      return;
+    }
+    const base = (window.FORM_L10N && window.FORM_L10N[lang]) || {labels:{}, exact:{}};
+    const labels = Object.assign({}, base.labels || {}, EXTRA[lang].labels || {});
+    const exact = Object.assign({}, base.exact || {}, EXTRA[lang].exact || {});
+    Object.entries(labels).forEach(([id,text]) => setLabel(id,text));
+    $$('h1,h2,h3,h4,p,li,summary,button,option,span,div.eyebrow,div.gate-eyebrow,div.header-brand,a#privacyLink,a#impressumLink,div.legal-note,div.progress-hint,div.utility-status').forEach(el => {
+      if (el.closest('script,style')) return;
+      translateElementText(el, exact);
+    });
+    ensureFrontLegal(lang);
+    // Hide only non-essential Hungarian explanatory copy that has no translation. Controls and translated legal blocks remain visible.
+    $$('p,li,div.legal-note,div.progress-hint,span:not(.required):not(.field-label):not(.utility-status),h1,h2,h3,h4').forEach(el => {
+      if (el.closest('.localized-copy') && el.closest('.localized-copy').dataset.lang === lang) return;
+      const txt = norm(el.textContent);
+      if (txt && HUNGARIAN_RE.test(txt)) el.classList.add('i18n-hidden-by-lang');
+    });
+    $$('.localized-copy[data-lang]').forEach(block => { block.hidden = block.dataset.lang !== lang; });
+  }
+  window.finalI18nApply = finalI18nApply;
+  document.addEventListener('click', (e) => {
+    const btn=e.target.closest('.lang-choice[data-lang]');
+    if (!btn) return;
+    setTimeout(() => finalI18nApply(btn.dataset.lang), 0);
+  });
+  document.addEventListener('DOMContentLoaded', () => setTimeout(() => finalI18nApply(currentLang()), 0));
+  setTimeout(() => finalI18nApply(currentLang()), 0);
+})();
+</script>
+
+
+<script id="final-export-language-fix">
+(() => {
+  const EMPTY = {
+    hu: {empty:'— Nincs kitöltve —', unchecked:'— Nincs bejelölve —', section:'Szekció', block:'Blokk', question:'Kérdés', help:'Magyarázat', answer:'Válasz', full:'Teljes kérdés'},
+    en: {empty:'— Not completed —', unchecked:'— Not selected —', section:'Section', block:'Block', question:'Question', help:'Explanation', answer:'Answer', full:'Full question'},
+    de: {empty:'— Nicht ausgefüllt —', unchecked:'— Nicht ausgewählt —', section:'Abschnitt', block:'Block', question:'Frage', help:'Erläuterung', answer:'Antwort', full:'Vollständige Frage'}
+  };
+  const clean = (v) => String(v || '').replace(/\s+/g,' ').trim();
+  const currentLang = () => (document.documentElement.lang || document.getElementById('interfaceLanguage')?.value || 'hu').slice(0,2);
+  const labelFor = (field) => clean(document.querySelector(`label[for="${CSS && CSS.escape ? CSS.escape(field.id) : field.id}"]`)?.textContent || field.name || field.id);
+  const optionLabel = (field) => clean(document.querySelector(`label[for="${CSS && CSS.escape ? CSS.escape(field.id) : field.id}"]`)?.textContent || field.value || field.id);
+  const sectionTitle = (field) => clean(field.closest('details.accordion')?.previousElementSibling?.querySelector('h2')?.textContent || '');
+  const blockTitle = (field) => clean(field.closest('details.accordion')?.querySelector('summary')?.textContent || '');
+  const helpText = (field) => {
+    const help = field.closest('.form-group')?.querySelector('.field-help');
+    if (!help || getComputedStyle(help).display === 'none') return '';
+    return clean(help.textContent);
+  };
+  function serializableFields(form){
+    return Array.from(form.querySelectorAll('input, textarea, select')).filter(f => {
+      if (!f.name || f.type === 'hidden' || f.type === 'submit' || f.type === 'button') return false;
+      if (f.classList.contains('honeypot')) return false;
+      return true;
+    });
+  }
+  function buildQuestion(field, lang){
+    const t = EMPTY[lang] || EMPTY.hu;
+    const parts=[];
+    const sec=sectionTitle(field), block=blockTitle(field), q=labelFor(field), help=helpText(field);
+    if(sec) parts.push(`${t.section}: ${sec}`);
+    if(block) parts.push(`${t.block}: ${block}`);
+    if(q) parts.push(`${t.question}: ${q.replace(/\s*\*\s*$/,'')}`);
+    if(help) parts.push(`${t.help}: ${help}`);
+    return parts.join('\n');
+  }
+  function buildExport(){
+    const form=document.getElementById('assessmentForm');
+    if(!form) return '';
+    const lang=currentLang();
+    const t=EMPTY[lang] || EMPTY.hu;
+    const rows=[];
+    const groups=new Map();
+    for(const f of serializableFields(form)){
+      if(f.type === 'checkbox' || f.type === 'radio'){
+        const q=buildQuestion(f,lang) || labelFor(f);
+        const key=`${f.type}::${f.name}::${q}`;
+        if(!groups.has(key)){ groups.set(key,{question:q,values:[],type:f.type}); rows.push(groups.get(key)); }
+        if(f.checked) groups.get(key).values.push(optionLabel(f));
+      } else if(f.tagName === 'SELECT'){
+        const val=clean(f.selectedOptions?.[0]?.textContent || f.value);
+        const empty=!f.value || /^(please select|bitte auswählen|kérem válasszon)$/i.test(val);
+        rows.push({question:buildQuestion(f,lang)||labelFor(f), value: empty ? t.empty : val});
+      } else {
+        rows.push({question:buildQuestion(f,lang)||labelFor(f), value: clean(f.value) || t.empty});
+      }
+    }
+    return rows.map((r,i)=>{
+      const val=Array.isArray(r.values) ? (r.values.length ? r.values.join('\n') : (r.type==='checkbox'?t.unchecked:t.empty)) : r.value;
+      return `${i+1}. ${t.full}:\n${r.question}\n\n${t.answer}:\n${val}`;
+    }).join('\n\n---\n\n');
+  }
+  document.addEventListener('submit', (e) => {
+    if(e.target && e.target.id === 'assessmentForm'){
+      if(window.finalI18nApply) window.finalI18nApply(currentLang());
+      const out=document.getElementById('formattedAnswers');
+      if(out) out.value=buildExport();
+    }
+  }, true);
+})();
+</script>
+
 </body>
 </html>
