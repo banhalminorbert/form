@@ -309,3 +309,8 @@ Weboldal: https://www.your-website.com
 *Ez a dokumentum a GDPR (2016/679/EU), az Osztrák Datenschutzgesetz (DSG 2000) és az EU adatvédelmi jogszabályoknak megfelelően lett elkészítve.*
 
 *Az itt foglalt információk informatívak, és nem tekintendőek jogi tanácsnak. A jogi értelmezésekhez kérjék egy osztrák adatvédelmi jogász tanácsát.*
+
+
+## AI tool disclosure update
+
+The audit workflow may use Claude, ChatGPT and Grok AI tools with specially programmed, personalised prompt sets. These tools may be used with internet access where public-source review is necessary for company analysis, deep-search research and vulnerability/reputation analysis. The form does not request special-category/sensitive personal data and users are instructed not to provide such data unless separately agreed and legally necessary.
