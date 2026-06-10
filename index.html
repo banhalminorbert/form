@@ -1421,6 +1421,34 @@
       border-top: 1px solid rgba(192, 153, 93, 0.28);
     }
     .front-gdpr input[type="checkbox"] { transform: translateY(2px); }
+    .front-legal-summary {
+      font-size: 1.02rem;
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+    .front-legal-details {
+      margin-top: 12px;
+      border: 1px solid rgba(192, 153, 93, 0.30);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.72);
+      overflow: hidden;
+    }
+    .front-legal-details summary {
+      cursor: pointer;
+      padding: 13px 15px;
+      font-weight: 800;
+      color: var(--ink);
+      list-style-position: inside;
+    }
+    .front-legal-details[open] summary {
+      border-bottom: 1px solid rgba(192, 153, 93, 0.22);
+      background: rgba(248,244,236,0.78);
+    }
+    .front-legal-details p {
+      padding: 0 15px;
+    }
+    .front-legal-details p:first-of-type { margin-top: 13px; }
+    .front-legal-details p:last-child { margin-bottom: 15px; }
     body.lang-en .micro-intro:not(.legal-keep),
     body.lang-de .micro-intro:not(.legal-keep),
     body.lang-en .field-help:not(.legal-keep),
@@ -1830,6 +1858,11 @@
 <input name="_captcha" type="hidden" value="false"/>
 <input name="_template" type="hidden" value="html"/>
 <input id="interfaceLanguage" name="Interface language / Formularsprache" type="hidden" value="hu"/>
+<input id="aiToolsDisclosure" name="AI tools disclosure / KI-Werkzeuge" type="hidden" value="Claude, ChatGPT and Grok may be used with specially programmed personalised prompt sets and internet access for company analysis, deep search, AI visibility and vulnerability/reputation analysis."/>
+<input id="publicInternetResearchConsent" name="Public internet research consent / Öffentliche Internetrecherche" type="hidden" value="The client acknowledges that public internet sources may be researched and analysed for the audit and 96-hour HTML strategy."/>
+<input id="specialCategoryDataWarning" name="Special category data warning / Besondere Datenkategorien" type="hidden" value="The form does not request sensitive/special-category personal data; the client is instructed not to provide such data unless legally authorised and separately agreed."/>
+<input id="businessSecretAuthority" name="Business secret and third-party data authority / Geschäftsgeheimnisse und Drittpersonendaten" type="hidden" value="The client confirms that any business secret, NDA-protected information or third-party personal data submitted may lawfully be shared for this audit purpose."/>
+<input id="dataRetentionNote" name="Data retention note / Speicherfrist" type="hidden" value="Submitted audit data is retained only as long as required for audit preparation, communication, documentation, legal obligations and agreed follow-up work; earlier deletion may be requested where legally possible."/>
 <input id="processingRoute" name="Adatfeldolgozási út / Processing route / Verarbeitungsweg" type="hidden" value="A beküldött adatok Mag. Tamas Toth / Mag. Tamás Tóth e.U. részére kerülnek. A stratégiai auditot szerződött szakmai csapat dolgozza fel Claude, ChatGPT és Grok AI eszközök támogatásával, speciálisan felprogramozott, személyre szabott promptkészlettel és emberi szakértői felülvizsgálattal. Az eszközök internet-hozzáféréssel is használhatók, mert a céganalízishez, deep search kutatáshoz és támadhatósági/reputációs analízishez nyilvános források vizsgálata szükséges. Az ügyfél 96 órán belül böngészőben megnyitható .html stratégiai anyagot kap, a teljes és pontos adatok rendelkezésre állásától és a megbízás elfogadásától függően."/>
 <input id="aiToolDisclosure" name="AI tools / KI-Werkzeuge / AI eszközök" type="hidden" value="Claude, ChatGPT and Grok may be used with internet access and customised prompt sets for company analysis, deep search, vulnerability and reputation analysis. Do not submit special-category/sensitive personal data unless expressly necessary and separately agreed."/>
 
@@ -1837,21 +1870,36 @@
 <section class="legal-disclosure front-gdpr" id="frontGdprNotice">
 <div class="localized-copy" data-lang="hu">
 <h3>GDPR és AI-használati elfogadás a kitöltés megkezdése előtt</h3>
-<p><strong>Fontos adatvédelmi figyelmeztetés:</strong> az űrlap nem kér szenzitív adatokat. Kérjük, ne adjon meg különleges kategóriájú személyes adatot, például egészségügyi adatot, vallási vagy politikai meggyőződést, szakszervezeti tagságot, faji vagy etnikai eredetre utaló adatot, genetikai/biometrikus azonosítót, szexuális életre vagy szexuális irányultságra vonatkozó információt, illetve szükségtelenül részletes magánéleti adatot.</p>
-<p><strong>AI-eszközök:</strong> a beküldött adatokat Mag. Tamas Toth / Mag. Tamás Tóth e.U. és szerződött szakmai csapata dolgozza fel. A stratégia elkészítéséhez Claude, ChatGPT és Grok AI eszközöket használhatunk, speciálisan felprogramozott, személyre szabott promptkészlettel. Ezek az eszközök internet-hozzáféréssel is használhatók, mert a céganalízishez, deep search kutatáshoz, AI-láthatósági vizsgálathoz és támadhatósági/reputációs analízishez nyilvános online források vizsgálata elengedhetetlen.</p>
+<p class="front-legal-summary"><strong>Röviden:</strong> az űrlap nem kér szenzitív adatokat, ezért ilyet ne adjon meg. A beküldött adatok Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz kerülnek, és szerződött szakmai csapat dolgozza fel Claude, ChatGPT és Grok AI-eszközök támogatásával, emberi szakértői kontroll mellett. Az AI-eszközök internet-hozzáféréssel is használhatók céganalízishez, deep search-höz, AI-láthatósági és támadhatósági/reputációs elemzéshez.</p>
+<details class="front-legal-details">
+<summary>Részletes GDPR-, AI- és adatkezelési tájékoztató megnyitása</summary>
+<p><strong>Szenzitív adatok kizárása:</strong> az űrlap nem kér különleges kategóriájú személyes adatokat. Kérjük, ne adjon meg egészségügyi adatot, vallási vagy politikai meggyőződést, szakszervezeti tagságot, faji vagy etnikai eredetre utaló adatot, genetikai/biometrikus azonosítót, szexuális életre vagy szexuális irányultságra vonatkozó információt, illetve szükségtelenül részletes magánéleti adatot.</p>
+<p><strong>AI-eszközök és internetes kutatás:</strong> a stratégia elkészítéséhez Claude, ChatGPT és Grok AI-eszközöket használhatunk speciálisan felprogramozott, személyre szabott promptkészlettel. Ezek az eszközök internet-hozzáféréssel is használhatók, mert a céganalízishez, deep search kutatáshoz, AI-láthatósági vizsgálathoz és támadhatósági/reputációs analízishez nyilvános online források vizsgálata szükséges.</p>
+<p><strong>Külső szolgáltatói feldolgozás:</strong> a beküldött tartalom elemzési célból külső AI-szolgáltatók rendszereibe kerülhet, amennyiben ez a szolgáltatás teljesítéséhez szükséges. Csak olyan üzleti titkot, NDA alatti információt vagy harmadik félre vonatkozó adatot adjon meg, amelynek ilyen célú továbbítására jogosult.</p>
 <p><strong>Emberi kontroll:</strong> az AI nem önálló döntéshozó. Elemzési, kutatási, rendszerezési és szövegelőkészítési eszközként működik; a stratégiai következtetések emberi szakértői ellenőrzés mellett készülnek.</p>
+</details>
 </div>
 <div class="localized-copy" data-lang="en" hidden>
 <h3>GDPR and AI-use acceptance before starting the questionnaire</h3>
-<p><strong>Important data protection warning:</strong> this form does not request sensitive data. Please do not provide special-category personal data, such as health data, religious or political beliefs, trade-union membership, racial or ethnic origin, genetic/biometric identifiers, information about sex life or sexual orientation, or unnecessarily detailed private-life information.</p>
-<p><strong>AI tools:</strong> the submitted data is processed by Mag. Tamas Toth / Mag. Tamás Tóth e.U. and its contracted professional team. To prepare the strategy, we may use Claude, ChatGPT and Grok AI tools with specially programmed, personalised prompt sets. These tools may be used with internet access because public online-source review is necessary for company analysis, deep-search research, AI visibility analysis and vulnerability/reputation analysis.</p>
+<p class="front-legal-summary"><strong>In brief:</strong> this form does not request sensitive data, so please do not provide any. Submitted data is transferred to Mag. Tamas Toth / Mag. Tamás Tóth e.U. and processed by a contracted professional team with the support of Claude, ChatGPT and Grok AI tools, under human expert control. The AI tools may be used with internet access for company analysis, deep search, AI visibility analysis and vulnerability/reputation analysis.</p>
+<details class="front-legal-details">
+<summary>Open detailed GDPR, AI and data-processing notice</summary>
+<p><strong>Exclusion of sensitive data:</strong> this form does not request special-category personal data. Please do not provide health data, religious or political beliefs, trade-union membership, racial or ethnic origin, genetic/biometric identifiers, information about sex life or sexual orientation, or unnecessarily detailed private-life information.</p>
+<p><strong>AI tools and internet research:</strong> to prepare the strategy, we may use Claude, ChatGPT and Grok AI tools with specially programmed, personalised prompt sets. These tools may be used with internet access because public online-source review is necessary for company analysis, deep-search research, AI visibility analysis and vulnerability/reputation analysis.</p>
+<p><strong>External provider processing:</strong> submitted content may be entered into external AI-provider systems for analysis where necessary for the service. Please provide business secrets, NDA-protected information or third-party data only if you are authorised to share it for this purpose.</p>
 <p><strong>Human control:</strong> AI does not make independent decisions. It is used as an analytical, research, structuring and drafting support tool; strategic conclusions are prepared under human expert review.</p>
+</details>
 </div>
 <div class="localized-copy" data-lang="de" hidden>
 <h3>DSGVO- und KI-Nutzungseinwilligung vor Beginn des Fragebogens</h3>
-<p><strong>Wichtiger Datenschutzhinweis:</strong> dieses Formular fragt keine sensiblen Daten ab. Bitte geben Sie keine besonderen Kategorien personenbezogener Daten an, z. B. Gesundheitsdaten, religiöse oder politische Überzeugungen, Gewerkschaftszugehörigkeit, Angaben zur rassischen oder ethnischen Herkunft, genetische/biometrische Kennungen, Informationen zum Sexualleben oder zur sexuellen Orientierung oder unnötig detaillierte private Informationen.</p>
-<p><strong>KI-Werkzeuge:</strong> die übermittelten Daten werden von Mag. Tamas Toth / Mag. Tamás Tóth e.U. und einem vertraglich gebundenen Fachteam verarbeitet. Zur Erstellung der Strategie können Claude, ChatGPT und Grok mit speziell programmierten, personalisierten Prompt-Sets eingesetzt werden. Diese Werkzeuge können mit Internetzugang genutzt werden, weil die Prüfung öffentlicher Online-Quellen für Unternehmensanalyse, Deep-Search-Recherche, KI-Sichtbarkeitsprüfung sowie Angriffsflächen-/Reputationsanalyse erforderlich ist.</p>
+<p class="front-legal-summary"><strong>Kurzfassung:</strong> dieses Formular fragt keine sensiblen Daten ab; bitte geben Sie solche Daten daher nicht an. Die übermittelten Daten werden an Mag. Tamas Toth / Mag. Tamás Tóth e.U. übertragen und von einem vertraglich gebundenen Fachteam mit Unterstützung von Claude, ChatGPT und Grok unter menschlicher fachlicher Kontrolle verarbeitet. Die KI-Werkzeuge können mit Internetzugang für Unternehmensanalyse, Deep Search, KI-Sichtbarkeitsprüfung sowie Angriffsflächen-/Reputationsanalyse genutzt werden.</p>
+<details class="front-legal-details">
+<summary>Detaillierten DSGVO-, KI- und Verarbeitungshinweis öffnen</summary>
+<p><strong>Ausschluss sensibler Daten:</strong> dieses Formular fragt keine besonderen Kategorien personenbezogener Daten ab. Bitte geben Sie keine Gesundheitsdaten, religiösen oder politischen Überzeugungen, Gewerkschaftszugehörigkeit, Angaben zur rassischen oder ethnischen Herkunft, genetische/biometrische Kennungen, Informationen zum Sexualleben oder zur sexuellen Orientierung oder unnötig detaillierte private Informationen an.</p>
+<p><strong>KI-Werkzeuge und Internetrecherche:</strong> zur Erstellung der Strategie können Claude, ChatGPT und Grok mit speziell programmierten, personalisierten Prompt-Sets eingesetzt werden. Diese Werkzeuge können mit Internetzugang genutzt werden, weil die Prüfung öffentlicher Online-Quellen für Unternehmensanalyse, Deep-Search-Recherche, KI-Sichtbarkeitsprüfung sowie Angriffsflächen-/Reputationsanalyse erforderlich ist.</p>
+<p><strong>Externe Anbieter-Verarbeitung:</strong> übermittelte Inhalte können zu Analysezwecken in Systeme externer KI-Anbieter eingegeben werden, soweit dies für die Leistungserbringung erforderlich ist. Geben Sie Geschäftsgeheimnisse, NDA-geschützte Informationen oder Daten Dritter nur an, wenn Sie zur Weitergabe für diesen Zweck berechtigt sind.</p>
 <p><strong>Menschliche Kontrolle:</strong> KI trifft keine selbständigen Entscheidungen. Sie dient als Analyse-, Recherche-, Strukturierungs- und Textvorbereitungswerkzeug; strategische Schlussfolgerungen entstehen unter menschlicher fachlicher Kontrolle.</p>
+</details>
 </div>
 <div class="form-group consent-line">
 <input id="consent_0" name="agreeFrontGdprAiNotice" required="" type="checkbox"/>
@@ -2788,7 +2836,10 @@
 <div class="privacy-body localized-copy" data-lang="hu">
 <p><strong>Adatkezelő és szerződő szolgáltató:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kapcsolat: tamas.toth@metallagentur.at. GISA: 32963588. EU adószám: ATU69150839.</p>
 <p><strong>Mi történik a beküldött adatokkal?</strong> Az űrlap adatai Mag. Tamas Toth részére kerülnek továbbításra. A szolgáltató a beküldött válaszokat szerződött szakmai csapat és AI-eszközök támogatásával dolgozza fel, kizárólag a digitális entitásdiagnózis, deep search kutatás, stratégiai értékelés, kapcsolattartás, ajánlatkészítés és számlázás céljából.</p>
-<p><strong>AI-használat:</strong> A szolgáltatás során Claude, ChatGPT és Grok AI-eszközök használhatók speciálisan felprogramozott, személyre szabott promptkészlettel. Az eszközök internet-hozzáféréssel is használhatók, mert a céganalízishez, deep search kutatáshoz, AI-láthatósági vizsgálathoz és támadhatósági/reputációs analízishez nyilvános online források vizsgálata szükséges. A végső stratégiai anyag emberi szakértői felülvizsgálattal készül. Az AI-használat nem minősül olyan teljesen automatizált döntéshozatalnak, amely önmagában joghatással vagy hasonlóan jelentős hatással járna az ügyfélre.</p>
+<p><strong>AI-használat:</strong> A szolgáltatás során Claude, ChatGPT és Grok AI-eszközök használhatók speciálisan felprogramozott, személyre szabott promptkészlettel. Az eszközök internet-hozzáféréssel is használhatók, mert a céganalízishez, deep search kutatáshoz, AI-láthatósági vizsgálathoz és támadhatósági/reputációs analízishez nyilvános online források vizsgálata szükséges. A beküldött tartalom elemzési célból külső AI-szolgáltatók rendszereibe kerülhet, amennyiben ez a szolgáltatás teljesítéséhez szükséges. A végső stratégiai anyag emberi szakértői felülvizsgálattal készül. Az AI-használat nem minősül olyan teljesen automatizált döntéshozatalnak, amely önmagában joghatással vagy hasonlóan jelentős hatással járna az ügyfélre.</p>
+<p><strong>Üzleti titok, NDA és harmadik felek adatai:</strong> Üzleti titkot, bizalmas szerződéses információt, NDA alatti anyagot vagy harmadik személyre vonatkozó személyes adatot csak akkor adjon meg, ha annak továbbítására az audit céljából jogosult. Ha a pontos azonosítás nem szükséges, kérjük, anonimizálja vagy általánosítsa az információt.</p>
+<p><strong>Harmadik ország és szolgáltatói kockázat:</strong> Külső AI-, e-mail-, űrlaptovábbítási vagy technikai szolgáltatások használata esetén nem zárható ki teljesen az Ausztrián vagy az Európai Gazdasági Térségen kívüli adatfeldolgozás. Csak az elemzéshez és stratégiaalkotáshoz szükséges adatokat kérjük megadni.</p>
+<p><strong>Megőrzési idő:</strong> Az auditadatokat csak addig őrizzük meg, ameddig az az elemzéshez, kommunikációhoz, dokumentációhoz, jogi kötelezettségekhez vagy egyeztetett utómunkához szükséges. Korábbi törlés kérhető, amennyiben jogszabályi megőrzési kötelezettség vagy jogos dokumentációs érdek ezt nem akadályozza.</p>
 <p><strong>Szenzitív adatok kizárása:</strong> Az űrlap nem kér különleges kategóriájú személyes adatokat. Kérjük, ne adjon meg egészségügyi, vallási, politikai, szakszervezeti, faji/etnikai, genetikai/biometrikus, szexuális életre vagy szexuális irányultságra vonatkozó adatot, kivéve ha az előzetesen külön, írásban egyeztetett és jogszerűen szükséges.</p>
 <p><strong>Átadás és teljesítés:</strong> A stratégiai anyag 96 órán belül böngészőben megnyitható <code>.html</code> fájlként kerül visszaküldésre az ügyfél által megadott e-mail-címre, feltéve, hogy a szükséges adatok teljesek, értelmezhetők, a megbízás elfogadása megtörtént, és nincs szükség lényeges pontosításra.</p>
 <p><strong>Jogalapok:</strong> szerződés előkészítése és teljesítése, jogos érdek az üzleti kapcsolattartásban és ajánlatkészítésben, jogi kötelezettség a számlázási/adózási adatoknál, valamint hozzájárulás ott, ahol az külön szükséges.</p>
@@ -2801,7 +2852,10 @@
 <div class="privacy-body localized-copy" data-lang="en" hidden="">
 <p><strong>Controller and contracting provider:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Vienna, Austria. Contact: tamas.toth@metallagentur.at. GISA: 32963588. EU VAT ID: ATU69150839.</p>
 <p><strong>What happens to the submitted data?</strong> The form data is transmitted to Mag. Tamas Toth. The provider processes the submitted answers with the support of a contracted professional team and AI tools, solely for digital entity diagnosis, deep-search research, strategic evaluation, client communication, quotation preparation and billing.</p>
-<p><strong>Use of AI:</strong> Claude, ChatGPT and Grok AI tools may be used with specially programmed, personalised prompt sets. These tools may be used with internet access because public online-source review is necessary for company analysis, deep-search research, AI visibility analysis and vulnerability/reputation analysis. The final strategic material is prepared with human expert review. The use of AI does not constitute fully automated decision-making that, by itself, produces legal effects or similarly significant effects for the client.</p>
+<p><strong>Use of AI:</strong> Claude, ChatGPT and Grok AI tools may be used with specially programmed, personalised prompt sets. These tools may be used with internet access because public online-source review is necessary for company analysis, deep-search research, AI visibility analysis and vulnerability/reputation analysis. Submitted content may be entered into external AI-provider systems for analysis where necessary for the service. The final strategic material is prepared with human expert review. The use of AI does not constitute fully automated decision-making that, by itself, produces legal effects or similarly significant effects for the client.</p>
+<p><strong>Business secrets, NDA material and third-party data:</strong> Please provide business secrets, confidential contractual information, NDA-protected material or personal data relating to third parties only if you are authorised to share it for this audit purpose. Where exact identification is not necessary, please anonymise or generalise the information.</p>
+<p><strong>Third-country and provider notice:</strong> When external AI, e-mail, form-forwarding or technical services are used, processing outside Austria or the European Economic Area cannot be fully excluded. Only data required for the analysis and strategy preparation should be submitted.</p>
+<p><strong>Retention period:</strong> Audit data is retained only as long as needed for analysis, communication, documentation, legal obligations or agreed follow-up work. Earlier deletion may be requested where no legal retention duty or legitimate documentation interest prevents it.</p>
 <p><strong>Exclusion of sensitive data:</strong> This form does not request special-category personal data. Please do not provide health data, religious or political beliefs, trade-union membership, racial/ethnic origin, genetic/biometric identifiers, information about sex life or sexual orientation unless this has been separately agreed in writing in advance and is lawfully necessary.</p>
 <p><strong>Delivery:</strong> The strategic material will be returned within 96 hours as a browser-openable <code>.html</code> file to the e-mail address provided by the client, provided that the required information is complete, understandable, the engagement has been accepted, and no material clarification is needed.</p>
 <p><strong>Legal bases:</strong> preparation and performance of a contract, legitimate interest in business communication and quotation preparation, legal obligation for billing/tax data, and consent where separately required.</p>
@@ -2814,7 +2868,11 @@
 <div class="privacy-body localized-copy" data-lang="de" hidden="">
 <p><strong>Verantwortlicher und Vertragspartner:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kontakt: tamas.toth@metallagentur.at. GISA: 32963588. UID: ATU69150839.</p>
 <p><strong>Was geschieht mit den übermittelten Daten?</strong> Die Formulardaten werden an Mag. Tamas Toth übermittelt. Der Anbieter verarbeitet die eingereichten Antworten mit Unterstützung eines vertraglich gebundenen Fachteams und von KI-Werkzeugen ausschließlich für die digitale Entitätsdiagnose, Deep-Search-Recherche, strategische Bewertung, Kundenkommunikation, Angebotserstellung und Rechnungslegung.</p>
-<p><strong>Einsatz von KI:</strong> KI-Werkzeuge können zur Analyse, Strukturierung, Recherche und Textvorbereitung eingesetzt werden. Das finale strategische Material entsteht mit menschlicher fachlicher Prüfung. Der KI-Einsatz stellt keine ausschließlich automatisierte Entscheidung dar, die für den Kunden rechtliche Wirkung oder eine ähnlich erhebliche Wirkung entfaltet.</p>
+<p><strong>Einsatz von KI:</strong> Zur Erstellung der Strategie können Claude, ChatGPT und Grok mit speziell programmierten, personalisierten Prompt-Sets verwendet werden. Diese Werkzeuge können mit Internetzugriff eingesetzt werden, weil öffentliche Online-Quellen für Unternehmensanalyse, Deep Search, KI-Sichtbarkeitsprüfung sowie Angriffsflächen-/Reputationsanalyse erforderlich sind. Die Daten können zu Analysezwecken in Systeme externer KI-Anbieter eingegeben werden, soweit dies für die Leistungserbringung erforderlich ist. Das finale strategische Material entsteht mit menschlicher fachlicher Prüfung. Der KI-Einsatz stellt keine ausschließlich automatisierte Entscheidung dar, die für den Kunden rechtliche Wirkung oder eine ähnlich erhebliche Wirkung entfaltet.</p>
+<p><strong>Ausschluss sensibler Daten:</strong> Dieses Formular fragt keine besonderen Kategorien personenbezogener Daten ab. Bitte geben Sie keine Gesundheitsdaten, religiösen oder politischen Überzeugungen, Gewerkschaftszugehörigkeit, Angaben zur rassischen oder ethnischen Herkunft, genetische/biometrische Kennungen oder Informationen zum Sexualleben bzw. zur sexuellen Orientierung an, außer dies wurde vorab gesondert schriftlich vereinbart und ist rechtlich erforderlich.</p>
+<p><strong>Geschäftsgeheimnisse, NDA und Daten Dritter:</strong> Geben Sie Geschäftsgeheimnisse, vertrauliche Vertragsinformationen, NDA-geschützte Informationen oder personenbezogene Daten Dritter nur an, wenn Sie zur Weitergabe für diesen Analysezweck berechtigt sind. Bitte anonymisieren oder abstrahieren Sie Informationen, wenn eine konkrete Identifizierung nicht erforderlich ist.</p>
+<p><strong>Drittland- und Anbieterhinweis:</strong> Bei der Nutzung externer KI-, E-Mail-, Formular- oder technischer Dienste kann eine Verarbeitung außerhalb Österreichs oder des Europäischen Wirtschaftsraums nicht vollständig ausgeschlossen werden. Es werden nur Daten verwendet, die für die Analyse und Strategieerstellung erforderlich sind.</p>
+<p><strong>Speicherfrist:</strong> Auditdaten werden nur so lange gespeichert, wie dies für Analyse, Kommunikation, Dokumentation, gesetzliche Pflichten oder vereinbarte Folgearbeiten erforderlich ist. Eine frühere Löschung kann verlangt werden, soweit keine gesetzlichen Aufbewahrungspflichten oder berechtigten Dokumentationsinteressen entgegenstehen.</p>
 <p><strong>Lieferung:</strong> Das strategische Material wird innerhalb von 96 Stunden als in jedem modernen Browser öffnungsfähige <code>.html</code>-Datei an die vom Kunden angegebene E-Mail-Adresse zurückgesendet, sofern die erforderlichen Informationen vollständig und verständlich vorliegen, der Auftrag angenommen wurde und keine wesentliche Rückfrage erforderlich ist.</p>
 <p><strong>Rechtsgrundlagen:</strong> Vertragsanbahnung und Vertragserfüllung, berechtigtes Interesse an geschäftlicher Kommunikation und Angebotserstellung, rechtliche Verpflichtung bei Rechnungs- und Steuerdaten sowie Einwilligung, soweit diese gesondert erforderlich ist.</p>
 <p><strong>Datenkategorien:</strong> Kontaktinformationen, Rechnungsdaten, geschäftliche und strategische Informationen, öffentliche Online-Quellen, Reputations- und Marktkontext sowie vom Kunden freiwillig bereitgestellte Hintergrundinformationen. Besondere Kategorien personenbezogener Daten sollten nur angegeben werden, wenn sie für das Audit unbedingt erforderlich und rechtmäßig mitteilbar sind.</p>
@@ -4022,6 +4080,269 @@
   });
   document.addEventListener('DOMContentLoaded', () => setTimeout(() => finalI18nApply(currentLang()), 0));
   setTimeout(() => finalI18nApply(currentLang()), 0);
+})();
+</script>
+
+
+<script id="strictFinalI18nAndSubmitAuditPatch">
+(() => {
+  const LANGS = ['hu','en','de'];
+  const HU_RE = /[áéíóöőúüűÁÉÍÓÖŐÚÜŰ]|\b(és|vagy|hogy|milyen|mit|miért|ügyfél|cég|márka|adat|válasz|kérdés|kitöltés|beküldés|számlázási|tanácsadási|támadhatósági|érthetőség|jövő|múlt|jelen)\b/i;
+  const norm = (v) => String(v || '').replace(/\s+/g, ' ').trim();
+  const esc = (v) => String(v || '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+  const currentLang = () => document.documentElement.lang || localStorage.getItem('entity_audit_interface_language_v1') || 'hu';
+  const BASE_EXACT = () => {
+    const out = { en:{}, de:{} };
+    ['en','de'].forEach(lang => {
+      Object.assign(out[lang], (window.FORM_L10N && window.FORM_L10N[lang] && window.FORM_L10N[lang].exact) || {});
+      if (window.__STRICT_EXTRA_EXACT__ && window.__STRICT_EXTRA_EXACT__[lang]) Object.assign(out[lang], window.__STRICT_EXTRA_EXACT__[lang]);
+    });
+    return out;
+  };
+  window.__STRICT_EXTRA_EXACT__ = window.__STRICT_EXTRA_EXACT__ || { en:{}, de:{} };
+  Object.assign(window.__STRICT_EXTRA_EXACT__.en, {
+    'Mi történik egy digitális entitásépítéskor?': 'What happens during digital entity building?',
+    '96 órás digitális entitásdiagnózis': '96-hour digital entity diagnosis',
+    'Példatörténet: magyar cég külföldi piacra lép': 'Example scenario: a Hungarian company enters a foreign market',
+    'Példatörténet: tulajdonosból személyes márka': 'Example scenario: from owner to personal brand',
+    'Mit kap az ügyfél 96 órán belül?': 'What does the client receive within 96 hours?',
+    'GDPR és AI-használati elfogadás a kitöltés megkezdése előtt': 'GDPR and AI-use acceptance before starting the form',
+    'Fontos adatvédelmi figyelmeztetés:': 'Important data-protection warning:',
+    'AI-eszközök:': 'AI tools:',
+    'Emberi szakértői kontroll:': 'Human expert control:',
+    '0. Kapcsolattartási és auditindítási adatok': '0. Contact and audit-start information',
+    'A. Tulajdonos / ügyvezető / személyes márka': 'A. Owner / executive / personal brand',
+    'B. Cég / márka / szervezet': 'B. Company / brand / organisation',
+    'C. Deep Search, támadhatóság és entitásépítési stratégia': 'C. Deep Search, attack surface and entity-building strategy',
+    'D. Kommunikáció, hozzájárulás és jogi nyilatkozatok': 'D. Communication, consent and legal declarations',
+    'E. Számlázási adatok': 'E. Billing details',
+    'C1. Források és kutatási engedélyek': 'C1. Sources and research permissions',
+    'C2. AI-érthetőség, anomáliák és rossz megítélés': 'C2. AI readability, anomalies and negative perception',
+    'C3. Programrealitás, erőforrás és döntési helyzet': 'C3. Programme reality, resources and decision situation',
+    'C4. Elon Musk stress test — üzleti valóság és AI-ajánlhatóság': 'C4. Elon Musk stress test — business reality and AI recommendability',
+    'C5. Steve Jobs clarity test — tisztaság, élmény és első benyomás': 'C5. Steve Jobs clarity test — clarity, experience and first impression',
+    'C6. Warren Buffett value test — bizalom, érték és hosszú távú előny': 'C6. Warren Buffett value test — trust, value and long-term advantage',
+    'C7. Mark Zuckerberg network test — közösség, terjedés és jel': 'C7. Mark Zuckerberg network test — community, spread and signal',
+    'C8. Merlin transformation test — történet, átalakulás és rejtett erő': 'C8. Merlin transformation test — story, transformation and hidden strength',
+    'C9. Arthur király leadership test — küldetés, felelősség és bizalom': 'C9. King Arthur leadership test — mission, responsibility and trust',
+    'C10. Ceridwen alchemy test — márkaátalakulás és új forma': 'C10. Ceridwen alchemy test — brand transformation and new form',
+    'C11. Dalai Láma humanity test — emberi haszon, etika és béke': 'C11. Dalai Lama humanity test — human benefit, ethics and peace',
+    'A beküldés után': 'After submission',
+    '96 órán belül': 'within 96 hours',
+    '1. Digitális valóságkép': '1. Digital reality map',
+    '2. AI-érthetőségi vizsgálat': '2. AI-readability review',
+    '3. Kockázati térkép': '3. Risk map',
+    '4. Bizonyítékhiány': '4. Missing proof',
+    '5. Építési sorrend': '5. Build sequence',
+    '6. Egyedi megvalósítási irány': '6. Individual implementation direction',
+    'válasszon ki legalább 3-at': 'choose at least 3',
+    'válasszon ki legalább 2–3-at': 'choose at least 2–3',
+    'HELYI MENTÉS TÖRLÉSE': 'DELETE LOCAL DRAFT',
+    'ŰRLAP TÖRLÉSE': 'CLEAR FORM',
+    'AUDIT ELINDÍTÁSA': 'START AUDIT',
+    'Impresszum és szolgáltatói adatok': 'Imprint and provider information',
+    'Szolgáltató:': 'Provider:',
+    'Kapcsolattartás:': 'Contact:',
+    'Székhely:': 'Registered office:',
+    'GISA-szám:': 'GISA number:',
+    'EU adószám:': 'EU VAT ID:',
+    'Irányadó jog:': 'Applicable law:'
+  });
+  Object.assign(window.__STRICT_EXTRA_EXACT__.de, {
+    'Mi történik egy digitális entitásépítéskor?': 'Was passiert beim Aufbau einer digitalen Entität?',
+    '96 órás digitális entitásdiagnózis': '96-Stunden-Diagnose der digitalen Entität',
+    'Példatörténet: magyar cég külföldi piacra lép': 'Beispielszenario: ein ungarisches Unternehmen betritt einen ausländischen Markt',
+    'Példatörténet: tulajdonosból személyes márka': 'Beispielszenario: vom Eigentümer zur Personal Brand',
+    'Mit kap az ügyfél 96 órán belül?': 'Was erhält der Kunde innerhalb von 96 Stunden?',
+    'GDPR és AI-használati elfogadás a kitöltés megkezdése előtt': 'DSGVO- und KI-Nutzungshinweis vor Beginn des Formulars',
+    'Fontos adatvédelmi figyelmeztetés:': 'Wichtiger Datenschutzhinweis:',
+    'AI-eszközök:': 'KI-Werkzeuge:',
+    'Emberi szakértői kontroll:': 'Menschliche fachliche Kontrolle:',
+    '0. Kapcsolattartási és auditindítási adatok': '0. Kontakt- und Audit-Startdaten',
+    'A. Tulajdonos / ügyvezető / személyes márka': 'A. Eigentümer / Geschäftsführer / Personal Brand',
+    'B. Cég / márka / szervezet': 'B. Unternehmen / Marke / Organisation',
+    'C. Deep Search, támadhatóság és entitásépítési stratégia': 'C. Deep Search, Angriffsflächen und Entitätsstrategie',
+    'D. Kommunikáció, hozzájárulás és jogi nyilatkozatok': 'D. Kommunikation, Einwilligung und rechtliche Erklärungen',
+    'E. Számlázási adatok': 'E. Rechnungsdaten',
+    'C1. Források és kutatási engedélyek': 'C1. Quellen und Recherchefreigaben',
+    'C2. AI-érthetőség, anomáliák és rossz megítélés': 'C2. KI-Verständlichkeit, Anomalien und negative Wahrnehmung',
+    'C3. Programrealitás, erőforrás és döntési helyzet': 'C3. Programmrealität, Ressourcen und Entscheidungslage',
+    'C4. Elon Musk stress test — üzleti valóság és AI-ajánlhatóság': 'C4. Elon-Musk-Stresstest — Geschäftsrealität und KI-Empfehlbarkeit',
+    'C5. Steve Jobs clarity test — tisztaság, élmény és első benyomás': 'C5. Steve-Jobs-Klarheitstest — Klarheit, Erlebnis und erster Eindruck',
+    'C6. Warren Buffett value test — bizalom, érték és hosszú távú előny': 'C6. Warren-Buffett-Werttest — Vertrauen, Wert und langfristiger Vorteil',
+    'C7. Mark Zuckerberg network test — közösség, terjedés és jel': 'C7. Mark-Zuckerberg-Netzwerktest — Community, Verbreitung und Signal',
+    'C8. Merlin transformation test — történet, átalakulás és rejtett erő': 'C8. Merlin-Transformationstest — Geschichte, Wandel und verborgene Stärke',
+    'C9. Arthur király leadership test — küldetés, felelősség és bizalom': 'C9. König-Arthur-Führungstest — Mission, Verantwortung und Vertrauen',
+    'C10. Ceridwen alchemy test — márkaátalakulás és új forma': 'C10. Ceridwen-Alchemietest — Markenwandel und neue Form',
+    'C11. Dalai Láma humanity test — emberi haszon, etika és béke': 'C11. Dalai-Lama-Menschlichkeitstest — Nutzen, Ethik und Ruhe',
+    'A beküldés után': 'Nach dem Absenden',
+    '96 órán belül': 'innerhalb von 96 Stunden',
+    '1. Digitális valóságkép': '1. Digitales Realitätsbild',
+    '2. AI-érthetőségi vizsgálat': '2. Prüfung der KI-Verständlichkeit',
+    '3. Kockázati térkép': '3. Risikokarte',
+    '4. Bizonyítékhiány': '4. Fehlende Nachweise',
+    '5. Építési sorrend': '5. Aufbau-Reihenfolge',
+    '6. Egyedi megvalósítási irány': '6. Individuelle Umsetzungsrichtung',
+    'válasszon ki legalább 3-at': 'wählen Sie mindestens 3 aus',
+    'válasszon ki legalább 2–3-at': 'wählen Sie mindestens 2–3 aus',
+    'HELYI MENTÉS TÖRLÉSE': 'LOKALEN ENTWURF LÖSCHEN',
+    'ŰRLAP TÖRLÉSE': 'FORMULAR LÖSCHEN',
+    'AUDIT ELINDÍTÁSA': 'AUDIT STARTEN',
+    'Impresszum és szolgáltatói adatok': 'Impressum und Anbieterangaben',
+    'Szolgáltató:': 'Anbieter:',
+    'Kapcsolattartás:': 'Kontakt:',
+    'Székhely:': 'Sitz:',
+    'GISA-szám:': 'GISA-Nummer:',
+    'EU adószám:': 'UID:',
+    'Irányadó jog:': 'Anwendbares Recht:'
+  });
+
+  function fallback(el, lang, sourceText) {
+    const isHeading = /^H[1-4]$/.test(el.tagName || '') || el.tagName === 'SUMMARY';
+    const isButton = el.tagName === 'BUTTON';
+    const isOption = el.tagName === 'OPTION';
+    const isLegal = el.closest('.privacy-panel,.terms-panel,.legal-note,.mandatory-legal-acceptance');
+    const isHelp = el.classList.contains('form-help') || el.classList.contains('help') || el.closest('.field,.form-field,.accordion-body');
+    if (lang === 'de') {
+      if (isButton) return 'WEITER';
+      if (isOption) return 'Bitte auswählen';
+      if (isHeading) return 'Strategischer Audit-Abschnitt';
+      if (isLegal) return 'Diese Information wird im Rahmen der digitalen Entitätsanalyse, der Deep-Search-Recherche, der KI-gestützten Strategievorbereitung und der 96-Stunden-HTML-Strategie verarbeitet. Bitte geben Sie keine sensiblen Daten an und teilen Sie vertrauliche Informationen nur, wenn Sie dazu berechtigt sind.';
+      if (isHelp) return 'Bitte antworten Sie klar, ehrlich und geschäftlich relevant. Die Information wird für die Analyse, die Deep-Search-Recherche und die 96-Stunden-HTML-Strategie verwendet.';
+      return 'Bitte geben Sie die relevanten Informationen für die digitale Entitätsanalyse, Deep Search und Strategievorbereitung an.';
+    }
+    if (isButton) return 'CONTINUE';
+    if (isOption) return 'Please select';
+    if (isHeading) return 'Strategic audit section';
+    if (isLegal) return 'This information is processed for digital entity analysis, deep-search research, AI-assisted strategy preparation and the 96-hour HTML strategy. Please do not provide sensitive data and share confidential information only if you are authorised to do so.';
+    if (isHelp) return 'Please answer clearly, honestly and in a business-relevant way. The information will be used for the analysis, deep-search research and the 96-hour HTML strategy.';
+    return 'Please provide the relevant information for the digital entity audit, deep search and strategy preparation.';
+  }
+
+  function keyElement(el) {
+    if (!el || el.dataset.i18nKey) return;
+    const txt = norm(el.textContent);
+    if (!txt) return;
+    el.dataset.i18nKey = txt;
+    el.dataset.i18nOriginalHtmlStrict = el.innerHTML;
+  }
+
+  function applyStrictI18n(lang=currentLang()) {
+    if (!LANGS.includes(lang)) lang = 'hu';
+    document.documentElement.lang = lang;
+    document.body.classList.remove('lang-hu','lang-en','lang-de');
+    document.body.classList.add(`lang-${lang}`);
+    const dicts = BASE_EXACT();
+    document.querySelectorAll('.i18n-hidden-by-lang').forEach(el => el.classList.remove('i18n-hidden-by-lang'));
+    document.querySelectorAll('.localized-copy[data-lang]').forEach(block => { block.hidden = block.dataset.lang !== lang; });
+    const selector = 'h1,h2,h3,h4,p,li,summary,button,option,span:not(.required),div.eyebrow,div.gate-eyebrow,div.header-brand,div.legal-note,div.progress-hint,div.utility-status,a#privacyLink,a#impressumLink';
+    document.querySelectorAll(selector).forEach(el => {
+      if (el.closest('script,style')) return;
+      if (el.closest('.localized-copy') && el.closest('.localized-copy').dataset.lang !== lang) return;
+      keyElement(el);
+      if (lang === 'hu') {
+        if (el.dataset.i18nOriginalHtmlStrict) el.innerHTML = el.dataset.i18nOriginalHtmlStrict;
+        return;
+      }
+      const source = el.dataset.i18nKey || norm(el.textContent);
+      let translated = dicts[lang][source];
+      if (!translated && HU_RE.test(source)) translated = fallback(el, lang, source);
+      if (translated) el.textContent = translated;
+    });
+    // Ensure labels and placeholders use the currently visible language.
+    const labels = ((window.FORM_L10N && window.FORM_L10N[lang] && window.FORM_L10N[lang].labels) || {});
+    Object.entries(labels).forEach(([id, text]) => {
+      const label = document.querySelector(`label[for="${(window.CSS && CSS.escape) ? CSS.escape(id) : id}"]`);
+      if (!label) return;
+      if (!label.dataset.i18nOriginalHtmlStrict) label.dataset.i18nOriginalHtmlStrict = label.innerHTML;
+      const required = label.textContent.includes('*') || label.querySelector('.required');
+      label.innerHTML = esc(text) + (required ? ' <span class="required">*</span>' : '');
+    });
+    const interfaceLanguage = document.getElementById('interfaceLanguage');
+    if (interfaceLanguage) interfaceLanguage.value = lang;
+    const progressHint = document.getElementById('progressHint');
+    if (progressHint && lang === 'en') progressHint.textContent = 'Start with the basic data. Because the sections open as accordions, you only see what you need at the current moment.';
+    if (progressHint && lang === 'de') progressHint.textContent = 'Beginnen Sie mit den Basisdaten. Durch die ausklappbaren Abschnitte sehen Sie jeweils nur das, was gerade erforderlich ist.';
+    // Final pass: never leave Hungarian helper/legal text visible in EN/DE.
+    if (lang !== 'hu') {
+      document.querySelectorAll(selector).forEach(el => {
+        if (el.closest('script,style')) return;
+        if (el.closest('.localized-copy') && el.closest('.localized-copy').dataset.lang !== lang) return;
+        const txt = norm(el.textContent);
+        if (txt && HU_RE.test(txt)) el.textContent = fallback(el, lang, txt);
+      });
+    }
+  }
+
+  function buildLocalizedExport() {
+    const lang = currentLang();
+    const EMPTY = lang === 'de' ? '[Nicht beantwortet]' : lang === 'en' ? '[Not answered]' : '[Nincs válasz]';
+    const HEAD_Q = lang === 'de' ? 'Vollständige Frage' : lang === 'en' ? 'Full question' : 'Teljes kérdés';
+    const HEAD_A = lang === 'de' ? 'Antwort' : lang === 'en' ? 'Answer' : 'Válasz';
+    const form = document.getElementById('assessmentForm');
+    if (!form) return '';
+    const fields = Array.from(form.querySelectorAll('input, textarea, select')).filter(field => {
+      if (!field.name || field.type === 'hidden' || field.name === '_captcha' || field.name === '_template') return false;
+      if (field.type === 'checkbox' && field.name && field.name.startsWith('_')) return false;
+      return true;
+    });
+    const seen = new Set();
+    const rows = [];
+    fields.forEach(field => {
+      const groupKey = field.type === 'checkbox' || field.type === 'radio' ? field.name : (field.id || field.name);
+      if (seen.has(groupKey)) return;
+      seen.add(groupKey);
+      let label = '';
+      if (field.type === 'checkbox' || field.type === 'radio') {
+        const group = Array.from(form.querySelectorAll(`[name="${CSS.escape(field.name)}"]`));
+        const checked = group.filter(f => f.checked).map(f => norm((form.querySelector(`label[for="${CSS.escape(f.id)}"]`) || {}).textContent || f.value)).filter(Boolean);
+        const firstLabel = form.querySelector(`label[for="${CSS.escape(field.id)}"]`);
+        const legend = field.closest('fieldset')?.querySelector('legend,h3,h4')?.textContent;
+        label = norm(legend || firstLabel?.textContent || field.name);
+        rows.push({ question: label, value: checked.length ? checked.join(', ') : EMPTY });
+      } else {
+        const lab = field.id ? form.querySelector(`label[for="${CSS.escape(field.id)}"]`) : null;
+        label = norm(lab?.textContent || field.name);
+        let value = '';
+        if (field.tagName === 'SELECT') value = norm(field.options[field.selectedIndex]?.textContent || field.value || '');
+        else value = norm(field.value || '');
+        rows.push({ question: label, value: value || EMPTY });
+      }
+    });
+    return rows.map((row, i) => `${i+1}. ${HEAD_Q}:\n${row.question}\n\n${HEAD_A}:\n${row.value}`).join('\n\n---\n\n');
+  }
+
+  function setAuditHiddenFields() {
+    const lang = currentLang();
+    const data = {
+      aiToolsDisclosure: lang === 'de' ? 'Claude, ChatGPT und Grok können mit speziell programmierten personalisierten Prompt-Sets und Internetzugriff für Unternehmensanalyse, Deep Search, KI-Sichtbarkeit sowie Angriffsflächen-/Reputationsanalyse verwendet werden.' : lang === 'en' ? 'Claude, ChatGPT and Grok may be used with specially programmed personalised prompt sets and internet access for company analysis, deep search, AI visibility and vulnerability/reputation analysis.' : 'Claude, ChatGPT és Grok használható speciálisan felprogramozott, személyre szabott promptkészlettel és internet-hozzáféréssel céganalízishez, deep search-höz, AI-láthatósághoz és támadhatósági/reputációs elemzéshez.',
+      publicInternetResearchConsent: lang === 'de' ? 'Der Kunde nimmt zur Kenntnis, dass öffentliche Internetquellen für Audit und 96-Stunden-HTML-Strategie recherchiert und analysiert werden können.' : lang === 'en' ? 'The client acknowledges that public internet sources may be researched and analysed for the audit and 96-hour HTML strategy.' : 'Az ügyfél tudomásul veszi, hogy nyilvános internetes források kutathatók és elemezhetők az audit és a 96 órás HTML stratégia elkészítéséhez.',
+      specialCategoryDataWarning: lang === 'de' ? 'Das Formular fragt keine sensiblen/besonderen Kategorien personenbezogener Daten ab; der Kunde wird angewiesen, solche Daten nicht anzugeben.' : lang === 'en' ? 'The form does not request sensitive/special-category personal data; the client is instructed not to provide such data.' : 'Az űrlap nem kér szenzitív/különleges kategóriájú személyes adatot; az ügyfél kifejezetten arra van kérve, hogy ilyet ne adjon meg.',
+      businessSecretAuthority: lang === 'de' ? 'Der Kunde bestätigt, dass eingereichte Geschäftsgeheimnisse, NDA-geschützte Informationen oder Drittpersonendaten rechtmäßig für diesen Auditzweck weitergegeben werden dürfen.' : lang === 'en' ? 'The client confirms that any business secret, NDA-protected information or third-party personal data submitted may lawfully be shared for this audit purpose.' : 'Az ügyfél megerősíti, hogy a megadott üzleti titkokat, NDA alatti információkat vagy harmadik felek személyes adatait jogszerűen oszthatja meg az audit céljára.',
+      dataRetentionNote: lang === 'de' ? 'Auditdaten werden nur so lange gespeichert, wie dies für Analyse, Kommunikation, Dokumentation, gesetzliche Pflichten oder vereinbarte Folgearbeiten erforderlich ist.' : lang === 'en' ? 'Audit data is retained only as long as needed for analysis, communication, documentation, legal obligations or agreed follow-up work.' : 'Az auditadatok csak addig kerülnek megőrzésre, ameddig az elemzéshez, kommunikációhoz, dokumentációhoz, jogi kötelezettséghez vagy egyeztetett utómunkához szükséges.'
+    };
+    Object.entries(data).forEach(([id,val]) => { const el = document.getElementById(id); if (el) el.value = val; });
+    const formatted = document.getElementById('formattedAnswers');
+    if (formatted) formatted.value = buildLocalizedExport();
+  }
+
+  window.strictFinalApplyI18n = applyStrictI18n;
+  window.strictBuildLocalizedExport = buildLocalizedExport;
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.lang-choice[data-lang]');
+    if (!btn) return;
+    setTimeout(() => { applyStrictI18n(btn.dataset.lang); setAuditHiddenFields(); }, 40);
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => { applyStrictI18n(currentLang()); setAuditHiddenFields(); }, 80);
+    const form = document.getElementById('assessmentForm');
+    if (form) {
+      form.addEventListener('input', setAuditHiddenFields);
+      form.addEventListener('change', setAuditHiddenFields);
+      form.addEventListener('submit', () => { applyStrictI18n(currentLang()); setAuditHiddenFields(); });
+    }
+  });
+  setTimeout(() => { applyStrictI18n(currentLang()); setAuditHiddenFields(); }, 150);
 })();
 </script>
 
