@@ -1,6 +1,6 @@
 # Felhasználási Feltételek (Terms of Service)
 
-**[Your Organization Name]**  
+**Mag. Tamás Tóth e.U.**  
 Wien, Österreich  
 www.metallagentur.at
 
@@ -22,7 +22,7 @@ A **Digitális Entitás Audit Framework** egy interaktív kérdőív és straté
 Az audit-keretrendszer szellemi tulajdon az alábbiak szerint:
 
 ```
-© 2026 [Your Organization Name]
+© 2026 Mag. Tamás Tóth e.U.
 
 Licensz: CC BY-NC-ND 4.0
 - BY (Attribution): Kötelezően hivatkozni kell Metallagentur-ra
@@ -42,7 +42,7 @@ Licensz: CC BY-NC-ND 4.0
 
 | Szellemi Termék | Tulajdonos | Felhasználási Jog |
 |---|---|---|
-| **Audit-keretrendszer (HTML/CSS/JS)** | [Your Organization Name] | CC BY-NC-ND 4.0 |
+| **Audit-keretrendszer (HTML/CSS/JS)** | Mag. Tamás Tóth e.U. | CC BY-NC-ND 4.0 |
 | **Audit-dokumentum (ügyfélre szabott)** | Ügyfél | Kizárólagos (titkos) |
 | **Stratégiai javaslatok** | Ügyfél + Metallagentur | Közös (szerződés alapján) |
 
@@ -336,15 +336,15 @@ Később továbbra is érvényre juttatható
 **Ha kérdése van a feltételekről:**
 
 ```
-[Your Organization Name]
+Mag. Tamás Tóth e.U.
 E-mail: [your-email@example.com]
-Weboldal: https://www.your-website.com
+Weboldal: https://www.metallagentur.at
 Telefon: [szám]
 ```
 
 ---
 
-**© 2026 [Your Organization Name]**
+**© 2026 Mag. Tamás Tóth e.U.**
 
 *Ezek a feltételek az österreichisches Recht (osztrák jog) szerint értelmezendőek és végrehajthatóak.*
 
@@ -353,4 +353,9 @@ Telefon: [szám]
 
 ## AI tool disclosure update
 
-The audit workflow may use Claude, ChatGPT and Grok AI tools with specially programmed, personalised prompt sets. These tools may be used with internet access where public-source review is necessary for company analysis, deep-search research and vulnerability/reputation analysis. The form does not request special-category/sensitive personal data and users are instructed not to provide such data unless separately agreed and legally necessary.
+The audit workflow may use ChatGPT, Claude, Grok, Gemini and Copilot AI tools with specially programmed, personalised prompt sets. These tools may be used with internet access where public-source review is necessary for company analysis, deep-search research and vulnerability/reputation analysis. The form does not request special-category/sensitive personal data and users are instructed not to provide such data unless separately agreed and legally necessary.
+
+
+## 2026-06-11 GDPR / AI útvonal frissítés
+
+A form magyar alapnyelvű, angol és német fordítással. A szolgáltatási útvonal szerint az adatok elsődlegesen Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz érkeznek, és az ügyfél Mag. Tamás Tóth e.U.-val szerződik. A 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának / GDPR Art. 28 szerinti adatfeldolgozójának közreműködésével történhet. A feldolgozás ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök támogatásával, emberi szakmai kontroll mellett történhet. A form nem kér különleges kategóriájú személyes adatot.

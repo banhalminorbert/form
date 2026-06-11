@@ -311,7 +311,7 @@ git push origin main
 ```
 1. GitHub Issues: https://github.com/[USERNAME]/digital-entity-audit/issues
 2. E-mail: [your-email@example.com]
-3. Website: https://www.your-website.com
+3. Website: https://www.metallagentur.at
 ```
 
 ---
@@ -341,8 +341,8 @@ Az audit-keretrendszer GitHub Pages-en működik:
 👉 https://[USERNAME].github.io/digital-entity-audit/
 ```
 
-Köszönjük, hogy a [Your Organization Name] audit-keretrendszert használod!
+Köszönjük, hogy a Mag. Tamás Tóth e.U. audit-keretrendszert használod!
 
 ---
 
-**© 2026 [Your Organization Name] GmbH | CC BY-NC-ND 4.0 | GDPR-kompatibilis**
+**© 2026 Mag. Tamás Tóth e.U. | CC BY-NC-ND 4.0 | GDPR-kompatibilis**

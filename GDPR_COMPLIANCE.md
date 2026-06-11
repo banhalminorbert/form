@@ -1,6 +1,6 @@
 # GDPR Compliance & Adatvédelmi Nyilatkozat
 
-**[Your Organization Name]**  
+**Mag. Tamás Tóth e.U.**  
 [City], [Country]  
 www.metallagentur.at  
 [your-email@example.com]
@@ -14,7 +14,7 @@ www.metallagentur.at
 - Cím: [Város], [Ország]
 - Telefon: [telefonszám]
 - E-mail: [your-email@example.com]
-- Weboldal: https://www.your-website.com
+- Weboldal: https://www.metallagentur.at
 - Képviselet: [Saját név] (Ügyvezető)
 
 ### Adatvédelmi Tisztségviselő (Data Protection Officer)
@@ -292,16 +292,16 @@ Ha jelentős változások történnek (pl. új adatkezelési célok), e-mailben 
 **Adatvédelmi Kérdéseihez:**
 
 ```
-[Your Organization Name]
+Mag. Tamás Tóth e.U.
 Adatvédelmi Tisztviselő
 E-mail: [your-email@example.com]
 Telefon: [számtelefon]
-Weboldal: https://www.your-website.com
+Weboldal: https://www.metallagentur.at
 ```
 
 ---
 
-**© 2026 [Your Organization Name]**  
+**© 2026 Mag. Tamás Tóth e.U.**  
 **GDPR-kompatibilis | Osztrák DSG megfelelő**
 
 ---
@@ -313,4 +313,9 @@ Weboldal: https://www.your-website.com
 
 ## AI tool disclosure update
 
-The audit workflow may use Claude, ChatGPT and Grok AI tools with specially programmed, personalised prompt sets. These tools may be used with internet access where public-source review is necessary for company analysis, deep-search research and vulnerability/reputation analysis. The form does not request special-category/sensitive personal data and users are instructed not to provide such data unless separately agreed and legally necessary.
+The audit workflow may use ChatGPT, Claude, Grok, Gemini and Copilot AI tools with specially programmed, personalised prompt sets. These tools may be used with internet access where public-source review is necessary for company analysis, deep-search research and vulnerability/reputation analysis. The form does not request special-category/sensitive personal data and users are instructed not to provide such data unless separately agreed and legally necessary.
+
+
+## 2026-06-11 GDPR / AI útvonal frissítés
+
+A form magyar alapnyelvű, angol és német fordítással. A szolgáltatási útvonal szerint az adatok elsődlegesen Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz érkeznek, és az ügyfél Mag. Tamás Tóth e.U.-val szerződik. A 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának / GDPR Art. 28 szerinti adatfeldolgozójának közreműködésével történhet. A feldolgozás ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök támogatásával, emberi szakmai kontroll mellett történhet. A form nem kér különleges kategóriájú személyes adatot.

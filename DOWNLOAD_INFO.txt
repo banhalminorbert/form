@@ -1,6 +1,6 @@
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                    LETÖLTÉS & TELEPÍTÉSI ÚTMUTATÓ                            ║
-║         Digitális Entitás Audit Framework — [Your Organization Name] GmbH               ║
+║         Digitális Entitás Audit Framework — Mag. Tamás Tóth e.U.               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
 📦 ZIP FÁJL TARTALMAZ:
@@ -77,7 +77,7 @@ TELJES MÉRET: ~52 KB (tömörített ZIP)
    [ ] Képviselő neve
 
 4. SZERVEZET NEVE MÓDOSÍTÁSA:
-   Keresés: [Your Organization Name] GmbH
+   Keresés: Mag. Tamás Tóth e.U.
    Cserélje: az Ön szervezet neve (ha szükséges)
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -164,7 +164,7 @@ INTERNET:
 ───────────────────────────────────────────────────────────────────────────────
 
 LICENSZ: CC BY-NC-ND 4.0
-- BY (Attribution): hivatkozni kell [Your Organization Name]-ra
+- BY (Attribution): hivatkozni kell Mag. Tamás Tóth e.U.-ra
 - NC (Non-Commercial): kereskedelmi felhasználás tilos
 - ND (No Derivatives): módosítás tilos
 
@@ -179,7 +179,7 @@ GDPR COMPLIANCE: Teljes
 ───────────────────────────────────────────────────────────────────────────────
 
 E-MAIL: [your-email@example.com]
-WEBSITE: https://www.your-website.com
+WEBSITE: https://www.metallagentur.at
 GITHUB: Issues: https://github.com/[USERNAME]/digital-entity-audit/issues
 
 DOKUMENTÁCIÓ:
@@ -221,7 +221,7 @@ Feltöltés után:
 Projekt: Digitális Entitás Audit Framework
 Verzió: 1.0.0
 Kiadás dátuma: 2026-05-08
-Szervezet: [Your Organization Name] GmbH
+Szervezet: Mag. Tamás Tóth e.U.
 Ország: Österreich (Austria)
 
 Frissítések:
@@ -235,8 +235,8 @@ v2.0.0 (tervezett) — AI audit-generátor
 
 Az audit-keretrendszer teljes, production-ready és GDPR-kompatibilis.
 
-Köszönjük, hogy a [Your Organization Name] audit-keretrendszert használod!
+Köszönjük, hogy a Mag. Tamás Tóth e.U. audit-keretrendszert használod!
 
 ═══════════════════════════════════════════════════════════════════════════════
 
-© 2026 [Your Organization Name] GmbH | GDPR-kompatibilis | CC BY-NC-ND 4.0
+© 2026 Mag. Tamás Tóth e.U. | GDPR-kompatibilis | CC BY-NC-ND 4.0

@@ -1,6 +1,6 @@
 # IMPRESSUM — Jogi Nyilatkozat
 
-**[Your Organization Name]**
+**Mag. Tamás Tóth e.U.**
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Adat | Érték |
 |------|-------|
-| **Szervezet neve** | [Your Organization Name] |
+| **Szervezet neve** | Mag. Tamás Tóth e.U. |
 | **Jogi forma** | GmbH (Gesellschaft mit beschränkter Haftung) |
 | **Cím** | [City], [Country] |
 | **Ország** | Österreich (Austria) |
@@ -27,7 +27,7 @@
 | Csatorna | Adat |
 |----------|------|
 | **E-mail** | [your-email@example.com] |
-| **Weboldal** | https://www.your-website.com |
+| **Weboldal** | https://www.metallagentur.at |
 | **Telefon** | [Kötelezett szám behelyezése] |
 
 ### 4. Nyilvánosságra Hozandó Adatok
@@ -88,8 +88,8 @@ Elérhetőség:                [your-email@example.com]
 
 ```
 Weboldal nyelve:    Magyar
-Szöveggondozás:     [Your Organization Name]
-Jogi szöveg:        [Your Organization Name] + Jogász
+Szöveggondozás:     Mag. Tamás Tóth e.U.
+Jogi szöveg:        Mag. Tamás Tóth e.U. + Jogász
 ```
 
 ---
@@ -99,7 +99,7 @@ Jogi szöveg:        [Your Organization Name] + Jogász
 ### 9. Szerzői Jogok
 
 ```
-© 2026 [Your Organization Name] — Minden jog fenntartva
+© 2026 Mag. Tamás Tóth e.U. — Minden jog fenntartva
 
 Digitális Entitás Audit Framework
 Licensz: CC BY-NC-ND 4.0
@@ -159,7 +159,7 @@ Jogsértés esetén: Jogi lépések és kártérítési igény.
 ### 14. GDPR Megfelelőség
 
 ```
-Adatkezelő:                [Your Organization Name]
+Adatkezelő:                Mag. Tamás Tóth e.U.
 Adatkezelés alapja:        GDPR Art. 6 (1) a-b-f
 Jogalapok:                 Hozzájárulás, szerződés, jogos érdek
 Adatvédelmi Nyilatkozat:   GDPR_COMPLIANCE.md (teljes szöveg)
@@ -174,7 +174,7 @@ Adatvédelmi Nyilatkozat:   GDPR_COMPLIANCE.md (teljes szöveg)
 ```
 Teljes szöveg:    TERMS_OF_SERVICE.md
 Alkalmazandó jog: Osztrák Jog
-Jogviszony:       [Your Organization Name] és az ügyfél között
+Jogviszony:       Mag. Tamás Tóth e.U. és az ügyfél között
 Végzésre hely:    [City], [Country]
 ```
 
@@ -198,7 +198,7 @@ E-mailben: [your-email@example.com] (Subject: Ingatlanműködés)
 ### 17. Képek és Média
 
 ```
-Fotók:              © [Your Organization Name] vagy forrás szerint
+Fotók:              © Mag. Tamás Tóth e.U. vagy forrás szerint
 Ikonok:             Saját kép vagy CC0 közvetlenből (hivatkozással)
 Videók:             Saját vagy forrásolt (jelölt)
 ```
@@ -323,7 +323,7 @@ Jelentős módosítások előfordulhatnak:
 ### 28. Levélcím
 
 ```
-[Your Organization Name]
+Mag. Tamás Tóth e.U.
 Wien
 Österreich
 
@@ -380,7 +380,7 @@ Bejelentési díj: EUR 0 (ingyenes)
 
 ---
 
-**© 2026 [Your Organization Name]**
+**© 2026 Mag. Tamás Tóth e.U.**
 
 *Osztrák E-kereskedelem Törvény (E-Commerce-Gesetz) szerint szükséges jogi nyilatkozat.*
 

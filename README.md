@@ -2,7 +2,7 @@
 
 **Professional Digital Identity & Reputation Strategy Assessment Tool**
 
-A [[Your Organization Name]](https://www.your-website.com) által fejlesztett, GDPR-kompatibilis, professzonális audit-rendszer vállalkozók, közéleti személyiségek és szervezetek digitális jelenlétének értékeléséhez.
+A [Mag. Tamás Tóth e.U.](https://www.metallagentur.at) által fejlesztett, GDPR-kompatibilis, professzonális audit-rendszer vállalkozók, közéleti személyiségek és szervezetek digitális jelenlétének értékeléséhez.
 
 ---
 
@@ -15,7 +15,7 @@ A [[Your Organization Name]](https://www.your-website.com) által fejlesztett, G
 ├── README.md                          # Ez a dokumentum
 ├── GDPR_COMPLIANCE.md                 # GDPR és osztrák adatvédelmi nyilatkozat
 ├── LICENSE.md                         # Jogok és felelősség korlátozás
-├── IMPRESSUM.md                       # Impresszum ([Your Organization Name])
+├── IMPRESSUM.md                       # Impresszum (Mag. Tamás Tóth e.U.)
 ├── TERMS_OF_SERVICE.md                # Felhasználási feltételek
 └── docs/
     ├── Digital_Entity_Audit_Template.md
@@ -94,7 +94,7 @@ Az `index.html` az alábbi GDPR-követelményeket teljesíti:
 ✓ **Artikulus 20**: Adathordozhatóság (teljes JSON export az e-mailben)  
 ✓ **Artikulus 21**: Jog a hozzájárulás megvonásához (e-mail-ben nyújtva)
 
-**Adatkezelő**: [Your Organization Name], [City], [Country]  
+**Adatkezelő**: Mag. Tamás Tóth e.U., [City], [Country]  
 **Ügyfél céljára végzett feldolgozás**: Digitális entitás audit és stratégiai tanácsadás  
 **Tárolási időtartam**: 30 nap, majd végleges törlés (vagy megmarad, ha szerződés kötik)
 
@@ -109,7 +109,7 @@ Az alábbi osztrák szabályozás megsértésének elkerülésével:
 ### Jogi Nyilatkozatok az index.html-ben
 
 1. **Impresszum (Pflichtangaben nach TMG/E-Commerce-Richtlinie)**
-   - Szervezet neve: [Your Organization Name]
+   - Szervezet neve: Mag. Tamás Tóth e.U.
    - Cím: [City], [Country]
    - Felelős: Tamas Toth
    - E-mail: [your-email@example.com]
@@ -178,7 +178,7 @@ Ajánlott: CC BY-NC-ND 4.0 (Creative Commons)
 Közvetlenül szükséges osztrák és EU kötelezettségek:
 
 ```
-[Your Organization Name]
+Mag. Tamás Tóth e.U.
 [City], [Country]
 FN: [Firmenregister szám]
 ÖSt.ID: [ÖSt.ID szám]
@@ -282,7 +282,7 @@ EGYÉB MEGJEGYZÉSEK
 JOGI NYILATKOZATOK
 
 ================================================
-GDPR-KOMPATIBILIS | [Your Organization Name]
+GDPR-KOMPATIBILIS | Mag. Tamás Tóth e.U.
 ```
 
 ---
@@ -362,8 +362,8 @@ Az audit-keretrendszer az alábbi feltételek alatt módosítható:
 
 ## 📞 Támogatás és Kontakt
 
-**[Your Organization Name]**
-- Web: https://www.your-website.com
+**Mag. Tamás Tóth e.U.**
+- Web: https://www.metallagentur.at
 - E-mail: [your-email@example.com]
 - Ország: Österreich (Austria)
 - Forma: GmbH (Gesellschaft mit beschränkter Haftung)
@@ -441,12 +441,17 @@ A fordítási berkehezést a `docs/` mappában végezzük.
 
 ---
 
-**© 2026 [Your Organization Name]. All rights reserved.**
+**© 2026 Mag. Tamás Tóth e.U.. All rights reserved.**
 
 *Gitub repository: [digital-entity-audit](https://github.com/metallagentur/digital-entity-audit)*
 
 ---
 
 **Last Updated**: 2026-05-08  
-**Maintainer**: [Your Organization Name]  
+**Maintainer**: Mag. Tamás Tóth e.U.  
 **Status**: Production Ready ✓
+
+
+## 2026-06-11 GDPR / AI útvonal frissítés
+
+A form magyar alapnyelvű, angol és német fordítással. A szolgáltatási útvonal szerint az adatok elsődlegesen Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz érkeznek, és az ügyfél Mag. Tamás Tóth e.U.-val szerződik. A 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának / GDPR Art. 28 szerinti adatfeldolgozójának közreműködésével történhet. A feldolgozás ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök támogatásával, emberi szakmai kontroll mellett történhet. A form nem kér különleges kategóriájú személyes adatot.

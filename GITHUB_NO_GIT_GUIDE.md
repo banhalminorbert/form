@@ -1,6 +1,6 @@
 # GitHub feltöltés GIT NÉLKÜL — Teljes útmutató
 
-**[Your Organization Name] GmbH**
+**Mag. Tamás Tóth e.U.**
 
 ---
 
@@ -396,5 +396,5 @@ Felhasználónak:
 
 ---
 
-**© 2026 [Your Organization Name] GmbH | GDPR-kompatibilis | CC BY-NC-ND 4.0**
+**© 2026 Mag. Tamás Tóth e.U. | GDPR-kompatibilis | CC BY-NC-ND 4.0**
 

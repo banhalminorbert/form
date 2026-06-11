@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Professional Digital Identity & Reputation Strategy Assessment Tool - GDPR compliant",
   "author": {
-    "name": "[Your Organization Name]",
+    "name": "Mag. Tamás Tóth e.U.",
     "email": "[your-email@example.com]",
-    "url": "https://www.your-website.com"
+    "url": "https://www.metallagentur.at"
   },
   "license": "CC-BY-NC-ND-4.0",
   "repository": {
@@ -16,7 +16,7 @@
     "url": "https://github.com/metallagentur/digital-entity-audit/issues",
     "email": "[your-email@example.com]"
   },
-  "homepage": "https://www.your-website.com",
+  "homepage": "https://www.metallagentur.at",
   "keywords": [
     "digital-identity",
     "reputation-management",
@@ -84,19 +84,19 @@
   },
   "funding": {
     "type": "individual",
-    "url": "https://www.your-website.com"
+    "url": "https://www.metallagentur.at"
   },
   "contributors": [
     {
       "name": "Tamas Toth",
       "email": "[your-email@example.com]",
-      "url": "https://www.your-website.com"
+      "url": "https://www.metallagentur.at"
     }
   ],
   "organization": {
-    "name": "[Your Organization Name]",
+    "name": "Mag. Tamás Tóth e.U.",
     "country": "Österreich",
     "city": "Wien",
-    "website": "https://www.your-website.com"
+    "website": "https://www.metallagentur.at"
   }
 }

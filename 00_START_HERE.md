@@ -1,6 +1,6 @@
 # 🎯 START HERE — Digitális Entitás Audit Framework
 
-**[Your Organization Name] GmbH**
+**Mag. Tamás Tóth e.U.**
 
 ---
 
@@ -147,7 +147,7 @@ Keresés: `[your-email@example.com]` — helyettesítsd a saját e-maileddel
 
 ### Weboldal Neve/Branding
 
-Keresés: `[Your Organization Name] GmbH` — helyettesítsd a szervezeted nevével
+Keresés: `Mag. Tamás Tóth e.U.` — helyettesítsd a szervezeted nevével
 
 ---
 
@@ -238,7 +238,7 @@ A fordítások a `docs/` mappában lesznek.
 
 ```
 E-mail: [your-email@example.com]
-Website: https://www.your-website.com
+Website: https://www.metallagentur.at
 GitHub Issues: [GitHub repo]/issues
 ```
 
@@ -261,7 +261,7 @@ GitHub Issues: [GitHub repo]/issues
 
 ## 🎉 Kész!
 
-Az audit-keretrendszer **production-ready**. Üdvözlünk a [Your Organization Name] szövetségében!
+Az audit-keretrendszer **production-ready**. Üdvözlünk a Mag. Tamás Tóth e.U. szövetségében!
 
 ```
 👉 Indíts el: index.html
@@ -271,6 +271,11 @@ Az audit-keretrendszer **production-ready**. Üdvözlünk a [Your Organization N
 
 ---
 
-**© 2026 [Your Organization Name] GmbH | GDPR-kompatibilis | CC BY-NC-ND 4.0**
+**© 2026 Mag. Tamás Tóth e.U. | GDPR-kompatibilis | CC BY-NC-ND 4.0**
 
 *Verzió: 1.0.0 | 2026-05-08*
+
+
+## 2026-06-11 GDPR / AI útvonal frissítés
+
+A form magyar alapnyelvű, angol és német fordítással. A szolgáltatási útvonal szerint az adatok elsődlegesen Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz érkeznek, és az ügyfél Mag. Tamás Tóth e.U.-val szerződik. A 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának / GDPR Art. 28 szerinti adatfeldolgozójának közreműködésével történhet. A feldolgozás ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök támogatásával, emberi szakmai kontroll mellett történhet. A form nem kér különleges kategóriájú személyes adatot.
