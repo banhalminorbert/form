@@ -1,321 +1,295 @@
-# GDPR Compliance & Adatvédelmi Nyilatkozat
+# GDPR & DSG Compliance Documentation
+## form.metallagentur.at — Digitális Entitásépítési Audit
 
-**Mag. Tamás Tóth e.U.**  
-[City], [Country]  
-www.metallagentur.at  
-[your-email@example.com]
+**Cég:** Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Austria  
+**Kontakt:** tamas.toth@metallagentur.at  
+**GISA:** 32963588 | **UID:** ATU69150839  
+**Verzió:** 2.0 (2026-06-12)
 
 ---
 
-## 1. Adatkezelő és Adatfeldolgozó
+## 1. Adatkezelő és feldolgozási útvonal
 
 ### Adatkezelő (Controller)
-**[Saját szervezet neve]**
-- Cím: [Város], [Ország]
-- Telefon: [telefonszám]
-- E-mail: [your-email@example.com]
-- Weboldal: https://www.metallagentur.at
-- Képviselet: [Saját név] (Ügyvezető)
+**Mag. Tamás Tóth e.U.** — az audit-kérdőív összegyűjtött adatainak kezelője.
 
-### Adatvédelmi Tisztségviselő (Data Protection Officer)
-[Ha szükséges — kötelezően erre szükség van, ha az adatkezelés rendszeres és nagyléptékű felügyeletét jelenti]
+Látható tartalom:
+- Az audit-kérdőívből kitöltött összes szöveges és strukturált adat
+- Az **készülő audit HTML-dokumentum** (a végeredmény)
 
-E-mail: [dpo@your-website.com]
+### Szerződéses szakmai alvállalkozó (Art. 28 Processor)
+**Szerződéses feladata:** A 96 órás HTML stratégiai audit szakmai előkészítése és összeállítása.
 
----
+Látható tartalom:
+- Az **internetről kikutatott nyilvános adatok** (cég weboldala, LinkedIn, közösségimédia, közszerzerzésű információk) — **NEM személyes adatok**
+- A stratégiai elemzés és szellemi munka (az ő szerzői és szellemi tulajdonuk)
+- Az **készülő audit HTML-dokumentum** (az alvállalkozó szerzői tulajdona)
 
-## 2. Az Adatkezelés Célja
-
-Az alábbi célokra dolgozzuk fel az Ön személyes adatait:
-
-1. **Digitális entitás audit készítése** — A kérdőívben megadott adatok alapján
-2. **Stratégiai tanácsadás** — Az audit-dokumentum elkészítése és küldése
-3. **Kommunikáció** — E-mailben történő kapcsolattartás az audit-folyamat során
-4. **Szerződéses teljesítés** — Szükséges a megállapodás teljesítéséhez
+### AI-eszközök (ChatGPT, Claude, Grok, Gemini, Copilot)
+Felhasználása az audit feldolgozás támogatásához, emberi szakértői kontroll mellett.
 
 ---
 
-## 3. Jogalap az Adatkezelésre (GDPR Art. 6)
+## 2. Az adatkezelés céljai
 
-Az alábbi jogalapok alapján kezeljük az adatokat:
+1. **Digitális entitás audit készítése** — a kérdőívben megadott adatok alapján
+2. **Stratégiai tanácsadás** — a 96 órás HTML audit-dokumentum elkészítése és e-mailes megküldése
+3. **Kommunikáció** — e-mailes kapcsolattartás az audit-folyamat során
+4. **Ajánlatadás és szerződésteljesítés** — számlázás megengedett
+
+---
+
+## 3. Jogalapok (GDPR Art. 6)
 
 | Jogalap | Alkalmazás |
 |---------|-----------|
-| **Art. 6 (1) a)** — Hozzájárulás | Explicit opt-in checkboxok az audit-formában |
-| **Art. 6 (1) b)** — Szerződés | Az audit-szerződés teljesítéséhez szükséges |
-| **Art. 6 (1) f)** — Jogos érdek | Szerzői jogok és szellemi tulajdon védelme |
+| **Art. 6 (1) b) — szerződés** | Az audit-kérdőív adatok kezelése az audit elkészítéséhez |
+| **Art. 6 (1) f) — jogos érdek** | Üzleti kommunikáció, dokumentáció, szellemi tulajdon védelme |
+| **Art. 6 (1) c) — jogi kötelezettség** | Számlázási és adózási adatok (BAO, UStG) |
 
 ---
 
-## 4. Az Ön Személyes Adatai
+## 4. Adatkategóriák és adatminimalizálás
 
-### Szokásos Kategóriák
+### Személyes adatok (GDPR szerinti)
+- **Kapcsolattartás:** név, e-mail, telefon (opcionális)
+- **Cég/márka:** cégnév, weboldal, pozicionálási és stratégiai válaszok
+- **Digitális jelenlét:** weboldalak, LinkedIn, közösségimédia-linkek
+- **Számlázás:** számlázási név, cím, ország, adószám, EU adószám (UID)
 
-```
-Identifikáció: Név, E-mail, Telefon
-Helymeghatározás: Lakcím, Bázis-város
-Végzettség: Iskolák, végzettségek
-Karrier: Pozíciók, szervezetek, eredmények
-Közösségi: Partnerállapot, gyermekek száma
-Digitális: Weboldalak, LinkedIn, közösségi média
-```
+### Technikai adatok
+- IP-cím (hoszting szint, GitHub Pages)
+- Böngésző localStorage (helyi piszkozat, felhasználó kezelésében)
 
-### Érzékeny Adatok (Special Categories - GDPR Art. 9)
+### NEM személyes adatok (Alvállalkozó által kezelt)
+- **Nyilvánosan elérhető információk** (céges weboldal, LinkedIn, sajtó, nyilvántartások)
+- Az ezekből levont **stratégiai elemzés** (szellemi munka)
 
-**Az audit-forma az alábbi érzékeny adatokat is feldolgozhat:**
+### Kizárt adatok — GDPR Art. 9
+Az űrlap **nem kér és kifejezetten tiltja** a különleges kategóriájú személyes adatok megadását:
+- Egészségügyi adatok
+- Politikai/vallási/szakszervezeti meggyőződés
+- Faji/etnikai eredet
+- Genetikai/biometrikus adatok
+- Szexuális élet vagy irányultság
 
-- **Jogi konfliktusok** (pereskedés, bírósági eljárások)
-- **Média botrányok** (szexuális zaklatatás, megvádolás)
-- **Egészségi adatok** (mentális egészség, betegségek — ha felvetik)
-
-**Ezek az adatok:**
-- ✓ Szigorúan bizalmas kezelésben részesülnek
-- ✓ Minimális szükségességgel kezelkednek
-- ✓ 30 nap után törlésre kerülnek
-- ✓ Nem osztódnak meg harmadik féllel
-
----
-
-## 5. Adatmegosztás (Recipients)
-
-Az Ön adatait az alábbi feleknek osztjuk meg:
-
-| Fél | Célja | Jogalap | Helye |
-|-----|-------|---------|-------|
-| **Formspree** | E-mail küldés | Adatkezelési megállapodás (DPA) | EU/USA |
-| **Google Fonts** | Tipográfia | Szükséges a weboldal működéséhez | Google EU szerver |
-| **Cloudflare** | DNS/CDN | Szükséges a weboldal működéséhez | EU/USA |
-
-**Nem osztjuk meg:**
-- ✗ Szociális média felekkel
-- ✗ Marketing vállalatokkal
-- ✗ Kormányzati szervekkel (kivéve jogerős megbízatás)
+Ha felhasználó mégis ilyen adatot ad meg, az haladéktalanul törlésre kerül.
 
 ---
 
-## 6. Nemzetközi Adattovábbítás
+## 5. Címzetek és technikai szolgáltatók
 
-Ha az adatok az EU-n kívülre kerülnek (pl. USA-ba a Formspree vagy Google szervereiben), az alábbi védelmi mekanizmusokat alkalmazzuk:
+| Szolgáltató | Funkció | Adatkezelési jogcím | Helyszín | Garancia |
+|-------------|---------|-------------------|----------|----------|
+| **GitHub, Inc.** (GitHub Pages) | Az audit-űrlap statikus hosztingja; IP-cím feldolgozása | Art. 28 | USA | EU–US Data Privacy Framework |
+| **Google Ireland Ltd. / Google LLC** | Google Apps Script: beküldött kérdőívadatok továbbítása a Google Workspace postafiókba | Art. 28 | EU/USA | SCC + EU–US DPF |
+| **Google Fonts** | Betűtípus-betöltés (New York, San Francisco) | Art. 28 | EU/USA | SCC + EU–US DPF |
+| **Szerződéses szakmai alvállalkozó** | 96 órás HTML audit-dokumentum előkészítése | Art. 28 DPA | EU/EGT | GDPR Art. 28 szerzodés |
+| **AI-szolgáltatók** (ChatGPT, Claude, Grok, Gemini, Copilot) | Audit-feldolgozás támogatása | Art. 28 (emb. felügyelet) | Részben EGT-n kívül | SCC / EU–US DPF |
 
-### Standard Contractual Clauses (SCC)
-Az EU Bizottság által jóváhagyott standard szerződési feltételek (2021/915/EU és 2021/914/EU)
-
-### Adequacy Decisions
-- USA: **[Privacy Shield helyett] Adequacy Decision (pending 2026)**
-- Más államok: Esetenként értékelés
-
----
-
-## 7. Az Adatok Tárolási Ideje
-
-| Adat Kategória | Tárolási Idő | Törlés Módja |
-|---|---|---|
-| **Kérdőív-válaszok** | 30 nap | Automatikus, vagy ha szerződést kötünk, amennyiben szükséges |
-| **Audit-dokumentum** | Szerződés időtartama + 7 év | Dokumentáltan a szerződés vége után |
-| **Közösségi média linkek** | 30 nap | Automatikus törlés |
-| **Szenzitív adatok** | 30 nap | Előbb lehet törölni, kérésre |
-| **E-mail kommunikáció** | 30 nap | Automatikus archívum törlés |
+### Nem osztjuk meg az adatokat
+- Közösségimédia-platformokkal
+- Marketingcégekkel
+- Adatkereskedőkkel
+- Kormányzati szervekkel (csak jogerős kötelezés alapján)
 
 ---
 
-## 8. Az Alany Jogai (GDPR Art. 15-22, 34)
+## 6. Nemzetközi adattovábbítás
 
-Önnek az alábbi jogai vannak:
+Az EGT-n kívüli feldolgozás nem zárható ki teljesen (GitHub, Google, AI-eszközök USA-ban). Alkalmazott garanciák:
 
-### Art. 15 — Hozzáférés Joga
-
-**Jogában áll:**
-- Kérdezni: "Milyen adatokat tartanak fenn rólam?"
-- Másolatot kapni az adatokról (szöveges formátumban)
-
-**Kérelem küldéséhez:**
-```
-E-mail: [your-email@example.com]
-Tárgy: GDPR Art. 15 — Hozzáférés kérése
-```
-
-**Válaszi időszak:** 30 nap
+- **Standard Contractual Clauses (SCC)** — EU Bizottság 2021/914/EU határozata
+- **EU–US Data Privacy Framework (DPF)** — GitHub, Google tanúsítványok
+- **Anonimizálás/pszeudonimizálás** — ahol a feldolgozáshoz nem szükséges közvetlen azonosíthatóság
 
 ---
 
-### Art. 16 — Helyesbítés Joga
+## 7. Adatmegőrzés és törlési procedúra
 
-**Ha az adatok helytelenek:**
-- "Andrea Osvárt" helyett "Andrea Osvart" stb.
+### Törlési ciklus: 30 nap
 
-**Kérelem:**
-```
-E-mail: [your-email@example.com]
-Tárgy: GDPR Art. 16 — Helyesbítés kérése
-```
+**Az audit-projekt kezdete = 0. nap**
 
----
+| Adat | Kezelő | Megőrzés | Törlés | Megjegyzés |
+|------|--------|----------|--------|-----------|
+| **Audit-kérdőív kitöltött adatai** | Mag. Tamás Tóth e.U. | 30 nap | A 30. nap után teljes törlés | Google Workspace + lokális biztonsági másolatok |
+| **Internet-kutatás adatai** (cég info, LinkedIn, nyilvános forrasok) | Szerződéses alvállalkozó | 30 nap | A 30. nap után teljes törlés | Nem személyes adat, de szerzerzéshez szükséges |
+| **Stratégiai elemzés és szellemi munka** | Szerződéses alvállalkozó | — | — | Az alvállalkozó szerzői tulajdona, nem törlésre kerül |
+| **Kész audit HTML-dokumentum** | Mag. Tamás Tóth e.U. + Alvállalkozó | — | — | **Nem törlésre kerül** — az alvállalkozó szerzői tulajdona, a megrendelő számára szállított termék |
+| **Számlázási adatok** | Mag. Tamás Tóth e.U. | 7 év | Az ügyletzárulástól számított 7 év után | BAO § 132 (osztrák adózás) |
+| **Böngésző-localStorage piszkozat** | A felhasználó böngészője | Felhasználó kezelésében | "HELYI MENTÉS TÖRLÉSE" gombbal | Nem szerver-oldalon tárolva |
 
-### Art. 17 — Törlés Joga ("Right to be Forgotten")
+### Törlési procedúra részletei
 
-**Jogában áll, hogy az adatok törlésre kerüljenek, ha:**
-- Az adatok már nem szükségesek az eredeti célokhoz
-- Visszavonta a hozzájárulást
-- Tiltakozik az adatkezelés ellen
-- Az adatokat jogtalanul kezelték
+#### 1. Mag. Tamás Tóth e.U. által kezelendő adatok (30 nap után törlés)
 
-**Korlátások:**
-- Nem tudjuk törölni, ha az audit-szerződés még aktív
-- Nem tudjuk törölni, ha jogos érdek (szellemi tulajdon) fenáll
+**Mit töröl:**
+- Az audit-kérdőív összes kitöltött szöveg- és strukturált adata
+- A Google Apps Script által átadott e-mail-bejegyzések (a kérdőívből)
+- Az összes helyi biztonsági másolat és naplóbejegyzés
 
-**Kérelem:**
-```
-E-mail: [your-email@example.com]
-Tárgy: GDPR Art. 17 — Törlés kérése
-```
+**Hogyan:**
+- Google Workspace postafiók: az e-mail-üzenet végleges törlése
+- Lokális ment-fájlok: a szerver-oldali adattár törlése
+- Végrehajtás: automatizált script vagy manuális ellenőrzés
+- Dokumentáció: a törlés időpontjának és módszerének naplózása
 
----
-
-### Art. 18 — Feldolgozás Korlátozása
-
-**Korlátozottan feldolgozzuk az adatokat, ha:**
-- Vitatja az adatok helyességét (helyesbítés alatt)
-- Az adatkezelés jogellenes
-- Már nincs szükség az adatokra, de megőrzésre van szüksége jogi claimhez
+**Felelős:** Mag. Tamás Tóth (ügyvezető)
 
 ---
 
-### Art. 20 — Adathordozhatóság Joga
+#### 2. Szerződéses alvállalkozó által kezelendő adatok (30 nap után törlés)
 
-**Jogában áll, hogy az adatokat gépileg olvasható formátumban (JSON, CSV) kapja meg.**
+**Mit töröl:**
+- Az internet-kutatás adatai (céges weboldal-másolatok, LinkedIn-exportok, sajtó-linkek)
+- A stratégiai elemzés munkafájljai (jegyzetek, szövegvázlatok)
+- Minden közbenső dokumentum, amely az audit elkészítéséhez szükséges volt
 
-```
-E-mail: [your-email@example.com]
-Tárgy: GDPR Art. 20 — Adathordozhatóság kérése
-```
+**NEM töröl:**
+- A kész HTML audit-dokumentumot (az alvállalkozó szerzői tulajdona)
+- A szellemi munka eredményeit (az alvállalkozó szerzői joga)
 
-**Formátum:** JSON vagy CSV  
-**Időszak:** 30 nap
+**Hogyan:**
+- Helyi fájl-törlés az alvállalkozó eszközeiről
+- Google Drive / OneDrive projektmappák törlése
+- Fájl-helyreállítási ellenőrzés (szükség esetén secure wipe)
+- Dokumentáció: a törlés naplózása
 
----
-
-### Art. 21 — Tiltakozás Joga
-
-**Tiltakozhat az adatkezelés ellen**, ha:
-- Jogos érdek alapján történik az adatkezelés
-- Közvetlen marketing célú
-
-```
-E-mail: [your-email@example.com]
-Tárgy: GDPR Art. 21 — Tiltakozás
-```
+**Felelős:** Az alvállalkozó projektvezetője
 
 ---
 
-### Art. 22 — Automatizált Döntéshozatal
+#### 3. Számlázási és adózási adatok (7 év után törlés)
 
-**Nem tartozunk automatizált döntéshozatalra (AI-alapú), csak emberi döntésre (audit auditor által).**
+**Jogalapja:** BAO § 132 (Österreichisches Bundesabschlussgesetz)
 
----
+**Mit töröl:**
+- Számlákat és kifizetési nyilvántartásokat
+- Az audithoz tartozó szerződést (ha van)
+- Az ügyfél számlázási adatait
 
-## 9. Biztonsági Intézkedések
-
-Az Ön adatainak védelmére az alábbi technikai és szervezeti intézkedéseket alkalmazzuk:
-
-### Technikai Intézkedések
-
-| Intézkedés | Standard | Implementáció |
-|-----------|----------|----------------|
-| **Titkosítás (Transit)** | HTTPS/TLS 1.2+ | Formspree, Cloudflare SSL |
-| **Titkosítás (Rest)** | AES-256 | Szerver-szintű titkosítás |
-| **Jelszó-védelem** | bcrypt/Argon2 | Adminisztrációs felülethez |
-| **Tűzfal** | WAF (Web App Firewall) | Cloudflare DDoS védelem |
-| **Backup** | Napi automatikus | Jelszóval védett archiválás |
-
-### Szervezeti Intézkedések
-
-| Intézkedés | Lépés |
-|-----------|------|
-| **Hozzáférés korlátozása** | Csak Tamas Toth (Geschäftsführer) és adatvédelmi tiszt |
-| **Képzés** | Éves GDPR/adatvédelmi oktatás |
-| **Szerződések** | DPA (Data Processing Agreements) valamennyi feldolgozóval |
-| **Naplózás** | Audit-nyomok minden adatkezelésről |
+**Felelős:** Mag. Tamás Tóth (vagy jogutódja)
 
 ---
 
-## 10. Adatvédelmi Incidens (Breach Notification)
+### Törlés dokumentálása
 
-**Ha az adatai sérülnek, 72 órán belül értesítünk.**
-
-```
-Értesítés módja: E-mail
-Leírás: Milyen adatok érintettek, hogyan kezelünk
-Javaslatok: Mit tehet a megelőzésért
-```
-
----
-
-## 11. Panasztétel
-
-**Ha úgy érzi, hogy az adatait nem megfelelően kezeljük, jogában áll panaszt tenni az osztrák adatvédelmi hatóságnál:**
-
-### Österreichische Datenschutzbehörde (DSB)
-- **Weboldal:** https://www.dsb.gv.at/
-- **E-mail:** dsb@dsb.gv.at
-- **Telefon:** +43 (1) 52 052-0
-- **Cím:** Wickenburggasse 8, 1080 Wien, Austria
+Minden törlés után az alábbiak naplózásra kerülnek:
+- **Dátum:** A törlés pontos napja és időpontja
+- **Mit:** Az érintett adatok/dokumentumok
+- **Hogyan:** A törlés módszere (végleges törlés, secure wipe, stb.)
+- **Ki:** A törlésért felelős személy
+- **Miért:** A törlés jogalapja (30 napos ciklus, BAO kötelezettség, stb.)
 
 ---
 
-## 12. Adatvédelmi Felelősségvállalás
+## 8. Érintetti jogok (GDPR Art. 15–22)
 
-A Metallagentur vállalja, hogy:
+Önt megilleti:
 
-✓ Az GDPR (2016/679/EU) összes követelményét betartja  
-✓ Az Osztrák Adatvédelmi Törvényt (DSG) respektálja  
-✓ Az adatokat csak a megadott célokra használja  
-✓ Az adatokat nem adja el harmadik félnek  
-✓ 30 nap után törlésre kerülnek az adatok (vagy szerződésig)  
-✓ Biztosítja az érintett jogait (hozzáférés, törlés stb.)
+- **Hozzáférés joga (Art. 15)** — az Önről kezelt adatok másolatának kérése
+- **Helyesbítés joga (Art. 16)** — pontatlan adatok korrigálása
+- **Törlés joga (Art. 17)** — adatok törlésének kérése (30 nap után automatikus)
+- **Korlátozás joga (Art. 18)** — az adatkezelés szüneteltetése
+- **Adathordozhatóság joga (Art. 20)** — adatok átvétele gépélyes formátumban
+- **Tiltakozás joga (Art. 21)** — jogos érdek alapján történő adatkezelés ellen tiltakozás
 
----
+### Kérelmek feldolgozása
 
-## 13. Adatvédelmi Nyilatkozat Frissítése
-
-Ez a nyilatkozat bármikor módosítható. Az utolsó frissítés dátuma:
-
-**Utolsó frissítés:** 2026-05-08
-
-**Verzió:** 1.0
-
-Ha jelentős változások történnek (pl. új adatkezelési célok), e-mailben értesítünk.
+**Bejelentés:** tamas.toth@metallagentur.at  
+**Tárgy:** Az érintett cikkel (pl. "Art. 15 — Hozzáférés joga")  
+**Válaszadási határidő:** 30 nap (GDPR Art. 12 (3))
 
 ---
 
-## 14. Kapcsolat az Adatvédelmi Tisztviselővel
+## 9. AI-eszközök használata (átláthatósági nyilatkozat)
 
-**Adatvédelmi Kérdéseihez:**
+Az audit-munkafolyamat az alábbi AI-eszközöket használhatja:
+- ChatGPT (OpenAI)
+- Claude (Anthropic)
+- Grok (xAI)
+- Gemini (Google)
+- Copilot (Microsoft)
 
-```
-Mag. Tamás Tóth e.U.
-Adatvédelmi Tisztviselő
-E-mail: [your-email@example.com]
-Telefon: [számtelefon]
-Weboldal: https://www.metallagentur.at
-```
+**Felhasználás:**
+- Személyre szabott promptkészlettel
+- Internet-hozzáféréssel (nyilvános adatok kutatása)
+- Emberi szakértői kontroll mellett
+
+**Adatok:**
+- Az audit-kérdőív adatai AI-eszközökhöz továbbításra kerülhetnek (SCC/DPF szerinti védelem)
+- Az internet-kutatás nyilvános forrásokból történik
+- Az alvállalkozó végső szakmai ellenőrzésere támaszkodik
+
+**Kizárás:**
+- Nem kerülnek AI-eszközökhöz különleges kategóriájú adatok (Art. 9)
 
 ---
 
-**© 2026 Mag. Tamás Tóth e.U.**  
-**GDPR-kompatibilis | Osztrák DSG megfelelő**
+## 10. Biztonsági intézkedések
+
+### Technikai
+- **HTTPS/TLS titkosítás** — GitHub Pages, Google Workspace
+- **Kétfaktoros hitelesítés** — Google Workspace fiók
+- **Jelszókapu** → **GDPR-elfogadásos kapu** — az audit-űrlap megnyitásához az Art. 13-as tájékoztatás elfogadása szükséges
+- **Beküldés utáni gombzárolás** — duplikációs támadások ellen
+- **`noindex/nofollow/noarchive` meta** — az oldal lezárása az archívumok elől
+- **localStorage** — helyi piszkozat, szerver-oldali adattárolás nélkül
+
+### Szervezeti
+- **Hozzáférés korlátozása** — csak Mag. Tamás Tóth (ügyvezető) és az alvállalkozó
+- **Írásbeli AVV/DPA** — Art. 28 szerinti szerződés minden feldolgozóval
+- **Adatkezelési naplózás** — a feldolgozási lépések dokumentálása
+- **Incident-kezelés** — adatvédelmi incidensek esetén az érintetteket és a felügyeleti hatóságot haladéktalanul értesítjük
 
 ---
 
-*Ez a dokumentum a GDPR (2016/679/EU), az Osztrák Datenschutzgesetz (DSG 2000) és az EU adatvédelmi jogszabályoknak megfelelően lett elkészítve.*
+## 11. Adatvédelmi incidens
 
-*Az itt foglalt információk informatívak, és nem tekintendőek jogi tanácsnak. A jogi értelmezésekhez kérjék egy osztrák adatvédelmi jogász tanácsát.*
+**Bejelentési kötelezettség:**
+- **Érintetteknek:** haladéktalanul (GDPR Art. 34)
+- **Felügyeleti hatóságnak:** 72 órán belül az incidens felfedezésétől (GDPR Art. 33)
 
+**Közlendő információk:**
+- Az érintett adatkörök
+- A megtett intézkedések
+- A javasolt lépések
+- Kapcsolattartó (tamas.toth@metallagentur.at)
 
-## AI tool disclosure update
+---
 
-The audit workflow may use ChatGPT, Claude, Grok, Gemini and Copilot AI tools with specially programmed, personalised prompt sets. These tools may be used with internet access where public-source review is necessary for company analysis, deep-search research and vulnerability/reputation analysis. The form does not request special-category/sensitive personal data and users are instructed not to provide such data unless separately agreed and legally necessary.
+## 12. Panasztétel
 
+**Österreichische Datenschutzbehörde (DSB)**  
+Barichgasse 40–42, 1030 Wien, Austria  
+📧 dsb@dsb.gv.at  
+📞 +43 1 52 152-0  
+🌐 www.dsb.gv.at
 
-## 2026-06-11 GDPR / AI útvonal frissítés
+---
 
-A form magyar alapnyelvű, angol és német fordítással. A szolgáltatási útvonal szerint az adatok elsődlegesen Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz érkeznek, és az ügyfél Mag. Tamás Tóth e.U.-val szerződik. A 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának / GDPR Art. 28 szerinti adatfeldolgozójának közreműködésével történhet. A feldolgozás ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök támogatásával, emberi szakmai kontroll mellett történhet. A form nem kér különleges kategóriájú személyes adatot.
+## 13. Verziókövetés
+
+| Verzió | Dátum | Módosítás |
+|--------|-------|----------|
+| 1.0 | 2026-05-08 | Első kiadás (FormSubmit/Formspree-alapú architektúra) |
+| 2.0 | 2026-06-12 | GitHub Pages + Google Apps Script; 30 napos törlési ciklus; alvállalkozó szellemi tulajdon; számára szállított HTML dokumentum védelme |
+
+---
+
+## Záró megjegyzés
+
+Ez a dokumentum a GDPR (2016/679/EU) és az osztrák Datenschutzgesetz (DSG) követelményeinek figyelembevételével készült.
+
+A **30 napos törlési ciklus** biztosítja, hogy az audithoz szükséges személyes adatok nem maradnak meg hosszú ideig.
+
+Az **alvállalkozó szellemi tulajdona** (stratégia, HTML dokumentum) külön kezelendő — ezek nem törlésre kerülnek, hanem a megrendelő számára szállított termékként maradnak meg.
+
+A **szerzői joggal és szellemi tulajdonnal** kapcsolatos kérdésekre az alvállalkozó vagy az ügyvezető ügyrend alapján válaszol.
+
+---
+
+© 2026 Mag. Tamás Tóth e.U.  
+**Status:** Termelésre kész  
+**Utolsó frissítés:** 2026-06-12
