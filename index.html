@@ -1100,7 +1100,7 @@
     .footer-links a:hover { color: #F4DA86; text-decoration: underline; }
 
     /* =========================================================
-       PASSWORD LANDING GATE
+       GDPR LANDING GATE
        ========================================================= */
     body.locked {
       overflow-x: hidden;
@@ -1465,6 +1465,22 @@
       .language-switcher { top: 10px; right: 10px; }
       .language-switcher .lang-choice { padding: 8px 10px; font-size: 0.68rem; }
     }
+
+
+    /* GDPR gate: the legal acceptance lives on the opening screen, before the full form unlocks. */
+    .gate-login .front-gdpr {
+      margin: 18px 0 16px;
+      max-height: min(58vh, 620px);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .gate-login .front-gdpr h3 { font-size: 1.12rem; }
+    .gate-login .front-legal-summary { font-size: 0.94rem; }
+    .gate-login .front-legal-details summary { font-size: 0.9rem; }
+    .gate-login .front-gdpr .checkbox-item {
+      background: rgba(23, 40, 61, 0.045);
+      border-color: rgba(23, 40, 61, 0.14);
+    }
 </style>
 <style id="responsive-polish-final">
   /* Final responsive hardening — mobile/tablet polish */
@@ -1716,7 +1732,7 @@
 <button aria-pressed="false" class="lang-choice" data-lang="en" type="button">EN</button>
 <button aria-pressed="false" class="lang-choice" data-lang="de" type="button">DE</button>
 </nav>
-<section aria-label="Jelszóval védett bevezető" class="password-gate" id="passwordGate">
+<section aria-label="GDPR-elfogadással védett bevezető" class="password-gate" id="passwordGate">
 <div class="gate-shell">
 <div class="gate-card">
 <div class="localized-copy" data-lang="hu">
@@ -1762,36 +1778,35 @@
 <div class="gate-login">
 <div class="localized-copy" data-lang="hu">
 <h2>Belépés a kérdőívhez</h2>
-<p>A kérdőív jelszóval védett, hogy ez a stratégiai anyag ne alkalmi kattintgatásként induljon, hanem tudatos, nyugodt folyamatként.</p>
+<p>A kérdőív az adatvédelmi, adatfeldolgozási és AI-használati tájékoztató elfogadása után nyílik meg. Ez biztosítja, hogy a stratégiai munka tudatos, átlátható és jogilag tiszta folyamatként induljon.</p>
 </div>
 <div class="localized-copy" data-lang="en" hidden="">
 <h2>Access to the questionnaire</h2>
-<p>The questionnaire is password-protected so that this strategic work starts as a deliberate, calm process — not as a casual click-through.</p>
+<p>The questionnaire opens after acceptance of the data-protection, data-processing and AI-use notice. This ensures that the strategic work starts as a deliberate, transparent and legally clear process.</p>
 </div>
 <div class="localized-copy" data-lang="de" hidden="">
 <h2>Zugang zum Fragebogen</h2>
-<p>Der Fragebogen ist passwortgeschützt, damit diese strategische Arbeit bewusst und in Ruhe beginnt — nicht als beiläufiges Anklicken.</p>
+<p>Der Fragebogen öffnet sich nach Annahme des Datenschutz-, Verarbeitungs- und KI-Nutzungshinweises. So beginnt die strategische Arbeit bewusst, transparent und rechtlich sauber.</p>
 </div>
 <div class="gdpr-gate-notice" style="background: #F4F2EC; border: 1px solid rgba(23,40,61,0.14); border-radius: 18px; padding: 32px 28px; margin: 16px 0;">
-    <div class="localized-copy" data-lang="hu" style="text-align: center;">
-      <strong style="display: block; font-size: 1.1rem; margin-bottom: 14px;">Az audithoz szükséges a GDPR-tájékoztató elfogadása</strong>
-      <p style="margin-bottom: 12px; font-size: 0.95rem;">Az alábbi adatvédelmi szöveg elolvasása után pipálja be az <strong>„Elolvastam és elfogadom..."</strong> checkboxot az audit első oldalán.</p>
-    </div>
-    <div class="localized-copy" data-lang="en" hidden="" style="text-align: center;">
-      <strong style="display: block; font-size: 1.1rem; margin-bottom: 14px;">GDPR acceptance required to start the audit</strong>
-      <p style="margin-bottom: 12px; font-size: 0.95rem;">After reading the data-protection notice below, check the <strong>"I have read and accept..."</strong> box on the first page of the audit.</p>
-    </div>
-    <div class="localized-copy" data-lang="de" hidden="" style="text-align: center;">
-      <strong style="display: block; font-size: 1.1rem; margin-bottom: 14px;">DSGVO-Akzeptanz erforderlich, um das Audit zu starten</strong>
-      <p style="margin-bottom: 12px; font-size: 0.95rem;">Nach dem Lesen des Datenschutzhinweises unten aktivieren Sie das Kontrollkästchen <strong>„Ich habe gelesen und akzeptiert..."</strong> auf der ersten Seite des Audits.</p>
-    </div>
+<div class="localized-copy" data-lang="hu" style="text-align: center;">
+<strong style="display: block; font-size: 1.1rem; margin-bottom: 14px;">GDPR-elfogadás szükséges a kérdőív megnyitásához</strong>
+<p style="margin-bottom: 12px; font-size: 0.95rem;">Olvassa el az alábbi adatvédelmi, adatfeldolgozási és AI-használati tájékoztatót, majd pipálja be az elfogadó mezőt. A kérdőív csak ezután nyílik meg.</p>
 </div>
-<div class="gate-meta localized-copy" data-lang="hu">A GDPR- és adatfeldolgozási tájékoztató elolvasása után pipálja be az „Elolvastam és elfogadom..." checkboxot az audit első oldalán. Addig nem tudja elkezdeni az auditot, amíg nem fogadja el a feltételeket.</div>
-<div class="gate-meta localized-copy" data-lang="en" hidden="">After reading the GDPR and data-processing notice below, check the "I have read and accept..." box on the first page of the audit. You cannot start the audit until you accept the terms.</div>
-<div class="gate-meta localized-copy" data-lang="de" hidden="">Nach dem Lesen des DSGVO- und Datenverarbeitungshinweises unten aktivieren Sie das Kontrollkästchen „Ich habe gelesen und akzeptiert..." auf der ersten Seite des Audits. Sie können das Audit erst starten, wenn Sie den Bedingungen zustimmen.</div>
+<div class="localized-copy" data-lang="en" hidden="" style="text-align: center;">
+<strong style="display: block; font-size: 1.1rem; margin-bottom: 14px;">GDPR acceptance is required to open the questionnaire</strong>
+<p style="margin-bottom: 12px; font-size: 0.95rem;">Read the data-protection, data-processing and AI-use notice below, then tick the acceptance checkbox. The questionnaire opens only after this acceptance.</p>
+</div>
+<div class="localized-copy" data-lang="de" hidden="" style="text-align: center;">
+<strong style="display: block; font-size: 1.1rem; margin-bottom: 14px;">DSGVO-Akzeptanz ist zum Öffnen des Fragebogens erforderlich</strong>
+<p style="margin-bottom: 12px; font-size: 0.95rem;">Lesen Sie den folgenden Datenschutz-, Verarbeitungs- und KI-Nutzungshinweis und aktivieren Sie anschließend das Kontrollkästchen. Der Fragebogen öffnet sich erst nach dieser Bestätigung.</p>
+</div>
+</div>
+<section class="legal-disclosure front-gdpr" data-legal-version="Front-GDPR-AI-HU-EN-DE-2026-06-12" id="frontGdprNotice"><div class="localized-copy" data-lang="hu"><h3>GDPR-, adatfeldolgozási és AI-használati elfogadás a kitöltés megkezdése előtt</h3><p class="front-legal-summary"><strong>Röviden:</strong> a magyar szöveg az alap. Az űrlap nem kér különleges kategóriájú vagy szükségtelenül érzékeny személyes adatokat. A beküldött adatok elsődlegesen Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz érkeznek; az ügyfél a szolgáltatásra Mag. Tamás Tóth e.U.-val szerződik. A 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának / GDPR Art. 28 szerinti adatfeldolgozójának közreműködésével történhet. A feldolgozás ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök támogatásával, emberi szakmai kontroll mellett történhet.</p><details class="front-legal-details"><summary>Részletes GDPR-, AI- és adatkezelési tájékoztató megnyitása</summary><p><strong>Adatkezelő és közreműködő:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U. jár el szolgáltatóként/adatkezelőként, és vele jön létre az ügyfél szerződéses jogviszonya. A teljesítéshez Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozót vehet igénybe, aki személyes adatok feldolgozása esetén adatfeldolgozóként működhet közre.</p><p><strong>AI és kutatás:</strong> az AI-eszközök elemzési, kutatási, rendszerezési és szövegelőkészítési támogatást adnak; önálló joghatású döntést nem hoznak. Nyilvános online források vizsgálhatók céganalízis, deep search, AI-láthatósági és reputációs/támadhatósági elemzés céljából.</p><p><strong>Ne adjon meg:</strong> egészségügyi, politikai, vallási, szakszervezeti, faji/etnikai, genetikai/biometrikus, szexuális életre vagy szexuális irányultságra vonatkozó adatot, illetve szükségtelen magánéleti információt.</p><p><strong>Harmadik ország:</strong> külső AI-, e-mail-, űrlap- vagy technikai szolgáltatás esetén EGT-n kívüli adatfeldolgozás nem zárható ki teljesen; ilyenkor megfelelő GDPR-garancia szükséges, például SCC, megfelelőségi határozat, EU–US DPF, anonimizálás vagy pseudonimizálás.</p><p><strong>Korlát:</strong> a végeredmény döntéstámogató HTML stratégiai dokumentum, nem jogi, adózási, pénzügyi vagy befektetési tanácsadás, és nem garantál SEO-, AI-platformos vagy üzleti eredményt.</p></details></div><div class="localized-copy" data-lang="en" hidden=""><h3>GDPR, processing and AI-use acceptance before starting the questionnaire</h3><p class="front-legal-summary"><strong>In brief:</strong> the Hungarian text is the base version. This form does not request special-category or unnecessarily sensitive personal data. Submitted data is received primarily by Mag. Tamas Toth / Mag. Tamás Tóth e.U.; the client enters into the service contract with Mag. Tamás Tóth e.U. The 96-hour HTML strategy audit may be prepared with the support of Mag. Tamás Tóth e.U.’s contracted professional subcontractor / GDPR Art. 28 processor. Processing may be supported by ChatGPT, Claude, Grok, Gemini and Copilot under human professional control.</p><details class="front-legal-details"><summary>Open detailed GDPR, AI and data-processing notice</summary><p><strong>Controller and professional processor:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U. acts as provider/controller, and the client’s contractual relationship is with Mag. Tamás Tóth e.U. Mag. Tamás Tóth e.U. may involve a contracted professional subcontractor who may act as processor where personal data is processed.</p><p><strong>AI and research:</strong> AI tools provide analytical, research, structuring and drafting support only; they do not make independent decisions with legal effect. Public online sources may be reviewed for company analysis, deep-search research, AI visibility and reputation/vulnerability analysis.</p><p><strong>Do not submit:</strong> health data, political or religious beliefs, trade-union membership, racial/ethnic origin, genetic/biometric identifiers, data concerning sex life or sexual orientation, or unnecessary private information.</p><p><strong>Third countries:</strong> when external AI, e-mail, form or technical providers are used, processing outside the EEA cannot be fully excluded; appropriate GDPR safeguards such as SCCs, adequacy decisions, EU–US DPF, anonymisation or pseudonymisation are required.</p><p><strong>Limit:</strong> the deliverable is a decision-supporting HTML strategy document, not legal, tax, financial or investment advice, and it does not guarantee SEO, AI-platform or business results.</p></details></div><div class="localized-copy" data-lang="de" hidden=""><h3>DSGVO-, Verarbeitungs- und KI-Nutzungshinweis vor Beginn des Fragebogens</h3><p class="front-legal-summary"><strong>Kurzfassung:</strong> die ungarische Fassung ist die Basisfassung. Dieses Formular fragt keine besonderen Kategorien personenbezogener Daten und keine unnötig sensiblen personenbezogenen Daten ab. Die Daten gehen primär bei Mag. Tamas Toth / Mag. Tamás Tóth e.U. ein; der Kunde schließt den Dienstleistungsvertrag mit Mag. Tamás Tóth e.U. ab. Das 96-Stunden-HTML-Strategieaudit kann mit Unterstützung des vertraglichen fachlichen Subunternehmers / Auftragsverarbeiters gemäß Art. 28 DSGVO von Mag. Tamás Tóth e.U. erstellt werden. Die Verarbeitung kann durch ChatGPT, Claude, Grok, Gemini und Copilot unter menschlicher fachlicher Kontrolle unterstützt werden.</p><details class="front-legal-details"><summary>Detaillierten DSGVO-, KI- und Verarbeitungshinweis öffnen</summary><p><strong>Verantwortlicher und fachlicher Auftragsverarbeiter:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U. tritt als Anbieter/Verantwortlicher auf; das Vertragsverhältnis des Kunden besteht mit Mag. Tamás Tóth e.U. Mag. Tamás Tóth e.U. kann einen vertraglich gebundenen fachlichen Subunternehmer einbeziehen, der, soweit personenbezogene Daten verarbeitet werden, als Auftragsverarbeiter tätig werden kann.</p><p><strong>KI und Recherche:</strong> KI-Werkzeuge unterstützen nur Analyse, Recherche, Strukturierung und Textvorbereitung; sie treffen keine eigenständigen Entscheidungen mit rechtlicher Wirkung. Öffentliche Online-Quellen können für Unternehmensanalyse, Deep Search, KI-Sichtbarkeit sowie Reputations-/Angriffsflächenanalyse geprüft werden.</p><p><strong>Nicht übermitteln:</strong> Gesundheitsdaten, politische oder religiöse Überzeugungen, Gewerkschaftszugehörigkeit, rassische/ethnische Herkunft, genetische/biometrische Kennungen, Daten zum Sexualleben oder zur sexuellen Orientierung oder unnötige private Informationen.</p><p><strong>Drittländer:</strong> bei externen KI-, E-Mail-, Formular- oder technischen Dienstleistern kann eine Verarbeitung außerhalb des EWR nicht vollständig ausgeschlossen werden; geeignete DSGVO-Garantien wie SCC, Angemessenheitsbeschluss, EU–US DPF, Anonymisierung oder Pseudonymisierung sind erforderlich.</p><p><strong>Grenze:</strong> das Ergebnis ist ein entscheidungsunterstützendes HTML-Strategiedokument, keine Rechts-, Steuer-, Finanz- oder Anlageberatung und keine Garantie für SEO-, KI-Plattform- oder Geschäftsergebnisse.</p></details></div><div class="form-group consent-line"><div class="checkbox-item"><input aria-describedby="frontConsentHint" data-legal-gate="true" form="assessmentForm" id="consent_0" name="agreeFrontGdprAiNotice" required="" type="checkbox" value="accepted"/><label for="consent_0" id="frontConsentHint">Elolvastam és elfogadom a fenti GDPR-, adatfeldolgozási és AI-használati tájékoztatást, tudomásul veszem, hogy Mag. Tamás Tóth e.U. a teljesítéshez szerződéses szakmai alvállalkozót vehet igénybe, és kijelentem, hogy különleges kategóriájú személyes adatot nem adok meg. <span class="required">*</span></label></div></div></section><div class="gate-meta localized-copy" data-lang="hu">Az elfogadás kötelező, és a beküldéshez kapcsolódóan az elfogadás nyelve, időpontja és a tájékoztató verziója is rögzítésre kerül.</div>
+<div class="gate-meta localized-copy" data-lang="en" hidden="">Acceptance is mandatory. The acceptance language, timestamp and notice version are recorded together with the submission.</div>
+<div class="gate-meta localized-copy" data-lang="de" hidden="">Die Bestätigung ist verpflichtend. Sprache, Zeitpunkt und Version des Hinweises werden zusammen mit der Übermittlung dokumentiert.</div>
 </div></div>
 </section>
-<section class="legal-disclosure front-gdpr" id="frontGdprNotice"><div class="localized-copy" data-lang="hu"><h3>GDPR-, adatfeldolgozási és AI-használati elfogadás a kitöltés megkezdése előtt</h3><p class="front-legal-summary"><strong>Röviden:</strong> a magyar szöveg az alap. Az űrlap nem kér különleges kategóriájú vagy szükségtelenül érzékeny személyes adatokat. A beküldött adatok elsődlegesen Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz érkeznek; az ügyfél a szolgáltatásra Mag. Tamás Tóth e.U.-val szerződik. A 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának / GDPR Art. 28 szerinti adatfeldolgozójának közreműködésével történhet. A feldolgozás ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök támogatásával, emberi szakmai kontroll mellett történhet.</p><details class="front-legal-details"><summary>Részletes GDPR-, AI- és adatkezelési tájékoztató megnyitása</summary><p><strong>Adatkezelő és közreműködő:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U. jár el szolgáltatóként/adatkezelőként, és vele jön létre az ügyfél szerződéses jogviszonya. A teljesítéshez Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozót vehet igénybe, aki személyes adatok feldolgozása esetén adatfeldolgozóként működhet közre.</p><p><strong>AI és kutatás:</strong> az AI-eszközök elemzési, kutatási, rendszerezési és szövegelőkészítési támogatást adnak; önálló joghatású döntést nem hoznak. Nyilvános online források vizsgálhatók céganalízis, deep search, AI-láthatósági és reputációs/támadhatósági elemzés céljából.</p><p><strong>Ne adjon meg:</strong> egészségügyi, politikai, vallási, szakszervezeti, faji/etnikai, genetikai/biometrikus, szexuális életre vagy szexuális irányultságra vonatkozó adatot, illetve szükségtelen magánéleti információt.</p><p><strong>Harmadik ország:</strong> külső AI-, e-mail-, űrlap- vagy technikai szolgáltatás esetén EGT-n kívüli adatfeldolgozás nem zárható ki teljesen; ilyenkor megfelelő GDPR-garancia szükséges, például SCC, megfelelőségi határozat, EU–US DPF, anonimizálás vagy pseudonimizálás.</p><p><strong>Korlát:</strong> a végeredmény döntéstámogató HTML stratégiai dokumentum, nem jogi, adózási, pénzügyi vagy befektetési tanácsadás, és nem garantál SEO-, AI-platformos vagy üzleti eredményt.</p></details></div><div class="localized-copy" data-lang="en" hidden=""><h3>GDPR, processing and AI-use acceptance before starting the questionnaire</h3><p class="front-legal-summary"><strong>In brief:</strong> the Hungarian text is the base version. This form does not request special-category or unnecessarily sensitive personal data. Submitted data is received primarily by Mag. Tamas Toth / Mag. Tamás Tóth e.U.; the client enters into the service contract with Mag. Tamás Tóth e.U. The 96-hour HTML strategy audit may be prepared with the support of Mag. Tamás Tóth e.U.’s contracted professional subcontractor / GDPR Art. 28 processor. Processing may be supported by ChatGPT, Claude, Grok, Gemini and Copilot under human professional control.</p><details class="front-legal-details"><summary>Open detailed GDPR, AI and data-processing notice</summary><p><strong>Controller and professional processor:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U. acts as provider/controller, and the client’s contractual relationship is with Mag. Tamás Tóth e.U. Mag. Tamás Tóth e.U. may involve a contracted professional subcontractor who may act as processor where personal data is processed.</p><p><strong>AI and research:</strong> AI tools provide analytical, research, structuring and drafting support only; they do not make independent decisions with legal effect. Public online sources may be reviewed for company analysis, deep-search research, AI visibility and reputation/vulnerability analysis.</p><p><strong>Do not submit:</strong> health data, political or religious beliefs, trade-union membership, racial/ethnic origin, genetic/biometric identifiers, data concerning sex life or sexual orientation, or unnecessary private information.</p><p><strong>Third countries:</strong> when external AI, e-mail, form or technical providers are used, processing outside the EEA cannot be fully excluded; appropriate GDPR safeguards such as SCCs, adequacy decisions, EU–US DPF, anonymisation or pseudonymisation are required.</p><p><strong>Limit:</strong> the deliverable is a decision-supporting HTML strategy document, not legal, tax, financial or investment advice, and it does not guarantee SEO, AI-platform or business results.</p></details></div><div class="localized-copy" data-lang="de" hidden=""><h3>DSGVO-, Verarbeitungs- und KI-Nutzungshinweis vor Beginn des Fragebogens</h3><p class="front-legal-summary"><strong>Kurzfassung:</strong> die ungarische Fassung ist die Basisfassung. Dieses Formular fragt keine besonderen Kategorien personenbezogener Daten und keine unnötig sensiblen personenbezogenen Daten ab. Die Daten gehen primär bei Mag. Tamas Toth / Mag. Tamás Tóth e.U. ein; der Kunde schließt den Dienstleistungsvertrag mit Mag. Tamás Tóth e.U. ab. Das 96-Stunden-HTML-Strategieaudit kann mit Unterstützung des vertraglichen fachlichen Subunternehmers / Auftragsverarbeiters gemäß Art. 28 DSGVO von Mag. Tamás Tóth e.U. erstellt werden. Die Verarbeitung kann durch ChatGPT, Claude, Grok, Gemini und Copilot unter menschlicher fachlicher Kontrolle unterstützt werden.</p><details class="front-legal-details"><summary>Detaillierten DSGVO-, KI- und Verarbeitungshinweis öffnen</summary><p><strong>Verantwortlicher und fachlicher Auftragsverarbeiter:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U. tritt als Anbieter/Verantwortlicher auf; das Vertragsverhältnis des Kunden besteht mit Mag. Tamás Tóth e.U. Mag. Tamás Tóth e.U. kann einen vertraglich gebundenen fachlichen Subunternehmer einbeziehen, der, soweit personenbezogene Daten verarbeitet werden, als Auftragsverarbeiter tätig werden kann.</p><p><strong>KI und Recherche:</strong> KI-Werkzeuge unterstützen nur Analyse, Recherche, Strukturierung und Textvorbereitung; sie treffen keine eigenständigen Entscheidungen mit rechtlicher Wirkung. Öffentliche Online-Quellen können für Unternehmensanalyse, Deep Search, KI-Sichtbarkeit sowie Reputations-/Angriffsflächenanalyse geprüft werden.</p><p><strong>Nicht übermitteln:</strong> Gesundheitsdaten, politische oder religiöse Überzeugungen, Gewerkschaftszugehörigkeit, rassische/ethnische Herkunft, genetische/biometrische Kennungen, Daten zum Sexualleben oder zur sexuellen Orientierung oder unnötige private Informationen.</p><p><strong>Drittländer:</strong> bei externen KI-, E-Mail-, Formular- oder technischen Dienstleistern kann eine Verarbeitung außerhalb des EWR nicht vollständig ausgeschlossen werden; geeignete DSGVO-Garantien wie SCC, Angemessenheitsbeschluss, EU–US DPF, Anonymisierung oder Pseudonymisierung sind erforderlich.</p><p><strong>Grenze:</strong> das Ergebnis ist ein entscheidungsunterstützendes HTML-Strategiedokument, keine Rechts-, Steuer-, Finanz- oder Anlageberatung und keine Garantie für SEO-, KI-Plattform- oder Geschäftsergebnisse.</p></details></div><div class="form-group consent-line"><div class="checkbox-item"><input id="consent_0" name="agreeFrontGdprAiNotice" required="" type="checkbox"/><label for="consent_0">Elolvastam és elfogadom a fenti GDPR-, adatfeldolgozási és AI-használati tájékoztatást, tudomásul veszem, hogy Mag. Tamás Tóth e.U. a teljesítéshez szerződéses szakmai alvállalkozót vehet igénybe, és kijelentem, hogy különleges kategóriájú személyes adatot nem adok meg. <span class="required">*</span></label></div></div></section>
 
 <main hidden="" id="protectedContent">
 <div class="container">
@@ -1862,7 +1877,7 @@
 <input name="technicalProcessor" type="hidden" value="Google Apps Script / Google Workspace"/>
 <input name="_captcha" type="hidden" value="false"/>
 <input name="_template" type="hidden" value="html"/>
-<input id="interfaceLanguage" name="Interface language / Formularsprache" type="hidden" value="hu"/>
+<input id="interfaceLanguage" name="Interface language / Formularsprache" type="hidden" value="hu"/><input id="frontConsentAcceptedAt" name="Front GDPR/AI notice accepted at / Elfogadás ideje / Zeitpunkt der Zustimmung" type="hidden" value=""/><input id="frontConsentLanguage" name="Front GDPR/AI notice language / Elfogadás nyelve / Sprache der Zustimmung" type="hidden" value=""/><input id="frontConsentNoticeVersion" name="Front GDPR/AI notice version / Tájékoztató verzió / Hinweisversion" type="hidden" value="Front-GDPR-AI-HU-EN-DE-2026-06-12"/><input id="frontConsentLabelSnapshot" name="Front GDPR/AI acceptance text / Elfogadási szöveg / Zustimmungstext" type="hidden" value=""/><input id="formSubmittedAt" name="Form submitted at / Beküldés ideje / Übermittlungszeitpunkt" type="hidden" value=""/><input id="formUserAgent" name="Browser user agent / Böngészőadat / Browserdaten" type="hidden" value=""/>
 <input id="aiToolsDisclosure" name="AI tools disclosure / KI-Werkzeuge" type="hidden" value="HU: ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök használhatók személyre szabott promptkészlettel és szükség esetén internet-hozzáféréssel céganalízishez, deep search kutatáshoz, AI-láthatósági és reputációs/támadhatósági elemzéshez. EN: ChatGPT, Claude, Grok, Gemini and Copilot may be used with personalised prompt sets and, where necessary, internet access. DE: ChatGPT, Claude, Grok, Gemini und Copilot können mit personalisierten Prompt-Sets und soweit erforderlich Internetzugang verwendet werden."/>
 <input id="publicInternetResearchConsent" name="Public internet research consent / Öffentliche Internetrecherche" type="hidden" value="HU/EN/DE: The client acknowledges that public internet sources may be researched and analysed for the 96-hour HTML strategy audit."/>
 <input id="specialCategoryDataWarning" name="Special category data warning / Besondere Datenkategorien" type="hidden" value="HU/EN/DE: The form does not request special-category personal data. Do not submit health, political, religious, trade-union, ethnic, genetic, biometric, sex-life or sexual-orientation data."/>
@@ -1870,7 +1885,6 @@
 <input id="dataRetentionNote" name="Data retention note / Speicherfrist" type="hidden" value="HU: Az audithoz szükséges kitöltött adatok 30 napon belül törlésre kerülnek. A számlázási adatok 7 éven keresztül megmaradnak (BAO § 132). Az audit HTML-dokumentum az alvállalkozó szellemi tulajdona, nem törlésre kerül. / EN: Completed questionnaire data is deleted within 30 days of audit start. Billing data retained for 7 years (BAO § 132). Audit HTML document is subcontractor intellectual property, not deleted. / DE: Ausgefüllte Fragebogendaten werden innerhalb von 30 Tagen nach Projektstart gelöscht. Rechnungsdaten werden 7 Jahre lang aufbewahrt (BAO § 132). Audit-HTML-Dokument ist geistiges Eigentum des Subunternehmers, wird nicht gelöscht."/>
 <input id="processingRoute" name="Adatfeldolgozási út / Processing route / Verarbeitungsweg" type="hidden" value="HU: Az adatok elsődlegesen Mag. Tamas Toth / Mag. Tamás Tóth e.U.-hoz érkeznek. A 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának / GDPR Art. 28 szerinti adatfeldolgozójának közreműködésével történhet. AI-eszközök: ChatGPT, Claude, Grok, Gemini, Copilot; emberi szakmai kontroll mellett. EN: Data is received primarily by Mag. Tamas Toth / Mag. Tamás Tóth e.U. The 96-hour HTML strategy audit may be prepared with the support of Mag. Tamás Tóth e.U.’s contracted professional subcontractor / GDPR Art. 28 processor. DE: Die Daten gehen primär bei Mag. Tamas Toth / Mag. Tamás Tóth e.U. ein. Das 96-Stunden-HTML-Strategieaudit kann mit Unterstützung des vertraglichen fachlichen Subunternehmers / Auftragsverarbeiters gemäß Art. 28 DSGVO von Mag. Tamás Tóth e.U. erstellt werden."/><input id="professionalProcessorRoute" name="Szerződéses szakmai alvállalkozó / Contracted professional subcontractor / Vertraglicher fachlicher Subunternehmer" type="hidden" value="Mag. Tamás Tóth e.U. may involve a contracted professional subcontractor / GDPR Art. 28 processor for the 96-hour HTML strategy audit; the client’s contract remains with Mag. Tamás Tóth e.U."/><input id="controllerEmail" name="Adatkezelő kapcsolati e-mail / Controller contact e-mail / Verantwortlicher Kontakt" type="hidden" value="tamas.toth@metallagentur.at"/><input id="processorName" name="Szerződéses szakmai alvállalkozó kategória / Contracted subcontractor category / Kategorie des vertraglichen Subunternehmers" type="hidden" value="Contracted professional subcontractor / GDPR Art. 28 processor of Mag. Tamás Tóth e.U."/>
 <input id="aiToolDisclosure" name="AI tools / KI-Werkzeuge / AI eszközök" type="hidden" value="ChatGPT, Claude, Grok, Gemini and Copilot / ChatGPT, Claude, Grok, Gemini és Copilot / ChatGPT, Claude, Grok, Gemini und Copilot may be used with customised prompt sets and, where necessary, internet access. Do not submit special-category personal data unless separately agreed in writing and legally authorised."/>
-
 <input id="nextUrl" name="_next" type="hidden" value="https://form.metallagentur.at/?sent=1"/>
 <input aria-hidden="true" autocomplete="off" id="formHoney" name="_honey" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;" tabindex="-1" type="text"/>
 <input id="formSourceUrl" name="formSourceUrl" type="hidden" value=""/>
@@ -3050,6 +3064,104 @@
     const passwordForm = document.getElementById('passwordForm');
     const gatePassword = document.getElementById('gatePassword');
     const passwordError = document.getElementById('passwordError');
+    const form = document.getElementById('assessmentForm');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const progressHint = document.getElementById('progressHint');
+    const formAlert = document.getElementById('formAlert');
+    const formattedAnswers = document.getElementById('formattedAnswers');
+    const resetButton = document.getElementById('resetButton');
+    const clearDraftButton = document.getElementById('clearDraftButton');
+    const submitButton = document.getElementById('submitButton');
+    const AUTOSAVE_KEY = 'entity_audit_form_autosave_v4';
+    const AUTOSAVE_BACKUP_KEY = 'entity_audit_form_autosave_v4_backup';
+    const currentLanguage = () => {
+      const value = (document.documentElement.lang || localStorage.getItem(CURRENT_LANG_KEY) || 'hu').slice(0,2).toLowerCase();
+      return ['hu','en','de'].includes(value) ? value : 'hu';
+    };
+    const tMsg = (hu, en, de) => currentLanguage() === 'de' ? de : (currentLanguage() === 'en' ? en : hu);
+    const cleanText = (value) => String(value || '').replace(/\s+/g, ' ').trim();
+    const cssEscape = (value) => (window.CSS && CSS.escape) ? CSS.escape(value) : String(value || '').replace(/([\"\\#.;?+*~':!^$[\]()=>|/@])/g, '\\$1');
+    const getAllFormControls = () => {
+      if (!form) return [];
+      const controls = [];
+      Array.from(form.elements || []).forEach(el => controls.push(el));
+      Array.from(form.querySelectorAll('input, textarea, select')).forEach(el => controls.push(el));
+      return Array.from(new Set(controls));
+    };
+    const getSerializableFields = () => getAllFormControls().filter((field) => {
+      if (!field || !field.name || field.disabled) return false;
+      if (['button','submit','reset','file'].includes(String(field.type || '').toLowerCase())) return false;
+      if (field.type === 'hidden' && field.id !== 'formattedAnswers') return false;
+      return true;
+    });
+    const getQuestionLabel = (field) => {
+      if (!field) return '';
+      const id = field.id ? cssEscape(field.id) : '';
+      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+      const legend = field.closest('fieldset')?.querySelector('legend');
+      return cleanText(label?.textContent || legend?.textContent || field.getAttribute('aria-label') || field.name || field.id || '');
+    };
+    const getOptionLabel = (field) => {
+      if (!field) return '';
+      const id = field.id ? cssEscape(field.id) : '';
+      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+      return cleanText(label?.textContent || field.value || '');
+    };
+    const collectFormState = () => {
+      const data = {};
+      getAllFormControls().forEach((field) => {
+        if (!field || !field.id || field.type === 'hidden' || ['button','submit','reset','file'].includes(String(field.type || '').toLowerCase())) return;
+        if (field.type === 'checkbox') data[field.id] = field.checked;
+        else if (field.type === 'radio') { if (field.checked) data[field.name] = field.value; }
+        else data[field.id] = field.value;
+      });
+      return data;
+    };
+    const restoreFormState = () => {
+      if (!form) return;
+      try {
+        const raw = localStorage.getItem(AUTOSAVE_KEY) || localStorage.getItem(AUTOSAVE_BACKUP_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        const data = parsed && parsed.data ? parsed.data : {};
+        getAllFormControls().forEach((field) => {
+          if (!field || field.type === 'hidden' || ['button','submit','reset','file'].includes(String(field.type || '').toLowerCase())) return;
+          if (field.type === 'checkbox' && Object.prototype.hasOwnProperty.call(data, field.id)) field.checked = Boolean(data[field.id]);
+          else if (field.type === 'radio' && Object.prototype.hasOwnProperty.call(data, field.name)) field.checked = data[field.name] === field.value;
+          else if (field.id && Object.prototype.hasOwnProperty.call(data, field.id)) field.value = data[field.id];
+        });
+      } catch (error) { console.warn('Autosave restore failed', error); }
+    };
+    const setRuntimeMeta = () => {
+      const now = new Date().toISOString();
+      const byId = (id) => document.getElementById(id);
+      if (byId('formSourceUrl')) byId('formSourceUrl').value = window.location.href.split('#')[0];
+      if (byId('formSubmittedAt')) byId('formSubmittedAt').value = now;
+      if (byId('formUserAgent')) byId('formUserAgent').value = navigator.userAgent || '';
+      if (byId('frontConsentNoticeVersion')) byId('frontConsentNoticeVersion').value = 'Front-GDPR-AI-HU-EN-DE-2026-06-12';
+      const consentBox = byId('consent_0');
+      if (consentBox && consentBox.checked) markFrontConsent(false);
+    };
+    const setAutosaveStatus = (message) => { const el = document.getElementById('autosaveStatus'); if (el) el.textContent = message; };
+    const clearAlert = () => { if (formAlert) { formAlert.textContent = ''; formAlert.classList.remove('show'); } };
+    const showAlert = (message) => { if (formAlert) { formAlert.textContent = message; formAlert.classList.add('show'); } };
+    const openAndFocus = (field) => {
+      if (!field) return;
+      const details = field.closest('details');
+      if (details) details.open = true;
+      field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => { try { field.focus({ preventScroll: true }); } catch (_) { try { field.focus(); } catch (__) {} } }, 120);
+    };
+    const markFrontConsent = (forceTimestamp = true) => {
+      const acceptedAt = document.getElementById('frontConsentAcceptedAt');
+      const language = document.getElementById('frontConsentLanguage');
+      const labelSnapshot = document.getElementById('frontConsentLabelSnapshot');
+      const consentLabel = document.querySelector('label[for="consent_0"]');
+      if (acceptedAt && (forceTimestamp || !acceptedAt.value)) acceptedAt.value = new Date().toISOString();
+      if (language) language.value = currentLanguage();
+      if (labelSnapshot) labelSnapshot.value = cleanText(consentLabel?.textContent || '');
+    };
 
     const showProtectedContent = () => {
       document.body.classList.remove('locked');
@@ -3117,6 +3229,8 @@
 const checkConsent = () => {
   const consentCheckbox = document.getElementById('consent_0');
   if (consentCheckbox && consentCheckbox.checked) {
+    markFrontConsent(true);
+    try { localStorage.setItem(AUTH_KEY, 'front-gdpr-accepted'); } catch (_) {}
     showProtectedContent();
     setTimeout(() => {
       const formElem = document.getElementById('assessmentForm');
@@ -4007,7 +4121,7 @@ if (consentCheckbox) consentCheckbox.addEventListener('change', checkConsent);;
     const HEAD_A = lang === 'de' ? 'Antwort' : lang === 'en' ? 'Answer' : 'Válasz';
     const form = document.getElementById('assessmentForm');
     if (!form) return '';
-    const fields = Array.from(form.querySelectorAll('input, textarea, select')).filter(field => {
+    const fields = Array.from(new Set([...Array.from(form.elements || []), ...Array.from(form.querySelectorAll('input, textarea, select'))])).filter(field => {
       if (!field.name || field.type === 'hidden' || field.name === '_captcha' || field.name === '_template') return false;
       if (field.type === 'checkbox' && field.name && field.name.startsWith('_')) return false;
       return true;
@@ -4145,6 +4259,83 @@ if (consentCheckbox) consentCheckbox.addEventListener('change', checkConsent);;
   document.addEventListener('DOMContentLoaded',()=>{apply();setTimeout(apply,300);setTimeout(apply,900);});
   document.addEventListener('click',e=>{ if(e.target.closest('.lang-choice[data-lang]')){setTimeout(apply,90);setTimeout(apply,350);} });
   document.addEventListener('submit',apply,true);
+})();
+</script>
+<script id="finalConsentExportAndRuntimeHardening20260612">
+(() => {
+  const LANGS = ['hu','en','de'];
+  const getLang = () => {
+    const value = (document.documentElement.lang || localStorage.getItem('entity_audit_interface_language_v1') || 'hu').slice(0,2).toLowerCase();
+    return LANGS.includes(value) ? value : 'hu';
+  };
+  const clean = (value) => String(value || '').replace(/\s+/g, ' ').trim();
+  const cssEscape = (value) => (window.CSS && CSS.escape) ? CSS.escape(value) : String(value || '').replace(/([\"\\#.;?+*~':!^$[\]()=>|/@])/g, '\\$1');
+  const allControls = (form) => Array.from(new Set([
+    ...Array.from(form?.elements || []),
+    ...Array.from(form?.querySelectorAll('input, textarea, select') || [])
+  ]));
+  const labelFor = (field) => {
+    const id = field?.id ? cssEscape(field.id) : '';
+    const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+    const legend = field?.closest('fieldset')?.querySelector('legend');
+    const section = field?.closest('details.accordion')?.previousElementSibling?.querySelector('h2');
+    const accordion = field?.closest('details.accordion')?.querySelector('summary');
+    return [section?.textContent, accordion?.textContent, label?.textContent || legend?.textContent || field?.name].map(clean).filter(Boolean).join(' / ');
+  };
+  const setHidden = (id, value) => { const el = document.getElementById(id); if (el) el.value = value; };
+  const markConsent = () => {
+    const now = new Date().toISOString();
+    const consent = document.getElementById('consent_0');
+    const label = document.querySelector('label[for="consent_0"]');
+    if (consent?.checked) {
+      if (!document.getElementById('frontConsentAcceptedAt')?.value) setHidden('frontConsentAcceptedAt', now);
+      setHidden('frontConsentLanguage', getLang());
+      setHidden('frontConsentNoticeVersion', 'Front-GDPR-AI-HU-EN-DE-2026-06-12');
+      setHidden('frontConsentLabelSnapshot', clean(label?.textContent || ''));
+    }
+    setHidden('formSourceUrl', window.location.href.split('#')[0]);
+    setHidden('formSubmittedAt', now);
+    setHidden('formUserAgent', navigator.userAgent || '');
+  };
+  const buildExport = (form) => {
+    const lang = getLang();
+    const empty = lang === 'de' ? '[Nicht beantwortet]' : lang === 'en' ? '[Not answered]' : '[Nincs válasz]';
+    const headQ = lang === 'de' ? 'Vollständige Frage' : lang === 'en' ? 'Full question' : 'Teljes kérdés';
+    const headA = lang === 'de' ? 'Antwort' : lang === 'en' ? 'Answer' : 'Válasz';
+    const rows = [];
+    const grouped = new Map();
+    allControls(form).forEach((field) => {
+      if (!field || !field.name || field.disabled) return;
+      const type = String(field.type || '').toLowerCase();
+      if (['hidden','button','submit','reset','file'].includes(type)) return;
+      if (type === 'checkbox' || type === 'radio') {
+        const key = `${type}::${field.name}`;
+        if (!grouped.has(key)) grouped.set(key, {question: labelFor(field), values: []});
+        if (field.checked) grouped.get(key).values.push(clean(labelFor(field)) || field.value || 'accepted');
+        return;
+      }
+      let value = '';
+      if (field.tagName === 'SELECT') value = clean(field.selectedOptions?.[0]?.textContent || field.value || '');
+      else value = clean(field.value || '');
+      rows.push({question: labelFor(field), value: value || empty});
+    });
+    grouped.forEach((group) => rows.push({question: group.question, value: group.values.length ? group.values.join(', ') : empty}));
+    return rows.map((row, i) => `${i + 1}. ${headQ}:\n${row.question || '-'}\n\n${headA}:\n${row.value || empty}`).join('\n\n---\n\n');
+  };
+  const sync = () => {
+    const form = document.getElementById('assessmentForm');
+    const formatted = document.getElementById('formattedAnswers');
+    markConsent();
+    if (form && formatted) formatted.value = buildExport(form);
+  };
+  document.addEventListener('change', (event) => { if (event.target?.id === 'consent_0') markConsent(); }, true);
+  document.addEventListener('DOMContentLoaded', () => { setTimeout(sync, 350); });
+  const form = document.getElementById('assessmentForm');
+  if (form) {
+    form.addEventListener('input', sync);
+    form.addEventListener('change', sync);
+    form.addEventListener('submit', sync);
+  }
 })();
 </script>
 </body>
