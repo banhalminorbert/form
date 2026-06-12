@@ -232,7 +232,7 @@ Az audit-munkafolyamat az alábbi AI-eszközöket használhatja:
 ### Technikai
 - **HTTPS/TLS titkosítás** — GitHub Pages, Google Workspace
 - **Kétfaktoros hitelesítés** — Google Workspace fiók
-- **GDPR-elfogadásos kapu** — az audit-űrlap megnyitásához az Art. 13-as tájékoztatás elfogadása szükséges
+- **Jelszókapu** → **GDPR-elfogadásos kapu** — az audit-űrlap megnyitásához az Art. 13-as tájékoztatás elfogadása szükséges
 - **Beküldés utáni gombzárolás** — duplikációs támadások ellen
 - **`noindex/nofollow/noarchive` meta** — az oldal lezárása az archívumok elől
 - **localStorage** — helyi piszkozat, szerver-oldali adattárolás nélkül

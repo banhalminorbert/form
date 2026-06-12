@@ -41,3 +41,8 @@
 - A régi „password gate” megfogalmazás a felhasználói és jogi szövegekben GDPR-elfogadásos kapura lett cserélve.
 - A verziótörténet 6 hónapos megőrzési utalása 30 napra lett javítva, hogy egyezzen a formban és a rejtett beküldési mezőben szereplő adattal.
 - Külső jogi megfelelőségi feltétel maradt: a tényleges AVV/DPA szerződések, szolgáltatói DPA-k és törlési naplók nem a HTML fájl részei, ezeket külön kell megőrizni.
+
+
+## Password gate hardening — 2026-06-12
+
+The opening screen was updated to require both a SHA-256 password check and GDPR / data-processing / AI-use acceptance before the questionnaire opens. The plain password is not stored in the HTML and is not submitted with the form. See `PASSWORD_GATE_AUDIT_2026-06-12.md` for details and limitations.

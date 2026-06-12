@@ -1280,6 +1280,13 @@
       font-size: 0.9rem;
       margin-top: 12px;
     }
+    .password-error.success { color: #1f6f4a; }
+    .password-help {
+      margin: -2px 0 14px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
 
     .gate-meta {
       margin-top: 22px;
@@ -1788,6 +1795,21 @@
 <h2>Zugang zum Fragebogen</h2>
 <p>Der Fragebogen öffnet sich nach Annahme des Datenschutz-, Verarbeitungs- und KI-Nutzungshinweises. So beginnt die strategische Arbeit bewusst, transparent und rechtlich sauber.</p>
 </div>
+<form aria-describedby="passwordHelp passwordError" autocomplete="off" class="password-form" id="passwordForm" novalidate="">
+<label for="gatePassword">Jelszó</label>
+<input aria-required="true" id="gatePassword" name="gatePassword" required="" type="password" autocomplete="current-password"/>
+<div class="password-help" id="passwordHelp">
+<span class="localized-copy" data-lang="hu">A kérdőív megnyitásához először adja meg a belépési jelszót, majd fogadja el az adatvédelmi és AI-használati tájékoztatót.</span>
+<span class="localized-copy" data-lang="en" hidden="">To open the questionnaire, first enter the access password, then accept the data-protection and AI-use notice.</span>
+<span class="localized-copy" data-lang="de" hidden="">Um den Fragebogen zu öffnen, geben Sie zuerst das Zugangspasswort ein und akzeptieren Sie anschließend den Datenschutz- und KI-Nutzungshinweis.</span>
+</div>
+<button id="gateUnlockButton" type="submit">
+<span class="localized-copy" data-lang="hu">JELSZÓ ELLENŐRZÉSE ÉS BELÉPÉS</span>
+<span class="localized-copy" data-lang="en" hidden="">CHECK PASSWORD AND ENTER</span>
+<span class="localized-copy" data-lang="de" hidden="">PASSWORT PRÜFEN UND ÖFFNEN</span>
+</button>
+<div aria-live="polite" class="password-error" id="passwordError"></div>
+</form>
 <div class="gdpr-gate-notice" style="background: #F4F2EC; border: 1px solid rgba(23,40,61,0.14); border-radius: 18px; padding: 32px 28px; margin: 16px 0;">
 <div class="localized-copy" data-lang="hu" style="text-align: center;">
 <strong style="display: block; font-size: 1.1rem; margin-bottom: 14px;">GDPR-elfogadás szükséges a kérdőív megnyitásához</strong>
@@ -1876,7 +1898,7 @@
 <input name="technicalProcessor" type="hidden" value="Google Apps Script / Google Workspace"/>
 <input name="_captcha" type="hidden" value="false"/>
 <input name="_template" type="hidden" value="html"/>
-<input id="interfaceLanguage" name="Interface language / Formularsprache" type="hidden" value="hu"/><input id="frontConsentAcceptedAt" name="Front GDPR/AI notice accepted at / Elfogadás ideje / Zeitpunkt der Zustimmung" type="hidden" value=""/><input id="frontConsentLanguage" name="Front GDPR/AI notice language / Elfogadás nyelve / Sprache der Zustimmung" type="hidden" value=""/><input id="frontConsentNoticeVersion" name="Front GDPR/AI notice version / Tájékoztató verzió / Hinweisversion" type="hidden" value="Front-GDPR-AI-HU-EN-DE-2026-06-12"/><input id="frontConsentLabelSnapshot" name="Front GDPR/AI acceptance text / Elfogadási szöveg / Zustimmungstext" type="hidden" value=""/><input id="formSubmittedAt" name="Form submitted at / Beküldés ideje / Übermittlungszeitpunkt" type="hidden" value=""/><input id="formUserAgent" name="Browser user agent / Böngészőadat / Browserdaten" type="hidden" value=""/>
+<input id="interfaceLanguage" name="Interface language / Formularsprache" type="hidden" value="hu"/><input id="frontConsentAcceptedAt" name="Front GDPR/AI notice accepted at / Elfogadás ideje / Zeitpunkt der Zustimmung" type="hidden" value=""/><input id="frontConsentLanguage" name="Front GDPR/AI notice language / Elfogadás nyelve / Sprache der Zustimmung" type="hidden" value=""/><input id="frontConsentNoticeVersion" name="Front GDPR/AI notice version / Tájékoztató verzió / Hinweisversion" type="hidden" value="Front-GDPR-AI-HU-EN-DE-2026-06-12"/><input id="frontConsentLabelSnapshot" name="Front GDPR/AI acceptance text / Elfogadási szöveg / Zustimmungstext" type="hidden" value=""/><input id="passwordGateVerifiedAt" name="Password gate verified at / Jelszókapu ellenőrzés ideje / Passwortprüfung Zeitpunkt" type="hidden" value=""/><input id="passwordGateProtectionType" name="Password gate protection type / Védelem típusa / Schutztyp" type="hidden" value="SHA-256 client-side password gate; password itself is not submitted"/><input id="formSubmittedAt" name="Form submitted at / Beküldés ideje / Übermittlungszeitpunkt" type="hidden" value=""/><input id="formUserAgent" name="Browser user agent / Böngészőadat / Browserdaten" type="hidden" value=""/>
 <input id="aiToolsDisclosure" name="AI tools disclosure / KI-Werkzeuge" type="hidden" value="HU: ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközök használhatók személyre szabott promptkészlettel és szükség esetén internet-hozzáféréssel céganalízishez, deep search kutatáshoz, AI-láthatósági és reputációs/támadhatósági elemzéshez. EN: ChatGPT, Claude, Grok, Gemini and Copilot may be used with personalised prompt sets and, where necessary, internet access. DE: ChatGPT, Claude, Grok, Gemini und Copilot können mit personalisierten Prompt-Sets und soweit erforderlich Internetzugang verwendet werden."/>
 <input id="publicInternetResearchConsent" name="Public internet research consent / Öffentliche Internetrecherche" type="hidden" value="HU/EN/DE: The client acknowledges that public internet sources may be researched and analysed for the 96-hour HTML strategy audit."/>
 <input id="specialCategoryDataWarning" name="Special category data warning / Besondere Datenkategorien" type="hidden" value="HU/EN/DE: The form does not request special-category personal data. Do not submit health, political, religious, trade-union, ethnic, genetic, biometric, sex-life or sexual-orientation data."/>
@@ -2794,7 +2816,7 @@
 </details>
 <details class="privacy-panel" id="privacyPanel">
 <summary id="privacySummary">Adatvédelmi tájékoztató — adatfeldolgozás, AI-támogatás és 96 órás HTML stratégia</summary>
-<div class="privacy-body localized-copy" data-lang="hu"><p><strong>Adatkezelő és szerződő szolgáltató:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kapcsolat: tamas.toth@metallagentur.at. GISA: 32963588. EU adószám: ATU69150839.</p><p><strong>Szerződéses szakmai alvállalkozó / adatfeldolgozó:</strong> Mag. Tamás Tóth e.U. a 96 órás HTML stratégiai audit elkészítéséhez szerződéses szakmai alvállalkozót vehet igénybe, aki személyes adatok feldolgozása esetén GDPR Art. 28 szerinti adatfeldolgozóként működhet közre. Az ügyfél szerződéses jogviszonya Mag. Tamás Tóth e.U.-val jön létre.</p><p><strong>AI-használat:</strong> ChatGPT, Claude, Grok, Gemini és Copilot használható személyre szabott promptkészlettel, szükség esetén internet-hozzáféréssel. A végső stratégiai anyag emberi szakértői felülvizsgálattal készül; az AI-használat nem kizárólag automatizált döntéshozatal.</p><p><strong>Különleges kategóriájú adatok kizárása:</strong> az űrlap nem kér GDPR 9. cikk szerinti különleges kategóriájú személyes adatot. Kérjük, ne adjon meg egészségügyi, politikai, vallási, szakszervezeti, faji/etnikai, genetikai/biometrikus, szexuális életre vagy szexuális irányultságra vonatkozó adatot.</p><p><strong>Üzleti titok és harmadik felek adatai:</strong> csak akkor adjon meg üzleti titkot, NDA alatti információt vagy harmadik személyre vonatkozó adatot, ha annak auditcélú továbbítására jogosult; ahol nem szükséges, anonimizáljon vagy általánosítson.</p><p><strong>Harmadik ország:</strong> külső AI-, e-mail-, űrlap- vagy technikai szolgáltatások használata esetén EGT-n kívüli adatfeldolgozás nem zárható ki teljesen. Ilyen esetben megfelelő garancia szükséges, például SCC, megfelelőségi határozat, EU–US DPF, anonimizálás vagy pseudonimizálás.</p><p><strong>Jogalapok:</strong> szerződés előkészítése és teljesítése, jogos érdek üzleti kommunikáció és dokumentáció céljából, jogi kötelezettség számlázási/adózási adatok esetén, valamint külön hozzájárulás ott, ahol ez kifejezetten szükséges.</p><p><strong>Jogok:</strong> hozzáférés, helyesbítés, törlés, korlátozás, tiltakozás, adathordozhatóság és panaszjog az osztrák Datenschutzbehörde előtt.</p><p><strong>Helyi mentés:</strong> az űrlap a válaszokat a felhasználó saját böngészőjének tartós helyi tárhelyében tárolhatja.</p><p><strong>Verzió:</strong> Privacy-HU/EN/DE-Entity-Audit-2026-06-11.</p></div><div class="privacy-body localized-copy" data-lang="en" hidden=""><p><strong>Controller and contracting provider:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Vienna, Austria. Contact: tamas.toth@metallagentur.at. GISA: 32963588. EU VAT ID: ATU69150839.</p><p><strong>Contracted professional subcontractor / processor:</strong> Mag. Tamás Tóth e.U. may involve a contracted professional subcontractor for the preparation of the 96-hour HTML strategy audit. Where personal data is processed, that subcontractor may act as a GDPR Art. 28 processor. The client’s contractual relationship remains with Mag. Tamás Tóth e.U.</p><p><strong>Use of AI:</strong> ChatGPT, Claude, Grok, Gemini and Copilot may be used with personalised prompt sets and, where necessary, internet access. The final strategic material is prepared with human expert review; AI use is not solely automated decision-making.</p><p><strong>Exclusion of special-category data:</strong> this form does not request special-category personal data under Article 9 GDPR. Please do not provide health data, political or religious beliefs, trade-union membership, racial/ethnic origin, genetic/biometric identifiers, data concerning sex life or sexual orientation.</p><p><strong>Business secrets and third-party data:</strong> submit business secrets, NDA-protected information or third-party data only if you are authorised to share them for this audit purpose; where not necessary, anonymise or generalise.</p><p><strong>Third countries:</strong> when external AI, e-mail, form or technical providers are used, processing outside the EEA cannot be fully excluded. Appropriate safeguards such as SCCs, adequacy decisions, EU–US DPF, anonymisation or pseudonymisation are required.</p><p><strong>Legal bases:</strong> preparation and performance of a contract, legitimate interest in business communication and documentation, legal obligation for billing/tax data, and consent where separately required.</p><p><strong>Rights:</strong> access, rectification, erasure, restriction, objection, data portability and the right to lodge a complaint with the Austrian Data Protection Authority.</p><p><strong>Local draft saving:</strong> the form may store answers in the user's own browser local storage.</p><p><strong>Version:</strong> Privacy-HU/EN/DE-Entity-Audit-2026-06-11.</p></div><div class="privacy-body localized-copy" data-lang="de" hidden=""><p><strong>Verantwortlicher und Vertragspartner:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kontakt: tamas.toth@metallagentur.at. GISA: 32963588. UID: ATU69150839.</p><p><strong>Vertraglicher fachlicher Subunternehmer / Auftragsverarbeiter:</strong> Mag. Tamás Tóth e.U. kann zur Erstellung des 96-Stunden-HTML-Strategieaudits einen vertraglich gebundenen fachlichen Subunternehmer einbeziehen. Soweit personenbezogene Daten verarbeitet werden, kann dieser als Auftragsverarbeiter gemäß Art. 28 DSGVO tätig werden. Das Vertragsverhältnis des Kunden besteht mit Mag. Tamás Tóth e.U.</p><p><strong>Einsatz von KI:</strong> ChatGPT, Claude, Grok, Gemini und Copilot können mit personalisierten Prompt-Sets und, soweit erforderlich, Internetzugang eingesetzt werden. Das finale strategische Material entsteht mit menschlicher fachlicher Prüfung; der KI-Einsatz ist keine ausschließlich automatisierte Entscheidung.</p><p><strong>Ausschluss besonderer Datenkategorien:</strong> dieses Formular fragt keine besonderen Kategorien personenbezogener Daten nach Art. 9 DSGVO ab. Bitte geben Sie keine Gesundheitsdaten, politischen oder religiösen Überzeugungen, Gewerkschaftszugehörigkeit, rassische/ethnische Herkunft, genetischen/biometrischen Kennungen oder Daten zum Sexualleben bzw. zur sexuellen Orientierung an.</p><p><strong>Geschäftsgeheimnisse und Daten Dritter:</strong> geben Sie Geschäftsgeheimnisse, NDA-geschützte Informationen oder Daten Dritter nur an, wenn Sie zur Weitergabe für diesen Auditzweck berechtigt sind; soweit nicht erforderlich, anonymisieren oder abstrahieren Sie.</p><p><strong>Drittländer:</strong> bei externen KI-, E-Mail-, Formular- oder technischen Dienstleistern kann eine Verarbeitung außerhalb des EWR nicht vollständig ausgeschlossen werden. Geeignete Garantien wie SCC, Angemessenheitsbeschluss, EU–US DPF, Anonymisierung oder Pseudonymisierung sind erforderlich.</p><p><strong>Rechtsgrundlagen:</strong> Vertragsanbahnung und Vertragserfüllung, berechtigtes Interesse an geschäftlicher Kommunikation und Dokumentation, rechtliche Verpflichtung bei Rechnungs- und Steuerdaten sowie Einwilligung, soweit gesondert erforderlich.</p><p><strong>Rechte:</strong> Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Datenübertragbarkeit und Beschwerderecht bei der österreichischen Datenschutzbehörde.</p><p><strong>Lokale Speicherung:</strong> das Formular kann Antworten im lokalen Speicher des eigenen Browsers speichern.</p><p><strong>Version:</strong> Privacy-HU/EN/DE-Entity-Audit-2026-06-11.</p></div></details>
+<div class="privacy-body localized-copy" data-lang="hu"><p><strong>Adatkezelő és szerződő szolgáltató:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kapcsolat: tamas.toth@metallagentur.at. GISA: 32963588. EU adószám: ATU69150839.</p><p><strong>Szerződéses szakmai alvállalkozó / adatfeldolgozó:</strong> Mag. Tamás Tóth e.U. a 96 órás HTML stratégiai audit elkészítéséhez szerződéses szakmai alvállalkozót vehet igénybe, aki személyes adatok feldolgozása esetén GDPR Art. 28 szerinti adatfeldolgozóként működhet közre. Az ügyfél szerződéses jogviszonya Mag. Tamás Tóth e.U.-val jön létre.</p><p><strong>AI-használat:</strong> ChatGPT, Claude, Grok, Gemini és Copilot használható személyre szabott promptkészlettel, szükség esetén internet-hozzáféréssel. A végső stratégiai anyag emberi szakértői felülvizsgálattal készül; az AI-használat nem kizárólag automatizált döntéshozatal.</p><p><strong>Különleges kategóriájú adatok kizárása:</strong> az űrlap nem kér GDPR 9. cikk szerinti különleges kategóriájú személyes adatot. Kérjük, ne adjon meg egészségügyi, politikai, vallási, szakszervezeti, faji/etnikai, genetikai/biometrikus, szexuális életre vagy szexuális irányultságra vonatkozó adatot.</p><p><strong>Üzleti titok és harmadik felek adatai:</strong> csak akkor adjon meg üzleti titkot, NDA alatti információt vagy harmadik személyre vonatkozó adatot, ha annak auditcélú továbbítására jogosult; ahol nem szükséges, anonimizáljon vagy általánosítson.</p><p><strong>Harmadik ország:</strong> külső AI-, e-mail-, űrlap- vagy technikai szolgáltatások használata esetén EGT-n kívüli adatfeldolgozás nem zárható ki teljesen. Ilyen esetben megfelelő garancia szükséges, például SCC, megfelelőségi határozat, EU–US DPF, anonimizálás vagy pseudonimizálás.</p><p><strong>Jogalapok:</strong> szerződés előkészítése és teljesítése, jogos érdek üzleti kommunikáció és dokumentáció céljából, jogi kötelezettség számlázási/adózási adatok esetén, valamint külön hozzájárulás ott, ahol ez kifejezetten szükséges.</p><p><strong>Címzettek és technikai út:</strong> a beküldés Google Apps Script / Google Workspace útvonalon érkezik Mag. Tamás Tóth e.U. postafiókjába; a statikus űrlap GitHub Pages környezetben működik; a 96 órás audit elkészítésében szerződéses szakmai alvállalkozó / Art. 28 szerinti adatfeldolgozó működhet közre; AI-eszközök kizárólag döntéstámogató, ember által ellenőrzött feldolgozást támogathatnak.</p><p><strong>Megőrzés:</strong> az audit-kérdőív kitöltött adatai és közbenső munkaanyagai 30 napon belül törlésre kerülnek; a számlázási és adózási adatok az osztrák BAO § 132 alapján 7 évig őrzendők; a kész HTML stratégiai dokumentum a szolgáltatás eredményeként nem automatikusan törlendő.</p><p><strong>Jogok:</strong> hozzáférés, helyesbítés, törlés, korlátozás, tiltakozás, adathordozhatóság és panaszjog az osztrák Datenschutzbehörde előtt.</p><p><strong>Helyi mentés:</strong> az űrlap a válaszokat a felhasználó saját böngészőjének tartós helyi tárhelyében tárolhatja.</p><p><strong>Verzió:</strong> Privacy-HU/EN/DE-Entity-Audit-2026-06-12.</p></div><div class="privacy-body localized-copy" data-lang="en" hidden=""><p><strong>Controller and contracting provider:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Vienna, Austria. Contact: tamas.toth@metallagentur.at. GISA: 32963588. EU VAT ID: ATU69150839.</p><p><strong>Contracted professional subcontractor / processor:</strong> Mag. Tamás Tóth e.U. may involve a contracted professional subcontractor for the preparation of the 96-hour HTML strategy audit. Where personal data is processed, that subcontractor may act as a GDPR Art. 28 processor. The client’s contractual relationship remains with Mag. Tamás Tóth e.U.</p><p><strong>Use of AI:</strong> ChatGPT, Claude, Grok, Gemini and Copilot may be used with personalised prompt sets and, where necessary, internet access. The final strategic material is prepared with human expert review; AI use is not solely automated decision-making.</p><p><strong>Exclusion of special-category data:</strong> this form does not request special-category personal data under Article 9 GDPR. Please do not provide health data, political or religious beliefs, trade-union membership, racial/ethnic origin, genetic/biometric identifiers, data concerning sex life or sexual orientation.</p><p><strong>Business secrets and third-party data:</strong> submit business secrets, NDA-protected information or third-party data only if you are authorised to share them for this audit purpose; where not necessary, anonymise or generalise.</p><p><strong>Third countries:</strong> when external AI, e-mail, form or technical providers are used, processing outside the EEA cannot be fully excluded. Appropriate safeguards such as SCCs, adequacy decisions, EU–US DPF, anonymisation or pseudonymisation are required.</p><p><strong>Legal bases:</strong> preparation and performance of a contract, legitimate interest in business communication and documentation, legal obligation for billing/tax data, and consent where separately required.</p><p><strong>Recipients and technical route:</strong> submissions are transmitted via Google Apps Script / Google Workspace to the mailbox of Mag. Tamás Tóth e.U.; the static form runs on GitHub Pages; a contracted professional subcontractor / Art. 28 processor may support preparation of the 96-hour audit; AI tools may support decision-supporting processing only under human review.</p><p><strong>Retention:</strong> completed questionnaire data and intermediate work materials are deleted within 30 days; billing and tax records are retained for 7 years under Austrian BAO § 132; the completed HTML strategy document is the service deliverable and is not automatically deleted.</p><p><strong>Rights:</strong> access, rectification, erasure, restriction, objection, data portability and the right to lodge a complaint with the Austrian Data Protection Authority.</p><p><strong>Local draft saving:</strong> the form may store answers in the user's own browser local storage.</p><p><strong>Version:</strong> Privacy-HU/EN/DE-Entity-Audit-2026-06-12.</p></div><div class="privacy-body localized-copy" data-lang="de" hidden=""><p><strong>Verantwortlicher und Vertragspartner:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kontakt: tamas.toth@metallagentur.at. GISA: 32963588. UID: ATU69150839.</p><p><strong>Vertraglicher fachlicher Subunternehmer / Auftragsverarbeiter:</strong> Mag. Tamás Tóth e.U. kann zur Erstellung des 96-Stunden-HTML-Strategieaudits einen vertraglich gebundenen fachlichen Subunternehmer einbeziehen. Soweit personenbezogene Daten verarbeitet werden, kann dieser als Auftragsverarbeiter gemäß Art. 28 DSGVO tätig werden. Das Vertragsverhältnis des Kunden besteht mit Mag. Tamás Tóth e.U.</p><p><strong>Einsatz von KI:</strong> ChatGPT, Claude, Grok, Gemini und Copilot können mit personalisierten Prompt-Sets und, soweit erforderlich, Internetzugang eingesetzt werden. Das finale strategische Material entsteht mit menschlicher fachlicher Prüfung; der KI-Einsatz ist keine ausschließlich automatisierte Entscheidung.</p><p><strong>Ausschluss besonderer Datenkategorien:</strong> dieses Formular fragt keine besonderen Kategorien personenbezogener Daten nach Art. 9 DSGVO ab. Bitte geben Sie keine Gesundheitsdaten, politischen oder religiösen Überzeugungen, Gewerkschaftszugehörigkeit, rassische/ethnische Herkunft, genetischen/biometrischen Kennungen oder Daten zum Sexualleben bzw. zur sexuellen Orientierung an.</p><p><strong>Geschäftsgeheimnisse und Daten Dritter:</strong> geben Sie Geschäftsgeheimnisse, NDA-geschützte Informationen oder Daten Dritter nur an, wenn Sie zur Weitergabe für diesen Auditzweck berechtigt sind; soweit nicht erforderlich, anonymisieren oder abstrahieren Sie.</p><p><strong>Drittländer:</strong> bei externen KI-, E-Mail-, Formular- oder technischen Dienstleistern kann eine Verarbeitung außerhalb des EWR nicht vollständig ausgeschlossen werden. Geeignete Garantien wie SCC, Angemessenheitsbeschluss, EU–US DPF, Anonymisierung oder Pseudonymisierung sind erforderlich.</p><p><strong>Rechtsgrundlagen:</strong> Vertragsanbahnung und Vertragserfüllung, berechtigtes Interesse an geschäftlicher Kommunikation und Dokumentation, rechtliche Verpflichtung bei Rechnungs- und Steuerdaten sowie Einwilligung, soweit gesondert erforderlich.</p><p><strong>Empfänger und technischer Weg:</strong> Einreichungen werden über Google Apps Script / Google Workspace an das Postfach von Mag. Tamás Tóth e.U. übermittelt; das statische Formular läuft auf GitHub Pages; ein vertraglich gebundener fachlicher Subunternehmer / Auftragsverarbeiter nach Art. 28 kann die Erstellung des 96-Stunden-Audits unterstützen; KI-Werkzeuge dürfen nur entscheidungsunterstützend und unter menschlicher Prüfung eingesetzt werden.</p><p><strong>Speicherfrist:</strong> ausgefüllte Fragebogendaten und Zwischenarbeitsmaterialien werden innerhalb von 30 Tagen gelöscht; Rechnungs- und Steuerunterlagen werden gemäß österreichischer BAO § 132 sieben Jahre aufbewahrt; das fertige HTML-Strategiedokument ist das Leistungsergebnis und wird nicht automatisch gelöscht.</p><p><strong>Rechte:</strong> Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Datenübertragbarkeit und Beschwerderecht bei der österreichischen Datenschutzbehörde.</p><p><strong>Lokale Speicherung:</strong> das Formular kann Antworten im lokalen Speicher des eigenen Browsers speichern.</p><p><strong>Version:</strong> Privacy-HU/EN/DE-Entity-Audit-2026-06-12.</p></div></details>
 <details class="privacy-panel" id="impressumPanel">
 <summary>Impresszum és szolgáltatói adatok</summary>
 <div class="privacy-body">
@@ -3082,7 +3104,7 @@
     applyLanguage(getInitialLang());
 
     const PASSWORD_HASH = 'df3abc05e3e7aa976d8d6f63c6da5caf23307fbbc1e5bd5feec5f7433a90ef8a';
-    const AUTH_KEY = 'entity_deep_search_unlocked_v1';
+    const AUTH_KEY = 'entity_deep_search_password_verified_session_v2';
     const passwordGate = document.getElementById('passwordGate');
     const protectedContent = document.getElementById('protectedContent');
     const passwordForm = document.getElementById('passwordForm');
@@ -3249,26 +3271,85 @@
       return [h0,h1,h2,h3,h4,h5,h6,h7].map((h) => h.toString(16).padStart(8, '0')).join('');
     };
 
-    // GDPR-based gate: unlock when consent_0 is checked
-const checkConsent = () => {
-  const consentCheckbox = document.getElementById('consent_0');
-  if (consentCheckbox && consentCheckbox.checked) {
-    markFrontConsent(true);
-    try { localStorage.setItem(AUTH_KEY, 'front-gdpr-accepted'); } catch (_) {}
-    showProtectedContent();
-    setTimeout(() => {
-      const formElem = document.getElementById('assessmentForm');
-      if (formElem) formElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
-  }
-};
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', checkConsent);
-} else {
-  checkConsent();
-}
-const consentCheckbox = document.getElementById('consent_0');
-if (consentCheckbox) consentCheckbox.addEventListener('change', checkConsent);;
+    // Password + GDPR-based gate: the form opens only after both checks are completed.
+    const gateMessage = (hu, en, de) => tMsg(hu, en, de);
+    const setPasswordError = (message, success = false) => {
+      if (!passwordError) return;
+      passwordError.textContent = message || '';
+      passwordError.classList.toggle('success', Boolean(success));
+    };
+    const sessionGet = (key) => {
+      try { return window.sessionStorage?.getItem(key) || null; } catch (_) { try { return localStorage.getItem(key); } catch (__) { return null; } }
+    };
+    const sessionSet = (key, value) => {
+      try { window.sessionStorage?.setItem(key, value); } catch (_) { try { localStorage.setItem(key, value); } catch (__) {} }
+    };
+    const isPasswordVerified = () => sessionGet(AUTH_KEY) === 'verified';
+    const markPasswordVerified = () => {
+      sessionSet(AUTH_KEY, 'verified');
+      const verifiedAt = document.getElementById('passwordGateVerifiedAt');
+      if (verifiedAt && !verifiedAt.value) verifiedAt.value = new Date().toISOString();
+    };
+    const unlockIfGateComplete = (scroll = true) => {
+      const consentCheckbox = document.getElementById('consent_0');
+      if (!isPasswordVerified()) return false;
+      if (!consentCheckbox?.checked) return false;
+      markFrontConsent(true);
+      showProtectedContent();
+      if (scroll) {
+        setTimeout(() => {
+          const formElem = document.getElementById('assessmentForm');
+          if (formElem) formElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+      return true;
+    };
+    const checkConsent = () => {
+      const consentCheckbox = document.getElementById('consent_0');
+      if (consentCheckbox?.checked) {
+        markFrontConsent(true);
+        if (!isPasswordVerified()) {
+          setPasswordError(gateMessage('A GDPR-elfogadás rendben. A kérdőív megnyitásához még adja meg a jelszót.', 'GDPR acceptance is complete. Enter the password to open the questionnaire.', 'Die DSGVO-Bestätigung ist abgeschlossen. Geben Sie noch das Passwort ein, um den Fragebogen zu öffnen.'), true);
+        }
+      }
+      unlockIfGateComplete(true);
+    };
+    if (passwordForm) {
+      passwordForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const password = gatePassword?.value || '';
+        if (!password) {
+          setPasswordError(gateMessage('Kérem, adja meg a jelszót.', 'Please enter the password.', 'Bitte geben Sie das Passwort ein.'));
+          gatePassword?.focus();
+          return;
+        }
+        try {
+          const hash = await sha256(password);
+          if (hash !== PASSWORD_HASH) {
+            setPasswordError(gateMessage('Hibás jelszó. Ellenőrizze a karaktereket, a kis- és nagybetűket is.', 'Incorrect password. Please check the characters and upper/lower case.', 'Falsches Passwort. Bitte prüfen Sie Zeichen sowie Groß- und Kleinschreibung.'));
+            gatePassword?.select?.();
+            return;
+          }
+          markPasswordVerified();
+          if (gatePassword) gatePassword.value = '';
+          const opened = unlockIfGateComplete(true);
+          if (!opened) {
+            setPasswordError(gateMessage('A jelszó rendben. Most fogadja el a GDPR-, adatfeldolgozási és AI-használati tájékoztatót is.', 'Password accepted. Now also accept the GDPR, processing and AI-use notice.', 'Passwort akzeptiert. Bitte bestätigen Sie nun auch den DSGVO-, Verarbeitungs- und KI-Nutzungshinweis.'), true);
+            document.getElementById('consent_0')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } catch (error) {
+          console.warn('Password verification failed', error);
+          setPasswordError(gateMessage('A jelszóellenőrzés nem sikerült ebben a böngészőben. Próbálja újra frissítés után.', 'Password verification failed in this browser. Please refresh and try again.', 'Die Passwortprüfung ist in diesem Browser fehlgeschlagen. Bitte aktualisieren und erneut versuchen.'));
+        }
+      });
+    }
+    const consentCheckbox = document.getElementById('consent_0');
+    if (consentCheckbox) consentCheckbox.addEventListener('change', checkConsent);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => unlockIfGateComplete(false));
+    } else {
+      unlockIfGateComplete(false);
+    }
 
       const buildDraftPayload = () => JSON.stringify({
         savedAt: new Date().toISOString(),
