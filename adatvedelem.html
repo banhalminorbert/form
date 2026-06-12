@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex"/>
+<title>Adatvédelmi tájékoztató — Mag. Tamás Tóth e.U.</title>
+<meta name="description" content="Részletes GDPR/DSG adatvédelmi tájékoztató a form.metallagentur.at Digitális Entitás Audit űrlaphoz — magyar, angol és német nyelven."/>
+<!-- System fonts: New York (serif) and San Francisco (sans) via -apple-system -->
+<style>
+  :root {
+    --paper:    #FBFAF7;
+    --paper-2:  #F4F2EC;
+    --card:     #FFFFFF;
+    --card-tint:#FCFBF8;
+    --ink:      #15202E;
+    --ink-soft: #2A3645;
+    --body:     #3C4655;
+    --muted:    #6B7280;
+    --blue:     #17283D;
+    --blue-dark:#0E1A2A;
+    --blue-mid: #213A57;
+    --blue-line:rgba(23, 40, 61, 0.14);
+    --blue-soft:rgba(23, 40, 61, 0.05);
+    --gold:     #C9A227;
+    --gold-deep:#A8841C;
+    --gold-line:rgba(201, 162, 39, 0.32);
+    --gold-tint:rgba(201, 162, 39, 0.08);
+    --on-dark:  #F3F1EA;
+    --on-dark-soft: rgba(243, 241, 234, 0.82);
+    --hairline: rgba(23, 40, 61, 0.12);
+    --shadow-sm: 0 1px 2px rgba(23, 40, 61, 0.04), 0 6px 16px rgba(23, 40, 61, 0.05);
+    --shadow-md: 0 2px 6px rgba(23, 40, 61, 0.05), 0 14px 34px rgba(23, 40, 61, 0.07);
+    --radius:    18px;
+    --radius-sm: 12px;
+    --serif: 'New York', Georgia, serif;
+    --sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--body);
+    line-height: 1.7;
+    font-size: 0.96rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 48px) clamp(16px, 4vw, 32px) 64px;
+  }
+
+  /* ---------- Document header ---------- */
+  .doc-header {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .doc-header::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue), var(--gold) 60%, var(--blue-mid));
+  }
+  .doc-header-inner { padding: clamp(26px, 4vw, 44px); }
+  .eyebrow {
+    color: var(--gold-deep);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .doc-lead { color: var(--muted); max-width: 62ch; }
+  .doc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .meta-chip {
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    background: var(--blue-soft);
+    border: 1px solid var(--blue-line);
+    border-radius: 999px;
+    padding: 6px 14px;
+  }
+  .meta-chip.gold {
+    color: var(--gold-deep);
+    background: var(--gold-tint);
+    border-color: var(--gold-line);
+  }
+
+  /* ---------- Toolbar: language + back ---------- */
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px clamp(26px, 4vw, 44px);
+    background: var(--card-tint);
+    border-top: 1px solid var(--hairline);
+  }
+  .lang-switch { display: flex; gap: 6px; }
+  .lang-switch button {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--blue-line);
+    background: var(--card);
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .lang-switch button:hover { border-color: var(--gold-line); color: var(--gold-deep); }
+  .lang-switch button[aria-pressed="true"] {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: var(--on-dark);
+  }
+  .lang-switch button:focus-visible,
+  .back-link:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--blue-mid);
+    outline-offset: 3px;
+  }
+  .back-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--blue-mid);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-line);
+    padding-bottom: 2px;
+  }
+  .back-link:hover { color: var(--gold-deep); }
+
+  /* ---------- Document body ---------- */
+  .doc-body {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: clamp(26px, 4vw, 48px);
+  }
+  .localized-copy[hidden] { display: none; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+    line-height: 1.18;
+    color: var(--ink);
+    margin: 38px 0 12px;
+    padding-top: 22px;
+    border-top: 1px solid var(--hairline);
+  }
+  h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+  h2 .sec-no {
+    color: var(--gold-deep);
+    font-family: var(--sans);
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-right: 10px;
+    vertical-align: 2px;
+  }
+  p { margin-bottom: 12px; }
+  strong { color: var(--ink-soft); }
+  ul { margin: 8px 0 14px 1.2em; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--gold); }
+  code {
+    font-size: 0.86em;
+    background: var(--blue-soft);
+    border: 1px solid var(--blue-line);
+    border-radius: 6px;
+    padding: 1px 6px;
+  }
+  a { color: var(--blue-mid); }
+
+  /* TOC */
+  .toc {
+    background: var(--card-tint);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm);
+    padding: 18px 22px;
+    margin-bottom: 30px;
+  }
+  .toc-title {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold-deep);
+    margin-bottom: 10px;
+  }
+  .toc ol {
+    columns: 2;
+    column-gap: 32px;
+    margin: 0 0 0 1.2em;
+    font-size: 0.88rem;
+  }
+  .toc li { margin-bottom: 5px; break-inside: avoid; }
+  .toc li::marker { color: var(--gold-deep); font-weight: 600; }
+  .toc a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid transparent; }
+  .toc a:hover { color: var(--gold-deep); border-bottom-color: var(--gold-line); }
+  @media (max-width: 640px) { .toc ol { columns: 1; } }
+
+  /* Tables */
+  .tbl-wrap { overflow-x: auto; margin: 14px 0 18px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    min-width: 520px;
+  }
+  th {
+    text-align: left;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--blue-soft);
+    border-bottom: 2px solid var(--blue-line);
+    padding: 10px 14px;
+    white-space: nowrap;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { font-weight: 600; color: var(--ink-soft); }
+
+  .note-box {
+    background: var(--gold-tint);
+    border: 1px solid var(--gold-line);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    margin: 14px 0 18px;
+    font-size: 0.9rem;
+  }
+  .doc-footnote {
+    margin-top: 34px;
+    padding-top: 20px;
+    border-top: 1px solid var(--hairline);
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: #fff; font-size: 10.5pt; }
+    .toolbar, .lang-switch, .back-link, .toc { display: none !important; }
+    .doc-header, .doc-body { box-shadow: none; border-color: #ccc; }
+    h2 { break-after: avoid; }
+    .tbl-wrap { overflow: visible; }
+    table { min-width: 0; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="doc-header">
+    <div class="doc-header-inner">
+      <div class="eyebrow" data-t="eyebrow">Mag. Tamás Tóth e.U. — Digitális Entitás Audit</div>
+      <h1 data-t="title">Adatvédelmi tájékoztató</h1>
+      <p class="doc-lead" data-t="lead">Részletes GDPR- és DSG-tájékoztató a form.metallagentur.at címen elérhető audit-űrlap adatkezeléséről — címzettek, jogalapok, megőrzési idők és érintetti jogok.</p>
+      <div class="doc-meta">
+        <span class="meta-chip gold" data-t="chipVersion">Verzió 2.0 · 2026-06-12</span>
+        <span class="meta-chip">GISA 32963588</span>
+        <span class="meta-chip">UID ATU69150839</span>
+        <span class="meta-chip" data-t="chipScope">Hatály: form.metallagentur.at</span>
+      </div>
+    </div>
+    <div class="toolbar">
+      <div class="lang-switch" role="group" aria-label="Nyelv / Language / Sprache">
+        <button type="button" data-lang-btn="hu" aria-pressed="true">Magyar</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">English</button>
+        <button type="button" data-lang-btn="de" aria-pressed="false">Deutsch</button>
+      </div>
+      <a class="back-link" href="index.html" data-t="back">← Vissza az űrlaphoz</a>
+    </div>
+  </header>
+
+  <article class="doc-body">
+
+  <!-- ============================================================ HU -->
+  <div class="localized-copy" data-lang="hu">
+
+    <nav class="toc">
+      <div class="toc-title">Tartalom</div>
+      <ol>
+        <li><a href="#hu-1">Adatkezelő és adatfeldolgozási útvonal</a></li>
+        <li><a href="#hu-2">Az adatkezelés céljai</a></li>
+        <li><a href="#hu-3">Jogalapok</a></li>
+        <li><a href="#hu-4">Adatkategóriák és adatminimalizálás</a></li>
+        <li><a href="#hu-5">Címzettek és technikai szolgáltatók</a></li>
+        <li><a href="#hu-6">Nemzetközi adattovábbítás</a></li>
+        <li><a href="#hu-7">Adatmegőrzés</a></li>
+        <li><a href="#hu-8">Az érintett jogai</a></li>
+        <li><a href="#hu-9">AI-eszközök használata</a></li>
+        <li><a href="#hu-10">Biztonsági intézkedések</a></li>
+        <li><a href="#hu-11">Adatvédelmi incidens</a></li>
+        <li><a href="#hu-12">Panasztétel</a></li>
+        <li><a href="#hu-13">Verziókövetés</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="hu-1"><span class="sec-no">1.</span>Adatkezelő és adatfeldolgozási útvonal</h2>
+    <p><strong>Adatkezelő (Controller):</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kapcsolat: <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a>. GISA: 32963588. EU adószám (UID): ATU69150839. Az ügyfél szerződéses jogviszonya kizárólag Mag. Tamás Tóth e.U.-val jön létre.</p>
+    <p><strong>Szerződéses szakmai alvállalkozó / adatfeldolgozó:</strong> a 96 órás HTML stratégiai audit elkészítése Mag. Tamás Tóth e.U. szerződéses szakmai alvállalkozójának közreműködésével történhet, aki személyes adatok feldolgozása esetén GDPR Art. 28 szerinti adatfeldolgozóként, írásbeli adatfeldolgozási megállapodás (AVV/DPA) alapján jár el.</p>
+    <p><strong>Adatvédelmi tisztviselő:</strong> a GDPR Art. 37 szerinti kötelező kijelölési feltételek nem állnak fenn (nincs nagyléptékű, rendszeres és szisztematikus megfigyelés, és nem történik különleges adatkategóriák nagyléptékű kezelése). Adatvédelmi kérdésekben a kapcsolat: tamas.toth@metallagentur.at.</p>
+
+    <h2 id="hu-2"><span class="sec-no">2.</span>Az adatkezelés céljai</h2>
+    <ul>
+      <li><strong>Digitális entitás audit készítése</strong> — a kérdőívben megadott adatok alapján.</li>
+      <li><strong>Stratégiai tanácsadás</strong> — a 96 órás HTML audit-dokumentum elkészítése és e-mailes megküldése.</li>
+      <li><strong>Kommunikáció</strong> — e-mailes kapcsolattartás az audit-folyamat során.</li>
+      <li><strong>Ajánlatkészítés és szerződéses teljesítés</strong> — beleértve szükség esetén a számlázást.</li>
+    </ul>
+
+    <h2 id="hu-3"><span class="sec-no">3.</span>Jogalapok (GDPR Art. 6)</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Jogalap</th><th>Alkalmazás</th></tr>
+      <tr><td>Art. 6 (1) b) — szerződés</td><td>A kérdőív-adatok kezelése a szerződés előkészítéséhez és az audit elkészítéséhez</td></tr>
+      <tr><td>Art. 6 (1) f) — jogos érdek</td><td>Üzleti kommunikáció, dokumentáció, szellemi tulajdon védelme</td></tr>
+      <tr><td>Art. 6 (1) c) — jogi kötelezettség</td><td>Számlázási és adózási adatok (BAO, UStG)</td></tr>
+      <tr><td>Art. 6 (1) a) — hozzájárulás</td><td>Kizárólag ott, ahol külön kifejezetten szükséges</td></tr>
+    </table></div>
+    <p>Az űrlap checkbox-logikája szándékosan „tudomásul veszem" megfogalmazást használ ott, ahol az adatkezelés szerződéses vagy szükségszerű — a hozzájárulás mint jogalap nincs túlhasználva.</p>
+
+    <h2 id="hu-4"><span class="sec-no">4.</span>Adatkategóriák és adatminimalizálás</h2>
+    <ul>
+      <li><strong>Kapcsolattartás:</strong> név, e-mail, telefon (opcionális).</li>
+      <li><strong>Cég/márka:</strong> cégnév, weboldal, pozicionálási és stratégiai válaszok.</li>
+      <li><strong>Digitális jelenlét:</strong> weboldalak, LinkedIn, közösségimédia-linkek.</li>
+      <li><strong>Számlázás:</strong> számlázási név, cím, ország, adószám, EU adószám (UID).</li>
+      <li><strong>Technikai:</strong> IP-cím és hozzáférési adatok (hoszting-szint), böngésző-localStorage (helyi piszkozat).</li>
+    </ul>
+    <div class="note-box"><strong>Különleges kategóriájú adatok (GDPR Art. 9) — kizárva.</strong> Az űrlap nem kér és kifejezetten tiltja különleges kategóriájú személyes adatok megadását (egészségügyi, politikai, vallási, szakszervezeti, faji/etnikai, genetikai/biometrikus, szexuális életre vagy irányultságra vonatkozó adatok). Ha a felhasználó ennek ellenére ilyen adatot ad meg, az haladéktalanul törlésre kerül, kivéve ha kezelése külön írásbeli megállapodás alapján jogszerű.</div>
+
+    <h2 id="hu-5"><span class="sec-no">5.</span>Címzettek és technikai szolgáltatók</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Szolgáltató</th><th>Funkció</th><th>Helyszín / garancia</th></tr>
+      <tr><td>GitHub, Inc. (GitHub Pages)</td><td>Az űrlap statikus hosztingja; technikai hozzáférési adatok (IP-cím) kezelése</td><td>USA — EU–US Data Privacy Framework</td></tr>
+      <tr><td>Google Ireland Ltd. / Google LLC</td><td>Google Apps Script: a beküldött válaszok továbbítása Mag. Tamás Tóth e.U. Google Workspace postafiókjába</td><td>EU / USA — SCC + EU–US DPF</td></tr>
+      <tr><td>Google Fonts</td><td>Betűtípus-betöltés; a betöltéskor az IP-cím a Google felé továbbítódik</td><td>EU / USA — SCC + EU–US DPF</td></tr>
+      <tr><td>Szerződéses szakmai alvállalkozó</td><td>A 96 órás HTML audit szakmai elkészítése</td><td>EU/EGT — GDPR Art. 28 AVV/DPA</td></tr>
+      <tr><td>AI-szolgáltatók (ChatGPT, Claude, Grok, Gemini, Copilot)</td><td>Az audit-feldolgozás támogatása, emberi szakértői kontroll mellett</td><td>Részben EGT-n kívül — SCC / EU–US DPF</td></tr>
+    </table></div>
+    <p><strong>Böngésző-localStorage:</strong> az automatikus piszkozatmentés kizárólag a felhasználó saját böngészőjében történik; ez nem jelent adattovábbítást, és a „HELYI MENTÉS TÖRLÉSE" gombbal bármikor törölhető.</p>
+    <p><strong>Nem osztjuk meg az adatokat:</strong> közösségimédia-platformokkal, marketingcégekkel vagy adatkereskedőkkel; kormányzati szerveknek kizárólag jogerős kötelezés alapján. Adatait nem értékesítjük.</p>
+
+    <h2 id="hu-6"><span class="sec-no">6.</span>Nemzetközi adattovábbítás</h2>
+    <p>EGT-n kívüli feldolgozás a fenti szolgáltatóknál nem zárható ki teljesen. Alkalmazott garanciák:</p>
+    <ul>
+      <li><strong>Standard Contractual Clauses (SCC)</strong> — az EU Bizottság 2021/914/EU határozata szerint.</li>
+      <li><strong>EU–US Data Privacy Framework (DPF)</strong> — a tanúsított USA-szolgáltatóknál (GitHub, Google).</li>
+      <li><strong>Anonimizálás / pszeudonimizálás</strong> — ahol a feldolgozáshoz nem szükséges a közvetlen azonosíthatóság.</li>
+    </ul>
+
+    <h2 id="hu-7"><span class="sec-no">7.</span>Adatmegőrzés</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Adatkategória</th><th>Megőrzési idő</th><th>Megjegyzés</th></tr>
+      <tr><td>Kérdőív-adatok és levelezés (szerződéskötés nélkül)</td><td>Az utolsó kapcsolatfelvételt követő 6 hónap</td><td>Ezt követően törlés</td></tr>
+      <tr><td>Szerződéses és számlázási adatok</td><td>7 év</td><td>Osztrák BAO § 132 szerinti törvényi megőrzés</td></tr>
+      <tr><td>Audit-dokumentum (szerződés esetén)</td><td>A szerződés időtartama + 7 év</td><td>Dokumentációs és jogi célból</td></tr>
+      <tr><td>Böngésző-localStorage piszkozat</td><td>A felhasználó kezelésében</td><td>Bármikor törölhető az űrlapon</td></tr>
+    </table></div>
+    <p>Kérésre korábbi törlés is lehetséges, amennyiben jogszabályi megőrzési kötelezettség nem áll fenn.</p>
+
+    <h2 id="hu-8"><span class="sec-no">8.</span>Az érintett jogai (GDPR Art. 15–22)</h2>
+    <p>Önt megilleti a hozzáférés (Art. 15), a helyesbítés (Art. 16), a törlés (Art. 17), a korlátozás (Art. 18), az adathordozhatóság (Art. 20) és a tiltakozás (Art. 21) joga. Kérelmét a <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a> címre küldheti, tárgyban a hivatkozott cikkel. Válaszadási határidő: a kérelem beérkezésétől számított 30 nap (GDPR Art. 12 (3)).</p>
+    <p><strong>Automatizált döntéshozatal (Art. 22):</strong> az AI-eszközök használata nem jelent kizárólag automatizált döntéshozatalt; a végső stratégiai következtetések emberi szakértői felülvizsgálattal készülnek.</p>
+
+    <h2 id="hu-9"><span class="sec-no">9.</span>AI-eszközök használata (átláthatósági nyilatkozat)</h2>
+    <p>Az audit-munkafolyamat ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközöket használhat személyre szabott promptkészletekkel, szükség esetén internet-hozzáféréssel (nyilvános forráskutatás, deep search, láthatósági és reputációs elemzés céljából). Az űrlap nem kér különleges kategóriájú adatot, és a felhasználók kifejezett utasítást kapnak, hogy ilyet ne adjanak meg. A végeredmény emberi szakmai kontroll mellett készül.</p>
+
+    <h2 id="hu-10"><span class="sec-no">10.</span>Biztonsági intézkedések</h2>
+    <p><strong>Technikai:</strong> HTTPS/TLS titkosítás (GitHub Pages, Google), hozzáférés-védelem a Google Workspace fiókhoz (erős jelszó és kétfaktoros hitelesítés), <code>noindex/nofollow/noarchive</code> meta és robots.txt tiltás az űrlapon, kliensoldali jelszókapu a kérdőív megnyitásához, beküldés utáni gombzárolás a duplikáció ellen.</p>
+    <p><strong>Szervezeti:</strong> hozzáférés kizárólag Mag. Tamás Tóth (ügyvezető) és az Art. 28 szerinti szerződéses alvállalkozó részére; írásbeli AVV/DPA valamennyi feldolgozóval; az adatkezelési lépések dokumentálása.</p>
+
+    <h2 id="hu-11"><span class="sec-no">11.</span>Adatvédelmi incidens</h2>
+    <p>Az érintetteket indokolatlan késedelem nélkül, a felügyeleti hatóságot — ha az incidens valószínűsíthetően kockázattal jár — 72 órán belül értesítjük (GDPR Art. 33–34), az érintett adatkörök, a megtett intézkedések és a javasolt lépések megjelölésével.</p>
+
+    <h2 id="hu-12"><span class="sec-no">12.</span>Panasztétel</h2>
+    <p><strong>Österreichische Datenschutzbehörde (DSB)</strong><br/>
+    Barichgasse 40–42, 1030 Wien · <a href="https://www.dsb.gv.at/" rel="noopener noreferrer" target="_blank">www.dsb.gv.at</a> · dsb@dsb.gv.at · +43 1 52 152-0</p>
+
+    <h2 id="hu-13"><span class="sec-no">13.</span>Verziókövetés</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Verzió</th><th>Dátum</th><th>Változás</th></tr>
+      <tr><td>1.0</td><td>2026-05-08</td><td>Első kiadás (FormSubmit/Formspree-alapú architektúra)</td></tr>
+      <tr><td>2.0</td><td>2026-06-12</td><td>Architektúra-frissítés: GitHub Pages + Google Apps Script / Workspace; címzetti lista és Google Fonts IP-továbbítás feltüntetve; megőrzési idők harmonizálva (6 hónap / 7 év, BAO § 132)</td></tr>
+    </table></div>
+
+    <p class="doc-footnote">Ez a dokumentum a GDPR (2016/679/EU) és az osztrák Datenschutzgesetz (DSG) követelményeinek figyelembevételével készült. Az itt foglalt információk tájékoztató jellegűek, nem minősülnek jogi tanácsnak. © 2026 Mag. Tamás Tóth e.U.</p>
+  </div>
+
+  <!-- ============================================================ EN -->
+  <div class="localized-copy" data-lang="en" hidden>
+
+    <nav class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#en-1">Controller and processing route</a></li>
+        <li><a href="#en-2">Purposes of processing</a></li>
+        <li><a href="#en-3">Legal bases</a></li>
+        <li><a href="#en-4">Data categories and minimisation</a></li>
+        <li><a href="#en-5">Recipients and technical providers</a></li>
+        <li><a href="#en-6">International transfers</a></li>
+        <li><a href="#en-7">Data retention</a></li>
+        <li><a href="#en-8">Your rights</a></li>
+        <li><a href="#en-9">Use of AI tools</a></li>
+        <li><a href="#en-10">Security measures</a></li>
+        <li><a href="#en-11">Data breach</a></li>
+        <li><a href="#en-12">Complaints</a></li>
+        <li><a href="#en-13">Version history</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="en-1"><span class="sec-no">1.</span>Controller and processing route</h2>
+    <p><strong>Controller:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Vienna, Austria. Contact: <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a>. GISA: 32963588. EU VAT ID: ATU69150839. The client's contractual relationship is established exclusively with Mag. Tamás Tóth e.U.</p>
+    <p><strong>Contracted professional subcontractor / processor:</strong> the 96-hour HTML strategy audit may be prepared with the support of Mag. Tamás Tóth e.U.'s contracted professional subcontractor, who, where personal data is processed, acts as a GDPR Art. 28 processor under a written data-processing agreement (DPA).</p>
+    <p><strong>Data protection officer:</strong> the mandatory designation conditions of GDPR Art. 37 are not met (no large-scale, regular and systematic monitoring, and no large-scale processing of special data categories). For privacy matters, contact: tamas.toth@metallagentur.at.</p>
+
+    <h2 id="en-2"><span class="sec-no">2.</span>Purposes of processing</h2>
+    <ul>
+      <li><strong>Preparation of the digital entity audit</strong> — based on the data provided in the questionnaire.</li>
+      <li><strong>Strategic consulting</strong> — preparation and e-mail delivery of the 96-hour HTML audit document.</li>
+      <li><strong>Communication</strong> — e-mail contact during the audit process.</li>
+      <li><strong>Quotation and contract performance</strong> — including billing where necessary.</li>
+    </ul>
+
+    <h2 id="en-3"><span class="sec-no">3.</span>Legal bases (GDPR Art. 6)</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Legal basis</th><th>Application</th></tr>
+      <tr><td>Art. 6 (1) b) — contract</td><td>Processing of questionnaire data for contract preparation and audit delivery</td></tr>
+      <tr><td>Art. 6 (1) f) — legitimate interest</td><td>Business communication, documentation, protection of intellectual property</td></tr>
+      <tr><td>Art. 6 (1) c) — legal obligation</td><td>Billing and tax data (Austrian BAO, UStG)</td></tr>
+      <tr><td>Art. 6 (1) a) — consent</td><td>Only where separately and expressly required</td></tr>
+    </table></div>
+    <p>The form's checkbox logic deliberately uses "I acknowledge" wording where processing is contractual or necessary — consent as a legal basis is not overused.</p>
+
+    <h2 id="en-4"><span class="sec-no">4.</span>Data categories and minimisation</h2>
+    <ul>
+      <li><strong>Contact:</strong> name, e-mail, phone (optional).</li>
+      <li><strong>Company/brand:</strong> company name, website, positioning and strategy answers.</li>
+      <li><strong>Digital presence:</strong> websites, LinkedIn, social-media links.</li>
+      <li><strong>Billing:</strong> billing name, address, country, tax number, EU VAT ID.</li>
+      <li><strong>Technical:</strong> IP address and access data (hosting level), browser localStorage (local draft).</li>
+    </ul>
+    <div class="note-box"><strong>Special-category data (GDPR Art. 9) — excluded.</strong> The form does not request and expressly prohibits the submission of special-category personal data (health, political, religious, trade-union, racial/ethnic, genetic/biometric data, or data concerning sex life or sexual orientation). If a user nevertheless provides such data, it is deleted without delay unless its processing is lawful under a separate written agreement.</div>
+
+    <h2 id="en-5"><span class="sec-no">5.</span>Recipients and technical service providers</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Provider</th><th>Function</th><th>Location / safeguard</th></tr>
+      <tr><td>GitHub, Inc. (GitHub Pages)</td><td>Static hosting of the form; processing of technical access data (IP address)</td><td>USA — EU–US Data Privacy Framework</td></tr>
+      <tr><td>Google Ireland Ltd. / Google LLC</td><td>Google Apps Script: transmission of submitted answers to the Google Workspace mailbox of Mag. Tamás Tóth e.U.</td><td>EU / USA — SCCs + EU–US DPF</td></tr>
+      <tr><td>Google Fonts</td><td>Font loading; your IP address is transmitted to Google when fonts load</td><td>EU / USA — SCCs + EU–US DPF</td></tr>
+      <tr><td>Contracted professional subcontractor</td><td>Professional preparation of the 96-hour HTML audit</td><td>EU/EEA — GDPR Art. 28 DPA</td></tr>
+      <tr><td>AI providers (ChatGPT, Claude, Grok, Gemini, Copilot)</td><td>Support of audit processing under human expert control</td><td>Partly outside the EEA — SCCs / EU–US DPF</td></tr>
+    </table></div>
+    <p><strong>Browser localStorage:</strong> automatic draft saving takes place exclusively in the user's own browser; it does not constitute a data transfer and can be deleted at any time with the "DELETE LOCAL DRAFT" button.</p>
+    <p><strong>We do not share your data</strong> with social-media platforms, marketing companies or data brokers; with public authorities only under a legally binding order. Your data is not sold.</p>
+
+    <h2 id="en-6"><span class="sec-no">6.</span>International transfers</h2>
+    <p>Processing outside the EEA cannot be fully excluded with the providers listed above. Safeguards applied:</p>
+    <ul>
+      <li><strong>Standard Contractual Clauses (SCCs)</strong> — under EU Commission Decision 2021/914/EU.</li>
+      <li><strong>EU–US Data Privacy Framework (DPF)</strong> — for certified US providers (GitHub, Google).</li>
+      <li><strong>Anonymisation / pseudonymisation</strong> — where direct identifiability is not required for processing.</li>
+    </ul>
+
+    <h2 id="en-7"><span class="sec-no">7.</span>Data retention</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Data category</th><th>Retention period</th><th>Note</th></tr>
+      <tr><td>Questionnaire data and correspondence (no contract)</td><td>6 months after the last contact</td><td>Deleted thereafter</td></tr>
+      <tr><td>Contract and billing data</td><td>7 years</td><td>Statutory retention under Austrian BAO § 132</td></tr>
+      <tr><td>Audit document (where a contract exists)</td><td>Contract term + 7 years</td><td>For documentation and legal purposes</td></tr>
+      <tr><td>Browser localStorage draft</td><td>Controlled by the user</td><td>Deletable at any time on the form</td></tr>
+    </table></div>
+    <p>Earlier deletion is possible on request where no statutory retention obligation applies.</p>
+
+    <h2 id="en-8"><span class="sec-no">8.</span>Your rights (GDPR Art. 15–22)</h2>
+    <p>You have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction (Art. 18), data portability (Art. 20) and objection (Art. 21). Send requests to <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a>, referencing the relevant article in the subject line. Response deadline: 30 days from receipt (GDPR Art. 12 (3)).</p>
+    <p><strong>Automated decision-making (Art. 22):</strong> the use of AI tools does not constitute solely automated decision-making; final strategic conclusions are prepared with human expert review.</p>
+
+    <h2 id="en-9"><span class="sec-no">9.</span>Use of AI tools (transparency statement)</h2>
+    <p>The audit workflow may use ChatGPT, Claude, Grok, Gemini and Copilot with personalised prompt sets and, where necessary, internet access (public-source research, deep search, visibility and reputation analysis). The form does not request special-category data and users are expressly instructed not to provide it. The deliverable is prepared under human professional control.</p>
+
+    <h2 id="en-10"><span class="sec-no">10.</span>Security measures</h2>
+    <p><strong>Technical:</strong> HTTPS/TLS encryption (GitHub Pages, Google), access protection of the Google Workspace account (strong password and two-factor authentication), <code>noindex/nofollow/noarchive</code> meta and robots.txt exclusion on the form, client-side password gate for opening the questionnaire, post-submission button lock against duplicates.</p>
+    <p><strong>Organisational:</strong> access restricted to Mag. Tamás Tóth (managing director) and the Art. 28 contracted subcontractor; written DPAs with all processors; documentation of processing steps.</p>
+
+    <h2 id="en-11"><span class="sec-no">11.</span>Data breach</h2>
+    <p>Affected persons are notified without undue delay; the supervisory authority is notified within 72 hours where the incident is likely to result in a risk (GDPR Art. 33–34), stating the data concerned, the measures taken and the recommended steps.</p>
+
+    <h2 id="en-12"><span class="sec-no">12.</span>Complaints</h2>
+    <p><strong>Austrian Data Protection Authority (Österreichische Datenschutzbehörde, DSB)</strong><br/>
+    Barichgasse 40–42, 1030 Vienna · <a href="https://www.dsb.gv.at/" rel="noopener noreferrer" target="_blank">www.dsb.gv.at</a> · dsb@dsb.gv.at · +43 1 52 152-0</p>
+
+    <h2 id="en-13"><span class="sec-no">13.</span>Version history</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Version</th><th>Date</th><th>Change</th></tr>
+      <tr><td>1.0</td><td>2026-05-08</td><td>First release (FormSubmit/Formspree-based architecture)</td></tr>
+      <tr><td>2.0</td><td>2026-06-12</td><td>Architecture update: GitHub Pages + Google Apps Script / Workspace; recipient list and Google Fonts IP transmission disclosed; retention periods harmonised (6 months / 7 years, BAO § 132)</td></tr>
+    </table></div>
+
+    <p class="doc-footnote">This document has been prepared with regard to the GDPR (2016/679/EU) and the Austrian Data Protection Act (DSG). The information provided is for guidance only and does not constitute legal advice. © 2026 Mag. Tamás Tóth e.U.</p>
+  </div>
+
+  <!-- ============================================================ DE -->
+  <div class="localized-copy" data-lang="de" hidden>
+
+    <nav class="toc">
+      <div class="toc-title">Inhalt</div>
+      <ol>
+        <li><a href="#de-1">Verantwortlicher und Verarbeitungsweg</a></li>
+        <li><a href="#de-2">Zwecke der Verarbeitung</a></li>
+        <li><a href="#de-3">Rechtsgrundlagen</a></li>
+        <li><a href="#de-4">Datenkategorien und Datenminimierung</a></li>
+        <li><a href="#de-5">Empfänger und technische Dienstleister</a></li>
+        <li><a href="#de-6">Internationale Datenübermittlung</a></li>
+        <li><a href="#de-7">Speicherdauer</a></li>
+        <li><a href="#de-8">Ihre Rechte</a></li>
+        <li><a href="#de-9">Einsatz von KI-Werkzeugen</a></li>
+        <li><a href="#de-10">Sicherheitsmaßnahmen</a></li>
+        <li><a href="#de-11">Datenschutzverletzung</a></li>
+        <li><a href="#de-12">Beschwerde</a></li>
+        <li><a href="#de-13">Versionsverlauf</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="de-1"><span class="sec-no">1.</span>Verantwortlicher und Verarbeitungsweg</h2>
+    <p><strong>Verantwortlicher:</strong> Mag. Tamas Toth / Mag. Tamás Tóth e.U., Liechtensteinstraße 131-133/24, 1090 Wien, Österreich. Kontakt: <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a>. GISA: 32963588. UID: ATU69150839. Das Vertragsverhältnis des Kunden besteht ausschließlich mit Mag. Tamás Tóth e.U.</p>
+    <p><strong>Vertraglicher fachlicher Subunternehmer / Auftragsverarbeiter:</strong> das 96-Stunden-HTML-Strategieaudit kann mit Unterstützung des vertraglich gebundenen fachlichen Subunternehmers von Mag. Tamás Tóth e.U. erstellt werden, der, soweit personenbezogene Daten verarbeitet werden, als Auftragsverarbeiter gemäß Art. 28 DSGVO auf Grundlage einer schriftlichen Auftragsverarbeitungsvereinbarung (AVV) tätig wird.</p>
+    <p><strong>Datenschutzbeauftragter:</strong> die Voraussetzungen einer verpflichtenden Benennung nach Art. 37 DSGVO liegen nicht vor (keine umfangreiche, regelmäßige und systematische Überwachung, keine umfangreiche Verarbeitung besonderer Datenkategorien). Datenschutzanfragen an: tamas.toth@metallagentur.at.</p>
+
+    <h2 id="de-2"><span class="sec-no">2.</span>Zwecke der Verarbeitung</h2>
+    <ul>
+      <li><strong>Erstellung des digitalen Entitätsaudits</strong> — auf Grundlage der im Fragebogen angegebenen Daten.</li>
+      <li><strong>Strategische Beratung</strong> — Erstellung und E-Mail-Zustellung des 96-Stunden-HTML-Auditdokuments.</li>
+      <li><strong>Kommunikation</strong> — E-Mail-Kontakt während des Auditprozesses.</li>
+      <li><strong>Angebotserstellung und Vertragserfüllung</strong> — einschließlich Rechnungslegung, soweit erforderlich.</li>
+    </ul>
+
+    <h2 id="de-3"><span class="sec-no">3.</span>Rechtsgrundlagen (Art. 6 DSGVO)</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Rechtsgrundlage</th><th>Anwendung</th></tr>
+      <tr><td>Art. 6 (1) b) — Vertrag</td><td>Verarbeitung der Fragebogendaten zur Vertragsanbahnung und Audit-Erstellung</td></tr>
+      <tr><td>Art. 6 (1) f) — berechtigtes Interesse</td><td>Geschäftliche Kommunikation, Dokumentation, Schutz geistigen Eigentums</td></tr>
+      <tr><td>Art. 6 (1) c) — rechtliche Verpflichtung</td><td>Rechnungs- und Steuerdaten (BAO, UStG)</td></tr>
+      <tr><td>Art. 6 (1) a) — Einwilligung</td><td>Nur dort, wo gesondert ausdrücklich erforderlich</td></tr>
+    </table></div>
+    <p>Die Checkbox-Logik des Formulars verwendet bewusst die Formulierung „ich nehme zur Kenntnis", wo die Verarbeitung vertraglich oder erforderlich ist — die Einwilligung als Rechtsgrundlage wird nicht übermäßig eingesetzt.</p>
+
+    <h2 id="de-4"><span class="sec-no">4.</span>Datenkategorien und Datenminimierung</h2>
+    <ul>
+      <li><strong>Kontakt:</strong> Name, E-Mail, Telefon (optional).</li>
+      <li><strong>Unternehmen/Marke:</strong> Firmenname, Website, Positionierungs- und Strategieantworten.</li>
+      <li><strong>Digitale Präsenz:</strong> Websites, LinkedIn, Social-Media-Links.</li>
+      <li><strong>Rechnung:</strong> Rechnungsname, Adresse, Land, Steuernummer, UID.</li>
+      <li><strong>Technisch:</strong> IP-Adresse und Zugriffsdaten (Hosting-Ebene), Browser-localStorage (lokaler Entwurf).</li>
+    </ul>
+    <div class="note-box"><strong>Besondere Datenkategorien (Art. 9 DSGVO) — ausgeschlossen.</strong> Das Formular fragt keine besonderen Kategorien personenbezogener Daten ab und untersagt deren Angabe ausdrücklich (Gesundheitsdaten, politische oder religiöse Überzeugungen, Gewerkschaftszugehörigkeit, rassische/ethnische Herkunft, genetische/biometrische Daten, Daten zum Sexualleben oder zur sexuellen Orientierung). Werden solche Daten dennoch angegeben, werden sie unverzüglich gelöscht, soweit ihre Verarbeitung nicht aufgrund einer gesonderten schriftlichen Vereinbarung rechtmäßig ist.</div>
+
+    <h2 id="de-5"><span class="sec-no">5.</span>Empfänger und technische Dienstleister</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Dienstleister</th><th>Funktion</th><th>Standort / Garantie</th></tr>
+      <tr><td>GitHub, Inc. (GitHub Pages)</td><td>Statisches Hosting des Formulars; Verarbeitung technischer Zugriffsdaten (IP-Adresse)</td><td>USA — EU–US Data Privacy Framework</td></tr>
+      <tr><td>Google Ireland Ltd. / Google LLC</td><td>Google Apps Script: Übermittlung der eingereichten Antworten an das Google-Workspace-Postfach von Mag. Tamás Tóth e.U.</td><td>EU / USA — SCC + EU–US DPF</td></tr>
+      <tr><td>Google Fonts</td><td>Laden der Schriftarten; dabei wird Ihre IP-Adresse an Google übermittelt</td><td>EU / USA — SCC + EU–US DPF</td></tr>
+      <tr><td>Vertraglicher fachlicher Subunternehmer</td><td>Fachliche Erstellung des 96-Stunden-HTML-Audits</td><td>EU/EWR — AVV gemäß Art. 28 DSGVO</td></tr>
+      <tr><td>KI-Anbieter (ChatGPT, Claude, Grok, Gemini, Copilot)</td><td>Unterstützung der Audit-Verarbeitung unter menschlicher fachlicher Kontrolle</td><td>Teilweise außerhalb des EWR — SCC / EU–US DPF</td></tr>
+    </table></div>
+    <p><strong>Browser-localStorage:</strong> die automatische Entwurfsspeicherung erfolgt ausschließlich im eigenen Browser des Nutzers; sie stellt keine Datenübermittlung dar und kann jederzeit über die Schaltfläche „LOKALEN ENTWURF LÖSCHEN" gelöscht werden.</p>
+    <p><strong>Keine Weitergabe</strong> an Social-Media-Plattformen, Marketingunternehmen oder Datenhändler; an Behörden nur aufgrund einer rechtskräftigen Anordnung. Ihre Daten werden nicht verkauft.</p>
+
+    <h2 id="de-6"><span class="sec-no">6.</span>Internationale Datenübermittlung</h2>
+    <p>Eine Verarbeitung außerhalb des EWR kann bei den oben genannten Dienstleistern nicht vollständig ausgeschlossen werden. Angewandte Garantien:</p>
+    <ul>
+      <li><strong>Standardvertragsklauseln (SCC)</strong> — gemäß Beschluss 2021/914/EU der EU-Kommission.</li>
+      <li><strong>EU–US Data Privacy Framework (DPF)</strong> — bei zertifizierten US-Anbietern (GitHub, Google).</li>
+      <li><strong>Anonymisierung / Pseudonymisierung</strong> — wo eine direkte Identifizierbarkeit für die Verarbeitung nicht erforderlich ist.</li>
+    </ul>
+
+    <h2 id="de-7"><span class="sec-no">7.</span>Speicherdauer</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Datenkategorie</th><th>Speicherdauer</th><th>Anmerkung</th></tr>
+      <tr><td>Fragebogendaten und Korrespondenz (ohne Vertrag)</td><td>6 Monate nach dem letzten Kontakt</td><td>Danach Löschung</td></tr>
+      <tr><td>Vertrags- und Rechnungsdaten</td><td>7 Jahre</td><td>Gesetzliche Aufbewahrung gemäß BAO § 132</td></tr>
+      <tr><td>Auditdokument (bei Vertrag)</td><td>Vertragsdauer + 7 Jahre</td><td>Zu Dokumentations- und Rechtszwecken</td></tr>
+      <tr><td>Browser-localStorage-Entwurf</td><td>In der Hand des Nutzers</td><td>Jederzeit im Formular löschbar</td></tr>
+    </table></div>
+    <p>Eine frühere Löschung ist auf Anfrage möglich, soweit keine gesetzliche Aufbewahrungspflicht besteht.</p>
+
+    <h2 id="de-8"><span class="sec-no">8.</span>Ihre Rechte (Art. 15–22 DSGVO)</h2>
+    <p>Ihnen stehen die Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zu. Anfragen an <a href="mailto:tamas.toth@metallagentur.at">tamas.toth@metallagentur.at</a> mit Angabe des betreffenden Artikels im Betreff. Antwortfrist: 30 Tage ab Eingang (Art. 12 (3) DSGVO).</p>
+    <p><strong>Automatisierte Entscheidungsfindung (Art. 22):</strong> der Einsatz von KI-Werkzeugen stellt keine ausschließlich automatisierte Entscheidungsfindung dar; finale strategische Schlussfolgerungen entstehen mit menschlicher fachlicher Prüfung.</p>
+
+    <h2 id="de-9"><span class="sec-no">9.</span>Einsatz von KI-Werkzeugen (Transparenzerklärung)</h2>
+    <p>Der Audit-Workflow kann ChatGPT, Claude, Grok, Gemini und Copilot mit personalisierten Prompt-Sets und, soweit erforderlich, Internetzugang einsetzen (Recherche öffentlicher Quellen, Deep Search, Sichtbarkeits- und Reputationsanalyse). Das Formular fragt keine besonderen Datenkategorien ab; die Nutzer werden ausdrücklich angewiesen, solche nicht anzugeben. Das Ergebnis entsteht unter menschlicher fachlicher Kontrolle.</p>
+
+    <h2 id="de-10"><span class="sec-no">10.</span>Sicherheitsmaßnahmen</h2>
+    <p><strong>Technisch:</strong> HTTPS/TLS-Verschlüsselung (GitHub Pages, Google), Zugriffsschutz des Google-Workspace-Kontos (starkes Passwort und Zwei-Faktor-Authentifizierung), <code>noindex/nofollow/noarchive</code>-Meta und robots.txt-Ausschluss des Formulars, clientseitiges Passwort-Gate zum Öffnen des Fragebogens, Sperrung der Schaltfläche nach dem Absenden gegen Duplikate.</p>
+    <p><strong>Organisatorisch:</strong> Zugriff ausschließlich für Mag. Tamás Tóth (Geschäftsführer) und den vertraglichen Subunternehmer gemäß Art. 28; schriftliche AVV mit allen Auftragsverarbeitern; Dokumentation der Verarbeitungsschritte.</p>
+
+    <h2 id="de-11"><span class="sec-no">11.</span>Datenschutzverletzung</h2>
+    <p>Betroffene werden ohne unangemessene Verzögerung informiert; die Aufsichtsbehörde wird — soweit die Verletzung voraussichtlich zu einem Risiko führt — innerhalb von 72 Stunden benachrichtigt (Art. 33–34 DSGVO), unter Angabe der betroffenen Datenkategorien, der getroffenen Maßnahmen und der empfohlenen Schritte.</p>
+
+    <h2 id="de-12"><span class="sec-no">12.</span>Beschwerde</h2>
+    <p><strong>Österreichische Datenschutzbehörde (DSB)</strong><br/>
+    Barichgasse 40–42, 1030 Wien · <a href="https://www.dsb.gv.at/" rel="noopener noreferrer" target="_blank">www.dsb.gv.at</a> · dsb@dsb.gv.at · +43 1 52 152-0</p>
+
+    <h2 id="de-13"><span class="sec-no">13.</span>Versionsverlauf</h2>
+    <div class="tbl-wrap"><table>
+      <tr><th>Version</th><th>Datum</th><th>Änderung</th></tr>
+      <tr><td>1.0</td><td>2026-05-08</td><td>Erstausgabe (FormSubmit/Formspree-basierte Architektur)</td></tr>
+      <tr><td>2.0</td><td>2026-06-12</td><td>Architektur-Update: GitHub Pages + Google Apps Script / Workspace; Empfängerliste und Google-Fonts-IP-Übermittlung offengelegt; Speicherfristen harmonisiert (6 Monate / 7 Jahre, BAO § 132)</td></tr>
+    </table></div>
+
+    <p class="doc-footnote">Dieses Dokument wurde unter Berücksichtigung der DSGVO (2016/679/EU) und des österreichischen Datenschutzgesetzes (DSG) erstellt. Die Angaben dienen der Information und stellen keine Rechtsberatung dar. © 2026 Mag. Tamás Tóth e.U.</p>
+  </div>
+
+  </article>
+</main>
+
+<script>
+(() => {
+  const META = {
+    hu: {
+      htmlLang: 'hu',
+      docTitle: 'Adatvédelmi tájékoztató — Mag. Tamás Tóth e.U.',
+      eyebrow: 'Mag. Tamás Tóth e.U. — Digitális Entitás Audit',
+      title: 'Adatvédelmi tájékoztató',
+      lead: 'Részletes GDPR- és DSG-tájékoztató a form.metallagentur.at címen elérhető audit-űrlap adatkezeléséről — címzettek, jogalapok, megőrzési idők és érintetti jogok.',
+      chipVersion: 'Verzió 2.0 · 2026-06-12',
+      chipScope: 'Hatály: form.metallagentur.at',
+      back: '← Vissza az űrlaphoz'
+    },
+    en: {
+      htmlLang: 'en',
+      docTitle: 'Privacy Notice — Mag. Tamás Tóth e.U.',
+      eyebrow: 'Mag. Tamás Tóth e.U. — Digital Entity Audit',
+      title: 'Privacy Notice',
+      lead: 'Detailed GDPR and DSG information on the processing carried out via the audit form at form.metallagentur.at — recipients, legal bases, retention periods and data-subject rights.',
+      chipVersion: 'Version 2.0 · 2026-06-12',
+      chipScope: 'Scope: form.metallagentur.at',
+      back: '← Back to the form'
+    },
+    de: {
+      htmlLang: 'de',
+      docTitle: 'Datenschutzhinweis — Mag. Tamás Tóth e.U.',
+      eyebrow: 'Mag. Tamás Tóth e.U. — Digitales Entitätsaudit',
+      title: 'Datenschutzhinweis',
+      lead: 'Ausführliche DSGVO- und DSG-Informationen zur Verarbeitung über das Auditformular auf form.metallagentur.at — Empfänger, Rechtsgrundlagen, Speicherfristen und Betroffenenrechte.',
+      chipVersion: 'Version 2.0 · 2026-06-12',
+      chipScope: 'Geltungsbereich: form.metallagentur.at',
+      back: '← Zurück zum Formular'
+    }
+  };
+  const LANGS = ['hu', 'en', 'de'];
+  const STORAGE_KEY = 'entityAuditPrivacyLang';
+
+  const applyLang = (lang) => {
+    if (!LANGS.includes(lang)) lang = 'hu';
+    const m = META[lang];
+    document.documentElement.lang = m.htmlLang;
+    document.title = m.docTitle;
+    document.querySelectorAll('[data-t]').forEach(el => {
+      const key = el.getAttribute('data-t');
+      if (m[key]) el.textContent = m[key];
+    });
+    document.querySelectorAll('.localized-copy[data-lang]').forEach(block => {
+      block.hidden = block.dataset.lang !== lang;
+    });
+    document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+      btn.setAttribute('aria-pressed', String(btn.dataset.langBtn === lang));
+    });
+    const back = document.querySelector('.back-link');
+    if (back) back.setAttribute('href', 'index.html');
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    try {
+      const url = new URL(window.location.href);
+      if (url.protocol.startsWith('http')) {
+        url.searchParams.set('lang', lang);
+        window.history.replaceState(null, '', url.toString());
+      }
+    } catch (e) {}
+  };
+
+  document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.langBtn));
+  });
+
+  let initial = new URLSearchParams(window.location.search).get('lang');
+  if (!LANGS.includes(initial)) {
+    try { initial = localStorage.getItem(STORAGE_KEY); } catch (e) { initial = null; }
+  }
+  applyLang(LANGS.includes(initial) ? initial : 'hu');
+})();
+</script>
+</body>
+</html>
