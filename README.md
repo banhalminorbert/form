@@ -210,7 +210,7 @@ Opcionális, de ajánlott:
 | HTML5 | 5 | Struktúra | Public Domain |
 | CSS3 | 3 | Stílus (Flexbox, Grid) | Public Domain |
 | JavaScript (Vanilla) | ES6+ | Forma logika, validáció | Public Domain |
-| Google Fonts | Latest | Tipográfia (Cormorant Garamond, Inter) | OFL 1.1 |
+| Rendszerfontok | Aktuális | New York / Georgia és San Francisco / system sans fallback | Nincs külső betöltés |
 | Formspree | API | E-mail gateway | GDPR-kompatibilis SaaS |
 
 ### Browser Kompatibilitás
@@ -306,7 +306,7 @@ Header set Access-Control-Allow-Origin "https://yourdomain.com"
 Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
 Header set X-Content-Type-Options "nosniff"
 Header set X-Frame-Options "SAMEORIGIN"
-Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src fonts.gstatic.com"
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:"
 ```
 
 ### nginx Konfigurálás
@@ -324,7 +324,7 @@ server {
 
     add_header X-Content-Type-Options "nosniff";
     add_header X-Frame-Options "SAMEORIGIN";
-    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src fonts.gstatic.com";
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:";
 
     location / {
         try_files $uri $uri/ =404;

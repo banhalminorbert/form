@@ -22,3 +22,22 @@
 - A tényleges alvállalkozói / adatfeldolgozói szerződés létezik-e Mag. Tamás Tóth e.U. és a közreműködő között.
 - A használt AI-eszközök és Google Workspace / Apps Script adatfeldolgozói feltételei ténylegesen összhangban vannak-e a vállalt tájékoztatóval.
 - Az EU-n kívüli adattovábbításokhoz tényleges SCC / adequacy / DPF vagy más garancia dokumentált-e.
+
+## Technikai QA futtatás
+
+- Statikus ellenőrzés: 1 darab fő `assessmentForm` form van.
+- `frontGdprNotice` a belépő/főoldali `passwordGate` részen belül van.
+- `consent_0` kötelező, a `form="assessmentForm"` attribútummal a fő formhoz van kötve.
+- A rejtett jogi naplómezők létrejöttek: elfogadás ideje, nyelve, tájékoztató-verzió, elfogadási szöveg, form URL, beküldési idő, böngészőadat.
+- JavaScript szintaktikai ellenőrzés: minden `<script>` blokk `node --check` szerint szintaktikailag érvényes.
+- Headless böngészős ellenőrzés: HU/EN/DE nyelvváltás után a fő GDPR checkbox címkéje megfelelő nyelvre vált; elfogadás után a védett tartalom megnyílik; a FormData tartalmazza az `agreeFrontGdprAiNotice=accepted` értéket és a jogi naplómezőket.
+- Beküldési esemény szimuláció: a kötelező mezők kitöltése és elfogadások bepipálása után a form validnak minősül, a submit logika futási hiba nélkül lefut, és a teljes kérdés-válasz export elkészül.
+
+
+## 2026-06-12 szigorított audit kiegészítés
+
+- A Perplexity által kifogásolt Art. 13 / címzett / megőrzési idő / háttérfeldolgozási elemek ellenőrizve lettek.
+- Az adatvédelmi tájékoztatóban pontosítva lett, hogy nincs aktív külső Google Fonts betöltés, ezért külön fontszolgáltatói IP-továbbítás nincs.
+- A régi „password gate” megfogalmazás a felhasználói és jogi szövegekben GDPR-elfogadásos kapura lett cserélve.
+- A verziótörténet 6 hónapos megőrzési utalása 30 napra lett javítva, hogy egyezzen a formban és a rejtett beküldési mezőben szereplő adattal.
+- Külső jogi megfelelőségi feltétel maradt: a tényleges AVV/DPA szerződések, szolgáltatói DPA-k és törlési naplók nem a HTML fájl részei, ezeket külön kell megőrizni.

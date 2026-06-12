@@ -149,8 +149,7 @@ A Munka az alábbi nyílt forráskódú komponenseket tartalmazza, amelyekre az 
 
 | Komponens | Forrás | Licensz |
 |-----------|--------|---------|
-| Google Fonts (Cormorant Garamond) | https://fonts.google.com | OFL 1.1 |
-| Google Fonts (Inter) | https://fonts.google.com | OFL 1.1 |
+| Rendszerfontok | Operációs rendszer / böngésző | Külső fontbetöltés nincs |
 | Formspree (E-mail backend) | https://formspree.io | GDPR-kompatibilis SaaS |
 | Cloudflare (CDN) | https://www.cloudflare.com | Saját feltételek |
 

@@ -373,7 +373,7 @@
       <tr><th>Szolgáltató</th><th>Funkció</th><th>Helyszín / garancia</th></tr>
       <tr><td>GitHub, Inc. (GitHub Pages)</td><td>Az űrlap statikus hosztingja; technikai hozzáférési adatok (IP-cím) kezelése</td><td>USA — EU–US Data Privacy Framework</td></tr>
       <tr><td>Google Ireland Ltd. / Google LLC</td><td>Google Apps Script: a beküldött válaszok továbbítása Mag. Tamás Tóth e.U. Google Workspace postafiókjába</td><td>EU / USA — SCC + EU–US DPF</td></tr>
-      <tr><td>Google Fonts</td><td>Betűtípus-betöltés; a betöltéskor az IP-cím a Google felé továbbítódik</td><td>EU / USA — SCC + EU–US DPF</td></tr>
+      <tr><td>Külső betűtípus-szolgáltató</td><td>Nincs aktív külső fontbetöltés; a felület rendszerfontokat használ</td><td>Nincs adattovábbítás</td></tr>
       <tr><td>Szerződéses szakmai alvállalkozó</td><td>A 96 órás HTML audit szakmai elkészítése</td><td>EU/EGT — GDPR Art. 28 AVV/DPA</td></tr>
       <tr><td>AI-szolgáltatók (ChatGPT, Claude, Grok, Gemini, Copilot)</td><td>Az audit-feldolgozás támogatása, emberi szakértői kontroll mellett</td><td>Részben EGT-n kívül — SCC / EU–US DPF</td></tr>
     </table></div>
@@ -409,7 +409,7 @@
     <p>Az audit-munkafolyamat ChatGPT, Claude, Grok, Gemini és Copilot AI-eszközöket használhat személyre szabott promptkészletekkel, szükség esetén internet-hozzáféréssel (nyilvános forráskutatás, deep search, láthatósági és reputációs elemzés céljából). Az űrlap nem kér különleges kategóriájú adatot, és a felhasználók kifejezett utasítást kapnak, hogy ilyet ne adjanak meg. A végeredmény emberi szakmai kontroll mellett készül.</p>
 
     <h2 id="hu-10"><span class="sec-no">10.</span>Biztonsági intézkedések</h2>
-    <p><strong>Technikai:</strong> HTTPS/TLS titkosítás (GitHub Pages, Google), hozzáférés-védelem a Google Workspace fiókhoz (erős jelszó és kétfaktoros hitelesítés), <code>noindex/nofollow/noarchive</code> meta és robots.txt tiltás az űrlapon, kliensoldali jelszókapu a kérdőív megnyitásához, beküldés utáni gombzárolás a duplikáció ellen.</p>
+    <p><strong>Technikai:</strong> HTTPS/TLS titkosítás (GitHub Pages, Google), hozzáférés-védelem a Google Workspace fiókhoz (erős jelszó és kétfaktoros hitelesítés), <code>noindex/nofollow/noarchive</code> meta és robots.txt tiltás az űrlapon, GDPR-elfogadásos kapu a kérdőív megnyitásához, beküldés utáni gombzárolás a duplikáció ellen.</p>
     <p><strong>Szervezeti:</strong> hozzáférés kizárólag Mag. Tamás Tóth (ügyvezető) és az Art. 28 szerinti szerződéses alvállalkozó részére; írásbeli AVV/DPA valamennyi feldolgozóval; az adatkezelési lépések dokumentálása.</p>
 
     <h2 id="hu-11"><span class="sec-no">11.</span>Adatvédelmi incidens</h2>
@@ -423,7 +423,7 @@
     <div class="tbl-wrap"><table>
       <tr><th>Verzió</th><th>Dátum</th><th>Változás</th></tr>
       <tr><td>1.0</td><td>2026-05-08</td><td>Első kiadás (FormSubmit/Formspree-alapú architektúra)</td></tr>
-      <tr><td>2.0</td><td>2026-06-12</td><td>Architektúra-frissítés: GitHub Pages + Google Apps Script / Workspace; címzetti lista és Google Fonts IP-továbbítás feltüntetve; megőrzési idők harmonizálva (6 hónap / 7 év, BAO § 132)</td></tr>
+      <tr><td>2.0</td><td>2026-06-12</td><td>Architektúra-frissítés: GitHub Pages + Google Apps Script / Workspace; címzetti lista pontosítva; külső fontbetöltés eltávolítva; megőrzési idők harmonizálva (30 nap / 7 év, BAO § 132)</td></tr>
     </table></div>
 
     <p class="doc-footnote">Ez a dokumentum a GDPR (2016/679/EU) és az osztrák Datenschutzgesetz (DSG) követelményeinek figyelembevételével készült. Az itt foglalt információk tájékoztató jellegűek, nem minősülnek jogi tanácsnak. © 2026 Mag. Tamás Tóth e.U.</p>
@@ -489,7 +489,7 @@
       <tr><th>Provider</th><th>Function</th><th>Location / safeguard</th></tr>
       <tr><td>GitHub, Inc. (GitHub Pages)</td><td>Static hosting of the form; processing of technical access data (IP address)</td><td>USA — EU–US Data Privacy Framework</td></tr>
       <tr><td>Google Ireland Ltd. / Google LLC</td><td>Google Apps Script: transmission of submitted answers to the Google Workspace mailbox of Mag. Tamás Tóth e.U.</td><td>EU / USA — SCCs + EU–US DPF</td></tr>
-      <tr><td>Google Fonts</td><td>Font loading; your IP address is transmitted to Google when fonts load</td><td>EU / USA — SCCs + EU–US DPF</td></tr>
+      <tr><td>External font provider</td><td>No active external font loading; the interface uses system fonts</td><td>No data transfer</td></tr>
       <tr><td>Contracted professional subcontractor</td><td>Professional preparation of the 96-hour HTML audit</td><td>EU/EEA — GDPR Art. 28 DPA</td></tr>
       <tr><td>AI providers (ChatGPT, Claude, Grok, Gemini, Copilot)</td><td>Support of audit processing under human expert control</td><td>Partly outside the EEA — SCCs / EU–US DPF</td></tr>
     </table></div>
@@ -525,7 +525,7 @@
     <p>The audit workflow may use ChatGPT, Claude, Grok, Gemini and Copilot with personalised prompt sets and, where necessary, internet access (public-source research, deep search, visibility and reputation analysis). The form does not request special-category data and users are expressly instructed not to provide it. The deliverable is prepared under human professional control.</p>
 
     <h2 id="en-10"><span class="sec-no">10.</span>Security measures</h2>
-    <p><strong>Technical:</strong> HTTPS/TLS encryption (GitHub Pages, Google), access protection of the Google Workspace account (strong password and two-factor authentication), <code>noindex/nofollow/noarchive</code> meta and robots.txt exclusion on the form, client-side password gate for opening the questionnaire, post-submission button lock against duplicates.</p>
+    <p><strong>Technical:</strong> HTTPS/TLS encryption (GitHub Pages, Google), access protection of the Google Workspace account (strong password and two-factor authentication), <code>noindex/nofollow/noarchive</code> meta and robots.txt exclusion on the form, GDPR acceptance gate for opening the questionnaire, post-submission button lock against duplicates.</p>
     <p><strong>Organisational:</strong> access restricted to Mag. Tamás Tóth (managing director) and the Art. 28 contracted subcontractor; written DPAs with all processors; documentation of processing steps.</p>
 
     <h2 id="en-11"><span class="sec-no">11.</span>Data breach</h2>
@@ -539,7 +539,7 @@
     <div class="tbl-wrap"><table>
       <tr><th>Version</th><th>Date</th><th>Change</th></tr>
       <tr><td>1.0</td><td>2026-05-08</td><td>First release (FormSubmit/Formspree-based architecture)</td></tr>
-      <tr><td>2.0</td><td>2026-06-12</td><td>Architecture update: GitHub Pages + Google Apps Script / Workspace; recipient list and Google Fonts IP transmission disclosed; retention periods harmonised (6 months / 7 years, BAO § 132)</td></tr>
+      <tr><td>2.0</td><td>2026-06-12</td><td>Architecture update: GitHub Pages + Google Apps Script / Workspace; recipient list clarified; external font loading removed; retention periods harmonised (30 days / 7 years, BAO § 132)</td></tr>
     </table></div>
 
     <p class="doc-footnote">This document has been prepared with regard to the GDPR (2016/679/EU) and the Austrian Data Protection Act (DSG). The information provided is for guidance only and does not constitute legal advice. © 2026 Mag. Tamás Tóth e.U.</p>
@@ -605,7 +605,7 @@
       <tr><th>Dienstleister</th><th>Funktion</th><th>Standort / Garantie</th></tr>
       <tr><td>GitHub, Inc. (GitHub Pages)</td><td>Statisches Hosting des Formulars; Verarbeitung technischer Zugriffsdaten (IP-Adresse)</td><td>USA — EU–US Data Privacy Framework</td></tr>
       <tr><td>Google Ireland Ltd. / Google LLC</td><td>Google Apps Script: Übermittlung der eingereichten Antworten an das Google-Workspace-Postfach von Mag. Tamás Tóth e.U.</td><td>EU / USA — SCC + EU–US DPF</td></tr>
-      <tr><td>Google Fonts</td><td>Laden der Schriftarten; dabei wird Ihre IP-Adresse an Google übermittelt</td><td>EU / USA — SCC + EU–US DPF</td></tr>
+      <tr><td>Externer Schriftartenanbieter</td><td>Kein aktives Laden externer Schriftarten; die Oberfläche verwendet Systemschriften</td><td>Keine Datenübermittlung</td></tr>
       <tr><td>Vertraglicher fachlicher Subunternehmer</td><td>Fachliche Erstellung des 96-Stunden-HTML-Audits</td><td>EU/EWR — AVV gemäß Art. 28 DSGVO</td></tr>
       <tr><td>KI-Anbieter (ChatGPT, Claude, Grok, Gemini, Copilot)</td><td>Unterstützung der Audit-Verarbeitung unter menschlicher fachlicher Kontrolle</td><td>Teilweise außerhalb des EWR — SCC / EU–US DPF</td></tr>
     </table></div>
@@ -641,7 +641,7 @@
     <p>Der Audit-Workflow kann ChatGPT, Claude, Grok, Gemini und Copilot mit personalisierten Prompt-Sets und, soweit erforderlich, Internetzugang einsetzen (Recherche öffentlicher Quellen, Deep Search, Sichtbarkeits- und Reputationsanalyse). Das Formular fragt keine besonderen Datenkategorien ab; die Nutzer werden ausdrücklich angewiesen, solche nicht anzugeben. Das Ergebnis entsteht unter menschlicher fachlicher Kontrolle.</p>
 
     <h2 id="de-10"><span class="sec-no">10.</span>Sicherheitsmaßnahmen</h2>
-    <p><strong>Technisch:</strong> HTTPS/TLS-Verschlüsselung (GitHub Pages, Google), Zugriffsschutz des Google-Workspace-Kontos (starkes Passwort und Zwei-Faktor-Authentifizierung), <code>noindex/nofollow/noarchive</code>-Meta und robots.txt-Ausschluss des Formulars, clientseitiges Passwort-Gate zum Öffnen des Fragebogens, Sperrung der Schaltfläche nach dem Absenden gegen Duplikate.</p>
+    <p><strong>Technisch:</strong> HTTPS/TLS-Verschlüsselung (GitHub Pages, Google), Zugriffsschutz des Google-Workspace-Kontos (starkes Passwort und Zwei-Faktor-Authentifizierung), <code>noindex/nofollow/noarchive</code>-Meta und robots.txt-Ausschluss des Formulars, DSGVO-Akzeptanz-Gate zum Öffnen des Fragebogens, Sperrung der Schaltfläche nach dem Absenden gegen Duplikate.</p>
     <p><strong>Organisatorisch:</strong> Zugriff ausschließlich für Mag. Tamás Tóth (Geschäftsführer) und den vertraglichen Subunternehmer gemäß Art. 28; schriftliche AVV mit allen Auftragsverarbeitern; Dokumentation der Verarbeitungsschritte.</p>
 
     <h2 id="de-11"><span class="sec-no">11.</span>Datenschutzverletzung</h2>
@@ -655,7 +655,7 @@
     <div class="tbl-wrap"><table>
       <tr><th>Version</th><th>Datum</th><th>Änderung</th></tr>
       <tr><td>1.0</td><td>2026-05-08</td><td>Erstausgabe (FormSubmit/Formspree-basierte Architektur)</td></tr>
-      <tr><td>2.0</td><td>2026-06-12</td><td>Architektur-Update: GitHub Pages + Google Apps Script / Workspace; Empfängerliste und Google-Fonts-IP-Übermittlung offengelegt; Speicherfristen harmonisiert (6 Monate / 7 Jahre, BAO § 132)</td></tr>
+      <tr><td>2.0</td><td>2026-06-12</td><td>Architektur-Update: GitHub Pages + Google Apps Script / Workspace; Empfängerliste präzisiert; externes Laden von Schriftarten entfernt; Speicherfristen harmonisiert (30 Tage / 7 Jahre, BAO § 132)</td></tr>
     </table></div>
 
     <p class="doc-footnote">Dieses Dokument wurde unter Berücksichtigung der DSGVO (2016/679/EU) und des österreichischen Datenschutzgesetzes (DSG) erstellt. Die Angaben dienen der Information und stellen keine Rechtsberatung dar. © 2026 Mag. Tamás Tóth e.U.</p>

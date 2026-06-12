@@ -21,7 +21,7 @@ Látható tartalom:
 **Szerződéses feladata:** A 96 órás HTML stratégiai audit szakmai előkészítése és összeállítása.
 
 Látható tartalom:
-- Az **internetről kikutatott nyilvános adatok** (cég weboldala, LinkedIn, közösségimédia, közszerzerzésű információk) — **NEM személyes adatok**
+- Az **internetről kikutatott nyilvános adatok** (cég weboldala, LinkedIn, közösségimédia, közhiteles / nyilvános forrásokból származó információk) — **NEM személyes adatok**
 - A stratégiai elemzés és szellemi munka (az ő szerzői és szellemi tulajdonuk)
 - Az **készülő audit HTML-dokumentum** (az alvállalkozó szerzői tulajdona)
 
@@ -83,8 +83,8 @@ Ha felhasználó mégis ilyen adatot ad meg, az haladéktalanul törlésre kerü
 |-------------|---------|-------------------|----------|----------|
 | **GitHub, Inc.** (GitHub Pages) | Az audit-űrlap statikus hosztingja; IP-cím feldolgozása | Art. 28 | USA | EU–US Data Privacy Framework |
 | **Google Ireland Ltd. / Google LLC** | Google Apps Script: beküldött kérdőívadatok továbbítása a Google Workspace postafiókba | Art. 28 | EU/USA | SCC + EU–US DPF |
-| **Google Fonts** | Betűtípus-betöltés (New York, San Francisco) | Art. 28 | EU/USA | SCC + EU–US DPF |
-| **Szerződéses szakmai alvállalkozó** | 96 órás HTML audit-dokumentum előkészítése | Art. 28 DPA | EU/EGT | GDPR Art. 28 szerzodés |
+| **Külső betűtípus-szolgáltató** | Nincs aktív külső fontbetöltés; rendszerfontok használata | — | — | Nincs adattovábbítás |
+| **Szerződéses szakmai alvállalkozó** | 96 órás HTML audit-dokumentum előkészítése | Art. 28 DPA | EU/EGT | GDPR Art. 28 szerződés |
 | **AI-szolgáltatók** (ChatGPT, Claude, Grok, Gemini, Copilot) | Audit-feldolgozás támogatása | Art. 28 (emb. felügyelet) | Részben EGT-n kívül | SCC / EU–US DPF |
 
 ### Nem osztjuk meg az adatokat
@@ -162,7 +162,7 @@ Az EGT-n kívüli feldolgozás nem zárható ki teljesen (GitHub, Google, AI-esz
 
 #### 3. Számlázási és adózási adatok (7 év után törlés)
 
-**Jogalapja:** BAO § 132 (Österreichisches Bundesabschlussgesetz)
+**Jogalapja:** BAO § 132 (Bundesabgabenordnung)
 
 **Mit töröl:**
 - Számlákat és kifizetési nyilvántartásokat
@@ -192,7 +192,7 @@ Minden törlés után az alábbiak naplózásra kerülnek:
 - **Helyesbítés joga (Art. 16)** — pontatlan adatok korrigálása
 - **Törlés joga (Art. 17)** — adatok törlésének kérése (30 nap után automatikus)
 - **Korlátozás joga (Art. 18)** — az adatkezelés szüneteltetése
-- **Adathordozhatóság joga (Art. 20)** — adatok átvétele gépélyes formátumban
+- **Adathordozhatóság joga (Art. 20)** — adatok átvétele gépi formátumban
 - **Tiltakozás joga (Art. 21)** — jogos érdek alapján történő adatkezelés ellen tiltakozás
 
 ### Kérelmek feldolgozása
@@ -220,7 +220,7 @@ Az audit-munkafolyamat az alábbi AI-eszközöket használhatja:
 **Adatok:**
 - Az audit-kérdőív adatai AI-eszközökhöz továbbításra kerülhetnek (SCC/DPF szerinti védelem)
 - Az internet-kutatás nyilvános forrásokból történik
-- Az alvállalkozó végső szakmai ellenőrzésere támaszkodik
+- Az alvállalkozó végső szakmai ellenőrzésére támaszkodik
 
 **Kizárás:**
 - Nem kerülnek AI-eszközökhöz különleges kategóriájú adatok (Art. 9)
@@ -232,7 +232,7 @@ Az audit-munkafolyamat az alábbi AI-eszközöket használhatja:
 ### Technikai
 - **HTTPS/TLS titkosítás** — GitHub Pages, Google Workspace
 - **Kétfaktoros hitelesítés** — Google Workspace fiók
-- **Jelszókapu** → **GDPR-elfogadásos kapu** — az audit-űrlap megnyitásához az Art. 13-as tájékoztatás elfogadása szükséges
+- **GDPR-elfogadásos kapu** — az audit-űrlap megnyitásához az Art. 13-as tájékoztatás elfogadása szükséges
 - **Beküldés utáni gombzárolás** — duplikációs támadások ellen
 - **`noindex/nofollow/noarchive` meta** — az oldal lezárása az archívumok elől
 - **localStorage** — helyi piszkozat, szerver-oldali adattárolás nélkül
